@@ -36,7 +36,7 @@ public class SumStudentLeavesActivity extends BaseActivity implements
 	private ArrayList<StuSumLeavesModel> sumLeaveList;//列表
 
 	private CusListView listView;
-	private CheckerQueryAdapter<?> queryAdapter;
+	private CheckerQueryAdapter queryAdapter;
 	private PullToRefreshScrollView refreshScrollView;
 
 	@Override
@@ -67,7 +67,7 @@ public class SumStudentLeavesActivity extends BaseActivity implements
 	}
 
 	private void initData() {
-		sumLeaveList = new ArrayList<StuSumLeavesModel>();
+		sumLeaveList = new ArrayList<>();
 		queryAdapter = new CheckerQueryAdapter(this);
 		listView.setAdapter(queryAdapter);
 		CheckerActivityControler.getInstance().GetStudentSumLeaves(unitClassId,
@@ -79,6 +79,7 @@ public class SumStudentLeavesActivity extends BaseActivity implements
 		int tag = (Integer) list.get(0);
 		if (tag == LeaveConstant.leave_GetStudentSumLeaves) {
 			refreshScrollView.onRefreshComplete();
+
 			ArrayList<StuSumLeavesModel> s1 = (ArrayList<StuSumLeavesModel>) list
 					.get(1);
 			sumLeaveList.clear();

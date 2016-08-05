@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import org.greenrobot.eventbus.Subscribe;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -16,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,6 +17,7 @@ import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
@@ -45,15 +38,21 @@ import com.lidroid.xutils.http.HttpHandler;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 /**
  * 点击列表头像的右侧区域的事务详情Activity
  */
 public class Work2DetailsListItemActivity extends BaseActivity implements
 		OnRefreshListener2<ScrollView>, OnClickListener {
-	private final static String TAG = "Work2DetailsListItemActivity";
-	final public static int Work2DetailsAttClick = 10;
-	int ci = 0;
-	int reply_position = -1;
+
 	private int pageNum = 1;
 	/** 来自我1/其他人2 */
 	private int type;
@@ -68,21 +67,19 @@ public class Work2DetailsListItemActivity extends BaseActivity implements
 	private String MsgRecDate;
 	private SimpleDateFormat dateFormat = new SimpleDateFormat(
 			"yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-	private List<HttpHandler> httpDownList = new ArrayList<HttpHandler>();
-	private ArrayList<Object> workList = new ArrayList<Object>();
+	private List<HttpHandler> httpDownList = new ArrayList<>();
+	private ArrayList<Object> workList = new ArrayList<>();
 
 	private Context mContext;
-	private LinearLayout reply_layout;// 回复区域布局
+
 	private Button btn_reply;// 回复按钮
 	private IEditText edt_keywords;// 回复编辑框
-	private CusListView listView;
 	private PullToRefreshScrollView mPullRefreshScrollView;
 	private Work2DetailListAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d(TAG, TAG);
 		if (savedInstanceState != null) {
 			type = savedInstanceState.getInt("type");
 			TabIDStr = savedInstanceState.getString("TabIDStr");
@@ -123,18 +120,20 @@ public class Work2DetailsListItemActivity extends BaseActivity implements
 	private void initViews() {
 		setContentView(R.layout.activity_work2details);
 		setActionBarTitle(UserName);
+		LinearLayout reply_layout;// 回复区域布局
 		reply_layout = (LinearLayout) findViewById(R.id.article_layout_reply);
 		edt_keywords = (IEditText) findViewById(R.id.article_edt_mywords);
 		btn_reply = (Button) findViewById(R.id.article_btn_send);
+		CusListView listView;
 		listView = (CusListView) findViewById(R.id.listview);
 		mPullRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
 		mContext = this;
 		httpDownList.clear();
 		Work2DetailsListActivityController.getInstance().setContext(this);
-		mPullRefreshScrollView.setMode(Mode.PULL_UP_TO_REFRESH);
+		mPullRefreshScrollView.setMode(Mode.PULL_FROM_END);
 		mPullRefreshScrollView.setOnRefreshListener(this);
-		reply_layout.setVisibility(0);
-		adapter = new Work2DetailListAdapter(this, onclickListener, mHandler);
+		reply_layout.setVisibility(View.VISIBLE);
+		adapter = new Work2DetailListAdapter(this, onclickListener);
 		adapter.setData(workList);
 		adapter.setWorkType(30 + type);
 		listView.setAdapter(adapter);
@@ -165,10 +164,6 @@ public class Work2DetailsListItemActivity extends BaseActivity implements
 		}
 	};
 
-	public void hideKeyboard(View view) {
-		InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
-		inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
-	}
 
 	public void onClick(View v) {
 		if (v.getId() == R.id.article_btn_send) {
@@ -270,21 +265,24 @@ public class Work2DetailsListItemActivity extends BaseActivity implements
 		case Constant.msgcenter_work2_FirstWorkDetails:// 获取我发出的信息详情
 			mPullRefreshScrollView.onRefreshComplete();
 			GetWorkMsgDetails getWorkDetails = (GetWorkMsgDetails) list.get(1);
+			List<FeeBack> feeBackList = getWorkDetails.getFeebackList();
+			haveMore=feeBackList.size()>=20;
 			if (pageNum == 1) {
-				if (getWorkDetails.getFeebackList().size() < 20) {
-					haveMore = false;
-				} else {
-					haveMore = true;
-				}
+//				haveMore=getWorkDetails.getFeebackList().size()>=20;
+//				if (getWorkDetails.getFeebackList().size() < 20) {
+//					haveMore = false;
+//				} else {
+//					haveMore = true;
+//				}
 				workList.clear();
 				workList.add(getWorkDetails);
 			} else {
-				List<FeeBack> feeBackList = getWorkDetails.getFeebackList();
-				if (feeBackList.size() < 20) {
-					haveMore = false;
-				} else {
-					haveMore = true;
-				}
+
+//				if (feeBackList.size() < 20) {
+//					haveMore = false;
+//				} else {
+//					haveMore = true;
+//				}
 				GetWorkMsgDetails firstWork = (GetWorkMsgDetails) workList
 						.get(workList.size() - 1);
 				firstWork.getFeebackList().addAll(feeBackList);
@@ -298,7 +296,7 @@ public class Work2DetailsListItemActivity extends BaseActivity implements
 
 	/**
 	 * 确认下载附件提示框
-	 * 
+	 *
 	 * @param att
 	 *            附件
 	 */

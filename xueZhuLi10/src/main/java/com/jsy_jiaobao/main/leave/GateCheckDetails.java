@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,20 +7,20 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
-import com.jsy.xuezhuli.utils.LeaveUtils;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.leave.GateQueryLeaveModel;
 import com.jsy_jiaobao.po.leave.LeaveConstant;
-import com.jsy_jiaobao.po.leave.LeaveDetail;
-import com.jsy_jiaobao.po.leave.LeaveTime;
 import com.umeng.analytics.MobclickAgent;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
 
 /**
  * 功能说明：请假系统，门卫签字
@@ -156,8 +152,8 @@ public class GateCheckDetails extends BaseActivity implements OnClickListener {
 	/**
 	 * 替换日期格式
 	 * 
-	 * @param date
-	 * @return
+	 * @param date 日期
+	 * @return 替换
 	 */
 	private static String replaceDate(String date) {
 		String reDate = date;

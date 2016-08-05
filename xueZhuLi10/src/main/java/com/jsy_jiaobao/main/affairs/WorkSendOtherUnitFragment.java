@@ -53,9 +53,7 @@ public class WorkSendOtherUnitFragment extends Fragment {
 	final static int TYPE_MY = 0;//本单位
 	final static int TYPE_PARENT = 1;//上级单位
 	final static int TYPE_SUB = 2;//下级单位
-	final static int TYPE_CLASS = 3;
 	private final int type_unit = 1;
-	//private final int type_class = 2;
 	private int start = 0;
 	private int end = 0;
 	private Uri photoUri;
@@ -68,8 +66,8 @@ public class WorkSendOtherUnitFragment extends Fragment {
 	private AndroidTreeView tView;
 
 	public static WorkSendOtherUnitFragment newInstance() {
-		WorkSendOtherUnitFragment fragment = new WorkSendOtherUnitFragment();
-		return fragment;
+		return 	new WorkSendOtherUnitFragment();
+
 	}
 
 	@Override
@@ -182,28 +180,14 @@ public class WorkSendOtherUnitFragment extends Fragment {
 			root.addChildren(computerRoot);
 		}
 
-		// if (WorkSendToSbActivity2.UnitClass != null&&
-		// WorkSendToSbActivity2.UnitClass.size()>0) {
-		// TreeNode computerRoot = new TreeNode(new
-		// TreeItemRootHolder.TreeItemRoot("所在班级",-1)).setViewHolder(new
-		// TreeItemRootHolder(mActivity));
-		// for (int i = 0; i < WorkSendToSbActivity2.UnitClass.size(); i++) {
-		// TreeNode myUnit = new TreeNode(new
-		// TreeItemGroupHolder.TreeItemGroup(WorkSendToSbActivity2.UnitClass.get(i),3)).setViewHolder(new
-		// TreeItemGroupHolder(mActivity,mHandler));
-		// computerRoot.addChild(myUnit);
-		// WorkSendFragmentController.getInstance().GetUnitClassRevicer(WorkSendToSbActivity2.UnitClass.get(i).getTabID(),WorkSendToSbActivity2.UnitClass.get(i).getFlag(),type_class,myUnit);
-		// start++;
-		// }
-		// root.addChildren(computerRoot);
-		// }
+
 		if (root.getChildren().size() > 0) {
 			tView = new AndroidTreeView(mActivity, root);
 			tView.setDefaultAnimation(false);
 			// tView.setDefaultNodeClickListener(nodeClickListener);
 			layout_tree.addView(tView.getView());
 			tView.setSelectionModeEnabled(true);
-			layout_tree.setVisibility(8);
+			layout_tree.setVisibility(View.GONE);
 		}
 		if (savedInstanceState != null) {
 			String state = savedInstanceState.getString("tState");
@@ -228,7 +212,7 @@ public class WorkSendOtherUnitFragment extends Fragment {
 				try {
 					tView.collapseAll();
 					tView.expandLevel(1);
-					layout_tree.setVisibility(0);
+					layout_tree.setVisibility(View.VISIBLE);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -354,7 +338,7 @@ public class WorkSendOtherUnitFragment extends Fragment {
 	/**
 	 * 提示框
 	 * 
-	 * @param count
+	 * @param count c
 	 */
 	protected void dialog_send(int count) {
 		AlertDialog.Builder builder = new Builder(getActivity());
@@ -552,7 +536,7 @@ public class WorkSendOtherUnitFragment extends Fragment {
 				tView.setDefaultNodeClickListener(nodeClickListener);
 				layout_tree.addView(tView.getView());
 				tView.setSelectionModeEnabled(true);
-				layout_tree.setVisibility(8);
+				layout_tree.setVisibility(View.GONE);
 			}
 			break;
 		case Constant.msgcenter_work_CreateCommMsg:
@@ -583,7 +567,7 @@ public class WorkSendOtherUnitFragment extends Fragment {
 																				// mCache.getAsObject("unit_group_selit_"+myUnit.getTabID());
 
 					Collections.sort(selit, comparator);
-					if (selit != null && selit.size() > 0) {
+					if ( selit.size() > 0) {
 						for (int i = 0; i < selit.size(); i++) {
 							GroupUserList group = selit.get(i);
 							TreeNode groupNode = new TreeNode(

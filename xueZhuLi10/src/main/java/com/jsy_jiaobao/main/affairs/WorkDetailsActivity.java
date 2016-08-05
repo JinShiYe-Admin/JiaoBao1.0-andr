@@ -1,13 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
@@ -52,7 +44,6 @@ import com.jsy_jiaobao.po.personal.CommMsgTrunToInfo;
 import com.jsy_jiaobao.po.personal.FeeBack;
 import com.jsy_jiaobao.po.personal.GetAttList;
 import com.jsy_jiaobao.po.personal.GetWorkMsgDetails;
-import com.jsy_jiaobao.po.personal.NoticeGetUnitInfo;
 import com.jsy_jiaobao.po.sys.GetUserClass;
 import com.jsy_jiaobao.po.sys.UserClass;
 import com.lidroid.xutils.BitmapUtils;
@@ -63,6 +54,14 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *                   _ooOoo_
@@ -90,19 +89,18 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 
 	private CusListView listView;
 	private CusGridView gridView;
-	private LinearLayout layout_details;
+
 	private LinearLayout layout_attlist;
-	private ImageView img_author;
+
 	private TextView tv_author;
 	private TextView tv_content;
 	private TextView tv_time;
-	private TextView tv_receiver;//接收人列表
+
 	private TextView tv_relay;//转发按钮
-	private Button btn_send;//回复
+
 	private IEditText edt_replycontent;//回复
 	private WorkDetailsListAdapter listAdapter;
 	private GridViewAdapter gridAdapter;
-	private BitmapUtils bitmapUtils;
 	private Context mContext;
 	private SharedPreferences sp_sys;
 	private XListViewFooter mFooterView;
@@ -112,19 +110,11 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 	private String MsgTabIDStr;
 	private int currPage = 1;
 	private boolean havemore = true;
-	private List<FeeBack> FeebackList = new ArrayList<FeeBack>();
-	
+	private List<FeeBack> FeebackList = new ArrayList<>();
 	private String str_reylycontent;
 	private String MsgRecDate;
 	private String str_msgcontent;
-	
 	private List<Attlist> attList;//附件列表
-	
-//	private CommMsgTrunToInfo commMsgTrunToInfo;//转发列表
-	private String UnitName = "";
-	private int RoleIdentity = 0;
-	private int UnitID;
-	
 	private boolean unitAdminTrun = false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -164,19 +154,24 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 		setContentLayout(R.layout.ui_msgdetails);
 		listView=(CusListView) findViewById(R.id.msgdetails_listview);
 		gridView=(CusGridView) findViewById(R.id.msgdetails_gridview);
+		LinearLayout layout_details;
 		layout_details=(LinearLayout) findViewById(R.id.msgdetails_layout_details);
 		layout_attlist=(LinearLayout) findViewById(R.id.msgdetails_layout_attlist);
+		ImageView img_author;
 		img_author=(ImageView) findViewById(R.id.msgdetails_img_photo);
 		tv_author=(TextView) findViewById(R.id.msgdetails_tv_author);
 		tv_content=(TextView) findViewById(R.id.msgdetails_tv_content);
 		tv_time=(TextView) findViewById(R.id.msgdetails_tv_time);
+		TextView tv_receiver;//接收人列表
 		tv_receiver=(TextView) findViewById(R.id.msgdetails_tv_receiver);
 		tv_relay=(TextView) findViewById(R.id.msgdetails_tv_relay);
+		Button btn_send;//回复
 		btn_send=(Button) findViewById(R.id.msgdetails_btn_send);
 		edt_replycontent=(IEditText) findViewById(R.id.msgdetails_edt_mywords);
 		ViewUtils.inject(this);
 		mContext = this;
 		LoginActivityController.getInstance().setContext(this);
+		BitmapUtils bitmapUtils;
 		bitmapUtils = new BitmapUtils(mContext);
 		bitmapUtils.configDefaultLoadFailedImage(R.drawable.photo);
 		bitmapUtils.configDefaultLoadingImage(R.drawable.photo);
@@ -190,7 +185,7 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 		
 		setActionBarTitle(R.string.message_details);
 		
-		tv_relay.setVisibility(8);
+		tv_relay.setVisibility(View.GONE);
 		mFooterView = new XListViewFooter(mContext);
 		listView.addFooterView(mFooterView);
 		listAdapter = new WorkDetailsListAdapter(this);
@@ -228,12 +223,12 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 	public void onClick(View v){
 		switch (v.getId()) {
 		case R.id.msgdetails_tv_receiver:
-			if (gridView.getVisibility() == 0) {
-				gridView.setVisibility(8);
-				listView.setVisibility(0);
+			if (gridView.getVisibility() == View.VISIBLE) {
+				gridView.setVisibility(View.GONE);
+				listView.setVisibility(View.VISIBLE);
 			}else{
-				gridView.setVisibility(0);
-				listView.setVisibility(8);
+				gridView.setVisibility(View.VISIBLE);
+				listView.setVisibility(View.GONE);
 			}
 			break;
 		case R.id.msgdetails_tv_relay:
@@ -265,36 +260,8 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 			break;
 		}
 	}
-	private void MarkRead(){
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("uid",TabIDStr);//
-		HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST, MarkRead,params, new RequestCallBack<String>() {
 
-			@Override
-			public void onFailure(HttpException arg0, String arg1) {
-				if (!isFinishing()) {
-				}
-			}
-			@Override
-			public void onSuccess(ResponseInfo<String> arg0) {
-				if (!isFinishing()) {
-					try {
-						JSONObject jsonObj = new JSONObject(arg0.result);
-						String ResultCode = jsonObj.getString("ResultCode");
-						
-						if ("0".equals(ResultCode)) {
-							System.out.println(jsonObj);
-						}else if("8".equals(ResultCode)){
-							LoginActivityController.getInstance().helloService(mContext);
-						} else {
-						}
-					} catch (Exception e) {
-					} 
-				}
-			}
-		});
-	}
-	ArrayList<CommMsgTrunToInfo> trunToInfoList = new ArrayList<CommMsgTrunToInfo>();
+	ArrayList<CommMsgTrunToInfo> trunToInfoList = new ArrayList<>();
 	@Override
 	public void initDeatilsData() {
 		DialogUtil.getInstance().getDialog(mContext, mContext.getResources().getString(R.string.public_loading));
@@ -350,7 +317,7 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 										if (commMsgTrunToInfo.getUnitType() == 1) {
 											//是否管理员，0不是，1是单位管理员2班主任，3单位管理员同时也是班主任
 											if (sp.getInt("isAdmin", 0) == 1||sp.getInt("isAdmin", 0) == 3) {
-												tv_relay.setVisibility(0);
+												tv_relay.setVisibility(View.VISIBLE);
 												unitAdminTrun = true;
 												if ("tomem".equals(commMsgTrunToInfo.getWho())) {
 													str = str+"转"+sp.getString("UnitName", "")+"人员;";
@@ -363,7 +330,7 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 										}else if (commMsgTrunToInfo.getUnitType() == 2) {
 											unitAdminTrun = false;
 											if (sp.getInt("isAdmin", 0) == 2||sp.getInt("isAdmin", 0) == 3) {
-												tv_relay.setVisibility(0);
+												tv_relay.setVisibility(View.VISIBLE);
 												if ("tomem".equals(commMsgTrunToInfo.getWho())) {
 													str = str+"转"+sp.getString("UnitName", "")+"人员;";
 												}else if ("togen".equals(commMsgTrunToInfo.getWho())) {
@@ -402,11 +369,7 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 							
 							List<FeeBack> list1 = getWorkDetails.getFeebackList();
 							FeebackList.addAll(list1);
-							if (list1.size()<20) {
-								havemore = false;
-							}else{
-								havemore = true;
-							}
+							havemore=list1.size()>=20;
 							if (currPage == 1) {
 								String str_attlist = "{\"AttList\":"+getWorkDetails.getModel().getAttList()+"}";
 								GetAttList getAttList = GsonUtil.GsonToObject(str_attlist, GetAttList.class);
@@ -479,23 +442,26 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 		});
 		builder.create().show();
 	}
+
+
+	ProgressDialog m_pDialog ;
+
 	/**
 	 * 下载附件
-	 * @param att
-	 */
-	ProgressDialog m_pDialog ;
+	 * @param att att
+     */
 	private void downloadAtt(final Attlist att) {
-		
+
 		final String filePath = JSYApplication.getInstance().FILE_PATH+att.getOrgFilename();
 		HttpHandler handler = HttpUtil.getInstanceNew().download(att.getDlurl(),filePath,true, new RequestCallBack<File>() {
-			
-			
+
+
 			@Override
 			public void onSuccess(ResponseInfo<File> arg0) {
 				m_pDialog.dismiss();
 				BaseUtils.shortToast(getApplicationContext(), R.string.save_success);
 				File currentPath = new File(filePath);
-				if(currentPath!=null&&currentPath.isFile()){
+				if(currentPath.length()>0&&currentPath.isFile()){
                     String fileName = currentPath.toString();
                     Intent intent;
                     if(checkEndsWithInStringArray(fileName, getResources().
@@ -546,12 +512,12 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
                 	BaseUtils.shortToast(getApplicationContext(), R.string.file_error);
                 }
 			}
-			
+
 			@Override
 			public void onFailure(HttpException arg0, String arg1) {
 				m_pDialog.dismiss();
 				BaseUtils.shortToast(getApplicationContext(), R.string.load_failed);
-				
+
 			}
 
 			@Override
@@ -574,9 +540,9 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 				m_pDialog.setMax(100);
 				m_pDialog.setIndeterminate(false);
 				m_pDialog.setCancelable(false);
-				m_pDialog.show();	
+				m_pDialog.show();
 			}
-			
+
 		});
 	}
 	private boolean checkEndsWithInStringArray(String checkItsEnd,String[] fileEndings) {
@@ -614,7 +580,7 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 						String ResultCode = jsonObj.getString("ResultCode");
 						
 						if ("0".equals(ResultCode)) {
-							List<FeeBack> turn = new ArrayList<FeeBack>();
+							List<FeeBack> turn = new ArrayList<>();
 							FeeBack feeback =  new FeeBack();
 							feeback.setUserName(getSharedPreferences(Constant.SP_TB_USER, MODE_PRIVATE).getString("TrueName", ""));
 							feeback.setFeeBackMsg(str_reylycontent);
@@ -658,7 +624,7 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 		String name = "";
 		switch (tag) {
 		case Constant.msgcenter_notice_getMySubUnitInfo://下级单位
-			NoticeGetUnitInfo getMySubUnitInfo = (NoticeGetUnitInfo) list.get(1);
+//			NoticeGetUnitInfo getMySubUnitInfo = (NoticeGetUnitInfo) list.get(1);
 //			for (int i = 0; i < trunToInfoList.size(); i++) {
 //				CommMsgTrunToInfo commMsgTrunToInfo = trunToInfoList.get(i);
 //				for (int j = 0; j < getMySubUnitInfo.getList().size(); j++) {
@@ -695,8 +661,8 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 					UserClass uc = getUnitClass.getList().get(j);
 					if (uc.getClassID() == commMsgTrunToInfo.getUnitID()) {
 							
-						tv_relay.setVisibility(0);
-						RoleIdentity = 2;
+						tv_relay.setVisibility(View.VISIBLE);
+
 						name = uc.getClassName();
 						if ("tomem".equals(commMsgTrunToInfo.getWho())) {
 							str = str+"转"+name+";";
@@ -706,8 +672,8 @@ public class WorkDetailsActivity extends BaseActivity implements PublicMethod, O
 							str = str+"转"+name+"学生;";
 						}
 					}else{
-						if (tv_relay.getVisibility() == 8) {
-							tv_relay.setVisibility(8);
+						if (tv_relay.getVisibility() == View.GONE) {
+							tv_relay.setVisibility(View.GONE);
 						}
 					}
 				}

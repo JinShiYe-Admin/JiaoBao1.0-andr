@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -15,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -43,15 +35,20 @@ import com.lidroid.xutils.http.HttpHandler;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 /**
  * 全部，未读，未回复，已回复,点击头像进入的事务详情Activity
  */
 public class Work2OthersDetailsListActivity extends BaseActivity implements
 		OnRefreshListener2<ScrollView>, OnClickListener {
 	final public static int Work2DetailsAttClick = 10;
-	private static final String TAG = "Work2OthersDetailsListActivity";
-
-	int ci = 0;
 	private int pageNum = 1;
 	/** 发送者AccID */
 	private int senderAccId;
@@ -68,22 +65,19 @@ public class Work2OthersDetailsListActivity extends BaseActivity implements
 	/** 分页标志值，此标志第1页为空，从第2页起须提供。 **/
 	private String lastId = "1";
 	private SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"yyyy-MM-dd HH:mm:ss");
-	private ArrayList<Object> workList = new ArrayList<Object>();
-	private List<HttpHandler> httpDownList = new ArrayList<HttpHandler>();
+			"yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+	private ArrayList<Object> workList = new ArrayList<>();
+	private List<HttpHandler> httpDownList = new ArrayList<>();
 
 	private Context mContext;
-	private LinearLayout reply_layout;// 回复区域布局
 	private Button btn_reply;// 回复按钮
 	private IEditText edt_keywords;// 回复编辑框
-	private CusListView listView;
 	private Work2DetailListAdapter adapter;
 	private PullToRefreshScrollView mPullRefreshScrollView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d(TAG, TAG);
 		if (savedInstanceState != null) {
 			TabIDStr = savedInstanceState.getString("TabIDStr");
 			MsgRecDate = savedInstanceState.getString("MsgRecDate");
@@ -121,9 +115,11 @@ public class Work2OthersDetailsListActivity extends BaseActivity implements
 		setContentView(R.layout.activity_work2details);
 		setActionBarTitle(UserName);
 		mContext = this;
+		LinearLayout reply_layout;// 回复区域布局
 		reply_layout = (LinearLayout) findViewById(R.id.article_layout_reply);
 		btn_reply = (Button) findViewById(R.id.article_btn_send);
 		edt_keywords = (IEditText) findViewById(R.id.article_edt_mywords);
+		CusListView listView;
 		listView = (CusListView) findViewById(R.id.listview);
 		mPullRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
 		Work2DetailsListActivityController.getInstance().setContext(this);
@@ -132,13 +128,12 @@ public class Work2OthersDetailsListActivity extends BaseActivity implements
 		mPullRefreshScrollView.setPullLabel(
 				getResources().getString(
 						R.string.pullToRefresh_header_pull_loadmore),
-				Mode.PULL_DOWN_TO_REFRESH);
+				Mode.PULL_FROM_START);
 		btn_reply.setOnClickListener(this);
 		reply_layout.setVisibility(View.VISIBLE);
-		adapter = new Work2DetailListAdapter(this, onclickListener, mHandler);
+		adapter = new Work2DetailListAdapter(this, onclickListener);
 		adapter.setData(workList);
 		adapter.setWorkType(2);
-		adapter.setAuthor(UserName);
 		listView.setAdapter(adapter);
 		ShowDetail();
 	}
@@ -241,8 +236,6 @@ public class Work2OthersDetailsListActivity extends BaseActivity implements
 		MobclickAgent.onPause(this);
 	}
 
-	int reply_position = -1;
-
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
 		int tag = (Integer) list.get(0);
@@ -271,21 +264,12 @@ public class Work2OthersDetailsListActivity extends BaseActivity implements
 		case Constant.msgcenter_work2_FirstWorkDetails:// 获取我发出的信息详情
 			mPullRefreshScrollView.onRefreshComplete();
 			GetWorkMsgDetails getWorkDetails = (GetWorkMsgDetails) list.get(1);
+			List<FeeBack> feeBackList = getWorkDetails.getFeebackList();
+			haveMore_fee=feeBackList.size()>=20;
 			if (pageNum_feeback == 1) {
-				if (getWorkDetails.getFeebackList().size() < 20) {
-					haveMore_fee = false;
-				} else {
-					haveMore_fee = true;
-				}
 				workList.clear();
 				workList.add(getWorkDetails);
 			} else {
-				List<FeeBack> feeBackList = getWorkDetails.getFeebackList();
-				if (feeBackList.size() < 20) {
-					haveMore_fee = false;
-				} else {
-					haveMore_fee = true;
-				}
 				GetWorkMsgDetails firstWork = (GetWorkMsgDetails) workList
 						.get(workList.size() - 1);
 				firstWork.getFeebackList().addAll(feeBackList);
@@ -319,7 +303,7 @@ public class Work2OthersDetailsListActivity extends BaseActivity implements
 	/**
 	 * 确认下载附件提示框
 	 * 
-	 * @param att
+	 * @param att att
 	 */
 	protected void dialog_down(final Attlist att) {
 		AlertDialog.Builder builder = new Builder(mContext);

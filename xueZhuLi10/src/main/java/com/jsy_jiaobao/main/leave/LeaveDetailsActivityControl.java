@@ -73,7 +73,7 @@ public class LeaveDetailsActivityControl implements ConstantUrl {
 	/**
 	 * 删除假条
 	 * 
-	 * @param post 假条记录Id
+	 * @param tabId 假条记录Id
 	 */
 	public void DeleteLeaveModel(int tabId) {
 		RequestParams params = new RequestParams();
@@ -137,7 +137,7 @@ public class LeaveDetailsActivityControl implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case LeaveConstant.leave_GetLeaveModel:

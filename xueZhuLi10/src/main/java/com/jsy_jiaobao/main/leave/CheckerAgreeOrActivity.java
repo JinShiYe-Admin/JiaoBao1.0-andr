@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -15,11 +11,11 @@ import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+
 import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
@@ -29,10 +25,14 @@ import com.jsy_jiaobao.po.leave.CheckLeaveModelPost;
 import com.jsy_jiaobao.po.leave.LeaveConstant;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+
 /**
  * 功能说明：请假系统审核功能
  * 
- * @author
+ * @author MSL
  * 
  */
 public class CheckerAgreeOrActivity extends BaseActivity implements
@@ -47,9 +47,8 @@ public class CheckerAgreeOrActivity extends BaseActivity implements
 
 	private Context mContext;
 	private EditText edt_text;// 批注编辑框
-	private Button btn_submit;// 提交按钮
-	private RadioGroup rg_agreeOr;// 单选
-	private RadioButton rb_agree;// 同意按钮
+
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +64,12 @@ public class CheckerAgreeOrActivity extends BaseActivity implements
 		setContentLayout(R.layout.leave_activity_checkleave);
 		CheckerActivityControler.getInstance().setContext(this);
 		setActionBarTitle(R.string.leave_approval);
-		rg_agreeOr = (RadioGroup) findViewById(R.id.rg_agreeOr);
-		btn_submit = (Button) findViewById(R.id.btn_submit);
-		rb_agree = (RadioButton) findViewById(R.id.rb_agree);
+		RadioGroup rg_agreeOr = (RadioGroup) findViewById(R.id.rg_agreeOr);
+		RadioButton rb_agree = (RadioButton) findViewById(R.id.rb_agree);
 		edt_text = (EditText) findViewById(R.id.edt_reason);
 		edt_text.addTextChangedListener(this);
 		rg_agreeOr.setOnCheckedChangeListener(this);
-		btn_submit.setOnClickListener(this);
+		findViewById(R.id.btn_submit).setOnClickListener(this);
 		rb_agree.setChecked(true);
 		post = new CheckLeaveModelPost(mContext);
 	}
@@ -140,7 +138,7 @@ public class CheckerAgreeOrActivity extends BaseActivity implements
 						public void onClick(DialogInterface dialog, int which) {
 							post.setTabid(leaveId);
 							post.setLevel(checkRole);
-							if (edt_text.getText().toString() != null) {
+							if (edt_text.getText().toString().length()>0) {
 								post.setNote(edt_text.getText().toString());
 							}
 							post.setCheckFlag(checkFlag);

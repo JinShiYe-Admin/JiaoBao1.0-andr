@@ -1,10 +1,7 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
 import android.app.Activity;
-import android.util.Log;
+
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.ConstantUrl;
 import com.jsy.xuezhuli.utils.Des;
@@ -25,12 +22,15 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class CheckerScreenConditionActivityControler implements ConstantUrl {
-	private static final String TAG = "CheckerScreenConditionActivityControler";
 	private static CheckerScreenConditionActivityControler instance;
 	private Activity mContext;
 
-	public static synchronized final CheckerScreenConditionActivityControler getInstance() {
+	public static synchronized  CheckerScreenConditionActivityControler getInstance() {
 		if (instance == null) {
 			instance = new CheckerScreenConditionActivityControler();
 		}
@@ -130,7 +130,7 @@ public class CheckerScreenConditionActivityControler implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object tag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(tag);
 
 		switch ((Integer) tag) {
@@ -138,7 +138,6 @@ public class CheckerScreenConditionActivityControler implements ConstantUrl {
 			result = "{\"list\":" + result + "}";
 			MyAdminClasses myAdminClasses = GsonUtil.GsonToObject(result,
 					MyAdminClasses.class);
-			Log.d(TAG + "GetMyAdminClass", myAdminClasses.toString());
 			post.add(myAdminClasses);
 			break;
 		case LeaveConstant.leave_getunitclass:

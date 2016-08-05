@@ -1,14 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.text.Collator;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Locale;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -37,10 +28,18 @@ import com.jsy_jiaobao.po.sys.GetStuInfo;
 import com.jsy_jiaobao.po.sys.StuInfo;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.Collator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Locale;
+
 /**
  * 功能说明：班主任请假时显示本班学生名单。通过教宝号获取班级Id，再通过班级Id获取学生的信息
  * 
- * @author 
+ * @author MSL
  * 
  */
 public class AllClassNamesActivity extends BaseActivity implements
@@ -48,10 +47,7 @@ public class AllClassNamesActivity extends BaseActivity implements
 	public static final String NAME = "com.jsy_jiaobao.main.leave.AllClassNamesActivity.name";
 	private final static String TAG = "AllClassNamesActivity";
 	private Context mContext;
-	private String name;// 学生姓名
-	private StuInfo choseStu;// 选择的学生的信息
 	private AdminClassModel choseClass;// 选择的班级
-	private MyAdminClasses myAdminClasses;// 获取的班级信息
 	private ArrayList<String> classNameList;// 班级名称
 	private ArrayList<String> nameList;// 学生名称
 	private ArrayList<StuInfo> stuInfoList;// 学生信息
@@ -59,7 +55,7 @@ public class AllClassNamesActivity extends BaseActivity implements
 
 	private LinearLayout lLayout_chooseClass;// 选择班级布局
 	private CusListView clv_stuNames;// 学生姓名列表
-	private Spinner spn_class;// 选择班级
+
 	private SpinnerAdapter spnAdapter_className;// 班级名称
 	private ArrayAdapter<String> arrayAdapter_stuName;// 学生名称
 
@@ -76,10 +72,11 @@ public class AllClassNamesActivity extends BaseActivity implements
 		AllClassNamesActivityController.getInstance().setContext(this);
 		lLayout_chooseClass = (LinearLayout) findViewById(R.id.leave_llayout_choose_class);
 		clv_stuNames = (CusListView) findViewById(R.id.leave_clv_stunames);
-		spn_class = (Spinner) findViewById(R.id.leave_spn_class);
-		classNameList = new ArrayList<String>();
-		nameList = new ArrayList<String>();
-		classNameList = new ArrayList<String>();
+		// 选择班级
+		Spinner spn_class = (Spinner) findViewById(R.id.leave_spn_class);
+		classNameList = new ArrayList<>();
+		nameList = new ArrayList<>();
+		classNameList = new ArrayList<>();
 		spnAdapter_className = new SpinnerAdapter(mContext, classNameList);
 		spn_class.setAdapter(spnAdapter_className);
 		spn_class.setOnItemSelectedListener(this);
@@ -120,7 +117,7 @@ public class AllClassNamesActivity extends BaseActivity implements
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position,
 			long id) {
-		choseClass = (AdminClassModel) classModelList.get(position);
+		choseClass =  classModelList.get(position);
 		if (choseClass != null) {
 			AllClassNamesActivityController.getInstance().getClassStdInfo(
 					choseClass.getTabID());// 获取学生信息
@@ -137,8 +134,8 @@ public class AllClassNamesActivity extends BaseActivity implements
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		name = (String) nameList.get(position);
-		choseStu = (StuInfo) stuInfoList.get(position);
+		String name =  nameList.get(position);
+		StuInfo choseStu = stuInfoList.get(position);
 		Log.d(TAG, name);
 		Intent data = new Intent();
 		data.putExtra(NAME, choseStu);
@@ -175,14 +172,15 @@ public class AllClassNamesActivity extends BaseActivity implements
 		int tag = (Integer) list.get(0);
 		switch (tag) {
 		case LeaveConstant.leave_GetMyAdminClass:// 获取班级信息
-			myAdminClasses = (MyAdminClasses) list.get(1);
+			// 获取的班级信息
+			MyAdminClasses myAdminClasses = (MyAdminClasses) list.get(1);
 			classModelList = myAdminClasses.getList();
 			getClassNameList();//处理获取的班级名单
 			break;
 		case Constant.msgcenter_chat_getClassStdInfo:// 获取学生信息
 			GetStuInfo getStuInfo = (GetStuInfo) list.get(1);
 			nameList.clear();
-			stuInfoList = new ArrayList<StuInfo>();
+			stuInfoList = new ArrayList<>();
 			ArrayList<StuInfo> mstuInfoList = getStuInfo.getList();
 			if (mstuInfoList != null && mstuInfoList.size() != 0) {//获取到学生信息
 				for (int i = 0; i < mstuInfoList.size(); i++) {
@@ -201,7 +199,7 @@ public class AllClassNamesActivity extends BaseActivity implements
 						}
 					}
 				}
-				arrayAdapter_stuName = new ArrayAdapter<String>(mContext,
+				arrayAdapter_stuName = new ArrayAdapter<>(mContext,
 						android.R.layout.simple_list_item_1, names);
 				clv_stuNames.setAdapter(arrayAdapter_stuName);
 				clv_stuNames.setOnItemClickListener(this);

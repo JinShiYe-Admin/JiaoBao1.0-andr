@@ -31,15 +31,15 @@ import android.util.Log;
 /**
  * 功能说明：班主任请假时获取本班学生名单
  * 
- * @author
+ * @author MSL
  * 
  */
 public class AllClassNamesActivityController implements ConstantUrl {
-	private static final String TAG = "AllClassNamesActivityController";
+	private static final String TAG = "AllClssNAController";
 	private Context mContext;
 	private static AllClassNamesActivityController instance;
 
-	public static synchronized final AllClassNamesActivityController getInstance() {
+	public static synchronized  AllClassNamesActivityController getInstance() {
 		if (instance == null) {
 			instance = new AllClassNamesActivityController();
 		}
@@ -137,9 +137,9 @@ public class AllClassNamesActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
-		MyAdminClasses myAdminClasses = null;
+		MyAdminClasses myAdminClasses ;
 		switch ((Integer) userTag) {
 		case LeaveConstant.leave_GetMyAdminClass:
 			result = "{\"list\":" + result + "}";

@@ -18,14 +18,14 @@ import com.viewpagerindicator.view.TabView;
 /**
  * 功能说明：班主任身份使用请假系统
  * 
- * @author 
+ * @author  MSL
  * 
  */
 public class HeadTeacherActivity extends BaseActivity {
 	private static String[] TITLE;
-	public static String MessageCenterTitle;
-	private TabPageIndicator2 indicator;
-	private TabView[] titles = new TabView[2];
+
+
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,10 @@ public class HeadTeacherActivity extends BaseActivity {
 		pager.setAdapter(adapter);
 
 		// 实例化TabPageIndicator然后设置ViewPager与之关联
+		TabPageIndicator2 indicator;
 		indicator = (TabPageIndicator2) findViewById(R.id.base_tab_indicator);
 		indicator.setViewPager(pager);
-
+		TabView[] titles = new TabView[2];
 		titles[0] = (TabView) indicator.findViewWithTag(0);
 		titles[1] = (TabView) indicator.findViewWithTag(1);
 	}

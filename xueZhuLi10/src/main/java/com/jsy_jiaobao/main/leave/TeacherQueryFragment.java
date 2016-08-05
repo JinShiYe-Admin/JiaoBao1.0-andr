@@ -1,14 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
 import android.content.Intent;
@@ -39,10 +30,19 @@ import com.jsy_jiaobao.po.leave.MyLeaves;
 import com.jsy_jiaobao.po.leave.MyLeavesPost;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * 功能说明：老师请假记录查询
  * 
- * @author
+ * @author MSL
  * 
  */
 public class TeacherQueryFragment extends Fragment implements OnClickListener,
@@ -61,8 +61,8 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 	private ArrayList<MyLeaveModel> myLeaveList;
 
 	private TextView tv_time;
-	private TextView tv_symbol;
-	private ListView lv_leave;
+
+
 	private PullToRefreshScrollView refreshView;
 	private UnitClassLeavesAdapter<?> unitClassLeavesAdapter;
 
@@ -75,7 +75,7 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		view = inflater.inflate(R.layout.leave_fragment_teacher_select, null);
+		view = inflater.inflate(R.layout.leave_fragment_teacher_select, container,false);
 		initViews();
 		return view;
 	}
@@ -83,7 +83,9 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 	private void initViews() {
 		LeaveFragmentControl.getInstance().setContext(this);
 		tv_time = (TextView) view.findViewById(R.id.leave_tv_time);
+		TextView tv_symbol;
 		tv_symbol = (TextView) view.findViewById(R.id.leave_tv_symbol);
+		ListView lv_leave;
 		lv_leave = (ListView) view.findViewById(R.id.leave_cuslistview);
 		refreshView = (PullToRefreshScrollView) view
 				.findViewById(R.id.leave_pulltorefreshscrollview);
@@ -106,7 +108,7 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 		timeChose = time + "-01";// 特殊要求增加“-01”，我也不知道为什么
 		tv_time.setText(time);
 		mLeavesPost.setsDateTime(timeChose);
-		myLeaveList = new ArrayList<MyLeaveModel>();
+		myLeaveList = new ArrayList<>();
 		getDefaultPost();
 		// LeaveFragmentControl.getInstance().GetMyLeaves(mLeavesPost);
 	}
@@ -181,7 +183,7 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 	}
 
 	private long getDayTime(String date) {
-		Date dt2 = null;
+		Date dt2;
 		try {
 			dt2 = sdf.parse(date);
 		} catch (ParseException e) {

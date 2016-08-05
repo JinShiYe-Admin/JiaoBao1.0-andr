@@ -1,10 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
 
@@ -29,12 +24,17 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class WorkFragment2Controller implements ConstantUrl {
 	private static WorkFragment2Controller instance;
 	private Fragment mContext;
 	private Context mAContext;
 
-	public static synchronized final WorkFragment2Controller getInstance() {
+	public static synchronized  WorkFragment2Controller getInstance() {
 		if (instance == null) {
 			instance = new WorkFragment2Controller();
 		}
@@ -47,49 +47,49 @@ public class WorkFragment2Controller implements ConstantUrl {
 		return this;
 	}
 
-	/**
-	 * 获取我发送的消息列表，列表中包括回复数量，未读回复数量经。比原接口简化了返回的字段且不加密
-	 * 
-	 * <pre>
-	 * 参数名称		是否必须	类型	描述
-	 * numPerPage	否	int	取回的记录数量，默认20
-	 * pageNum		否	int	第几页，默认为1
-	 * SendName		否	string	按发送内容检索，默认为空，不需要该检索条件（sendname这里不表示发送者）
-	 * sDate		否	DateTime	开始日间，默认为二个月前（现在时间减去约60天）（以日期字符串赋值）
-	 * eDate		否	DateTime	结束日间，默认为现在的时间 （以日期字符串赋值）
-	 */
-	public void GetMySendMsgList() {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("numPerPage", "1");//
-		params.addBodyParameter("pageNum", "1");//
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_work2_GetMySendMsgList);
-		HttpUtil.InstanceSend(GetMySendMsgList, params, callback);
-	}
+//	/**
+//	 * 获取我发送的消息列表，列表中包括回复数量，未读回复数量经。比原接口简化了返回的字段且不加密
+//	 *
+//	 * <pre>
+//	 * 参数名称		是否必须	类型	描述
+//	 * numPerPage	否	int	取回的记录数量，默认20
+//	 * pageNum		否	int	第几页，默认为1
+//	 * SendName		否	string	按发送内容检索，默认为空，不需要该检索条件（sendname这里不表示发送者）
+//	 * sDate		否	DateTime	开始日间，默认为二个月前（现在时间减去约60天）（以日期字符串赋值）
+//	 * eDate		否	DateTime	结束日间，默认为现在的时间 （以日期字符串赋值）
+//	 */
+//	public void GetMySendMsgList() {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("numPerPage", "1");//
+//		params.addBodyParameter("pageNum", "1");//
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_work2_GetMySendMsgList);
+//		HttpUtil.InstanceSend(GetMySendMsgList, params, callback);
+//	}
 
-	/**
-	 * 取发给我消息的用户列表。包括最新一条消息内容，以及该用户发给我的未读消息数量，未回复数量
-	 * 
-	 * @param params
-	 *            request参数
-	 * 
-	 *            <pre>
-	 * 参数名称		是否必须	类型	描述
-	 * numPerPage	否	int	取回的记录数量，默认20
-	 * pageNum		否	int	第几页，默认为1
-	 * lastId		否	string	分页标志值，此标志第1页为空，从第2页起须提供。如果取第1页数据后还有后续页记录，则接口结果值中会返回该标志值 。如果返回的值 为空，则表示没有记录（已取加全部记录）。如果有返回值，则在取下一页时向接口提供该标志值。
-	 * SendName	 	否	string	按发送者姓名检索，默认为空，不需要该检索条件
-	 * sDate		否	DateTime	开始日间，默认为二个月前（现在时间减去约60天）（以日期字符串赋值）
-	 * eDate		否	DateTime	结束日间，默认为现在的时间 （以日期字符串赋值）
-	 * readflag		否	int	按阅读标志检索：不提供该参数：查全部，1：未读，2：已读未回复，3：已回复
-	 * 
-	 */
-	public void SendToMeUserList(RequestParams params) {
-		params.addBodyParameter("numPerPage", "20");//
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_work2_SendToMeUserList);
-		HttpUtil.InstanceSend(SendToMeUserList, params, callback);
-	}
+//	/**
+//	 * 取发给我消息的用户列表。包括最新一条消息内容，以及该用户发给我的未读消息数量，未回复数量
+//	 *
+//	 * @param params
+//	 *            request参数
+//	 *
+//	 *            <pre>
+//	 * 参数名称		是否必须	类型	描述
+//	 * numPerPage	否	int	取回的记录数量，默认20
+//	 * pageNum		否	int	第几页，默认为1
+//	 * lastId		否	string	分页标志值，此标志第1页为空，从第2页起须提供。如果取第1页数据后还有后续页记录，则接口结果值中会返回该标志值 。如果返回的值 为空，则表示没有记录（已取加全部记录）。如果有返回值，则在取下一页时向接口提供该标志值。
+//	 * SendName	 	否	string	按发送者姓名检索，默认为空，不需要该检索条件
+//	 * sDate		否	DateTime	开始日间，默认为二个月前（现在时间减去约60天）（以日期字符串赋值）
+//	 * eDate		否	DateTime	结束日间，默认为现在的时间 （以日期字符串赋值）
+//	 * readflag		否	int	按阅读标志检索：不提供该参数：查全部，1：未读，2：已读未回复，3：已回复
+//	 *
+//	 */
+//	public void SendToMeUserList(RequestParams params) {
+//		params.addBodyParameter("numPerPage", "20");//
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_work2_SendToMeUserList);
+//		HttpUtil.InstanceSend(SendToMeUserList, params, callback);
+//	}
 
 	/**
 	 * 取发给我的交流信息
@@ -189,7 +189,7 @@ public class WorkFragment2Controller implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_work2_GetMySendMsgList:

@@ -23,7 +23,7 @@ public class WorkSendListViewAdapter extends BaseAdapter {
 	private Handler mHandler;
 	public WorkSendListViewAdapter(Context context, Handler mHandler){
 		this.context = context;
-        mChecked = new ArrayList<Boolean>();
+        mChecked = new ArrayList<>();
         this.mHandler = mHandler;
 	}
 
@@ -35,7 +35,7 @@ public class WorkSendListViewAdapter extends BaseAdapter {
 		}
 	}
 	public ArrayList<SMSTreeUnitID> getCheckedList(){
-		ArrayList<SMSTreeUnitID> unitclass = new ArrayList<SMSTreeUnitID>();
+		ArrayList<SMSTreeUnitID> unitclass = new ArrayList<>();
 		for (int i = 0; i < mChecked.size(); i++) {
 			if (mChecked.get(i)) {
 				unitclass.add(unitClass.get(i));
@@ -45,7 +45,7 @@ public class WorkSendListViewAdapter extends BaseAdapter {
 	}
 	/**
 	 * 全选或全不选
-	 * @param isChecked
+	 * @param isChecked is
 	 */
 	public void setAllSelect(boolean isChecked){
 		for (int i = 0; i < mChecked.size(); i++) {

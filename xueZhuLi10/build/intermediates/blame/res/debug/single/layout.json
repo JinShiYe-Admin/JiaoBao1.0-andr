@@ -4,6 +4,14 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\msgcenter_listview_item.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalcenter.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalcenter.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_readarticle_listview_item_title.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_title.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_reply.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\work2details_reply.xml"
     },
@@ -12,16 +20,8 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\tabpageindicatorviewpager.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\work2details_item.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_worksend_grouptitle.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\include_worksend_grouptitle.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_calendar.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_calendar.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_menu_item_layout.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_menu_item_layout.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_choseclazz.xml",
@@ -32,64 +32,76 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_siftlist.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_gridview_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\channel_gridview_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_list_item_1.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\simple_list_item_1.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_editarticle.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_editarticle.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_splash.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_splash.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gateguard_query.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gateguard_query.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_indexsiftion_listview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_indexsiftion_listview.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_leave.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_leave.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\grid_view.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\grid_view.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_editarticle.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_editarticle.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_commlist.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_commlist.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_teacher_select.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_teacher_select.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_publish.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_publish.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_checkleave.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_checkleave.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_gen.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_gen.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_worksendsb2.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_worksendsb2.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_worksendagain.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_worksendagain.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_publisharticle_listview_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_publisharticle_listview_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__simple_dropdown_hint.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__simple_dropdown_hint.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tree_workol_stu_select.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_select.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\common_datetime.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\common_datetime.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolstu_hwlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_workolstu_hwlist.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_pickeddetails.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_pickeddetails.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_siftlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_siftlist.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcwork_item_1child.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcwork_item_1child.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_answerdetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_answerdetails.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalcenter.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalcenter.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcshow_gridview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcshow_gridview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gridview_reciver_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\gridview_reciver_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\question_suggest_list_head.xml",
@@ -104,40 +116,32 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_hwtitle.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_login.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_login.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_answer_listview.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_answer_listview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_leavedetails.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_leavedetails.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_base.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_base.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_approval.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_approval.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_first.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_first.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\show_myunit_list_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\show_myunit_list_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_contacts.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_contacts.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_checkleave.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_checkleave.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolgen_levellist.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_workolgen_levellist.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcchat_crowditem.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcchat_crowditem.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolgen_levellist.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_workolgen_levellist.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_view.xml",
@@ -156,60 +160,40 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_notice_unitlist_item.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_list_webview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_list_webview.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_visitunit.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_visitunit.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_gen.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_gen.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tree_workol_stu_root.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_root.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\appcenter_gridview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\appcenter_gridview_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_train.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_train.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_show2.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_show2.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_base_menu.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\include_base_menu.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\XueZhuLi1.0\\xZLpulltorefresh_lib\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_show2.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_show2.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_publish.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_publish.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workol_spinner.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_workol_spinner.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workolstu.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_workolstu.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_work2.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_work2.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_listview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_listview.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_unit.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_unit.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_checker_screen_condition.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_checker_screen_condition.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_worksend_gen_genlist.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_worksend_gen_genlist.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_appcenter.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_appcenter.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalspace.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalspace.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artlist_item.xml",
@@ -220,52 +204,60 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_msgcenter_sendmessage.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gird_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\gird_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_siftion_top.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_siftion_top.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_mode_close_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_mode_close_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_txt.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_txt.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\voice_rcd_hint_window.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\voice_rcd_hint_window.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_tab.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_tab.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_videorecorder.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\dialog_videorecorder.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspace_photo.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspace_photo.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_worksend_grouptitle.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\include_worksend_grouptitle.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_menu_layout.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_menu_layout.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_readarticle_listview_item_content.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_content.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\question_suggest_list_content.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\question_suggest_list_content.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_artlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_artlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_pager_image.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_pager_image.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_work_reciveritem_gridview.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_work_reciveritem_gridview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_msgdetails.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_msgdetails.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_writeinfo.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_writeinfo.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_first.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_first.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalspace.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalspace.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_details.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_details.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_checker.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_checker.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_reply.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\work2details_reply.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolgen_overlist.xml",
@@ -276,12 +268,16 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_work2details.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_clazzb.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_clazzb.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\chat_friends_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\chat_friends_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_questionlist.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_questionlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_otherunit.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_otherunit.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_textview.xml",
@@ -292,14 +288,6 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_words_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_answerdetails.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_answerdetails.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_slideshow.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_slideshow.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_personalcenter_change_unitlist.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_personalcenter_change_unitlist.xml"
     },
@@ -308,12 +296,16 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_gradeb.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_siftion_top.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_siftion_top.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_txt.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_txt.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_clazza.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_clazza.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalcenter_change.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalcenter_change.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_sign_location.xml",
@@ -324,6 +316,14 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_common_datetime.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__activity_chooser_view.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__activity_chooser_view.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_slideshow.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_slideshow.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_icon.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__list_menu_item_icon.xml"
     },
@@ -332,16 +332,20 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\popup_artlistcomment.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_work2.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_work2.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\msgdetails_listview_item.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\msgdetails_listview_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\textview_spinner.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\textview_spinner.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspaceexp.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspaceexp.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_second.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_second.xml"
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\textview_spinner.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\textview_spinner.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leavedetails_time.xml",
@@ -356,10 +360,6 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_contacts.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_dropdown_item_icons_2line.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_activity_error_screen.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\workol_activity_error_screen.xml"
     },
@@ -368,20 +368,12 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_checker_leave_list.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_articlelist.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_articlelist.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_checker_screen_condition.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_checker_screen_condition.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__simple_dropdown_hint.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__simple_dropdown_hint.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_sign_home.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_sign_home.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_xlistview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_xlistview.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_base_body.xml",
@@ -396,16 +388,928 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pc_dialog.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_gallery.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_gallery.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_checkbox.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__list_menu_item_checkbox.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_personalcenter_change_unitlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_personalcenter_change_unitlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_questionlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_questionlist.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_system.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_system.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_answer_comment.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_answer_comment.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_footer.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\xlistview_footer.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_work.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_work.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tabpageindicatorviewpager.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\tabpageindicatorviewpager.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_publisharticle.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_publisharticle.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_gate_checkdetails.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_gate_checkdetails.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_tab.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_tab.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_siftlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_siftlist.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_clazza.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_clazza.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workol_do.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_workol_do.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_xlistview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_xlistview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artlist_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_artlist_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcwork_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcwork_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pc_dialog.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_pc_dialog.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_smsg.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_smsg.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\voice_rcd_hint_window.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\voice_rcd_hint_window.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_teacherpublish.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_teacherpublish.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_expan_worksend.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_expan_worksend.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_workplandetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_workplandetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_work_reciveritem_gridview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_work_reciveritem_gridview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_studentrecord.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_studentrecord.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_ppw_signway.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_ppw_signway.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_unit.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_unit.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unit_show.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unit_show.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\show_myunit_list_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\show_myunit_list_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_teacher_select.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_teacher_select.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar_overlay.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_action_bar_overlay.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_conversation_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_conversation_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_worksend_tree_root.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_worksend_tree_root.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_item.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_teareplace.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_teareplace.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_class_names.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_class_names.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_chat.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_chat.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_personalcenter_search.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_personalcenter_search.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\define_simple_spinner.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\define_simple_spinner.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_query.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_query.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_splash.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_splash.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_teacherpublish.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_teacherpublish.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_otherunit.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_otherunit.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_mytopicallist_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_mytopicallist_item.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_details.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_details.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_item_error.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\workol_item_error.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar_overlay.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_action_bar_overlay.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_base_body.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\include_base_body.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gallery_gridview_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\gallery_gridview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_leave_sum.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_leave_sum.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_menu_layout.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_show.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_show.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_expandablelistview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\channel_expandablelistview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_work2.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_work2.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artcomment_listitem.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_artcomment_listitem.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_publisharticle.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_publisharticle.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_createspacephoto.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_createspacephoto.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspaceexp.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspaceexp.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_leavedetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_leavedetails.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple_overlay_action_mode.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\grid_view.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\grid_view.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_personalcenter_search.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_personalcenter_search.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_tab_bar_view.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_tab_bar_view.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_chosesign_parent.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_chosesign_parent.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_header.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\xlistview_header.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\chat_friends_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\chat_friends_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_gen.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_gen.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_expan_worksend.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_expan_worksend.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_studentrecord.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_studentrecord.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_expandlistview_group.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_expandlistview_group.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_titile.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\actionbar_titile.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_correlationunit.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_show_correlationunit.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_gradeb.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_gradeb.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_item_teacherselect_listview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_item_teacherselect_listview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_correlationunit.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_show_correlationunit.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_unitdetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_unitdetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_worksend_gen_genlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_worksend_gen_genlist.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_worksend_gen_gridview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_worksend_gen_gridview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_details.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_details.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple_overlay_action_mode.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\imageview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\imageview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_expan_worksend_child.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_expan_worksend_child.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_leave_tea.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_leave_tea.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_expandablelistview_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\channel_expandablelistview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcchat_crowditem.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcchat_crowditem.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_smsg.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_smsg.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_worksend_gen_gridview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_worksend_gen_gridview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\actionbar.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tree_workol_stu_select.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_select.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_studentrecord.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_studentrecord.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_activity_error_screen.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\workol_activity_error_screen.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalcenter_change.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalcenter_change.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_parentcheck.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_parentcheck.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_main.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\calendar_main.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_door.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_door.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_simple.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_readarticle_listview_item_content.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_content.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artcomment_refcomitem.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_artcomment_refcomitem.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_indexsiftion_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_indexsiftion_listview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_gen.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_gen.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_msgcenter_sendmessage.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_msgcenter_sendmessage.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\qiuzhi_tabview_textview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\qiuzhi_tabview_textview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_base_menu.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\include_base_menu.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_item.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_readarticle_listview_item_title.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_title.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_showcorrelation_unitname.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_showcorrelation_unitname.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_list_item_error.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\workol_list_item_error.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_checked.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_checked.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_subjectlist.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_subjectlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_checkbox.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_parentcheck.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_parentcheck.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\qiuzhi_tabview_textview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\qiuzhi_tabview_textview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artcomment_listitem.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_artcomment_listitem.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_qiuzhi.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_qiuzhi.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_impersonality.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_impersonality.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_action_bar.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_radio.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\XueZhuLi1.0\\xZLpulltorefresh_lib\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_common_datetime.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_common_datetime.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_worksend_chosefile.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_worksend_chosefile.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_expandablelistview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\channel_expandablelistview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_login.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_login.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_artlist.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\popup_artlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_door.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_door.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\work2details_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_choseunit.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_choseunit.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_worksend_grouptitle.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\include_worksend_grouptitle.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_view.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__search_view.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_calendar.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_calendar.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_gridview_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\channel_gridview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_indexsiftion_listview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_indexsiftion_listview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_checker_leave_list.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_checker_leave_list.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_leave.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_leave.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_footer.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\xlistview_footer.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_commlist.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_commlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_checker.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_checker.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspace_photo.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspace_photo.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcwork_item_1child.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcwork_item_1child.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_worksendsb2.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_worksendsb2.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitspacephoto_gridview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitspacephoto_gridview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_listview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_publisharticle_listview_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_publisharticle_listview_item.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\common_datetime.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\common_datetime.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_articledetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_articledetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_commit_textview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\simple_commit_textview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_reason_choose.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_reason_choose.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_pickeddetails.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_pickeddetails.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcwork_item_1child.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcwork_item_1child.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workolstu.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_workolstu.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalcenter.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalcenter.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_qiuzhi.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_qiuzhi.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_leave.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_leave.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_show2.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_show2.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_login.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_login.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_leavedetails.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_leavedetails.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_first.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_first.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspace.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspace.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_gallery.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_gallery.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\show_myunit_list_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\show_myunit_list_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\question_suggest_list_head.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\question_suggest_list_head.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tree_workol_stu_hwtitle.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_hwtitle.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_train.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_train.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_personal.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_personal.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_gen.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_gen.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tree_workol_stu_root.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_root.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\XueZhuLi1.0\\xZLpulltorefresh_lib\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\moive_recorder_view.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\moive_recorder_view.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workolstu.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_workolstu.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_publish.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_publish.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_listview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_listview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leavedetails_time.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leavedetails_time.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_checker_screen_condition.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_checker_screen_condition.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_unit.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_unit.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_videorecorder.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\dialog_videorecorder.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_answer_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_answer_listview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_worksend_gen_genlist.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_worksend_gen_genlist.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_appcenter.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_appcenter.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gird_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\gird_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_expandlistview_group.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_expandlistview_group.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_details.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_details.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_mode_close_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_mode_close_item.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\voice_rcd_hint_window.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\voice_rcd_hint_window.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_quaryunit.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_quaryunit.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspace_photo.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspace_photo.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_menu_layout.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_notice.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_notice.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_topicalspace.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_topicalspace.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\actionbar.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_msgdetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_msgdetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_head_query.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_head_query.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_msgdetails.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_msgdetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_words_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_words_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unit_show.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unit_show.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalinfo.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalinfo.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_details.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_details.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_checker.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_checker.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_clazzb.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_clazzb.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\textview_spinner.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\textview_spinner.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_second.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_second.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_answerdetails.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_answerdetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_treeview_person.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_treeview_person.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_slideshow.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_slideshow.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_leave_tea.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_leave_tea.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tabview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\layout\\layout_tabview.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_siftion_top.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_siftion_top.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_sign_home.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_sign_home.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_chosesign.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_chosesign.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_action_bar.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_impersonality.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_impersonality.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gird_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\gird_item.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_second.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_second.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_basepicked.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_basepicked.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_clazzb.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_clazzb.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_dropdown_item_icons_2line.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_gate_checkdetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_gate_checkdetails.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_artlistcomment.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_artlistcomment.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_item_error.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\workol_item_error.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_articlelist.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_articlelist.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_sign_home.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_sign_home.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_xlistview.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_xlistview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolgen_overlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_workolgen_overlist.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\msgcenter_listview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\msgcenter_listview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_item_teacherselect_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_item_teacherselect_listview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__popup_menu_item_layout.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_gallery.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_gallery.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artcomment_refcomitem.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_artcomment_refcomitem.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_sign_location.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_sign_location.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_siftlist.xml",
@@ -424,10 +1328,6 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_writeinfo.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_footer.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\xlistview_footer.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitspacephoto_gridview_item.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitspacephoto_gridview_item.xml"
     },
@@ -436,80 +1336,96 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_workolgen_hwlist.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_work.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_work.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_treeview_person.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_treeview_person.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_visitunit.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_visitunit.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__activity_chooser_view_list_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__activity_chooser_view_list_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_personal.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_personal.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_gate_checkdetails.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_gate_checkdetails.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_tab.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_tab.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspace.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspace.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_clazza.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_clazza.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_readarticle.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_readarticle.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workol_do.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_workol_do.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_uncheck.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_uncheck.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_answerlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_answerlist.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_topicalspace.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_topicalspace.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_smsg.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_smsg.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_teacherpublish.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_teacherpublish.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_mode_bar.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_mode_bar.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_checked.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_checked.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_appcenter.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_appcenter.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_gridview.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_gridview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_studentrecord.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_studentrecord.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\work2details_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unit_show.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unit_show.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_gateguard.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_gateguard.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_listview_show2.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_listview_show2.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_calendar.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_calendar.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_system.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_system.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_modechose.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_modechose.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_workol_do.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_workol_do.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_time.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_time.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_list_item_error.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\workol_list_item_error.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_leave_sum.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_leave_sum.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_conversation_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_conversation_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_base.xml",
@@ -520,64 +1436,28 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_articledetails.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_simple.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_teareplace.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_teareplace.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_chat.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_chat.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_pickeddetails.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_pickeddetails.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_suggest_answer_listview.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_suggest_answer_listview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_personalcenter_search.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_personalcenter_search.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_gateguard.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_gateguard.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\define_simple_spinner.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\define_simple_spinner.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_query.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_query.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_class_names.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_class_names.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_splash.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_splash.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_otherunit.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_otherunit.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_details.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_details.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_item_error.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\workol_item_error.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar_overlay.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_action_bar_overlay.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gallery_gridview_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\gallery_gridview_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_header.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\xlistview_header.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_head_query.xml",
@@ -586,6 +1466,18 @@
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_main.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\calendar_main.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_conversation_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_conversation_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_icon.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__list_menu_item_icon.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_gridview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\channel_gridview_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_chosesign.xml",
@@ -600,36 +1492,44 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_tab_bar_view.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\imageview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\imageview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_query.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_query.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolgen_hwlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_workolgen_hwlist.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_radio.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__list_menu_item_radio.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_work2.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_work2.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_teareplace.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_teareplace.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_textview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_textview.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_answer_comment.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_answer_comment.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artcomment_listitem.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_artcomment_listitem.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_trainartlist_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_trainartlist_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_publisharticle.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_publisharticle.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_worksendsb2.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_worksendsb2.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_unitspaceexp.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_unitspaceexp.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple_overlay_action_mode.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_simple_overlay_action_mode.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\grid_view.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\grid_view.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\tree_workol_stu_root.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\tree_workol_stu_root.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_time.xml",
@@ -644,44 +1544,44 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_basepicked.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\listview_workplan_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\listview_workplan_item.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_worksend_tree_root.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_worksend_tree_root.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_commlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_commlist.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_answerlist.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_question_answerlist.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\xlistview_header.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\xlistview_header.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gridview_reciver_item.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\gridview_reciver_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\chat_friends_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\chat_friends_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_timepicker.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_timepicker.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_quaryunit.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_quaryunit.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_expan_worksend.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_expan_worksend.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__popup_menu_item_layout.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__popup_menu_item_layout.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_studentrecord.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_studentrecord.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_register_third.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_register_third.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_expandlistview_group.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_expandlistview_group.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_subjectlist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_subjectlist.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_work2.xml",
@@ -696,6 +1596,10 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_workplandetails.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_home.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_home.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_list_item_1.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\simple_list_item_1.xml"
     },
@@ -704,12 +1608,12 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_item_checkedselect_listview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_worksend_chosefile.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\popup_worksend_chosefile.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_textview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\simple_textview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_item_teacherselect_listview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_item_teacherselect_listview.xml"
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_worksend_chosefile.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\popup_worksend_chosefile.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_pager_image.xml",
@@ -720,20 +1624,20 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_listview_show2.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_unitdetails.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_unitdetails.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\msgdetails_listview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\msgdetails_listview_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_correlationunit.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_show_correlationunit.xml"
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_unitdetails.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\ui_unitdetails.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_commit_textview.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\simple_commit_textview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_worksend_gen_gridview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_worksend_gen_gridview.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_approval.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_approval.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_ppw_signway.xml",
@@ -748,32 +1652,64 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_index_listview.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_unitmsg_readarticle.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_unitmsg_readarticle.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_textview.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\simple_textview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_item_checkedselect_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_item_checkedselect_listview.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gateguard_query.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gateguard_query.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\listview_sign_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\listview_sign_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_titile.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\actionbar_titile.xml"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_showcorrelation_unitname.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_showcorrelation_unitname.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_index_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_index_listview.xml"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_chosesign_parent.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\popup_chosesign_parent.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\imageview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\imageview.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_title_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolgen_levellist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_workolgen_levellist.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_title_item.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_bar_title_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_expan_worksend_child.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_expan_worksend_child.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_suggest_answer_listview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhi_suggest_answer_listview.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_timepicker.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_timepicker.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_modify_leave.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_modify_leave.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\appcenter_gridview_item.xml",
@@ -788,40 +1724,56 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcwork_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_leave_tea.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_leave_tea.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_expandablelistview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\channel_expandablelistview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__search_dropdown_item_icons_2line.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_reason_choose.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_reason_choose.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_expandablelistview_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\channel_expandablelistview_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_mode_close_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__action_mode_close_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\actionbar.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_articlelist.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_articlelist.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalcenter_change.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalcenter_change.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_work.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_work.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_parentcheck.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_parentcheck.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_uncheck.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_uncheck.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_publisharticle_listview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_publisharticle_listview_item.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_choseclazz.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_qiuzhi_choseclazz.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\ui_studentrecord.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\ui_studentrecord.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_expan_worksend_child.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\item_expan_worksend_child.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__activity_chooser_view_list_item.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_layout_leave_door.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_door.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_simple.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\define_simple_spinner.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\define_simple_spinner.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workolstu_hwlist.xml",
@@ -836,20 +1788,8 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalinfo.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_createspacephoto.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\activity_createspacephoto.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_readarticle_listview_item_content.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_content.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_artcomment_refcomitem.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_artcomment_refcomitem.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_home.xml",
@@ -860,16 +1800,12 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_notice.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_readarticle_listview_item_title.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_title.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_chat.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_chat.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_showcorrelation_unitname.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_showcorrelation_unitname.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\workol_list_item_error.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\workol_list_item_error.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_gridview.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_gridview.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_workol_spinner.xml",
@@ -880,32 +1816,28 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\moive_recorder_view.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhip_subjectlist.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\item_qiuzhip_subjectlist.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_work2details.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_work2details.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\qiuzhi_tabview_textview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\qiuzhi_tabview_textview.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_notice_unitlist_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_notice_unitlist_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_qiuzhi.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\fragment_qiuzhi.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\common_datetime.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\common_datetime.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_workol_tree_impersonality.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_impersonality.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\gallery_gridview_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\gallery_gridview_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout\\abs__screen_action_bar.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_showartlist_item.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_showartlist_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\question_suggest_list_content.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\question_suggest_list_content.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\exploded-aar\\XueZhuLi1.0\\xZLpulltorefresh_lib\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_choseunit.xml",
@@ -916,19 +1848,19 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_workol_tree_modechose.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcshow_gridview_item.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcshow_gridview_item.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\channel_expandablelistview.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\channel_expandablelistview.xml"
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcshow_gridview_item.xml",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_pcshow_gridview_item.xml"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_mytopicallist_item.xml",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\layout_mytopicallist_item.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_artlist.xml",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\layout\\popup_artlist.xml"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_register.xml"
     }
 ]

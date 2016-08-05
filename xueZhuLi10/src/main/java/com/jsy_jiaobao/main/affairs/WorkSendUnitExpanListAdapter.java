@@ -24,7 +24,7 @@ public class WorkSendUnitExpanListAdapter extends BaseExpandableListAdapter {
 	private Context mContext;
 	private ArrayList<GroupUserList> groupList;
 	private Handler mHandler;
-	public ArrayList<ArrayList<Boolean>> mChecked = new ArrayList<ArrayList<Boolean>>();
+	public ArrayList<ArrayList<Boolean>> mChecked = new ArrayList<>();
 	public WorkSendUnitExpanListAdapter(Context fragmentActivity, Handler mHandler){
 		this.mContext = fragmentActivity;
 		this.mHandler = mHandler;
@@ -33,7 +33,7 @@ public class WorkSendUnitExpanListAdapter extends BaseExpandableListAdapter {
 		this.groupList = selitList;
 		mChecked.clear();
 		for(GroupUserList groupList : selitList){
-			ArrayList<Boolean> childList = new ArrayList<Boolean>();
+			ArrayList<Boolean> childList = new ArrayList<>();
 			for (int i = 0; i < groupList.getGroupselit_selit().size(); i++) {
 				childList.add(i,false);
 			}
@@ -50,9 +50,9 @@ public class WorkSendUnitExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 获取一条人员信息选中状态
-	 * @param groupPosition
-	 * @param childPosition
-	 * @return
+	 * @param groupPosition g
+	 * @param childPosition c
+	 * @return boolean
 	 */
 	private boolean getSelitCheckFlag(int groupPosition, int childPosition){
 		try {
@@ -66,9 +66,9 @@ public class WorkSendUnitExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 设置一条人员选中状态
-	 * @param groupPosition
-	 * @param childPosition
-	 * @param checkFlag
+	 * @param groupPosition g
+	 * @param childPosition c
+	 * @param checkFlag c
 	 */
 	public void setSelitCheckFlag(int groupPosition, int childPosition,boolean checkFlag){
 		try {
@@ -79,7 +79,7 @@ public class WorkSendUnitExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 操作全部
-	 * @param checkFlag
+	 * @param checkFlag c
 	 */
 	public void setAllSelitCheckFlag(boolean checkFlag){
 		for (int i = 0; i < mChecked.size(); i++) {
@@ -108,10 +108,10 @@ public class WorkSendUnitExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 返回被选中的人员列表
-	 * @return
+	 * @return arrayList
 	 */
 	public ArrayList<Selit> getSelectSelit(){
-		ArrayList<Selit> list = new ArrayList<Selit>();
+		ArrayList<Selit> list = new ArrayList<>();
 		for (int i = 0; i < mChecked.size(); i++) {
 			ArrayList<Boolean> childList = mChecked.get(i);
 			for (int j = 0; j < childList.size(); j++) {

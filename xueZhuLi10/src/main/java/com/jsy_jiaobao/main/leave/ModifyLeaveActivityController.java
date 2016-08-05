@@ -27,9 +27,8 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 public class ModifyLeaveActivityController implements ConstantUrl {
 	private static ModifyLeaveActivityController instance;
 	private Context mContext;
-	private static final String TAG = "ModifyLeaveActivityController";
 
-	public static synchronized final ModifyLeaveActivityController getInstance() {
+	public static synchronized  ModifyLeaveActivityController getInstance() {
 		if (instance == null) {
 			instance = new ModifyLeaveActivityController();
 		}
@@ -44,7 +43,7 @@ public class ModifyLeaveActivityController implements ConstantUrl {
 	/**
 	 * 更新一条请假记录
 	 * 
-	 * @param post
+	 * @param post 请求信息
 	 */
 	public void UpdateLeaveModel(UpdateLeaveModelPost post) {
 		// Log.i("UpdateLeaveModel", "更新一条请假记录");
@@ -119,28 +118,28 @@ public class ModifyLeaveActivityController implements ConstantUrl {
 		HttpUtil.InstanceSend(DeleteLeaveTime, params, callback);
 	}
 
-	/**
-	 * 删除假条
-	 * 
-	 * @param post
-	 *            假条记录Id
-	 */
-	public void DeleteLeaveModel(int tabId) {
-		// Log.i("DeleteLeaveModel", "删除假条");
-		DialogUtil.getInstance().getDialog(mContext, "正在发送数据");
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("tabId", String.valueOf(tabId));
-		CallBack callback = new CallBack();
-		callback.setUserTag(LeaveConstant.leave_DeleteLeaveModel);
-		HttpUtil.InstanceSend(DeleteLeaveModel, params, callback);
-	}
+//	/**
+//	 * 删除假条
+//	 *
+//	 * @param tabId
+//	 *            假条记录Id
+//	 */
+//	public void DeleteLeaveModel(int tabId) {
+//		// Log.i("DeleteLeaveModel", "删除假条");
+//		DialogUtil.getInstance().getDialog(mContext, "正在发送数据");
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("tabId", String.valueOf(tabId));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(LeaveConstant.leave_DeleteLeaveModel);
+//		HttpUtil.InstanceSend(DeleteLeaveModel, params, callback);
+//	}
 
 	private class CallBack extends RequestCallBack<String> {
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
 			if (null != mContext) {
-				dealResponseInfo("false", this.getUserTag());
+				dealResponseInfo( this.getUserTag());
 				DialogUtil.getInstance().cannleDialog();
 				if (BaseUtils.isNetworkAvailable(mContext)) {
 					ToastUtil.showMessage(mContext, R.string.phone_no_web);
@@ -161,19 +160,19 @@ public class ModifyLeaveActivityController implements ConstantUrl {
 						if ("0".equals(ResultCode)) {
 							switch ((Integer) this.getUserTag()) {
 							case LeaveConstant.leave_DeleteLeaveModel:
-								dealResponseInfo("0", this.getUserTag());
+								dealResponseInfo(this.getUserTag());
 								break;
 							case LeaveConstant.leave_UpdateLeaveModel:
-								dealResponseInfo("0", this.getUserTag());
+								dealResponseInfo( this.getUserTag());
 								break;
 							case LeaveConstant.leave_DeleteLeaveTime:
-								dealResponseInfo("0", this.getUserTag());
+								dealResponseInfo(this.getUserTag());
 								break;
 							case LeaveConstant.leave_UpdateLeaveTime:
-								dealResponseInfo("0", this.getUserTag());
+								dealResponseInfo(this.getUserTag());
 								break;
 							case LeaveConstant.leave_AddLeaveTime:
-								dealResponseInfo("0", this.getUserTag());
+								dealResponseInfo( this.getUserTag());
 								break;
 							default:
 								break;
@@ -201,8 +200,8 @@ public class ModifyLeaveActivityController implements ConstantUrl {
 		}
 	}
 
-	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+	private void dealResponseInfo( Object userTag) {
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case LeaveConstant.leave_DeleteLeaveModel:

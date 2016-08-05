@@ -1,15 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
-
-import org.greenrobot.eventbus.Subscribe;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -45,6 +35,11 @@ import com.jsy_jiaobao.po.leave.LeaveTime;
 import com.jsy_jiaobao.po.leave.SpinnerAdapter;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 //一些修改1 2016-5-4 MSL
 //1.增加-家长身份请假时，发起人姓名使用获取的学生信息中家长的姓名
 
@@ -60,8 +55,7 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 	private View view;
 	private Context mContext;
 	private String typeChose;// 选择的请假类型
-	private String reasonDetail;// 请假描述
-	private Leave mLeave;// 假条
+
 	private GenStuInfo mChoseGenStuInfo;// 选择的学生信息
 	private ArrayList<String> nameList;// 学生姓名
 	private ArrayList<String> typeList;// 请假类型
@@ -69,18 +63,18 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 	private ArrayList<LeaveTime> mLeaveTimeList;// 请假时间段
 
 	private LinearLayout lLayout_time;// 时间段布局
-	private TextView tv_timeAdd;// 添加时间
+
 	private EditText edt_reason;// 描述输入框
-	private Button btn_commit;// 提交按钮
+
 	private Spinner spn_leaver;// 请假人
 	private Spinner spn_type;// 请假类型
 	private SpinnerAdapter spnAdapter_leaver;// 请假人
-	private SpinnerAdapter spnAdapter_type;// 请假类型
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mLeaveTimeList = new ArrayList<LeaveTime>();
+		mLeaveTimeList = new ArrayList<>();
 	}
 
 	public static GenLeaveFragment newInstance() {
@@ -90,7 +84,7 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		view = inflater.inflate(R.layout.leave_fragment_gen_leave, null);
+		view = inflater.inflate(R.layout.leave_fragment_gen_leave, container,false);
 		mContext = getActivity();
 		initViews();
 		return view;
@@ -105,7 +99,7 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 		LeaveUtils.addTimeLayout(mContext, lLayout_time, mLeaveTimeList);// 生成默认的时间段
 		GenFragmentController.getInstance().setContext(this);
 		String jiaobaohao = BaseActivity.sp.getString("JiaoBaoHao", "");
-		if (jiaobaohao != null) {
+		if (jiaobaohao.length()>0) {
 			GenFragmentController.getInstance().GetMyStdInfo(jiaobaohao);// 获取学生信息
 		} else {
 			Log.e(TAG, "jiaobaohao is null ");
@@ -119,18 +113,21 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 	private void initViews() {
 		lLayout_time = (LinearLayout) view
 				.findViewById(R.id.leave_llayout_time);
+		TextView tv_timeAdd;// 添加时间
 		tv_timeAdd = (TextView) view.findViewById(R.id.leave_tv_timeadd);
 		edt_reason = (EditText) view.findViewById(R.id.leave_edt_reason);
+		Button btn_commit;// 提交按钮
 		btn_commit = (Button) view.findViewById(R.id.leave_btn_commit);
 		spn_leaver = (Spinner) view.findViewById(R.id.leave_spn_name);
 		spn_type = (Spinner) view.findViewById(R.id.leave_spn_type);
 		tv_timeAdd.setOnClickListener(this);
 		edt_reason.addTextChangedListener(this);
 		btn_commit.setOnClickListener(this);
-		nameList = new ArrayList<String>();
-		typeList = new ArrayList<String>();
+		nameList = new ArrayList<>();
+		typeList = new ArrayList<>();
 		mChoseGenStuInfo = new GenStuInfo();
 		spnAdapter_leaver = new SpinnerAdapter(mContext, nameList);
+		SpinnerAdapter spnAdapter_type;// 请假类型
 		spnAdapter_type = new SpinnerAdapter(mContext, typeList);
 		spn_leaver.setAdapter(spnAdapter_leaver);
 		spn_leaver.setOnItemSelectedListener(this);
@@ -234,6 +231,7 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 	 * 设置假条参数
 	 */
 	private void setLeave() {
+		Leave mLeave;// 假条
 		mLeave = new Leave(mContext);
 		mLeave.setManId(mChoseGenStuInfo.getTabID());// 请假人的人员Id，学生ID或老师Id,非教宝号
 		mLeave.setManName(mChoseGenStuInfo.getStdName());// 请假人姓名
@@ -244,8 +242,9 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 		mLeave.setUnitClassId(mChoseGenStuInfo.getClassId());// 班级Id,学生请假须提供
 		mLeave.setWriter(BaseActivity.sp.getString("UserName",
 				mChoseGenStuInfo.getGenName()));// 发起人姓名
+		String reasonDetail;
 		reasonDetail = edt_reason.getText().toString();
-		if (reasonDetail != null) {
+		if (reasonDetail.length()>0) {
 			mLeave.setLeaveReason(reasonDetail);// 请假理由描述
 		}
 		mLeave.setLeaveTimeList(mLeaveTimeList);// 请假时间段
