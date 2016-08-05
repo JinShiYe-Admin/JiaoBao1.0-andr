@@ -52,10 +52,8 @@ public class AllClassNamesActivity extends BaseActivity implements
 	private ArrayList<String> nameList;// 学生名称
 	private ArrayList<StuInfo> stuInfoList;// 学生信息
 	private ArrayList<AdminClassModel> classModelList;// 班级信息
-
 	private LinearLayout lLayout_chooseClass;// 选择班级布局
 	private CusListView clv_stuNames;// 学生姓名列表
-
 	private SpinnerAdapter spnAdapter_className;// 班级名称
 	private ArrayAdapter<String> arrayAdapter_stuName;// 学生名称
 

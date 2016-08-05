@@ -70,7 +70,7 @@ public class GenQueryFragment extends Fragment implements
 	private ArrayList<MyLeaveModel> myLeaveModelList;
 	private TextView tv_time;// 选择时间
 	private SpinnerAdapter spnAdapter_leaver;// 请假人
-	private UnitClassLeavesAdapter<?> unitClassLeavesAdapter;// 假条列表
+	private UnitClassLeavesAdapter unitClassLeavesAdapter;// 假条列表
 	private PullToRefreshScrollView refreshView;//上拉加载更多，下拉刷新的控件
 
 	@Override
@@ -112,7 +112,7 @@ public class GenQueryFragment extends Fragment implements
 		nameList = new ArrayList<>();
 		myLeaveModelList = new ArrayList<>();
 		spnAdapter_leaver = new SpinnerAdapter(mContext, nameList);
-		unitClassLeavesAdapter = new UnitClassLeavesAdapter<Object>(this);
+		unitClassLeavesAdapter = new UnitClassLeavesAdapter(this);
 		spn_leaver.setAdapter(spnAdapter_leaver);
 		spn_leaver.setOnItemSelectedListener(this);
 		unitClassLeavesAdapter.setType(1);// 设置姓名列不可见

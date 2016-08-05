@@ -35,7 +35,7 @@ import android.content.Context;
 import android.util.Log;
 
 public class CheckerActivityControler implements ConstantUrl {
-	private static final String TAG = null;
+
 	private static CheckerActivityControler instance;
 	private Context mContext;
 
@@ -193,32 +193,32 @@ public class CheckerActivityControler implements ConstantUrl {
 		HttpUtil.InstanceSend(UpdateGateInfo, params, callback);
 	}
 
-	/**
-	 * 班主任身份获取本班学生请假的审批记录
-	 * 
-	 * <pre>
-	 * 参数名称	是否必须	类型	描述
-	 * @param numPerPage 否	int	取回的记录数量，默认20
-	 * @param pageNum 否	int	第几页，默认为1
-	 * @param RowCount  是	int	pageNum=1为0，第二页起从前一页的返回结果中获得
-	 * @param unitClassId 是	Int	班级ID
-	 * @param sDateTime	是	Datetime	按月查记录，月内任何一天都可以，这是申请日期，不是请假日期。
-	 * @param checkFlag	是	int	0待审记录，1已审记录
-	 */
-	public void GetClassLeaves(int numPerPage, int pageNum, int RowCount,
-			int unitClassId, String sDateTime, int checkFlag) {
-		DialogUtil.getInstance().getDialog(mContext, "正在获取班级,请稍后");
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("numPerPage", String.valueOf(numPerPage));
-		params.addBodyParameter("pageNum", String.valueOf(pageNum));
-		params.addBodyParameter("RowCount", String.valueOf(RowCount));
-		params.addBodyParameter("unitClassId", String.valueOf(unitClassId));
-		params.addBodyParameter("sDateTime", sDateTime);
-		params.addBodyParameter("checkFlag", String.valueOf(checkFlag));
-		CallBack callback = new CallBack();
-		callback.setUserTag(LeaveConstant.leave_GetClassLeaves);
-		HttpUtil.InstanceSend(GetClassLeaves, params, callback);
-	}
+//	/**
+//	 * 班主任身份获取本班学生请假的审批记录
+//	 *
+//	 * <pre>
+//	 * 参数名称	是否必须	类型	描述
+//	 * @param numPerPage 否	int	取回的记录数量，默认20
+//	 * @param pageNum 否	int	第几页，默认为1
+//	 * @param RowCount  是	int	pageNum=1为0，第二页起从前一页的返回结果中获得
+//	 * @param unitClassId 是	Int	班级ID
+//	 * @param sDateTime	是	Datetime	按月查记录，月内任何一天都可以，这是申请日期，不是请假日期。
+//	 * @param checkFlag	是	int	0待审记录，1已审记录
+//	 */
+//	public void GetClassLeaves(int numPerPage, int pageNum, int RowCount,
+//			int unitClassId, String sDateTime, int checkFlag) {
+//		DialogUtil.getInstance().getDialog(mContext, "正在获取班级,请稍后");
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("numPerPage", String.valueOf(numPerPage));
+//		params.addBodyParameter("pageNum", String.valueOf(pageNum));
+//		params.addBodyParameter("RowCount", String.valueOf(RowCount));
+//		params.addBodyParameter("unitClassId", String.valueOf(unitClassId));
+//		params.addBodyParameter("sDateTime", sDateTime);
+//		params.addBodyParameter("checkFlag", String.valueOf(checkFlag));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(LeaveConstant.leave_GetClassLeaves);
+//		HttpUtil.InstanceSend(GetClassLeaves, params, callback);
+//	}
 
 	private class CallBack extends RequestCallBack<String> {
 
@@ -303,7 +303,6 @@ public class CheckerActivityControler implements ConstantUrl {
 			result = "{\"list\":" + result + "}";
 			MyAdminClasses myAdminClasses = GsonUtil.GsonToObject(result,
 					MyAdminClasses.class);
-			Log.d(TAG + "GetMyAdminClass", myAdminClasses.toString()+"");
 			post.add(myAdminClasses);
 			break;
 		case LeaveConstant.leave_GetUnitLeaves://获取本单位的假条

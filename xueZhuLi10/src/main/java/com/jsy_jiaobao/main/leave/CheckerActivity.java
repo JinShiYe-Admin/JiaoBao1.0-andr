@@ -1,13 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Locale;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,8 +19,6 @@ import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.CusListView;
-//一些修改1 2016-5-4 MSL
-//1.修改-修改班主任查看学生审核或未审核时，使用审核人员的接口
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.leave.ClassSumLeaveModel;
@@ -41,6 +31,16 @@ import com.jsy_jiaobao.po.leave.UnitClassLeaveModel;
 import com.jsy_jiaobao.po.leave.UnitClassLeaves;
 import com.jsy_jiaobao.po.leave.UnitLeavesPost;
 import com.umeng.analytics.MobclickAgent;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+
+//一些修改1 2016-5-4 MSL
+//1.修改-修改班主任查看学生审核或未审核时，使用审核人员的接口
 
 /**
  * 功能说明：请假系统，请假审核界面
@@ -81,7 +81,7 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
     /**
      * 班级id
      */
-    private Integer mBackClassId;// 班级id
+//    private Integer mBackClassId;// 班级id
     /**
      * 查询类型：0待审核，1已审核，2统计查询
      */
@@ -103,16 +103,13 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
     private UnitLeavesPost unitLeavesPost;// 请假审核记录查询post
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-DD",
             Locale.getDefault());
-
     private ArrayList<GateQueryLeaveModel> gateLeaveList;// 门卫审核假条列表
     private ArrayList<UnitClassLeaveModel> leaveList;// 假条列表
     private SparseArray<Object> mCheckTypeGradeClassMap;
-
     private Context mContext;
     private LinearLayout ly_condition;// 筛选条件区域
     private LinearLayout ly_listtitile;// 假条列表标题区域
     private LinearLayout ly_querylisttitile;// 查询统计标题区域
-    private TextView tv_screen;// 筛选条件
     private TextView tv_uncheck;// 待审核
     private TextView tv_checked;// 已审核
     private TextView tv_query;// 统计查询
@@ -121,8 +118,8 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
     private TextView tv_condition;// 筛选条件显示区域
 
     private CusListView listView;// 假条列表
-    private CheckerQueryAdapter<?> queryAdapter;// 统计查询
-    private UnitClassLeavesAdapter<?> checkAdapter;// 待审核，已审核，门卫审核
+    private CheckerQueryAdapter queryAdapter;// 统计查询
+    private UnitClassLeavesAdapter checkAdapter;// 待审核，已审核，门卫审核
     private PullToRefreshScrollView refreshScrollView;
 
     @Override
@@ -149,7 +146,9 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
         tv_checked = (TextView) findViewById(R.id.tv_checked);
         tv_query = (TextView) findViewById(R.id.tv_query);
         tv_gate = (TextView) findViewById(R.id.tv_gateGuard);
-        tv_screen = (TextView) findViewById(R.id.tv_screen_condition);
+
+
+        TextView tv_screen = (TextView) findViewById(R.id.tv_screen_condition);
         tv_checkedflag = (TextView) findViewById(R.id.item_checkedcommited_flag);
         tv_condition = (TextView) findViewById(R.id.tv_condition);
         listView = (CusListView) findViewById(R.id.cus_listView);
@@ -198,7 +197,7 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
     /**
      * 设置获取焦点的View
      *
-     * @param view
+     * @param view view
      */
     private void setViewFocusable(View view) {
         view.setFocusable(true);
@@ -364,13 +363,6 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
                             .get(TYPE_UNCHECK);
                     int levelUncheck = unitLeavesPost.getLevel();
                     int manTypeUncheck = unitLeavesPost.getManType();
-                    // if (levelUncheck == ROLE_1 && manTypeUncheck == 0) {//
-                    // 班主任查询未审核
-                    // int unitClassId = unitLeavesPost.getUnitId();
-                    // String sDateTime = unitLeavesPost.getsDateTime();
-                    // CheckerActivityControler.getInstance().GetClassLeaves(20,
-                    // pageNum, rowCount, unitClassId, sDateTime, 0);
-                    // } else {
                     unitLeavesPost.setRowCount(rowCount);
                     unitLeavesPost.setPageNum(pageNum);
                     unitLeavesPost.setCheckFlag(0);
@@ -562,16 +554,8 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
                     : LevelNoteStdE);
             approvalStuList.add(ROLE_5);
         }
-        if (approvalList.size() > 0 && approvalList != null) {
-            isHasTea = true;
-        } else {
-            isHasTea = false;
-        }
-        if (approvalStuList.size() > 0 && approvalStuList != null) {
-            isHasStu = true;
-        } else {
-            isHasStu = false;
-        }
+        isHasTea = approvalList.size() > 0;
+        isHasStu = approvalStuList.size() > 0;
         getDefaultView();
     }
 
@@ -594,10 +578,10 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
         super.onActivityResult(arg0, arg1, arg2);
         switch (arg1) {
             case 999:
-                Bundle args = (Bundle) arg2.getExtras();
+                Bundle args = arg2.getExtras();
                 if (args != null) {
                     try {
-                        mBackTime = (String) args.getString("ChoseTime");// 时间
+                        mBackTime = args.getString("ChoseTime");// 时间
                         /**
                          * 班级id
                          */
@@ -609,8 +593,8 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
                          */
                         String mBackCheckerName = args
                                 .getString("CheckerRoleName");// 选择的审核人名称
-                        mBackClassName = (String) args.getString("ChoseClassName");// 班级名字
-                        mBackGradeName = (String) args.getString("ChoseGradeName");// 年级名字
+                        mBackClassName = args.getString("ChoseClassName");// 班级名字
+                        mBackGradeName = args.getString("ChoseGradeName");// 年级名字
                         mBackCheckType = (Integer) args.get("CheckType");// 查询类型：0待审核，1已审核，2统计查询
                         if (mBackType == 1) {// 如果是教职工
                             mBackClassName = null;
@@ -657,7 +641,7 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
     /**
      * 处理发送请求获取的返回数据
      *
-     * @param list
+     * @param list list
      */
     @Subscribe
     public void onEventMainThread(ArrayList<Object> list) {
@@ -826,13 +810,13 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
         } else {// 选取的标题不是门卫审核，并且已经选取了筛选条件
             switch (mCheckType) {
                 case TYPE_GATE:// 门卫审核
-                    judgeIsNoMore(rowCount, gateLeaveList, pageNum);
+                    judgeIsNoMore(rowCount, gateLeaveList);
                     break;
                 case TYPE_CHECKED:// 已审核
-                    judgeIsNoMore(rowCount, leaveList, pageNum);
+                    judgeIsNoMore(rowCount, leaveList);
                     break;
                 case TYPE_UNCHECK:// 待审核
-                    judgeIsNoMore(rowCount, leaveList, pageNum);
+                    judgeIsNoMore(rowCount, leaveList);
                     break;
                 default:
                     ToastUtil.showMessage(mContext, "没有更多了");
@@ -845,11 +829,10 @@ public class CheckerActivity extends BaseActivity implements OnClickListener,
     /**
      * 判断是否还有更多
      *
-     * @param RowCount
-     * @param LeaveList
-     * @param pageNum
+     * @param RowCount  r
+     * @param LeaveList l
      */
-    private void judgeIsNoMore(int RowCount, ArrayList<?> LeaveList, int pageNum) {
+    private void judgeIsNoMore(int RowCount, ArrayList<?> LeaveList) {
         if (RowCount == LeaveList.size() || RowCount == 0) {
             ToastUtil.showMessage(mContext, "没有更多了");
             refreshScrollView.onRefreshComplete();

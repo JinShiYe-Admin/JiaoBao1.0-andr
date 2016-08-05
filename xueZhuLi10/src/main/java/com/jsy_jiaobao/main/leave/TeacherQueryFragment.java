@@ -64,7 +64,7 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 
 
 	private PullToRefreshScrollView refreshView;
-	private UnitClassLeavesAdapter<?> unitClassLeavesAdapter;
+	private UnitClassLeavesAdapter unitClassLeavesAdapter;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -93,7 +93,7 @@ public class TeacherQueryFragment extends Fragment implements OnClickListener,
 		tv_symbol.setOnClickListener(this);
 		refreshView.setOnRefreshListener(this);
 		refreshView.setMode(Mode.BOTH);
-		unitClassLeavesAdapter = new UnitClassLeavesAdapter<Object>(this);
+		unitClassLeavesAdapter = new UnitClassLeavesAdapter(this);
 		unitClassLeavesAdapter.setType(1);
 		lv_leave.setAdapter(unitClassLeavesAdapter);
 	}

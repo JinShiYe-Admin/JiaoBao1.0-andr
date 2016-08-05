@@ -407,15 +407,15 @@ public class CheckerScreenConditionActivity extends BaseActivity implements
                         classNameList.add(classModelList.get(i).getClsName());
                         gradeNameList.add(classModelList.get(i).getGradeName());
                     }
-                    ArrayList<AdminClassModel> classlist = classModelList;
-                    for (int i = 0; i < classlist.size(); i++) {
+                    ArrayList<AdminClassModel> classList = classModelList;
+                    for (int i = 0; i < classList.size(); i++) {
                         ArrayList<AdminClassModel> s = new ArrayList<>();
                         HashMap<String, ArrayList<AdminClassModel>> jh = new HashMap<>();
                         s.add(classModelList.get(i));
-                        for (int j = i + 1; j < classlist.size(); j++) {
-                            if (classModelList.get(i).equals(classlist.get(j))) {
-                                s.add(classlist.get(j));
-                                classlist.remove(classlist.get(j));
+                        for (int j = i + 1; j < classList.size(); j++) {
+                            if (classModelList.get(i).equals(classList.get(j))) {
+                                s.add(classList.get(j));
+                                classList.remove(classList.get(j));
                             }
                         }
                         jh.put(classModelList.get(i).getGradeName(), s);
@@ -535,13 +535,8 @@ public class CheckerScreenConditionActivity extends BaseActivity implements
                     choseGradeName = realGradeList.get(position);
                     if (checkType != 2) {
                         if (mCheckRol == ROLE_1 && mType == TYPE_STU) {// 班主任
-                            if (headGradeClass == null
-                                    || headGradeClass.size() == 0) {
-                                // ToastUtil.showMessage(mContext, "没班级");
-                            } else {
-                                Log.d(TAG + "size", headGradeClass.size() + "");
-                                Log.d(TAG + "posdtion", position + "");
-
+                            if (headGradeClass != null
+                                    &&headGradeClass.size() != 0) {
                                 headChoseGradeClassList = headGradeClass.get(
                                         position).get(choseGradeName);
                                 classNameList.clear();
@@ -575,8 +570,7 @@ public class CheckerScreenConditionActivity extends BaseActivity implements
                     choseClassName = null;
                 } else {
                     if (mCheckRol == ROLE_1 && mType == TYPE_STU) {
-                        if (headChoseGradeClassList != null
-                                || headChoseGradeClassList.size() != 0) {
+                        if (headChoseGradeClassList != null) {
                             AdminClassModel choseClass = headChoseGradeClassList
                                     .get(position);
                             choseClassId = choseClass.getTabID();

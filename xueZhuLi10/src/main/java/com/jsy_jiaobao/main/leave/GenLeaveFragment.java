@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -101,8 +100,6 @@ public class GenLeaveFragment extends Fragment implements OnClickListener,
 		String jiaobaohao = BaseActivity.sp.getString("JiaoBaoHao", "");
 		if (jiaobaohao.length()>0) {
 			GenFragmentController.getInstance().GetMyStdInfo(jiaobaohao);// 获取学生信息
-		} else {
-			Log.e(TAG, "jiaobaohao is null ");
 		}
 	}
 

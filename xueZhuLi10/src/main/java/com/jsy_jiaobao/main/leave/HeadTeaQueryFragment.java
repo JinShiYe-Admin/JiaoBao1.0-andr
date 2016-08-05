@@ -92,7 +92,7 @@ public class HeadTeaQueryFragment extends Fragment implements
     private RadioButton rb_self;// 本人
 
     private SpinnerAdapter classAdapter;// 选择班级
-    private UnitClassLeavesAdapter<Object> uclAdapter_leave;// 假条列表
+    private UnitClassLeavesAdapter uclAdapter_leave;// 假条列表
     private PullToRefreshScrollView ptrScrollView;// 上拉加载更多，下拉刷新的控件
 
     @Override
@@ -132,7 +132,7 @@ public class HeadTeaQueryFragment extends Fragment implements
         classNameList = new ArrayList<>();
         myLeaveList = new ArrayList<>();
         stuLeaveList = new ArrayList<>();
-        uclAdapter_leave = new UnitClassLeavesAdapter<>(this);
+        uclAdapter_leave = new UnitClassLeavesAdapter(this);
         classAdapter = new SpinnerAdapter(mContext, classNameList);
         clv_leave.setAdapter(uclAdapter_leave);
         spn_class.setAdapter(classAdapter);
