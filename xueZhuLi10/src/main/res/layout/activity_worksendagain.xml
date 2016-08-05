@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        layout="@layout/layout_gridview" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d8d8" />
+
+    <LinearLayout
+        android:id="@+id/article_layout_reply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <com.jsy_jiaobao.customview.IEditText
+            android:id="@+id/article_edt_mywords"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/ui_5dp"
+            android:layout_weight="5.0"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/input_reply_message"
+            android:paddingLeft="@dimen/ui_15dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/article_btn_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ui_10dp"
+            android:layout_marginRight="@dimen/ui_10dp"
+            android:layout_marginTop="@dimen/ui_10dp"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:text="@string/reply"
+            android:textColor="@color/topbar_bg" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/ui_sign_home"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/home_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_48dp"
+        android:background="@color/topbar_bg" >
+
+        <TextView
+            android:id="@+id/home_tv_username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/ui_20dp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/home_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ui_10dp"
+            android:layout_marginTop="@dimen/ui_5dp"
+            android:textColor="@color/topbar_bg"
+            android:paddingLeft="@dimen/ui_10dp"
+            android:paddingRight="@dimen/ui_10dp"
+            android:layout_marginBottom="@dimen/ui_5dp"
+            android:background="@drawable/edittext_bg"
+            android:text="@string/logout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/home_top_bg"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_200dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/ui_30dp"
+            android:background="@drawable/edittext_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/ui_20dp" >
+
+            <LinearLayout
+                android:id="@+id/home_layout_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_view_sp" />
+
+                <TextView
+                    android:id="@+id/home_tv_choseUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/ui_48dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/click_choose_unit"
+                    android:textSize="@dimen/text_size_18"
+                    android:gravity="center_vertical"
+                    android:background="@null" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/home_layout_middle"
+                android:layout_marginTop="@dimen/ui_25dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_layout_middle"
+                android:layout_marginTop="@dimen/ui_48dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/home_btn_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ui_10dp"
+                    android:layout_weight="1.0"
+                    android:background="@color/topbar_bg"
+                    android:padding="@dimen/ui_5dp"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+
+                <Button
+                    android:id="@+id/home_btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ui_10dp"
+                    android:layout_weight="1.0"
+                    android:background="@color/topbar_bg"
+                    android:padding="@dimen/ui_5dp"
+                    android:text="@string/inquire"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

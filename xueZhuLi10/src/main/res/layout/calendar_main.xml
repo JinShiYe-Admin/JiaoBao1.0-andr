@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/workplan_view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_40dp"
+            android:background="#EDE8DD" >
+
+            <TextView
+                android:id="@+id/search_Top_Date"
+                android:layout_width="@dimen/ui_150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal|center"
+                android:textColor="#424139"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/search_btn_pre_year"
+                android:layout_width="@dimen/ui_40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/abs__ic_go_left" />
+
+            <Button
+                android:id="@+id/search_btn_pre_month"
+                android:layout_width="@dimen/ui_40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/ui_15dp"
+                android:layout_toRightOf="@id/search_btn_pre_year"
+                android:background="@drawable/abs__ic_go_left" />
+
+            <Button
+                android:id="@+id/search_btn_next_year"
+                android:layout_width="@dimen/ui_40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/ui_15dp"
+                android:background="@drawable/abs__ic_go" />
+
+            <Button
+                android:id="@+id/search_btn_next_month"
+                android:layout_width="@dimen/ui_40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/ui_15dp"
+                android:layout_toLeftOf="@id/search_btn_next_year"
+                android:background="@drawable/abs__ic_go" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jsy_jiaobao.main"
+    android:versionCode="14"
+    android:versionName="3.3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </permission>
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <!--  -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        name="com.jsy_jiaobao.main.JSYApplication"
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/logo72"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.MyTheme" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5732d2f867e58e19d2000fd0" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="jinshiye" />
+
+        <activity
+            android:name="com.jsy_jiaobao.main.system.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jsy_jiaobao.main.BaseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <!-- 信息中心 -->
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.MessageCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendToSbActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendToSbActivity2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.filechoser.grivider.FileChooseActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendAgainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendToLowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkJuniorUnitListActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendToAllActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.ContactsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.ShowArticleListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.Show2MoreArticleListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.Show2MoreArticleListSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.ShowCorrelationUnitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.UnitSpacePhotoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.UnitSpacePhotoExpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.UnitSpacePhotoGroupActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.SpacePhotoCreateActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.UnitSpaceExpActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.UnitSpaceBriefInfo"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.UnitSpaceActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.TopicalSpaceActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.PersonalSpaceActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.PersonalInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.FriendMultiChoiceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkSendToSMSActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkMoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.Work2MineDetailsListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.Work2OthersDetailsListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.Work2DetailsListItemActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.NoticeArtListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolecircle.TrainArtListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.NoticeTopArtListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.SearchArtListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.ArticleDetailsActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="standard"
+            android:layerType="hardware"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.TrainArticleDetailsActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:layerType="hardware"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.NoticeJuniorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.schoolcircle.TrainJuniorListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.PublishArticaleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.WorkDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 应用中心 -->
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.AppCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.sign.LocationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.sign.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.workplan.WorkPlanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.workplan.WorkPlanDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.workplan.WriteInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+        <!-- singleTask模式无法使用setActivityOnResult -->
+        <activity
+            android:name="com.jsy_jiaobao.main.appcenter.GalleryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+        <activity
+            android:name="com.jsy_jiaobao.main.affairs.SinglePictureDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
+
+        <!-- 个人中心 -->
+        <activity
+            android:name="com.jsy_jiaobao.main.system.QiuzhiQuestionListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.system.QiuzhiPersonalCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.system.SystemActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.system.RegistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.system.PersonalCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.system.PersonalCenterChangeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+
+        <!-- 求知 -->
+
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiPickedDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiPickedBaseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiSiftListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiPublishQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiQuestionDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiChoseClazzActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiSuggestQuestionDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiQuestionAnswerListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiSuggestShowRecommentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiQuestionAnswerDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiSuggestQuestionAnswerDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <!-- 在线作业 -->
+        <activity
+            android:name="com.jsy_jiaobao.main.workol.TeacherPublishWorkActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.workol.GenCheckWorkActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.workol.StudentWorkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name="com.jsy_jiaobao.main.workol.WorkDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.workol.ErrorScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!--
+             <activity
+            android:name="com.jsy.xuezhuli.main.system.LoginActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateUnspecified|adjustUnspecified" />
+        -->
+        <!-- 学生档案 -->
+        <activity
+            android:name="com.jsy_jiaobao.main.studentrecord.StudentRecordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.GenActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.HeadTeacherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.CheckerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.AllClassNamesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.CheckerScreenConditionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.TeacherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.LeaveDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.ModifyLeaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.CheckerAgreeOrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.GateCheckDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jsy_jiaobao.main.leave.SumStudentLeavesActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 下载文件服务 -->
+        <service
+            android:name="com.jsy_jiaobao.main.UpdateService"
+            android:label="@string/app_name" >
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="NLHqyhqTPEtbgVx8XQgEKwjK" >
+        </meta-data>
+    </application>
+
+</manifest>

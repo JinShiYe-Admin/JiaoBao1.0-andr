@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ui_48dp" 
+    android:background="@color/topbar_bg">
+
+    <com.jsy_jiaobao.customview.IEditText
+        android:id="@+id/pcsearch_edt_keywork"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:hint="@string/key_words"
+        android:textColor="@color/white"
+        android:minHeight="@dimen/ui_48dp"
+        android:paddingLeft="@dimen/ui_5dp"
+        android:paddingRight="@dimen/ui_48dp"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/pcsearch_btn_search"
+        android:layout_width="@dimen/ui_40dp"
+        android:layout_height="@dimen/ui_40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/ui_10dp"
+        android:background="@drawable/abs__ic_search" />
+
+</RelativeLayout>

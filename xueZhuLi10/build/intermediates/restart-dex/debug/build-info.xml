@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86,armeabi-v7a"
+    api-level="17"
+    density="mdpi"
+    format="7"
+    timestamp="91870351257343"
+    token="-5924949457020624909" >
+
+    <task
+        name="javac"
+        duration="7460" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="9220" />
+    <task
+        name="verifier"
+        duration="5416" />
+
+    <artifact
+        location="E:\XueZhuLi1.0\xueZhuLi10\build\outputs\apk\xueZhuLi10-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="91870351257343" >
+        <artifact
+            location="E:\XueZhuLi1.0\xueZhuLi10\build\outputs\apk\xueZhuLi10-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

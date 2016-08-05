@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tree_workol_clazz_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_to_dip_60"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_to_dip_20"
+        android:paddingRight="@dimen/px_to_dip_20" >
+
+        <TextView
+            android:id="@+id/tree_workol_clazz_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/class_choose"
+            android:textColor="@color/color_21292b"
+            android:textSize="@dimen/px_to_sp_21" />
+
+        <TextView
+            android:id="@+id/tree_workol_clazz_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/px_to_dip_25"
+            android:layout_marginRight="@dimen/px_to_dip_25"
+            android:layout_toRightOf="@id/tree_workol_clazz_tv_1"
+            android:gravity="center_vertical"
+            android:text="@string/first_class"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/color_ff6800"
+            android:textSize="@dimen/px_to_sp_18" />
+
+        <ImageView
+            android:id="@+id/tree_workol_clazz_iv_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_worksend_selit_plus" />
+
+        <LinearLayout
+            android:id="@+id/tree_workol_clazz_layout_chose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/px_to_dip_20"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/tree_workol_clazz_iv_toggle"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tree_workol_clazz_tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/difficult_choose" />
+
+            <Spinner
+                android:id="@+id/tree_workol_clazz_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

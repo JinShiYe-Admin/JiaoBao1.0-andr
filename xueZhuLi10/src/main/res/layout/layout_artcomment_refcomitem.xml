@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sendmessage_bg_transparent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/artcomment_refcom_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/ui_10dp"
+        android:paddingRight="@dimen/ui_10dp"
+        android:paddingTop="@dimen/ui_5dp"
+        android:text="@string/comment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/ui_40dp" >
+
+        <TextView
+            android:id="@+id/artcomment_refcom_tv_cai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/ui_10dp"
+            android:paddingRight="@dimen/ui_10dp"
+            android:text="@string/trample" />
+
+        <TextView
+            android:id="@+id/artcomment_refcom_tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/artcomment_refcom_tv_cai"
+            android:paddingLeft="@dimen/ui_10dp"
+            android:paddingRight="@dimen/ui_10dp"
+            android:text="@string/praise" />
+    </RelativeLayout>
+
+</LinearLayout>

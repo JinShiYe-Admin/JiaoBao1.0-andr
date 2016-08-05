@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/XueZhuLi1.0.iml" filepath="$PROJECT_DIR$/XueZhuLi1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xZLpulltorefresh_lib/xZLpulltorefresh_lib.iml" filepath="$PROJECT_DIR$/xZLpulltorefresh_lib/xZLpulltorefresh_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xZLviewPager_lib/xZLviewPager_lib.iml" filepath="$PROJECT_DIR$/xZLviewPager_lib/xZLviewPager_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xueZhuLi10/xueZhuLi10.iml" filepath="$PROJECT_DIR$/xueZhuLi10/xueZhuLi10.iml" />
+    </modules>
+  </component>
+</project>

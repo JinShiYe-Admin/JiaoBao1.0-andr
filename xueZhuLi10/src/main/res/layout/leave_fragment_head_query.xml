@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/leave_rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/leave_rb_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本人" />
+
+        <RadioButton
+            android:id="@+id/rb_stu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学生" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#ebebeb" />
+
+        <LinearLayout
+            android:id="@+id/leave_llayout_class"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="班级"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/leave_spn_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/leave_please_choose_class"
+                android:spinnerMode="dialog"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#ebebeb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/leave_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/leave_tv_symbol"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:drawableLeft="@drawable/expan_group_minus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_listTitile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silver"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/item_checkedcommited_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="时间" />
+
+        <TextView
+            android:id="@+id/leave_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="学生" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/item_checkedcommited_reason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="理由" />
+
+            <TextView
+                android:id="@+id/item_checkedcommited_flag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="状态" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/leave_ptrscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" >
+
+        <com.jsy_jiaobao.customview.CusListView
+            android:id="@+id/leave_clv_leave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.jsy_jiaobao.customview.CusListView>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bottom_title_article">学校圈</string>
+    <string name="bottom_title_notice">分享</string>
+    <string name="bottom_title_qiuzhi">求知</string>
+    <string name="bottom_title_topical">主题</string>
+    <string name="bottom_title_work">事务</string>
+</resources>

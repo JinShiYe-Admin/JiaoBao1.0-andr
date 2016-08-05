@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/px_to_dip_20" >
+
+    <ImageView
+        android:id="@+id/item_expan_worksend_expan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px_to_dip_10"
+        android:src="@drawable/icon_worksend_selit_plus" />
+
+    <TextView
+        android:id="@+id/item_expan_worksend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px_to_dip_12"
+        android:layout_toRightOf="@+id/item_expan_worksend_expan"
+        android:text="@string/group_name"
+        android:textColor="#292929"
+        android:textSize="@dimen/px_to_sp_18" />
+
+    <ImageView
+        android:id="@+id/item_expan_worksend_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px_to_dip_10"
+        android:layout_toRightOf="@+id/item_expan_worksend_name"
+        android:src="@drawable/icon_worksend_selit_plus_p" />
+
+    <CheckBox
+        android:id="@+id/item_expan_worksend_cb_invert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@null"
+        android:text="@string/inverse"
+        android:textColor="#292929"
+        android:textSize="@dimen/px_to_sp_18" />
+
+    <CheckBox
+        android:id="@+id/item_expan_worksend_cb_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px_to_dip_20"
+        android:layout_toLeftOf="@id/item_expan_worksend_cb_invert"
+        android:text="@string/all_select"
+        android:button="@drawable/worksend_checkedbox"
+        android:textColor="#292929"
+        android:textSize="@dimen/px_to_sp_18" />
+
+</RelativeLayout>

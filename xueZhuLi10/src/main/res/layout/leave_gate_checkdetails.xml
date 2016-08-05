@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ly_leave_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ly_manName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请假人:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_manName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_writeDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发起时间:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_writeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#d9d8d8" />
+
+        <LinearLayout
+            android:id="@+id/ly_leaveType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="理由:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_leaveType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_startTime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始时间:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_leaveTime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离校时间:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_leaveTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_leaveSign"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="值班门卫:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_leaveSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/bt_gateSignLeave"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_qiuzhi_updata_btn"
+                android:text="门卫签字"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_endTime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束时间:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_backTime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="回校时间:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_backTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_backSign"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="值班门卫:"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_backSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/bt_gateSignBack"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_qiuzhi_updata_btn"
+                android:text="门卫签字"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#d9d8d8" />
+    </LinearLayout>
+
+</ScrollView>

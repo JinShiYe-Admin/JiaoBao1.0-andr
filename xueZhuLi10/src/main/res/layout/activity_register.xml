@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/register_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+<!--     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/px_to_dip_20" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/regist_tv_getnumber_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px_to_dip_10"
+                android:text="手机"
+                android:textColor="#292929"
+                android:textSize="@dimen/px_to_sp_20" />
+
+            <TextView
+                android:id="@+id/regist_tv_getnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/px_to_dip_10"
+                android:text="免费获取验证码"
+                android:textColor="#045fae"
+                android:textSize="@dimen/px_to_sp_18" />
+
+            <com.jsy.xuezhuli.customview.IEditText
+                android:id="@+id/regist_edt_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/regist_tv_getnumber"
+                android:hint="13000000000"
+                android:paddingLeft="@dimen/px_to_dip_120"
+                android:textColor="#292929"
+                android:textColorHint="#b3b3b3"
+                android:textSize="@dimen/px_to_sp_20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px_to_dip_10"
+                android:text="验证码"
+                android:textColor="#292929"
+                android:textSize="@dimen/px_to_sp_20" />
+
+            <com.jsy.xuezhuli.customview.IEditText
+                android:id="@+id/regist_edt_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="手机收到的验证码"
+                android:paddingLeft="@dimen/px_to_dip_120"
+                android:textColor="#292929"
+                android:textColorHint="#b3b3b3"
+                android:textSize="@dimen/px_to_sp_20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px_to_dip_10"
+                android:text="密码"
+                android:textColor="#292929"
+                android:textSize="@dimen/px_to_sp_20" />
+
+            <TextView
+                android:id="@+id/regist_tv_pwdmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/px_to_dip_10"
+                android:text="6-18个字符"
+                android:textColor="#292929"
+                android:textSize="@dimen/px_to_sp_18" />
+
+            <com.jsy.xuezhuli.customview.IEditText
+                android:id="@+id/regist_edt_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/regist_tv_pwdmsg"
+                android:hint="填写密码"
+                android:paddingLeft="@dimen/px_to_dip_120"
+                android:textColor="#292929"
+                android:textColorHint="#b3b3b3"
+                android:textSize="@dimen/px_to_sp_20" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px_to_dip_10"
+                android:text="确认密码"
+                android:textColor="#292929"
+                android:textSize="@dimen/px_to_sp_20" />
+
+            <TextView
+                android:id="@+id/regist_tv_pwdmsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/px_to_dip_10"
+                android:text="6-18个字符"
+                android:textColor="#292929"
+                android:textSize="@dimen/px_to_sp_18" />
+
+            <com.jsy.xuezhuli.customview.IEditText
+                android:id="@+id/regist_edt_pwd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/regist_tv_pwdmsg2"
+                android:hint="再次填写密码"
+                android:paddingLeft="@dimen/px_to_dip_120"
+                android:textColor="#292929"
+                android:textColorHint="#b3b3b3"
+                android:textSize="@dimen/px_to_sp_20" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/regist_iv_regist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_to_dip_84"
+            android:src="@drawable/btn_register_regist" />
+    </LinearLayout> -->
+
+</RelativeLayout>

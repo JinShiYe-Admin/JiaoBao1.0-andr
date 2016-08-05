@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_to_dip_14" >
+
+        <TextView
+            android:id="@+id/workol_stuhw_tv_icon"
+            android:layout_width="@dimen/px_to_dip_25"
+            android:layout_height="@dimen/px_to_dip_25"
+            android:background="@drawable/icon_workol_zhuguan" />
+
+        <TextView
+            android:id="@+id/workol_stuhw_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/px_to_dip_10"
+            android:ellipsize="end"
+            android:maxLength="15"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#549ed6"
+            android:textSize="@dimen/px_to_sp_20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/px_to_dip_14"
+        android:paddingBottom="@dimen/px_to_dip_14"
+        android:paddingRight="@dimen/px_to_dip_14" >
+
+        <TextView
+            android:id="@+id/workol_stuhw_tv_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_orInput_orAll"
+            android:textColor="#999999"
+            android:textSize="@dimen/px_to_sp_16" />
+
+        <TextView
+            android:id="@+id/workol_stuhw_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/workol_stuhw_tv_num1"
+            android:textSize="@dimen/px_to_sp_16" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/workol_stuhw_tv_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unfinish"
+                android:textColor="#549ed6"
+                android:textSize="@dimen/px_to_sp_16"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/workol_stuhw_ll_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score_"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/workol_stuhw_tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:paddingLeft="@dimen/px_to_dip_5"
+                    android:paddingRight="@dimen/px_to_dip_15"
+                    android:textColor="#ff5b01"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/study_power_"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/workol_stuhw_tv_edulevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zero"
+                    android:paddingLeft="@dimen/px_to_dip_5"
+                    android:textColor="#ff5b01"
+                    android:textSize="@dimen/px_to_sp_16" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

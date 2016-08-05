@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrMode="both" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/px_to_dip_10"
+            android:paddingRight="@dimen/px_to_dip_10" >
+
+            <TextView
+                android:id="@+id/qiuzhi_pickeddetails_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/color_2589d1"
+                android:textSize="@dimen/px_to_sp_20" />
+
+            <TextView
+                android:id="@+id/qiuzhi_pickeddetails_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/qiuzhi_pickeddetails_time"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/color_2589d1"
+                android:textSize="@dimen/px_to_sp_20" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_to_dip_150" >
+
+            <com.jsy_jiaobao.customview.SlideShowView
+                android:id="@+id/qiuzhi_item_siftiontop_slideShowView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_to_dip_150" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom" 
+                android:background="#4b808080"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/qiuzhi_item_siftiontop_slider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <com.jsy_jiaobao.customview.CusListView
+            android:id="@+id/qiuzhi_pickeddetails_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="@dimen/px_to_dip_10" />
+    </LinearLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

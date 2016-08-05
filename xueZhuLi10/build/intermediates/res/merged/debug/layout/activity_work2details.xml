@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" >
+
+        <LinearLayout
+            android:id="@+id/layout_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <com.jsy_jiaobao.customview.CusListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:cacheColorHint="#ffffff"
+                android:listSelector="#ffffff"/>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:background="#d9d8d8"/>
+    <LinearLayout
+        android:id="@+id/article_layout_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.jsy_jiaobao.customview.IEditText
+            android:id="@+id/article_edt_mywords"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/px_to_dip_60"
+            android:maxHeight="@dimen/px_to_dip_90"
+            android:layout_margin="@dimen/ui_5dp"
+            android:layout_weight="5.0"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/input_reply_message"
+            android:paddingLeft="@dimen/ui_15dp"
+            android:maxLength="1000"/>
+
+        <Button
+            android:id="@+id/article_btn_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ui_10dp"
+            android:layout_marginRight="@dimen/ui_10dp"
+            android:layout_marginTop="@dimen/ui_10dp"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:text="@string/reply"
+            android:textColor="@color/topbar_bg" />
+    </LinearLayout>
+
+</LinearLayout>

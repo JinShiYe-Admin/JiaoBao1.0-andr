@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/qiuzhi_question_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/qiuzhi_question_layout_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ebebeb"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/px_to_dip_20"
+                android:paddingLeft="@dimen/px_to_dip_10"
+                android:paddingRight="@dimen/px_to_dip_17"
+                android:paddingTop="@dimen/px_to_dip_20" >
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_q"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_qiuzhi_question" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_to_dip_12"
+                    android:layout_toRightOf="@id/qiuzhi_question_tv_q"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/color_2589d1"
+                    android:textSize="@dimen/px_to_sp_22" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_to_dip_10" >
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_to_dip_30"
+                    android:text="话题:"
+                    android:textColor="@color/color_b2b2b2"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/qiuzhi_question_tv_1"
+                    android:textColor="@color/color_292929"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_clicknum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="@dimen/px_to_dip_10"
+                    android:paddingRight="@dimen/px_to_dip_20"
+                    android:textColor="@color/color_292929"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/qiuzhi_question_tv_clicknum"
+                    android:text="@string/visit_"
+                    android:textColor="@color/color_b2b2b2"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_answernum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/qiuzhi_question_tv_2"
+                    android:paddingLeft="@dimen/px_to_dip_10"
+                    android:paddingRight="@dimen/px_to_dip_15"
+                    android:textColor="@color/color_292929"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/qiuzhi_question_tv_answernum"
+                    android:text="@string/answer_"
+                    android:textColor="@color/color_b2b2b2"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_attnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/qiuzhi_question_tv_3"
+                    android:paddingLeft="@dimen/px_to_dip_10"
+                    android:paddingRight="@dimen/px_to_dip_15"
+                    android:textColor="@color/color_292929"
+                    android:textSize="@dimen/px_to_sp_16" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_question_tv_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/qiuzhi_question_tv_attnum"
+                    android:text="@string/follow_"
+                    android:textColor="@color/color_b2b2b2"
+                    android:textSize="@dimen/px_to_sp_16" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_cccccc" />
+
+        <LinearLayout
+            android:id="@+id/qiuzhi_question_layout_wv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px_to_dip_20"
+            android:paddingLeft="@dimen/px_to_dip_17"
+            android:paddingRight="@dimen/px_to_dip_17"
+            android:paddingTop="@dimen/px_to_dip_20" />
+
+        <com.jsy_jiaobao.customview.IEditText
+            android:id="@+id/qiuzhi_question_edt_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_to_dip_20"
+            android:layout_marginRight="@dimen/px_to_dip_20"
+            android:hint="@string/answer_noMoreThan100"
+            android:maxLength="100"
+            android:minHeight="@dimen/px_to_dip_60"
+            android:textSize="@dimen/px_to_sp_20" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/qiuzhi_question_tv_photo"
+                android:layout_width="@dimen/px_to_dip_48"
+                android:layout_height="@dimen/px_to_dip_48"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px_to_dip_10"
+                android:layout_marginTop="@dimen/px_to_dip_10"
+                android:background="@drawable/icon_qiuzhi_takepic" />
+
+            <com.jsy_jiaobao.customview.IEditText
+                android:id="@+id/qiuzhi_question_edt_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_15"
+                android:layout_marginRight="@dimen/px_to_dip_15"
+                android:layout_toLeftOf="@id/qiuzhi_question_tv_photo"
+                android:hint="@string/answerContent_selectable_answerQuestionWithProveBest"
+                android:maxLength="20000"
+                android:minHeight="@dimen/px_to_dip_80"
+                android:textSize="@dimen/px_to_sp_20"
+                android:maxHeight="@dimen/px_to_dip_240" />
+        </RelativeLayout>
+ 
+        <CheckBox
+            android:id="@+id/qiuzhi_question_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/prove_check" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_to_dip_50"
+            android:layout_marginTop="@dimen/px_to_dip_50"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/qiuzhi_question_tv_answithname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_to_dip_48"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/px_to_dip_10"
+                android:background="@drawable/bg_qiuzhi_updata_btn"
+                android:gravity="center"
+                android:paddingLeft="@dimen/px_to_dip_15"
+                android:paddingRight="@dimen/px_to_dip_15"
+                android:text="@string/submit_answer"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/qiuzhi_question_tv_ansnoname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_to_dip_48"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/px_to_dip_10"
+                android:layout_toRightOf="@id/qiuzhi_question_tv_answithname"
+                android:background="@drawable/bg_qiuzhi_updata_btn"
+                android:gravity="center"
+                android:paddingLeft="@dimen/px_to_dip_15"
+                android:paddingRight="@dimen/px_to_dip_15"
+                android:text="@string/anonymity_submit"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

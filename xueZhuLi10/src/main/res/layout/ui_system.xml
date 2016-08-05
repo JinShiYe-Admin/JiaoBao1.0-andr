@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/system_img_photo"
+        android:layout_width="@dimen/ui_100dp"
+        android:layout_height="@dimen/ui_100dp"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/system_btn_upphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/system_img_photo"
+        android:text="@string/upload_head_portrait" />
+
+    <Button
+        android:id="@+id/system_btn_loginout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/user_logout" />
+
+    <Button
+        android:id="@+id/system_btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/system_btn_loginout"
+        android:layout_toRightOf="@id/system_btn_loginout"
+        android:text="@string/quit_system" />
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="node_header" type="id"/>
+    <item name="node_items" type="id"/>
+    <item name="tree_items" type="id"/>
+    <!-- qiuzhi -->
+    <item name="tabtag_position" type="id"/>
+    <item name="tabtag_category" type="id"/>
+    <item name="list_item_webView" type="id"/>
+    <item name="list_item_webView1" type="id"/>
+    <item name="qiuzhi_list_item_webView" type="id"/>
+
+</resources>

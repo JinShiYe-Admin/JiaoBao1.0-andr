@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minHeight="@dimen/px_to_dip_40"
+    android:layout_height="match_parent">
+    <TextView 
+        android:id="@+id/item_worksend_gen_gen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/px_to_dip_30"
+        android:paddingTop="@dimen/px_to_dip_10"
+        android:paddingBottom="@dimen/px_to_dip_10"
+        android:textColor="#292929"
+        android:textSize="@dimen/px_to_sp_18"
+        android:gravity="center"/>
+	<CheckBox 
+	    android:id="@+id/item_worksend_gen_gen_cb"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:button="@drawable/worksend_checkedbox"
+	    android:layout_marginRight="@dimen/px_to_dip_80"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentRight="true"/>
+</RelativeLayout>

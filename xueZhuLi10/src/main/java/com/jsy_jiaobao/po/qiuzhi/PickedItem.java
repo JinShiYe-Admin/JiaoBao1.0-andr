@@ -1,0 +1,80 @@
+package com.jsy_jiaobao.po.qiuzhi;
+
+import java.io.Serializable;
+
+/**
+ * 精选列表Model
+ * 
+ * @author admin
+ * 
+ */
+
+public class PickedItem implements Serializable {
+
+	private static final long serialVersionUID = 8791596836706646075L;
+	private int TabID;// 精选ID
+	private String PTitle;// 精选标题
+	private String PickDescipt;// 精选说明
+	private String RecDate;// 日期
+	private String ImgContent;// 字符串数组
+								// 轮播图片地址片段（每个地址需要加上baseImgUrl这个字段以得到一个完整的url地址）这个列表应该取第一个图片做为显示用
+	private String baseImgUrl;//
+	private int RowCount;// 记录数量，用于取第二页记录起给参数赋值和客户端分页用
+
+	public int getTabID() {
+		return TabID;
+	}
+
+	public void setTabID(int tabID) {
+		TabID = tabID;
+	}
+
+	public String getPTitle() {
+		return PTitle;
+	}
+
+	public void setPTitle(String pTitle) {
+		PTitle = pTitle;
+	}
+
+	public String getPickDescipt() {
+		return PickDescipt;
+	}
+
+	public void setPickDescipt(String pickDescipt) {
+		PickDescipt = pickDescipt;
+	}
+
+	public String getRecDate() {
+		return RecDate;
+	}
+
+	public void setRecDate(String recDate) {
+		RecDate = recDate;
+	}
+
+	public String getImgContent() {
+		return ImgContent;
+	}
+
+	public void setImgContent(String imgContent) {
+		ImgContent = imgContent;
+	}
+
+	public String getBaseImgUrl() {
+		return baseImgUrl;
+	}
+
+	public void setBaseImgUrl(String baseImgUrl) {
+		this.baseImgUrl = baseImgUrl;
+	}
+
+	public int getRowCount() {
+		return RowCount;
+	}
+
+	public void setRowCount(int rowCount) {
+		RowCount = rowCount;
+	}
+
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ebebeb"
+                android:orientation="horizontal"
+                android:padding="@dimen/px_to_dip_14" >
+
+                <TextView
+                    android:id="@+id/workol_tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title"
+                    android:textSize="@dimen/px_to_sp_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/px_to_dip_14" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/choose_question_"
+                    android:textSize="@dimen/px_to_sp_20" />
+
+                <Spinner
+                    android:id="@+id/workol_sp_chose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/workol_tv_totalnum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/px_to_sp_20" />
+
+                <Chronometer
+                    android:id="@+id/workol_used_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:format="hh:mm:ss"
+                    android:paddingLeft="@dimen/px_to_dip_12"
+                    android:textSize="@dimen/px_to_sp_18" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/workol_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:horizontalSpacing="@dimen/px_to_dip_5"
+                android:numColumns="5"
+                android:padding="@dimen/px_to_dip_12"
+                android:verticalSpacing="@dimen/px_to_dip_5" />
+
+            <WebView
+                android:id="@+id/workol_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:id="@+id/workol_ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/px_to_dip_10" >
+
+            <View
+                android:id="@+id/workol_view_center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/workol_tv_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_to_dip_20"
+                android:layout_toLeftOf="@id/workol_view_center"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:padding="@dimen/px_to_dip_10"
+                android:text="@string/last_question" />
+
+            <TextView
+                android:id="@+id/workol_tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_20"
+                android:layout_toRightOf="@id/workol_view_center"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:padding="@dimen/px_to_dip_10"
+                android:text="@string/next_question" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_to_dip_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f0eff5"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/worksend_gen_iv_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:src="@drawable/icon_worksend_gen_class_selected" />
+
+            <ImageView
+                android:id="@+id/worksend_gen_iv_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:src="@drawable/icon_worksend_gen_person_selected" />
+
+            <ImageView
+                android:id="@+id/worksend_gen_iv_school"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:src="@drawable/icon_worksend_gen_school_selected" />
+
+            <ImageView
+                android:id="@+id/worksend_gen_iv_gen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:src="@drawable/icon_worksend_gen_gen_selected" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shape_worksend_msgcontent"
+            android:padding="1px" >
+
+            <LinearLayout
+                android:id="@+id/worksend_gen_class_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_to_dip_50"
+                    android:background="#ebebeb"
+                    android:padding="@dimen/px_to_dip_10"
+                    android:text="@string/all_class_parent"
+                    android:textColor="#616060"
+                    android:textSize="@dimen/px_to_sp_20" />
+
+                <com.jsy_jiaobao.customview.CusGridView
+                    android:id="@+id/worksend_gen_class_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/px_to_dip_10"
+                    android:layout_marginRight="@dimen/px_to_dip_10"
+                    android:numColumns="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/worksend_gen_person_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_to_dip_50"
+                    android:background="#ebebeb"
+                    android:padding="@dimen/px_to_dip_10"
+                    android:text="所在班级家长"
+                    android:textColor="#616060"
+                    android:textSize="@dimen/px_to_sp_20" />
+
+                <com.jsy_jiaobao.customview.CusExpandableListView
+                    android:id="@+id/worksend_gen_person_expanlistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/px_to_dip_10"
+                    android:layout_marginRight="@dimen/px_to_dip_10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/worksend_gen_school_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.jsy_jiaobao.customview.CusListView
+                    android:id="@+id/worksend_gen_school_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/worksend_gen_gen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/worksend_gen_gen_layout_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ebebeb" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/px_to_dip_10"
+                        android:text="@string/allJurisdiction_school_parent"
+                        android:textColor="#616060"
+                        android:textSize="@dimen/px_to_sp_20" />
+
+                    <CheckBox
+                        android:id="@+id/worksend_gen_gen_cb_invert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/px_to_dip_10"
+                        android:button="@null"
+                        android:text="@string/inverse"
+                        android:textColor="#292929"
+                        android:textSize="@dimen/px_to_sp_20" />
+
+                    <CheckBox
+                        android:id="@+id/worksend_gen_gen_cb_selectall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_to_dip_10"
+                        android:layout_toLeftOf="@id/worksend_gen_gen_cb_invert"
+                        android:button="@drawable/worksend_checkedbox"
+                        android:text="@string/all_select"
+                        android:textColor="#292929"
+                        android:textSize="@dimen/px_to_sp_20" />
+                </RelativeLayout>
+
+                <com.jsy_jiaobao.customview.CusListView
+                    android:id="@+id/worksend_gen_gen_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

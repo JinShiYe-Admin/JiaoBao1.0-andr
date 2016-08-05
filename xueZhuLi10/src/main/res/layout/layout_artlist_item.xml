@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/px_to_dip_10"
+    android:paddingRight="@dimen/px_to_dip_10" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#cccccc" />
+
+    <ImageView
+        android:id="@+id/artlist_item_pic"
+        android:layout_width="@dimen/px_to_dip_54"
+        android:layout_height="@dimen/px_to_dip_54"
+        android:layout_centerVertical="true" />
+
+    <RelativeLayout
+        android:id="@+id/artlist_item_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/px_to_dip_10"
+        android:layout_toRightOf="@id/artlist_item_pic"
+        android:paddingBottom="@dimen/px_to_dip_3" >
+
+        <RelativeLayout
+            android:id="@+id/artlist_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_to_dip_10" >
+
+            <TextView
+                android:id="@+id/artlist_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_10"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:textColor="@color/art_title"
+                android:textSize="@dimen/px_to_sp_20"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/artlist_item_content"
+            android:layout_marginTop="@dimen/px_to_dip_10" >
+
+            <TextView
+                android:id="@+id/artlist_item_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:textSize="@dimen/px_to_sp_18"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/px_to_dip_10" />
+
+            <LinearLayout
+                android:id="@+id/artlist_item_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/artlist_item_likeview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_art3" />
+
+                <TextView
+                    android:id="@+id/artlist_item_likecount"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/px_to_sp_18"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_to_dip_10"
+                    android:textColor="@color/topbar_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/artlist_item_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_to_dip_15"
+                android:layout_toLeftOf="@id/artlist_item_like"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_art2" />
+
+                <TextView
+                    android:id="@+id/artlist_item_viewcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/px_to_sp_18"
+                    android:layout_marginLeft="@dimen/px_to_dip_10"
+                    android:textColor="@color/topbar_bg" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/artlist_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_10"
+                android:layout_marginRight="@dimen/px_to_dip_10"
+                android:singleLine="true"
+                android:textSize="@dimen/px_to_sp_18"
+                android:layout_toLeftOf="@id/artlist_item_view"
+                android:layout_toRightOf="@id/artlist_item_author"/>
+            <!--
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/ui_10dp"
+                    android:layout_toLeftOf="@+id/artlist_item_view"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/icon_art1" />
+
+                    <TextView
+                        android:id="@+id/artlist_item_clickcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ui_5dp"
+                        android:textColor="@color/topbar_bg" />
+                </LinearLayout>
+            -->
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

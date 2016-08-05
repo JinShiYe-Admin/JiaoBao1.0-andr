@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_to_dip_60" >
+
+        <TextView
+            android:id="@+id/qiuzhi_tv_moretopic"
+            android:layout_width="@dimen/px_to_dip_48"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/qiuzhi_btn_moretopic" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/qiuzhi_tv_moretopic"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/qiuzhi_layout_scrolltab"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/color_ebebeb" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/qiuzhi_index_tv_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:minHeight="@dimen/px_to_dip_30"
+            android:textColor="@color/color_ff8503" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/qiuzhi_index_tv_dismiss"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/qiuzhi_index_layout_topic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/qiuzh_index_tv_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableRight="@drawable/channel_expandablelistview_bottom_icon"
+                    android:padding="@dimen/px_to_dip_10"
+                    android:text="@string/primarySchool_Chinese" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/qiuzh_index_tv_topic"
+                    android:padding="@dimen/px_to_dip_10"
+                    android:text="@string/chose_topic_" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/qiuzhi_index_layout_chose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ebebeb"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="4" >
+
+                <TextView
+                    android:id="@+id/qiuzhi_index_tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_to_dip_10"
+                    android:layout_marginBottom="@dimen/px_to_dip_10"
+                    android:layout_marginLeft="@dimen/px_to_dip_50"
+                    android:layout_marginRight="@dimen/px_to_dip_10"
+                    android:background="@drawable/bg_qiuzhi_siftion"
+                    android:paddingBottom="@dimen/px_to_dip_5"
+                    android:paddingLeft="@dimen/px_to_dip_10"
+                    android:paddingRight="@dimen/px_to_dip_10"
+                    android:paddingTop="@dimen/px_to_dip_5"
+                    android:text="@string/all"
+                    android:textColor="@color/color_03ab35" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_index_tv_evidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_to_dip_10"
+                    android:layout_marginLeft="@dimen/px_to_dip_50"
+                    android:layout_marginRight="@dimen/px_to_dip_10"
+                    android:layout_marginTop="@dimen/px_to_dip_10"
+                    android:paddingBottom="@dimen/px_to_dip_5"
+                    android:paddingLeft="@dimen/px_to_dip_10"
+                    android:paddingRight="@dimen/px_to_dip_10"
+                    android:paddingTop="@dimen/px_to_dip_5"
+                    android:text="@string/have_prove" />
+
+                <TextView
+                    android:id="@+id/qiuzhi_index_tv_discuss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_to_dip_10"
+                    android:layout_marginLeft="@dimen/px_to_dip_50"
+                    android:layout_marginRight="@dimen/px_to_dip_10"
+                    android:layout_marginTop="@dimen/px_to_dip_10"
+                    android:paddingBottom="@dimen/px_to_dip_5"
+                    android:paddingLeft="@dimen/px_to_dip_10"
+                    android:paddingRight="@dimen/px_to_dip_10"
+                    android:paddingTop="@dimen/px_to_dip_5"
+                    android:text="@string/discussing" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/qiuzhi_noContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/qiuzhi_nocontent"
+                android:visibility="gone" />
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/qiuzhi_listview_index"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#ebebeb"
+                android:dividerHeight="@dimen/px_to_dip_12" />
+        </LinearLayout>
+        <!--
+             <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/qiuzhi_index_tv_dismiss"
+            android:orientation="vertical"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="both" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/qiuzhi_index_layout_topic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/qiuzh_index_tv_topic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/px_to_dip_10"
+                        android:text="@string/primarySchool_Chinese" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/qiuzh_index_tv_topic"
+                        android:padding="@dimen/px_to_dip_10"
+                        android:text="@string/chose_topic_" />
+                </RelativeLayout>
+
+                <com.jsy.xuezhuli.customview.CusListView
+                    android:id="@+id/qiuzhi_listview_index_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#ebebeb"
+                    android:dividerHeight="@dimen/px_to_dip_10" />
+
+                <LinearLayout
+                    android:id="@+id/qiuzhi_index_layout_chose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ebebeb"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/qiuzhi_index_tv_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/px_to_dip_10"
+                        android:background="@drawable/bg_qiuzhi_siftion"
+                        android:paddingBottom="@dimen/px_to_dip_5"
+                        android:paddingLeft="@dimen/px_to_dip_10"
+                        android:paddingRight="@dimen/px_to_dip_10"
+                        android:paddingTop="@dimen/px_to_dip_5"
+                        android:text="@string/all"
+                        android:textColor="@color/color_03ab35" />
+
+                    <TextView
+                        android:id="@+id/qiuzhi_index_tv_evidence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/px_to_dip_10"
+                        android:paddingBottom="@dimen/px_to_dip_5"
+                        android:paddingLeft="@dimen/px_to_dip_10"
+                        android:paddingRight="@dimen/px_to_dip_10"
+                        android:paddingTop="@dimen/px_to_dip_5"
+                        android:text="@string/have_prove" />
+
+                    <TextView
+                        android:id="@+id/qiuzhi_index_tv_discuss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/px_to_dip_10"
+                        android:paddingBottom="@dimen/px_to_dip_5"
+                        android:paddingLeft="@dimen/px_to_dip_10"
+                        android:paddingRight="@dimen/px_to_dip_10"
+                        android:paddingTop="@dimen/px_to_dip_5"
+                        android:text="@string/discussing" />
+                </LinearLayout>
+
+                <com.jsy.xuezhuli.customview.CusListView
+                    android:id="@+id/qiuzhi_listview_index"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#ebebeb"
+                    android:dividerHeight="@dimen/px_to_dip_10" />
+            </LinearLayout>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+        -->
+    </RelativeLayout>
+
+</LinearLayout>

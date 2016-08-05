@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/workol_stuhw_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/px_to_dip_20"
+        android:paddingRight="@dimen/px_to_dip_20"
+        android:paddingTop="@dimen/px_to_dip_10"
+        android:paddingBottom="@dimen/px_to_dip_10"
+         >
+
+        <TextView
+            android:id="@+id/workol_stuhw_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/course"
+            android:textColor="#21292b"
+            android:ellipsize="end"
+            android:maxLength="15"
+            android:textSize="@dimen/px_to_sp_18" />
+
+        <TextView
+            android:id="@+id/workol_stuhw_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/finish_orLackHand_orTotals"
+            android:textColor="#21292b"
+            android:textSize="@dimen/px_to_sp_18" />
+    </RelativeLayout>
+
+</LinearLayout>

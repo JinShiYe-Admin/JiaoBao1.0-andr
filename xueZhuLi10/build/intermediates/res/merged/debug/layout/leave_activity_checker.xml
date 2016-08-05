@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_messagecenter_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp" >
+
+         <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" 
+            android:visibility="gone"/>
+         
+        <TextView
+            android:id="@+id/tv_uncheck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/gen_check_title_background"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_to_dip_15"
+            android:text="@string/leave_uncheck"
+            android:textColor="@color/gen_check_title_color"
+            android:textSize="@dimen/px_to_sp_22" />
+
+        <TextView
+            android:id="@+id/tv_checked"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/gen_check_title_background"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_to_dip_15"
+            android:text="@string/leave_checked"
+            android:textColor="@color/gen_check_title_color"
+            android:textSize="@dimen/px_to_sp_22" />
+
+        <TextView
+            android:id="@+id/tv_query"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/gen_check_title_background"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_to_dip_15"
+            android:text="@string/leave_statistical_query"
+            android:textColor="@color/gen_check_title_color"
+            android:textSize="@dimen/px_to_sp_22" />
+
+        <TextView
+            android:id="@+id/tv_gateGuard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/gen_check_title_background"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_to_dip_15"
+            android:text="门卫审核"
+            android:textColor="@color/gen_check_title_color"
+            android:textSize="@dimen/px_to_sp_22"
+            android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/tv_null2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d8d8" />
+
+    <LinearLayout
+        android:id="@+id/ly_condition"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" 
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_screen_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/leave_screen_condition"
+            android:textSize="17sp"
+            android:background="@drawable/textview_border" />
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:text="" 
+            android:layout_marginRight="5dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d8d8" />
+
+    <LinearLayout
+        android:id="@+id/ly_listtitile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silver"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/item_checkedcommited_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="时间" />
+
+        <TextView
+            android:id="@+id/item_checkedcommited_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="姓名" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/item_checkedcommited_reason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="理由" />
+
+            <TextView
+                android:id="@+id/item_checkedcommited_flag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="状态" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_querylisttitile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/silver"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/item_checkedselect_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:text="人名" />
+
+        <TextView
+            android:id="@+id/item_checkedselect_class"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="补课假/" />
+
+        <TextView
+            android:id="@+id/item_checkedselect_other"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="其他假" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" >
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.jsy_jiaobao.customview.CusListView
+                android:id="@+id/cus_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#dfdede" />
+        </FrameLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

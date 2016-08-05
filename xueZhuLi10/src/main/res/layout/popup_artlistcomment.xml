@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_show2_layout_commit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_to_dip_60"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/px_to_dip_5"
+        android:paddingTop="@dimen/px_to_dip_5" >
+
+        <ImageView
+            android:id="@+id/item_show2_iv_commit"
+            android:layout_width="@dimen/px_to_dip_60"
+            android:layout_height="@dimen/px_to_dip_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_worksend_send" />
+
+        <com.jsy_jiaobao.customview.IEditText
+            android:id="@+id/item_show2_edt_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/px_to_dip_10"
+            android:layout_marginRight="@dimen/px_to_dip_12"
+            android:layout_toLeftOf="@id/item_show2_iv_commit"
+            android:background="@drawable/bg_publish_input"
+            android:hint="@string/comment"
+            android:maxLength="1000"
+            android:lines="1"
+            android:textSize="@dimen/px_to_sp_18" />
+    </RelativeLayout>
+
+</RelativeLayout>

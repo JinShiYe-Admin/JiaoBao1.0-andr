@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_60dp"
+        android:orientation="horizontal" >
+        <RelativeLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="5">
+            <com.jsy_jiaobao.customview.IEditText 
+                android:id="@+id/unitmsg_quaryunit_edt_keywords"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_10dp"
+                android:hint="@string/name_keywords_orUnitNo"
+                android:paddingLeft="@dimen/ui_20dp"
+                android:background="@drawable/edittext_bg"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/unitmsg_quaryunit_edt_keywords"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/ui_5dp"
+                android:background="@drawable/msgcenter_btn_search" />
+        </RelativeLayout>
+        <Button 
+            android:id="@+id/unitmsg_quaryunit_btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/ui_10dp"
+            android:text="@string/search"
+            android:background="@drawable/buttonbg"/>
+    </LinearLayout>
+
+    <com.jsy_jiaobao.customview.XListView
+        android:id="@+id/unitmsg_quaryunit_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000" />
+
+</LinearLayout>

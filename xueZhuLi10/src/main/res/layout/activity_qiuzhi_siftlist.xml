@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/qiuzhi_siftlist_hidden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:minHeight="@dimen/px_to_dip_48"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/qiuzhi_siftlist_hidden"
+        android:orientation="vertical"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" >
+
+        <com.jsy_jiaobao.customview.CusListView
+            android:id="@+id/qiuzhi_siftlist_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ebebeb"
+            android:dividerHeight="@dimen/px_to_dip_10" />
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrMode="both" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_48dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/unitshow_layout_newunit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ui_48dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/unitshow_iv_newunitlogo"
+                    android:layout_width="@dimen/ui_48dp"
+                    android:layout_height="@dimen/ui_48dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ui_10dp"
+                    android:layout_marginRight="@dimen/ui_10dp"
+                    android:background="@drawable/icon_new" />
+
+                <TextView
+                    android:id="@+id/unitshow_tv_newunit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/newest_updateUnit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/unitshow_layout_newart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ui_48dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/ui_48dp"
+                    android:layout_height="@dimen/ui_48dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ui_10dp"
+                    android:layout_marginRight="@dimen/ui_10dp"
+                    android:background="@drawable/icon_new" />
+
+                <TextView
+                    android:id="@+id/unitshow_tv_newart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/newest_updateArtical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/unitshow_layout_newloca"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ui_48dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/unitshow_iv_newlocalogo"
+                    android:layout_width="@dimen/ui_48dp"
+                    android:layout_height="@dimen/ui_48dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ui_10dp"
+                    android:layout_marginRight="@dimen/ui_10dp"
+                    android:background="@drawable/icon_new" />
+
+                <TextView
+                    android:id="@+id/unitshow_tv_newloca"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/local_newestUnit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/unitshow_layout_newlocalart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ui_48dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/ui_48dp"
+                    android:layout_height="@dimen/ui_48dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ui_10dp"
+                    android:layout_marginRight="@dimen/ui_10dp"
+                    android:background="@drawable/icon_new" />
+
+                <TextView
+                    android:id="@+id/unitshow_tv_newlocalart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/local_newestArtical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/unitshow_layout_correunit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_48dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/unitshow_iv_correunitlogo"
+                android:layout_width="@dimen/ui_48dp"
+                android:layout_height="@dimen/ui_48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ui_10dp"
+                android:layout_marginRight="@dimen/ui_10dp"
+                android:background="@drawable/icon_unit_junior" />
+
+            <TextView
+                android:id="@+id/unitshow_tv_correunit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="@string/related_unit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/unitshow_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_30dp"
+            android:background="@color/sendmessage_bg_transparent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/unitshow_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ui_10dp"
+                android:text="@string/unit_iam_in" />
+        </LinearLayout>
+
+        <com.jsy_jiaobao.customview.CusListView
+            android:id="@+id/unitshow_listview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/unitshow_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_30dp"
+            android:background="@color/sendmessage_bg_transparent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/ui_10dp"
+                android:text="@string/unit_haveMyAttention" />
+        </LinearLayout>
+
+        <com.jsy_jiaobao.customview.CusListView
+            android:id="@+id/unitshow_listview2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

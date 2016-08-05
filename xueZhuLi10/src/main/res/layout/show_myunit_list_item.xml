@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_48dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/ui_48dp"
+            android:layout_height="@dimen/ui_48dp" >
+
+            <ImageView
+                android:id="@+id/unitshow_item_pic"
+                android:layout_width="@dimen/ui_48dp"
+                android:layout_height="@dimen/ui_48dp"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/ui_3dp" />
+
+            <TextView
+                android:id="@+id/unitshow_item_badview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/textview_badview"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/unitshow_item_unitname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:text="@string/newest_unit" />
+
+        <ImageView
+            android:id="@+id/unitshow_item_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/ui_10dp"
+            android:background="@drawable/btn_more"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

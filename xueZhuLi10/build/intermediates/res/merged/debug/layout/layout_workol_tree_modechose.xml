@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_to_dip_60"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/px_to_dip_20"
+        android:gravity="center_vertical"
+        android:text="@string/model_choose"
+        android:textColor="@color/color_21292b"
+        android:textSize="@dimen/px_to_sp_21" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_to_dip_60"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/px_to_dip_10"
+        android:layout_marginRight="@dimen/px_to_dip_10"
+        android:gravity="center_vertical"
+        android:scrollbars="@null" >
+
+        <RadioGroup
+            android:id="@+id/tree_modechose_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_to_dip_60"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tree_modechose_radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/workol_tea_radiobutton"
+                android:checked="true"
+                android:text="@string/personality"
+                android:textColor="@color/color_797979"
+                android:textSize="@dimen/px_to_sp_18" />
+
+            <RadioButton
+                android:id="@+id/tree_modechose_radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_15"
+                android:button="@drawable/workol_tea_radiobutton"
+                android:text="@string/unify"
+                android:textColor="@color/color_797979"
+                android:textSize="@dimen/px_to_sp_18" />
+
+            <RadioButton
+                android:id="@+id/tree_modechose_radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_15"
+                android:button="@drawable/workol_tea_radiobutton"
+                android:text="@string/AB_testPaper"
+                android:textColor="@color/color_797979"
+                android:textSize="@dimen/px_to_sp_18" />
+
+            <RadioButton
+                android:id="@+id/tree_modechose_radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_to_dip_15"
+                android:button="@drawable/workol_tea_radiobutton"
+                android:text="@string/user_defined"
+                android:textColor="@color/color_797979"
+                android:textSize="@dimen/px_to_sp_18" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

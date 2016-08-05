@@ -1,0 +1,158 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrMode="both" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/leave_rg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <RadioButton
+                android:id="@+id/rb_self"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本人"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/rb_stu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_roleIdentity_student"
+                android:textSize="17sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#ebebeb" />
+
+            <LinearLayout
+                android:id="@+id/leave_llayout_chosestu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp" >
+
+                <TextView
+                    android:id="@+id/leaver_identity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_roleIdentity_student"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/leave_tv_stuname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableRight="@drawable/bar_back"
+                    android:text="@string/leave_chosestudent_please"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="#ebebeb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/leave_reason"
+                android:textSize="17sp" />
+
+            <Spinner
+                android:id="@+id/leave_spn_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/leave_please_choose_type"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#ebebeb" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/leave_reason_edit"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/leave_edt_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/leave_reason_describe"
+                android:maxLength="100"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leave_llayout_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/leave_tv_time_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_add"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/leave_add_time"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/leave_btn_commit"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:text="@string/commit"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="@dimen/ui_30dp"
+    android:padding="@dimen/ui_30dp"
+    android:orientation="vertical"
+    android:background="@color/transparent" >
+    <TimePicker 
+        android:id="@+id/timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button 
+        android:id="@+id/timepicker_btn_take"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ui_10dp"
+        android:padding="@dimen/ui_10dp"
+        android:layout_below="@id/timepicker"
+        android:background="@drawable/login_btn_login"
+        android:text="@string/sure"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

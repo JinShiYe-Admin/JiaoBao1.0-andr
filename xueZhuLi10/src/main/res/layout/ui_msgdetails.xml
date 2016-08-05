@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/msgdetails_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/msgdetails_img_photo"
+                    android:layout_width="@dimen/ui_48dp"
+                    android:layout_height="@dimen/ui_48dp"
+                    android:layout_margin="@dimen/ui_10dp"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/msgdetails_layout_details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/ui_10dp"
+                android:layout_marginTop="@dimen/ui_5dp"
+                android:layout_weight="4.0"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/msgdetails_tv_author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/sendme_textcolor"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:id="@+id/msgdetails_tv_relay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/transmit"
+                        android:textColor="@color/sendme_textcolor"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/msgdetails_tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_5dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <LinearLayout
+                    android:id="@+id/msgdetails_layout_attlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_10dp" >
+
+                    <TextView
+                        android:id="@+id/msgdetails_tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/sendme_textcolor"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/msgdetails_tv_receiver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/receiver_details"
+                            android:textColor="@color/sendme_textcolor"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.jsy_jiaobao.customview.CusListView
+                        android:id="@+id/msgdetails_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f2f2f2" />
+
+                    <com.jsy_jiaobao.customview.CusGridView
+                        android:id="@+id/msgdetails_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f2f2f2"
+                        android:numColumns="2"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <com.jsy_jiaobao.customview.IEditText
+            android:id="@+id/msgdetails_edt_mywords"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/ui_5dp"
+            android:layout_weight="5.0"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/input_reply_message"
+            android:paddingLeft="@dimen/ui_15dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/msgdetails_btn_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ui_5dp"
+            android:layout_marginRight="@dimen/ui_5dp"
+            android:layout_marginTop="@dimen/ui_5dp"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:text="@string/reply"
+            android:textColor="@color/topbar_bg" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ui_10dp" >
+
+        <TextView
+            android:id="@+id/publisharticle_item_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/publisharticle_item_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/publisharticle_item_tv_num"
+            android:ellipsize="end"
+            android:ems="10"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/publisharticle_item_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ui_10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/edit"
+                android:textColor="@color/topbar_bg" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ui_10dp"
+                android:background="@null"
+                android:text="@string/comment"
+                android:textColor="@color/topbar_bg" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ui_10dp"
+                android:background="@null"
+                android:text="@string/delete"
+                android:textColor="@color/topbar_bg" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ui_10dp"
+                android:background="@null"
+                android:text="@string/release"
+                android:textColor="@color/topbar_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
