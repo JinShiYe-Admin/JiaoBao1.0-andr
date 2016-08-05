@@ -7,36 +7,13 @@ import android.view.View;
 import android.widget.Toast;
 
 /**
- * <pre>
- *                   _ooOoo_
- *                  o8888888o
- *                  88" . "88
- *                  (| -_- |)
- *                  O\  =  /O
- *               ____/`---'\____
- *             .'  \\|     |//  `.
- *            /  \\|||  :  |||//  \
- *           /  _||||| -:- |||||-  \
- *           |   | \\\  -  /// |   |
- *           | \_|  ''\---/''  |   |
- *           \  .-\__  `-`  ___/-. /
- *         ___`. .'  /--.--\  `. . __
- *      ."" '<  `.___\_<|>_/___.'  >'"".
- *     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *     \  \ `-.   \_ __\ /__ _/   .-` /  /
- *======`-.____`-.___\_____/___.-`____.-'======
- *                   `=---='
- *^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *         		    佛祖保佑       永无BUG
  *         Toast快速消失
  */
 public class ToastUtil {
 
 	private static Handler handler = new Handler(Looper.getMainLooper());
-
 	private static Toast toast = null;
-
-	private static Object synObj = new Object();
+	private static final Object synObj = new Object();
 	private static View view;
 
 	public static void showMessage(final Context context, final String msg) {
@@ -50,7 +27,7 @@ public class ToastUtil {
 		try {
 			showMessage(context, context.getResources().getString(id),Toast.LENGTH_SHORT);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 
@@ -82,5 +59,4 @@ public class ToastUtil {
 			}
 		}).start();
 	}
-
 }

@@ -1,6 +1,5 @@
 package com.jsy.xuezhuli.utils;
 
-import java.io.File;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -11,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.jsy_jiaobao.customview.MovieRecorderView;
 import com.jsy_jiaobao.customview.MovieRecorderView.OnRecordFinishListener;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
+
+import java.io.File;
 
 /**
  *一些修改1 2016-4-26 MSL<br>
@@ -25,16 +27,15 @@ import com.jsy_jiaobao.main.R;
  * 录制视频
  */
 public class VideoRecorderDialog extends Dialog {
-
+	private int flag = 1;
+	private long startVoiceT, endVoiceT;
+	private String voiceName;
 	private Context mContext;
 	private ClickListenerInterface clickListenerInterface;
 	private Handler mHandler;
 
 	public interface ClickListenerInterface {
-
-		public void doConfirm();
-
-		public void doCancel(String filePath);
+		void doCancel(String filePath);
 	}
 
 	public VideoRecorderDialog(Context context, Handler mHandler) {
@@ -52,7 +53,6 @@ public class VideoRecorderDialog extends Dialog {
 	MovieRecorderView movieRecorderView;
 	TextView tvConfirm;//开始录制和停止录制按钮
 	TextView tvCancel;//退出按钮
-	boolean startRecorder = false;//这个好像没用上
 
 	protected DisplayMetrics getScreenWH() {
 		DisplayMetrics dMetrics = new DisplayMetrics();
@@ -179,82 +179,7 @@ public class VideoRecorderDialog extends Dialog {
 		}
 	}
 
-	private int flag = 1;
-	private long startVoiceT, endVoiceT;
-	String voiceName;
 
-	// @Override
-	// public boolean onTouch(View v, MotionEvent event) {
-	// int[] location = new int[2];
-	// tvConfirm.getLocationInWindow(location); // 获取在当前窗口内的绝对坐标
-	// int btn_rc_Y = location[1];
-	// int btn_rc_X = location[0];
-	// int[] del_location = new int[2];
-	// tvCancel.getLocationInWindow(del_location);
-	// int del_Y = del_location[1];
-	// int del_x = del_location[0];
-	// if (event.getAction() == MotionEvent.ACTION_DOWN && flag == 1) {
-	// if (event.getY() > btn_rc_Y && event.getX() > btn_rc_X) {
-	// tvConfirm.setText("松开保存");
-	// tvConfirm.setBackgroundResource(R.drawable.voice_rcd_btn_pressed);
-	// tvCancel.setVisibility(View.VISIBLE);
-	// startVoiceT = System.currentTimeMillis();
-	// voiceName = startVoiceT + ".mp4";
-	// movieRecorderView.record(new OnRecordFinishListener() {
-	//
-	// @Override
-	// public void onRecordFinish() {
-	// clickListenerInterface.doCancel(JSYApplication.getInstance().AV_PATH+voiceName);
-	// }
-	// },JSYApplication.getInstance().AV_PATH,voiceName);
-	// flag = 2;
-	// }
-	// } else if (event.getAction() == MotionEvent.ACTION_UP && flag == 2)
-	// {//松开手势时执行录制完成
-	// tvConfirm.setBackgroundResource(R.drawable.voice_rcd_btn_nor);
-	// tvCancel.setVisibility(View.INVISIBLE);
-	// tvTouch.setEnabled(false);
-	// tvConfirm.setText("数据处理中");
-	// mHandler.postDelayed(new Runnable() {
-	// @Override
-	// public void run() {
-	// tvTouch.setEnabled(true);
-	// tvConfirm.setText("按住开始");
-	// }
-	// }, 2000);
-	// movieRecorderView.stop();
-	// try {
-	// movieRecorderView.initCamera();
-	// } catch (Exception e) {
-	// e.printStackTrace();
-	// }
-	// flag = 1;
-	// if (event.getY() >= del_Y && event.getY() <= del_Y + tvCancel.getHeight()
-	// && event.getX() >= del_x && event.getX() <= del_x + tvCancel.getWidth())
-	// {
-	// File file = new File(JSYApplication.getInstance().AV_PATH+voiceName);
-	// if (file.exists()) {
-	// file.delete();
-	// }
-	// } else {
-	// endVoiceT = System.currentTimeMillis();
-	// int time = (int) ((endVoiceT - startVoiceT) / 1000);
-	// if (time < 3) {
-	// ToastUtil.showMessage(mContext, "录制时间太短");
-	// File file = new File(JSYApplication.getInstance().AV_PATH+voiceName);
-	// if (file.exists()) {
-	// file.delete();
-	// }
-	// }else{
-	// if (!movieRecorderView.isFinish()) {
-	// clickListenerInterface.doCancel(JSYApplication.getInstance().AV_PATH+voiceName);
-	// }
-	// }
-	// }
-	//
-	// }
-	// return true;
-	// }
 
 	public void setClickListenerInterface(
 			ClickListenerInterface clickListenerInterface) {
@@ -266,6 +191,5 @@ public class VideoRecorderDialog extends Dialog {
 		if (flag == 1) {
 			super.onBackPressed();
 		}
-	};
-
+	}
 }

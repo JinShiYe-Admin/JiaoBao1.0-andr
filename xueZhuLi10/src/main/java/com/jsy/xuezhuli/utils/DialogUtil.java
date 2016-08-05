@@ -4,12 +4,10 @@ import android.app.ProgressDialog;
 import android.content.Context;
 
 public class DialogUtil {
-
 	private static DialogUtil instance;
 	private ProgressDialog dialog;
 
-	public static final DialogUtil getInstance() {
-
+	public static DialogUtil getInstance() {
 		if (instance == null) {
 			instance = new DialogUtil();
 		}
@@ -17,8 +15,9 @@ public class DialogUtil {
 	}
 
 	public boolean isDialogShowing(){
-		return dialog ==null ?false:dialog.isShowing();
+		return dialog != null && dialog.isShowing();
 	}
+
 	public void getDialog(Context pContext, int id) {
 		String pMessage=pContext.getResources().getString(id);
 		try {
@@ -37,6 +36,7 @@ public class DialogUtil {
 			e.printStackTrace();
 		}
 	}
+
 	public void getDialog(Context pContext, String pMessage) {
 		try {
 			if (dialog != null) {
@@ -61,10 +61,10 @@ public class DialogUtil {
 				dialog.setCancelable(can);
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
 	public void cannleDialog() {
 		try {
 			if (dialog != null) {
@@ -76,13 +76,4 @@ public class DialogUtil {
 			e.printStackTrace();
 		}
 	}
-/*	Handler handler = new Handler(){
-
-		@Override
-		public void handleMessage(Message msg) {
-			super.handleMessage(msg);
-			cannleDialog();
-		}
-		
-	};*/
 }

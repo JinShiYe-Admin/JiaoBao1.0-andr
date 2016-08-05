@@ -1,11 +1,11 @@
 package com.jsy.xuezhuli.utils;
 
-import java.security.PublicKey;
-import java.util.List;
-
 import com.jsy_jiaobao.po.sign.ChildSignWay;
 import com.jsy_jiaobao.po.sign.ParentSignWay;
 import com.jsy_jiaobao.po.sys.UserIdentity;
+
+import java.security.PublicKey;
+import java.util.List;
 
 /**
  * @author cai
@@ -14,8 +14,7 @@ import com.jsy_jiaobao.po.sys.UserIdentity;
 public class Constant {
 	public static int ScreenWith = 0;
 	public static int ScreenHeight = 0;
-	public static int MENU_HOME = 0;
-	public static int MENU_OTHER = 1;
+
 	public static String SP_TB_USER = "sp_tb_user";
 	public static String SP_TB_SYS = "sp_tb_sys";
 	static String SPKXmlStr = "<RSAKeyValue><Modulus>xc0EHqiwAGNZn4s+Nr6U7NOSq6H62WBHOPZHwMFrwRMRm55S7R2oIL7vaaDLTg+x10bztPgKrhxor1hQ1uv2NKAx5uqJwsRd4VckhKEWVms6ysQDTy01Jhz9N3SIe2iMibkIuVW/mVSmgLEWHAAKUv4j0pCPSqkmozX6Ur0BAKE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
@@ -28,19 +27,14 @@ public class Constant {
 	public static ParentSignWay SIGNWAY_P =new ParentSignWay("1","普通考勤");//分组父类
 	public static ChildSignWay SIGNWAY_C=new ChildSignWay("5150001","默认");//分组孩子
 	//用户所在单位群组
-	
-	final public static int msgcenter_fail = 0;
+
 	final public static int msgcenter_checkversion = -1;
 	final public static int msgcenter_updataversion = -2;
-	
+
 	final public static int system_login_again = 99;
-	
-	final public static int msgcenter_select_position_0 = 100;
+
 	final public static int msgcenter_select_position_1 = 101;
-	final public static int msgcenter_select_position_2 = 102;
-	final public static int msgcenter_select_position_3 = 103;
-	final public static int msgcenter_select_position_4 = 104;
-	
+
 	final public static int user_regist_ReSendCheckCode = 212;
 	final public static int user_regist_SendCheckCode = 205;
 	final public static int user_regist_checkmobileAcc = 204;
@@ -54,22 +48,13 @@ public class Constant {
 	final public static int user_regist_UpateRecAcc = 214;
 	final public static int user_regist_ChangePW = 215;
 	final public static int user_regist_GetMyMobileUnitList = 216;
-	final public static int user_regist_JoinUnitOP = 217;
-	
-	final public static int msgcenter_gridviewclick_notice = 200;
-	final public static int msgcenter_gridviewclick_show = 201;
-	final public static int msgcenter_gridviewclick_train = 203;
-	
-	final public static int msgcenter_work_chat = 9;
+
 	final public static int msgcenter_work_notice = 1;
-	final public static int msgcenter_notice_notice = 2;
 	final public static int msgcenter_show_notice = 3;
-	final public static int msgcenter_train_notice = 4;
 	final public static int msgcenter_getMyUnitInfo = 5;
 	final public static int msgcenter_getMyParentUnitInfo = 6;
-	final public static int msgcenter_getAllUnitSuccess = 7;
 	final public static int msgcenter_GetMyFriends = -2;
-	
+
 	final public static int msgcenter_select_position = 8;
 	final public static int msgcenter_publish_permission = 80;
 	final public static int msgcenter_publish_getmyUserClass = 81;
@@ -98,32 +83,23 @@ public class Constant {
 	final public static int msgcenter_work2_CommListFromMe = 114;
 	
 	final public static int msgcenter_worksend_getUnitGroups = 115;
-	final public static int msgcenter_worksend_getUserInfoByGroupID = 116;
 	final public static int msgcenter_worksend_GetUnitClassRevicer = 117;
 	final public static int msgcenter_worksend_GetUnitRevicer_otherunit = 118;
 	final public static int msgcenter_worksend_SendBtnClicked = 119;
-	
-	final public static int msgcenter_notice_getmyUserClass = 20;
-	final public static int msgcenter_notice_getMyUnitInfo = 21;
-	final public static int msgcenter_notice_getMyParentUnitInfo = 22;
+
 	final public static int msgcenter_notice_getMySubUnitInfo = 23;
 	final public static int msgcenter_notice_getSchoolClassInfo = 24;
 	final public static int msgcenter_notice_ArthListIndex = 25;
 	final public static int msgcenter_notice_ShowArthDetail = 26;
 	final public static int msgcenter_notice_GetArthInfo = 36;
-	final public static int msgcenter_notice_addfeeback = 27;
 	final public static int msgcenter_notice_uploadSectionImg = 28;
 	final public static int msgcenter_notice_uploadSectionAudio = 36;
 	final public static int msgcenter_notice_uploadSectionVideo = 37;
 	final public static int msgcenter_notice_savepublishArticle = 29;
 	final public static int msgcenter_notice_changeUnit = 30;
-	final public static int msgcenter_notice_TopArthListIndex = 31;
 	final public static int msgcenter_notice_getSectionMessageNew = 32;
 	final public static int msgcenter_notice_getSectionMessageSuggest = 33;
-	final public static int msgcenter_notice_myShareingArth = 34;
-	final public static int msgcenter_notice_gotoset = 35;
-	
-	
+
 	final public static int msgcenter_article_LikeIt = 1;
 	final public static int msgcenter_article_addComment = 2;
 	final public static int msgcenter_articlelist_addComment = 200;
@@ -135,8 +111,7 @@ public class Constant {
 	final public static int msgcenter_article_AddScore_cai_ref = 9;
 	final public static int msgcenter_article_AddScore_callback = 7;
 	final public static int msgcenter_article_click_reply = 10;
-	
-	
+
 	final public static int msgcenter_show_TopArthListIndex = 40;
 	final public static int msgcenter_show_ArthListIndex = 41;
 	final public static int msgcenter_show_UnitArthListIndex = 141;
@@ -155,37 +130,17 @@ public class Constant {
 	final public static int msgcenter_show_getSectionMessageNew = 45;
 	final public static int msgcenter_show_getSchoolClassInfo = 46;
 	final public static int msgcenter_show_getUnitSectionMessages = 47;
-	final public static int msgcenter_show_gotoset = 48;
-	final public static int msgcenter_show_UpdateUnitList = 49;
-	final public static int msgcenter_show_ShowingUnitArthList = 50;
 	final public static int msgcenter_show_getintroduce = 51;
 	final public static int msgcenter_show_GetMyAttUnit = 52;
 	
 	final public static int msgcenter_train_getUnitNotics = 56;
-	final public static int msgcenter_train_ShowNoticDetail = 57;
 	final public static int msgcenter_train_changeUnit = 58;
 	final public static int msgcenter_train_getUserInfo = 59;
 	final public static int msgcenter_train_getmyUserClass = 60;
-	final public static int msgcenter_train_getSchoolClassInfo = 61;
-	final public static int msgcenter_train_changeSchoolUnit = 62;
-	final public static int msgcenter_train_getUnitSectionMessages = 63;
-	final public static int msgcenter_train_gotoset = 64;
-	final public static int msgcenter_train_UpdatedInterestList = 65;
-	final public static int msgcenter_train_EnjoyInterestList = 66;
-	
-	final public static int msgcenter_topical_UpdatedInterestList = 67;
-	
-	final public static int msgcenter_topicalspace_ExistAtt = 1;
-	final public static int msgcenter_topicalspace_RemoveAtt = 2;
-	final public static int msgcenter_topicalspace_AddAtt = 3;
 	
 	final public static int msgcenter_chat_getUnitGroups = 70;
-	final public static int msgcenter_chat_getUserInfoByGroupID = 71;
-	final public static int msgcenter_chat_getmyUserClass = 72;
 	final public static int msgcenter_chat_getClassStdInfo = 73;
-	final public static int msgcenter_chat_getClassGenInfo = 74;
 	final public static int msgcenter_chat_getUserInfoByUnitID = 75;
-	final public static int msgcenter_chat_updataConversation = 76;
 	
 	final public static int msgcenter_unitspace_GetUnitPGroup = 1;
 	final public static int msgcenter_unitspace_GetUnitPhotoByGroupID = 2;
@@ -200,8 +155,7 @@ public class Constant {
 	final public static int appcenter_gallery_GetPhotoList = 1;
 	final public static int appcenter_gallery_UpLoadPhoto = 2;
 	final public static int appcenter_gallery_UpLoadPhotofailed = 3;
-	
-	
+
 	final public static int sturecord_home_BaseInfo = 1;
 	final public static int sturecord_home_PackMsgSch_sch = 20;
 	final public static int sturecord_home_PackMsg_sch = 22;

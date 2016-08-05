@@ -16,24 +16,15 @@ public class DownloadInfo {
     }
 
     private long id;
-
     @Transient
     private HttpHandler<File> handler;
-
     private HttpHandler.State state;
-
     private String downloadUrl;
-
     private String fileName;
-
     private String fileSavePath;
-
     private long progress;
-
     private long fileLength;
-
     private boolean autoResume;
-
     private boolean autoRename;
 
 
@@ -69,10 +60,6 @@ public class DownloadInfo {
         this.downloadUrl = downloadUrl;
     }
 
-    public String getFileName() {
-        return fileName;
-    }
-
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
@@ -85,16 +72,8 @@ public class DownloadInfo {
         this.fileSavePath = fileSavePath;
     }
 
-    public long getProgress() {
-        return progress;
-    }
-
     public void setProgress(long progress) {
         this.progress = progress;
-    }
-
-    public long getFileLength() {
-        return fileLength;
     }
 
     public void setFileLength(long fileLength) {
@@ -121,12 +100,8 @@ public class DownloadInfo {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof DownloadInfo)) return false;
-
         DownloadInfo that = (DownloadInfo) o;
-
-        if (id != that.id) return false;
-
-        return true;
+        return id == that.id;
     }
 
     @Override

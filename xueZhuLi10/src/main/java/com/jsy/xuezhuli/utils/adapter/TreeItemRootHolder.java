@@ -1,29 +1,24 @@
 package com.jsy.xuezhuli.utils.adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.po.personal.MyUnit;
 import com.unnamed.b.atv.model.TreeNode;
 
 /**
  * Created by Bogdan Melnychuk on 2/12/15.
  */
 public class TreeItemRootHolder extends TreeNode.BaseNodeViewHolder<TreeItemRootHolder.TreeItemRoot> {
-    private TextView name;
-    public CheckBox cb_all;
-    private CheckBox cb_invert;
-    private ImageView arrowView_1;
+	public CheckBox cb_all;
+	private ImageView arrowView_1;
     private ImageView arrowView_2;
     public TreeItemRootHolder(Context context) {
         super(context);
@@ -35,12 +30,12 @@ public class TreeItemRootHolder extends TreeNode.BaseNodeViewHolder<TreeItemRoot
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.layout_worksend_tree_root, null, false);
         view.setPadding(10, 0, 10, 0);
-        name = (TextView) view.findViewById(R.id.tree_root_tv_name);
+		TextView name = (TextView) view.findViewById(R.id.tree_root_tv_name);
         arrowView_1 = (ImageView) view.findViewById(R.id.tree_root_iv_arrow_1);
         arrowView_2 = (ImageView) view.findViewById(R.id.tree_root_iv_arrow_2);
         cb_all = (CheckBox) view.findViewById(R.id.tree_root_cb_all);
-        cb_invert = (CheckBox) view.findViewById(R.id.tree_root_cb_invert);
-        name.setText(value.name.toString());
+		CheckBox cb_invert = (CheckBox) view.findViewById(R.id.tree_root_cb_invert);
+        name.setText(value.name);
 		name.setTextColor(context.getResources().getColor(R.color.color_292929));
     	cb_all.setChecked(node.isSelected());
         cb_all.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -48,7 +43,7 @@ public class TreeItemRootHolder extends TreeNode.BaseNodeViewHolder<TreeItemRoot
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if (isChecked) {
-					setChildSelect(node, isChecked);
+					setChildSelect(node, true);
 				}
 			}
 		});
@@ -81,39 +76,10 @@ public class TreeItemRootHolder extends TreeNode.BaseNodeViewHolder<TreeItemRoot
     		setChildInvert(n);
     		if (n.getValue() instanceof TreeItemPersonHolder.TreeItemPerson) {
     			getTreeView().selectNode(n, !n.isSelected());
-//    			setParentSelect(node);
 			}
     	}
     }
-    private void setParentSelect(TreeNode node){
-		boolean set = true;
-		x:for (TreeNode n : node.getChildren()) {
-			if (!n.isSelected()) {
-				set = false;
-				break x;
-			}
-		}
-		if (!set) {
-			getTreeView().selectNode(node, set);
-		}
-    }
-    private void setSelfSelect(TreeNode node){
-    	boolean select = node.isSelected();
-    	boolean isLast = false;
-    	x:for(TreeNode n : node.getChildren()){
-    		setSelfSelect(n);
-    		if (n.getValue() instanceof TreeItemPersonHolder.TreeItemPerson) {
-    			isLast = true;
-    			if (!n.isSelected()) {
-    				select = false;
-    				break x;
-    			}
-			}
-    	}
-    	if (isLast) {
-    		getTreeView().selectNode(node, select);
-		}
-    }
+
     @Override
     public void toggle(boolean active) {
     	arrowView_1.setImageResource(active? R.drawable.icon_worksend_selit_minus : R.drawable.icon_worksend_selit_plus);
@@ -132,14 +98,9 @@ public class TreeItemRootHolder extends TreeNode.BaseNodeViewHolder<TreeItemRoot
 			this.HOLDER_TYPE =type;
 		}
 
-
 		@Override
 		public String toString() {
-			// TODO Auto-generated method stub
 			return name;
 		}
-		
     }
-
-
 }

@@ -7,7 +7,6 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 
-
 public class HttpUtil {
     private HttpUtil() { }
     

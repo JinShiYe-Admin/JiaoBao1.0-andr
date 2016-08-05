@@ -712,7 +712,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 											(int) getResources().getDimension(
 													R.dimen.px_to_dip_100)));
 									Bitmap bg = BaseUtils.createVideoThumbnail(
-											filePath, 100, 100);// 生成缩略图
+											filePath);// 生成缩略图
 									if (bg == null) {// 生成缩略图失败
 										item.setImageResource(R.drawable.pic_video_no);
 									} else {

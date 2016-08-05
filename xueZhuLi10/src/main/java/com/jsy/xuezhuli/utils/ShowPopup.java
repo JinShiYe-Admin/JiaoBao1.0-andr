@@ -1,9 +1,4 @@
 package com.jsy.xuezhuli.utils;
-
-
-
-import com.jsy_jiaobao.main.R;
-
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.Gravity;
@@ -16,6 +11,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.TimePicker.OnTimeChangedListener;
+
+import com.jsy_jiaobao.main.R;
 
 public class ShowPopup {
 	private PopupWindow ppw;
@@ -56,6 +53,5 @@ public class ShowPopup {
 				view.setText(time);
 			}
 		});
-		
 	}
 }

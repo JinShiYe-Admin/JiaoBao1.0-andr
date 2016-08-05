@@ -18,7 +18,6 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -27,7 +26,6 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -472,7 +470,7 @@ public class QiuZhiQuestionDetailsActivity extends BaseActivity implements
 				ToastUtil.showMessage(mContext, "字数超出限制,请删除" + (length - 20000)
 						+ "字");
 			} else {
-				BaseUtils.insetImage(mContext, edt_describe, img, bitmap);
+				BaseUtils.insetImage(edt_describe, img, bitmap);
 			}
 			break;
 		default:

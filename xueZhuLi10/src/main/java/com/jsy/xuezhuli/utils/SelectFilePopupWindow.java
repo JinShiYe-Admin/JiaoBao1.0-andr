@@ -1,7 +1,5 @@
 package com.jsy.xuezhuli.utils;
 
-import com.jsy_jiaobao.main.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
@@ -14,9 +12,9 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
+import com.jsy_jiaobao.main.R;
+
 public class SelectFilePopupWindow extends PopupWindow {
-
-
 	private Button btn_cancel;
 	private View mMenuView;
 
@@ -55,7 +53,6 @@ public class SelectFilePopupWindow extends PopupWindow {
 		mMenuView.setOnTouchListener(new OnTouchListener() {
 			
 			public boolean onTouch(View v, MotionEvent event) {
-				
 				int height = mMenuView.findViewById(R.id.pop_layout).getTop();
 				int y=(int) event.getY();
 				if(event.getAction()==MotionEvent.ACTION_UP){
@@ -66,7 +63,5 @@ public class SelectFilePopupWindow extends PopupWindow {
 				return true;
 			}
 		});
-
 	}
-
 }

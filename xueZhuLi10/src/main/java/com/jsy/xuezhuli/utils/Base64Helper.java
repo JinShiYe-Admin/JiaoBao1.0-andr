@@ -26,7 +26,7 @@ public class Base64Helper {
 			-1, -1 };
 
 	public static String encode(byte[] data) {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		int len = data.length;
 		int i = 0;
 		int b1, b2, b3;
@@ -62,7 +62,6 @@ public class Base64Helper {
 		try {
 			return decodePrivate(str);
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return new byte[] {};
@@ -71,7 +70,7 @@ public class Base64Helper {
 	private static byte[] decodePrivate(String str)
 			throws UnsupportedEncodingException {
 		StringBuffer sb = new StringBuffer();
-		byte[] data = null;
+		byte[] data;
 		data = str.getBytes("US-ASCII");
 		int len = data.length;
 		int i = 0;

@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.personalcenter;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.greenrobot.eventbus.Subscribe;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -29,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.DialogUtil;
@@ -47,6 +41,14 @@ import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.jsy_jiaobao.po.sys.UserUnit;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 //一些修改1 2016-5-31 MSL
 //1.使用图片前判断字数是否达到3000，是：不允许再上传图片
@@ -649,7 +651,7 @@ public class PublishArticaleActivity extends BaseActivity implements
 					bitmap.recycle();
 				} else {
 					//插入图片
-					BaseUtils.insetImage(mContext, edt_content, "<img src='"
+					BaseUtils.insetImage(edt_content, "<img src='"
 							+ upFile.getUrl() + "'/>", bitmap);
 				}
 				edt_content.requestFocus();
@@ -672,7 +674,7 @@ public class PublishArticaleActivity extends BaseActivity implements
 
 				Bitmap bmp = BitmapFactory.decodeResource(getResources(),
 						R.drawable.chatto_voice_playing);
-				BaseUtils.insetImage(mContext, edt_content, "<audio src=\""
+				BaseUtils.insetImage(edt_content, "<audio src=\""
 						+ upFile1.getUrl() + "\" controls=\"controls\"/>", bmp);
 			}
 			break;
@@ -681,7 +683,7 @@ public class PublishArticaleActivity extends BaseActivity implements
 			List<UpFiles> upFiles1 = (List<UpFiles>) list.get(1);
 			if (upFiles1 != null && upFiles1.size() > 0) {
 				UpFiles upFile1 = upFiles1.get(0);
-				BaseUtils.insetImage(mContext, edt_content, "<video src=\""
+				BaseUtils.insetImage(edt_content, "<video src=\""
 						+ upFile1.getUrl() + "\" controls=\"controls\"/>",
 						bitmap);
 				bitmap.recycle();

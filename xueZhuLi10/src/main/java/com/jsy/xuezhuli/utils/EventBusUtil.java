@@ -1,9 +1,6 @@
 package com.jsy.xuezhuli.utils;
 
-
 import org.greenrobot.eventbus.EventBus;
-
-
 
 public class EventBusUtil {
 
