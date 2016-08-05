@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -15,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -43,14 +35,19 @@ import com.lidroid.xutils.http.HttpHandler;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 /**
  * 我发的，并且是点击头像进入的事务详情Activity
  */
 public class Work2MineDetailsListActivity extends BaseActivity implements
 		OnRefreshListener2<ScrollView>, OnClickListener {
-	private static final String TAG = "Work2MineDetailsListActivity";
-	final public static int Work2DetailsAttClick = 10;
-	int reply_position = -1;
 	private int pageNum = 1;
 	private int pageNum_feeback = 1;
 	/** 未读数量 */
@@ -62,22 +59,20 @@ public class Work2MineDetailsListActivity extends BaseActivity implements
 	private boolean haveMore_fee = true;
 	private boolean haveMore_work = true;
 	private SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"yyyy-MM-dd HH:mm:ss");
-	private List<HttpHandler> httpDownList = new ArrayList<HttpHandler>();
-	private ArrayList<Object> workList = new ArrayList<Object>();
+			"yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+	private List<HttpHandler> httpDownList = new ArrayList<>();
+	private ArrayList<Object> workList = new ArrayList<>();
 
 	private Context mContext;
-	private LinearLayout reply_layout;// 回复区域布局
+
 	private IEditText edt_keywords;// 回复编辑框
 	private Button btn_reply;// 回复按钮
-	private CusListView listView;
 	private Work2DetailListAdapter adapter;
 	private PullToRefreshScrollView mPullRefreshScrollView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d(TAG, TAG);
 		if (savedInstanceState != null) {
 			TabIDStr = savedInstanceState.getString("TabIDStr");
 			MsgRecDate = savedInstanceState.getString("MsgRecDate");
@@ -113,9 +108,11 @@ public class Work2MineDetailsListActivity extends BaseActivity implements
 		setContentView(R.layout.activity_work2details);
 		setActionBarTitle("我发送的信息");
 		mContext = this;
+		LinearLayout reply_layout;// 回复区域布局
 		reply_layout = (LinearLayout) findViewById(R.id.article_layout_reply);
 		edt_keywords = (IEditText) findViewById(R.id.article_edt_mywords);
 		btn_reply = (Button) findViewById(R.id.article_btn_send);
+		CusListView listView;
 		listView = (CusListView) findViewById(R.id.listview);
 		mPullRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
 		Work2DetailsListActivityController.getInstance().setContext(this);
@@ -124,11 +121,10 @@ public class Work2MineDetailsListActivity extends BaseActivity implements
 		mPullRefreshScrollView.setPullLabel(
 				getResources().getString(
 						R.string.pullToRefresh_header_pull_loadmore),
-				Mode.PULL_DOWN_TO_REFRESH);
+				Mode.PULL_FROM_START);
 		reply_layout.setVisibility(View.VISIBLE);
-		adapter = new Work2DetailListAdapter(this, onclickListener, mHandler);
+		adapter = new Work2DetailListAdapter(this, onclickListener);
 		adapter.setData(workList);
-		// adapter.setAuthor("我");
 		adapter.setWorkType(1);
 		listView.setAdapter(adapter);
 		listView.setTranscriptMode(AbsListView.TRANSCRIPT_MODE_DISABLED);

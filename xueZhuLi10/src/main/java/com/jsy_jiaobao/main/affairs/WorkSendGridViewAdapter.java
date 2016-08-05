@@ -21,7 +21,7 @@ public class WorkSendGridViewAdapter extends BaseAdapter {
 	private ArrayList<CommMsgRevicerUnitClass> unitClass;
 	public WorkSendGridViewAdapter(Context context){
 		this.context = context;
-        mChecked = new ArrayList<Boolean>();
+        mChecked = new ArrayList<>();
 
 	}
 
@@ -38,7 +38,7 @@ public class WorkSendGridViewAdapter extends BaseAdapter {
 		}
 	}
 	public ArrayList<CommMsgRevicerUnitClass> getCheckedList(){
-		ArrayList<CommMsgRevicerUnitClass> unitclass = new ArrayList<CommMsgRevicerUnitClass>();
+		ArrayList<CommMsgRevicerUnitClass> unitclass = new ArrayList<>();
 		for (int i = 0; i < mChecked.size(); i++) {
 			if (mChecked.get(i)) {
 				unitclass.add(unitClass.get(i));

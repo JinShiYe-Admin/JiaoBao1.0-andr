@@ -24,7 +24,7 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 	private Context mContext;
 	private ArrayList<CommMsgRevicerUnitClass> groupList;
 	private Handler mHandler;
-	public ArrayList<ArrayList<Boolean>> mChecked = new ArrayList<ArrayList<Boolean>>();
+	public ArrayList<ArrayList<Boolean>> mChecked = new ArrayList<>();
 	public WorkSendGenExpanListAdapter(Context fragmentActivity, Handler mHandler){
 		this.mContext = fragmentActivity;
 		this.mHandler = mHandler;
@@ -33,7 +33,7 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 		this.groupList = unitClass;
 		mChecked.clear();
 		for(CommMsgRevicerUnitClass groupList : unitClass){
-			ArrayList<Boolean> childList = new ArrayList<Boolean>();
+			ArrayList<Boolean> childList = new ArrayList<>();
 			for (int i = 0; i < groupList.getUserList().getGenselit().size(); i++) {
 				childList.add(i,false);
 			}
@@ -50,9 +50,9 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 获取一条人员信息选中状态
-	 * @param groupPosition
-	 * @param childPosition
-	 * @return
+	 * @param groupPosition g
+	 * @param childPosition c
+	 * @return s
 	 */
 	private boolean getSelitCheckFlag(int groupPosition, int childPosition){
 		try {
@@ -66,9 +66,9 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 设置一条人员选中状态
-	 * @param groupPosition
-	 * @param childPosition
-	 * @param checkFlag
+	 * @param groupPosition g
+	 * @param childPosition c
+	 * @param checkFlag c
 	 */
 	public void setSelitCheckFlag(int groupPosition, int childPosition,boolean checkFlag){
 		try {
@@ -79,7 +79,7 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 	}
 	/**
 	 * 操作全部
-	 * @param checkFlag
+	 * @param checkFlag v
 	 */
 	public void setAllSelitCheckFlag(boolean checkFlag){
 		for (int i = 0; i < mChecked.size(); i++) {
@@ -89,29 +89,29 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 			}
 		}
 	}
-	/**
-	 * 全部反选
-	 */
-	public boolean setAllSelitInvert(){
-		boolean selectall = true;
-		for (int i = 0; i < mChecked.size(); i++) {
-			ArrayList<Boolean> childList = mChecked.get(i);
-			for (int j = 0; j < childList.size(); j++) {
-				boolean flag = !getSelitCheckFlag(i,j);
-				childList.set(j,flag);
-				if (!flag) {
-					selectall = false;
-				}
-			}
-		}
-		return selectall;
-	}
+//	/**
+//	 * 全部反选
+//	 */
+//	public boolean setAllSelitInvert(){
+//		boolean selectall = true;
+//		for (int i = 0; i < mChecked.size(); i++) {
+//			ArrayList<Boolean> childList = mChecked.get(i);
+//			for (int j = 0; j < childList.size(); j++) {
+//				boolean flag = !getSelitCheckFlag(i,j);
+//				childList.set(j,flag);
+//				if (!flag) {
+//					selectall = false;
+//				}
+//			}
+//		}
+//		return selectall;
+//	}
 	/**
 	 * 返回被选中的人员列表
-	 * @return
+	 * @return fc
 	 */
 	public ArrayList<Selit> getSelectSelit(){
-		ArrayList<Selit> list = new ArrayList<Selit>();
+		ArrayList<Selit> list = new ArrayList<>();
 		for (int i = 0; i < mChecked.size(); i++) {
 			ArrayList<Boolean> childList = mChecked.get(i);
 			for (int j = 0; j < childList.size(); j++) {
@@ -219,7 +219,7 @@ public class WorkSendGenExpanListAdapter extends BaseExpandableListAdapter {
 		ImageView expan = viewHolder.getView(R.id.item_expan_worksend_expan);
 		CommMsgRevicerUnitClass string = groupList.get(groupPosition);
 		name.setText(string.getClsName().trim());
-		cb_all.setVisibility(8);
+		cb_all.setVisibility(View.GONE);
 		if (isExpanded) {
 			expan.setImageResource(R.drawable.icon_worksend_selit_minus);
 			flag.setImageResource(R.drawable.icon_worksend_selit_minus_m);

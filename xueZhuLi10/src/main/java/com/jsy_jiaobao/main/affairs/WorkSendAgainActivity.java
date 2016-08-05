@@ -20,8 +20,8 @@ public class WorkSendAgainActivity extends BaseActivity {
 	@ViewInject(R.id.article_edt_mywords)IEditText edt_keywords;
 	@ViewInject(R.id.article_btn_send)Button btn_reply;
 	private String readlist;
-	private WorkSendAgainListAdapter adapter;
-	private Context mContext;
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -50,8 +50,10 @@ public class WorkSendAgainActivity extends BaseActivity {
 	private void initViews() {
 		setContentLayout(R.layout.activity_worksendagain);
 		ViewUtils.inject(this);
+		Context mContext;
 		mContext =  this;
 		setActionBarTitle(R.string.receiver_details);
+		WorkSendAgainListAdapter adapter;
 		adapter = new WorkSendAgainListAdapter(mContext);
 		try {
 			JSONArray readerArray = new JSONArray(readlist);

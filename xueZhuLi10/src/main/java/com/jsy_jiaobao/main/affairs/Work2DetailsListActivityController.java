@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.io.File;
-import java.util.ArrayList;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.util.Log;
@@ -34,12 +30,17 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+
 public class Work2DetailsListActivityController implements ConstantUrl {
 	private static Work2DetailsListActivityController instance;
 	private Activity mContext;
-	private ArrayList<ProgressDialog> dialogList = new ArrayList<ProgressDialog>();
+	private ArrayList<ProgressDialog> dialogList = new ArrayList<>();
 
-	public static synchronized final Work2DetailsListActivityController getInstance() {
+	public static synchronized  Work2DetailsListActivityController getInstance() {
 		if (instance == null) {
 			instance = new Work2DetailsListActivityController();
 		}
@@ -99,7 +100,7 @@ public class Work2DetailsListActivityController implements ConstantUrl {
 	 * 获取信息详情<br>
 	 * (warn:未找到该接口的详细说明，所以无法添加详细注释)
 	 * 
-	 * @param params
+	 * @param params vc
 	 */
 	public void ShowDetail(RequestParams params) {
 		DialogUtil.getInstance().getDialog(mContext,
@@ -141,7 +142,7 @@ public class Work2DetailsListActivityController implements ConstantUrl {
 	 * 返回结果：<br>
 	 * 由api结果类定义，返回0表示成功,>0表示出错了
 	 * 
-	 * @param TabIDStr
+	 * @param TabIDStr d
 	 */
 	public void MarkRead(String TabIDStr) {
 		RequestParams params = new RequestParams();
@@ -214,7 +215,7 @@ public class Work2DetailsListActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_work2_GetMySendMsgList:
@@ -250,7 +251,7 @@ public class Work2DetailsListActivityController implements ConstantUrl {
 	/**
 	 * 下载附件
 	 * 
-	 * @param att
+	 * @param att d
 	 */
 	public HttpHandler downloadAtt(final Attlist att) {
 		for (int i = 0; i < dialogList.size(); i++) {
@@ -261,7 +262,7 @@ public class Work2DetailsListActivityController implements ConstantUrl {
 		}
 		final String filePath = JSYApplication.getInstance().FILE_PATH
 				+ System.currentTimeMillis() + att.getOrgFilename();
-		HttpHandler handler = HttpUtil.getInstanceNew().download(
+		return HttpUtil.getInstanceNew().download(
 				att.getDlurl(), filePath, true, new RequestCallBack<File>() {
 
 					private String TAG = "00";
@@ -347,7 +348,6 @@ public class Work2DetailsListActivityController implements ConstantUrl {
 					}
 
 				});
-		return handler;
 	}
 
 }

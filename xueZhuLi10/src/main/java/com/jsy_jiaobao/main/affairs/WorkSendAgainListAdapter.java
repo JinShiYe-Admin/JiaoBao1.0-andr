@@ -17,10 +17,10 @@ import android.widget.TextView;
 import com.jsy.xuezhuli.utils.adapter.ViewHolder;
 import com.jsy_jiaobao.main.R;
 
-public class WorkSendAgainListAdapter<T> extends BaseAdapter{
+public class WorkSendAgainListAdapter extends BaseAdapter{
 	private Context mContext;
 	protected JSONArray readerArray;
-	ArrayList<Boolean> checkedList = new ArrayList<Boolean>();
+	ArrayList<Boolean> checkedList = new ArrayList<>();
 	public WorkSendAgainListAdapter(Context context){
 		this.mContext = context;
 	}
@@ -56,15 +56,15 @@ public class WorkSendAgainListAdapter<T> extends BaseAdapter{
 		ImageView photo = viewHolder.getView(R.id.chat_friends_photo);
 		CheckBox checkBox = viewHolder.getView(R.id.chat_friends_checkbox);
 		try {
-			photo.setVisibility(8);
+			photo.setVisibility(View.GONE);
 			checkBox.setChecked(checkedList.get(position));
 			JSONObject item = readerArray.getJSONObject(position);
 			int mc = item.getInt("MCState");
 			int pc = item.getInt("PCState");
 			if (mc == 1 || pc == 1) {
-				nick.setText(item.getString("TrueName").toString()+"(已查看)");
+				nick.setText(item.getString("TrueName")+"(已查看)");
 			}else{
-				nick.setText(item.getString("TrueName").toString());
+				nick.setText(item.getString("TrueName"));
 			}
 			checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 				

@@ -23,7 +23,7 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
  */
 public class SinglePictureDisplayActivity extends BaseActivity {
 
-    private ImageView imageView;
+
     private DisplayImageOptions options;
     private String photoPath;
     private ProgressBar spinner;
@@ -67,6 +67,7 @@ public class SinglePictureDisplayActivity extends BaseActivity {
     private void initViews() {
         // TODO Auto-generated method stub
         setContentLayout(R.layout.item_pager_image);
+        ImageView imageView;
         imageView = (ImageView) findViewById(R.id.imageView);
         spinner = (ProgressBar) findViewById(R.id.loading);
         photoPath = "file://" + photoPath;

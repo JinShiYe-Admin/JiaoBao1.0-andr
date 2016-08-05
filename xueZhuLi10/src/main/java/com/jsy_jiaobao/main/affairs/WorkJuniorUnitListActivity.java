@@ -1,45 +1,25 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.SubMenu;
 import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
-import com.jsy.xuezhuli.utils.ACache;
-import com.jsy.xuezhuli.utils.Constant;
-import com.jsy.xuezhuli.utils.EventBusUtil;
-import com.jsy.xuezhuli.utils.HanyuPinyin;
+import com.actionbarsherlock.view.SubMenu;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.PublicMethod;
 import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.po.personal.ArthInfo;
 import com.jsy_jiaobao.po.personal.CommMsgRevicerUnit;
 import com.jsy_jiaobao.po.personal.CommMsgRevicerUnitClass;
-import com.jsy_jiaobao.po.sys.GetUserClass;
-import com.jsy_jiaobao.po.sys.UserClass;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
+
+import java.util.ArrayList;
 
 /**
  * <pre>
@@ -69,7 +49,7 @@ public class WorkJuniorUnitListActivity extends BaseActivity implements PublicMe
 	public static String TAG = "WorkJuniorUnitListActivity";
 	private Context mContext;
 	private ArrayList<Object> tag;
-	ArrayList<Object> resulttag = new ArrayList<Object>();
+	ArrayList<Object> resulttag = new ArrayList<>();
 	private Object checked;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -148,31 +128,7 @@ public class WorkJuniorUnitListActivity extends BaseActivity implements PublicMe
 	@Override
 	public void initListener() {
 	}
-//	@Override
-//	public void onResume() {
-//		EventBusUtil.register(this);
-//		super.onResume();
-//	}
-//	@Override
-//	public void onPause() {
-//		EventBusUtil.unregister(this);
-//		super.onPause();
-//	}
 
-	HanyuPinyin hanYu = new HanyuPinyin();
-	Comparator<UserClass> comparator1 = new Comparator<UserClass>() {
-		public int compare(UserClass s1, UserClass s2) {
-			String s1name = hanYu.getStringPinYin(s1.getClassName());
-			String s2name = hanYu.getStringPinYin(s2.getClassName());
-			// 按姓名排序
-			if (!s1name.equals(s2name)) {
-				return s1name.compareTo(s2name);
-			} else {
-				// 姓名也相同则按学号排序
-				return s1.getClassID() - s2.getClassID();
-			}
-		}
-	};
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
        

@@ -98,7 +98,7 @@ import com.umeng.analytics.MobclickAgent;
  * 1.附件限制10个
  */
 enum Function {
-	UNIT, GEN, OTHER;
+	UNIT, GEN, OTHER
 }
 
 /**
@@ -127,12 +127,10 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 	protected Bitmap bitmap;
 	protected File file;
 	private Function function = Function.UNIT;// 标题，内部事务，家校互动，多单位事务
-	private ArrayList<String> selectFileList = new ArrayList<String>();// 附件文件路径
-
+	private ArrayList<String> selectFileList = new ArrayList<>();// 附件文件路径
 	private Context mContext;
 	private LinearLayout layout_body;// 整个界面
 	private LinearLayout layout_file;// 附件显示布局
-	// private LinearLayout layout_photofile;
 	private TextView tv_left;// 显示可输入的剩余字数
 	private TextView tv_takefile;// 附件按钮
 	private IEditText edt_input;// 内容编辑框
@@ -147,8 +145,6 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 	private int voice_rc_time;// 录音持续时间
 	private boolean isShosrt = false;// 录音时间过短
 	private long startVoiceT;// 录音开始的时间
-	private long endVoiceT;// 录音结束的时间
-	private String mVoice;// 分贝数
 	private String voiceName;// 录音文件名称
 	private String playingMediaName;// 多媒体名称
 	private SoundMeter mSensor;// 声音管理
@@ -281,6 +277,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 			double amp = mSensor.getAmplitude();
 			updateDisplay(amp);
 			mHandler.postDelayed(mPollTask, POLL_INTERVAL);
+			String mVoice;// 分贝数
 			mVoice = amp + "";
 			// System.out.println("分贝："+mVoice+"-"+voice_rc_time);
 			if (voice_rc_time > 1) {
@@ -320,7 +317,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 	/**
 	 * 开始录音
 	 * 
-	 * @param
+	 * @param name  name
 	 */
 	private void start(String name) {
 		mSensor.start(name);
@@ -458,6 +455,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 							android.R.drawable.presence_audio_online, 0, 0, 0);
 					voice_rcd_hint_rcding.setVisibility(View.GONE);
 					stop();
+					long endVoiceT;// 录音结束的时间
 					endVoiceT = System.currentTimeMillis();
 					int time = (int) ((endVoiceT - startVoiceT) / 1000);
 					// if (time < 1) {
@@ -731,7 +729,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 											startActivity(intent);
 										}
 									});
-									ArrayList<Object> tag = new ArrayList<Object>();
+									ArrayList<Object> tag = new ArrayList<>();
 									tag.add(0, layout);
 									tag.add(1, filePath);
 									delete.setTag(tag);
@@ -777,7 +775,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 						params.addBodyParameter("ATTfileList" + i, new File(
 								selectFileList.get(i)));
 					}
-					ArrayList<Object> post = new ArrayList<Object>();
+					ArrayList<Object> post = new ArrayList<>();
 					post.add(Constant.msgcenter_worksend_SendBtnClicked);
 					post.add(function);// 选择的标题不同，发送不同的信息
 					post.add(params);
@@ -921,9 +919,9 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 				function = Function.UNIT;
 				WorkSendToSbActivity2Controller.getInstance()
 						.switchUnitFragment();
-				unitFragment.setVisibility(0);
+				unitFragment.setVisibility(View.VISIBLE);
 			} else {// 无同级单位发送事务权限，隐藏内部事务
-				unitFragment.setVisibility(8);
+				unitFragment.setVisibility(View.GONE);
 				genFragment
 						.setImageResource(R.drawable.icon_worksend_genfragment_selected);
 				otherUnitFragment
@@ -934,9 +932,9 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 			}
 			if (getCommPerm.isParentCommRight()
 					|| getCommPerm.isSubUnitCommRight()) {// 有上级或下级单位发送事务权限，显示多单位事务
-				otherUnitFragment.setVisibility(0);
+				otherUnitFragment.setVisibility(View.VISIBLE);
 			} else {
-				otherUnitFragment.setVisibility(8);
+				otherUnitFragment.setVisibility(View.GONE);
 			}
 			WorkSendToSbActivity2Controller.getInstance()
 					.CommMsgRevicerUnitList();
@@ -965,7 +963,6 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 				myUnit = null;
 			}
 			UnitClass = commMsgRevicerUnitList.getUnitClass();
-			Log.i("UnitClass-CommMsgRevicerUnitList", UnitClass + "");
 			noClassChangeRole();
 			if (myUnit != null) {// 有同级单位
 				RequestParams params = new RequestParams();
@@ -1040,11 +1037,9 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 		case 10:// 附件从本地选择
 			if (data != null) {
 				String path = data.getExtras().getString("path");
-				// size = 0;
-				// for (int i = 0; i < selectFileList.size(); i++) {
-				// File file = new File(selectFileList.get(i));
-				// size += file.length();
-				// }
+				if(path==null){
+					break;
+				}
 				File file = new File(path);
 				size += file.length();
 				System.out.println("------------size:" + size);
@@ -1146,8 +1141,6 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 				thread = null;
 				if (file != null) {
 					updateFile(file);
-					// } else {
-					// ToastUtil.showMessage(mContext, "文件为空");
 				}
 			}
 		}
@@ -1172,7 +1165,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 					JSYApplication.getInstance().bitmap
 							.display(item, photoPath);
 					item.setTag(photoPath);
-					ArrayList<Object> tag = new ArrayList<Object>();
+					ArrayList<Object> tag = new ArrayList<>();
 					tag.add(0, layout);
 					tag.add(1, photoPath);
 					delete.setTag(tag);
@@ -1180,10 +1173,8 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 					layout.addView(delete);
 					layout.addView(item);
 					layout_file.addView(layout);
-					// layout_photofile.addView(layout);
 					selectFileList.add(photoPath);
 					delete.setOnClickListener(deleteListener);
-					// item.setOnClickListener(deleteListener);//添加附件，点击拍照图片删除
 				}
 			}
 		}

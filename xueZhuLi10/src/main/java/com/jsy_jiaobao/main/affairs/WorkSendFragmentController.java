@@ -37,7 +37,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 	private Fragment mContext;
 	private Context mAContext;
 
-	public static synchronized final WorkSendFragmentController getInstance() {
+	public static synchronized  WorkSendFragmentController getInstance() {
 		if (instance == null) {
 			instance = new WorkSendFragmentController();
 		}
@@ -52,9 +52,11 @@ public class WorkSendFragmentController implements ConstantUrl {
 
 	/**
 	 * 功能：获取单位接收人
-	 * 
-	 * @param unitname
-	 */
+	 * @param uid  uid
+	 * @param flag flag
+	 * @param type type
+     * @param node node
+     */
 	public void GetUnitRevicer(int uid, int flag, int type, TreeNode node) {
 		DialogUtil.getInstance().getDialog(mAContext, R.string.public_loading);
 		DialogUtil.getInstance().setCanCancel(false);
@@ -62,7 +64,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 		params.addBodyParameter("unitId", String.valueOf(uid));
 		params.addBodyParameter("flag", String.valueOf(flag));
 		UnitRevicerCallBack callback = new UnitRevicerCallBack();
-		ArrayList<Object> tag = new ArrayList<Object>();
+		ArrayList<Object> tag = new ArrayList<>();
 		tag.add(uid);
 		tag.add(node);
 		tag.add(type);
@@ -72,28 +74,30 @@ public class WorkSendFragmentController implements ConstantUrl {
 
 	}
 
-	/**
-	 * 功能：获取单位接收人
-	 * 
-	 * @param unitname
-	 */
-	public void GetUnitClassRevicer(int uid, int flag, int type, TreeNode node) {
-		DialogUtil.getInstance().getDialog(mAContext, R.string.public_loading);
-		DialogUtil.getInstance().setCanCancel(false);
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("unitclassId", String.valueOf(uid));
-		params.addBodyParameter("flag", String.valueOf(flag));
-		UnitRevicerCallBack callback = new UnitRevicerCallBack();
-		ArrayList<Object> tag = new ArrayList<Object>();
-		tag.add(uid);
-		tag.add(node);
-		tag.add(type);
-		callback.setUserTag(tag);
-		HttpUtil.InstanceSend(GetUnitClassRevice, params, callback);
-
-		// HttpUstil.InstanceSend(GetUnitClassRevice, params, callback);
-
-	}
+//	/**
+//	 * 功能：获取单位接收人
+//	 * @param uid
+//	 * @param flag
+//	 * @param type
+//     * @param node
+//     */
+//	public void GetUnitClassRevicer(int uid, int flag, int type, TreeNode node) {
+//		DialogUtil.getInstance().getDialog(mAContext, R.string.public_loading);
+//		DialogUtil.getInstance().setCanCancel(false);
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("unitclassId", String.valueOf(uid));
+//		params.addBodyParameter("flag", String.valueOf(flag));
+//		UnitRevicerCallBack callback = new UnitRevicerCallBack();
+//		ArrayList<Object> tag = new ArrayList<Object>();
+//		tag.add(uid);
+//		tag.add(node);
+//		tag.add(type);
+//		callback.setUserTag(tag);
+//		HttpUtil.InstanceSend(GetUnitClassRevice, params, callback);
+//
+//		// HttpUstil.InstanceSend(GetUnitClassRevice, params, callback);
+//
+//	}
 
 	private class UnitRevicerCallBack extends RequestCallBack<String> {
 
@@ -105,7 +109,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 				} else {
 					try {
 						if (mContext != null) {
-							ArrayList<Object> post = new ArrayList<Object>();
+							ArrayList<Object> post = new ArrayList<>();
 							post.add(
 									0,
 									Constant.msgcenter_worksend_GetUnitRevicer_otherunit);
@@ -123,7 +127,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
 			if (mContext.isAdded() && !mContext.isDetached()) {
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(0,
 						Constant.msgcenter_worksend_GetUnitRevicer_otherunit);
 				try {
@@ -157,10 +161,9 @@ public class WorkSendFragmentController implements ConstantUrl {
 
 	/**
 	 * 功能：获取班级接收人
-	 * 
-	 * @param commMsgRevicerUnitClass
-	 * @param unitname
-	 */
+	 * @param params p
+	 * @param commMsgRevicerUnitClass c
+     */
 	public void GetUnitRevicer(RequestParams params,
 			CommMsgRevicerUnitClass commMsgRevicerUnitClass) {
 		RevicerCallBack callback = new RevicerCallBack();
@@ -171,7 +174,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 	/**
 	 * 发送信息
 	 * 
-	 * @param params
+	 * @param params p
 	 */
 	public void CreateCommMsg(RequestParams params) {
 		DialogUtil.getInstance().getDialog(mContext.getActivity(),
@@ -184,16 +187,14 @@ public class WorkSendFragmentController implements ConstantUrl {
 
 	}
 
-	/**
-	 * 短信直通车数据
-	 * 
-	 * @param params
-	 */
-	public void SMSCommIndex() {
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_work_SMSCommIndex);
-		HttpUtil.InstanceSend(SMSCommIndex, null, callback);
-	}
+//	/**
+//	 * 短信直通车数据
+//	 */
+//	public void SMSCommIndex() {
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_work_SMSCommIndex);
+//		HttpUtil.InstanceSend(SMSCommIndex, null, callback);
+//	}
 
 	private class RevicerCallBack extends RequestCallBack<String> {
 
@@ -203,7 +204,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 			if (mAContext != null) {
 				try {
 					if (mContext != null) {
-						ArrayList<Object> post = new ArrayList<Object>();
+						ArrayList<Object> post = new ArrayList<>();
 						post.add(0,
 								Constant.msgcenter_worksend_GetUnitClassRevicer);
 						post.add(1, null);
@@ -223,7 +224,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
 			if (mContext.isAdded() && !mContext.isDetached()) {
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(0, Constant.msgcenter_worksend_GetUnitClassRevicer);
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
@@ -312,7 +313,7 @@ public class WorkSendFragmentController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_work_CreateCommMsg:
