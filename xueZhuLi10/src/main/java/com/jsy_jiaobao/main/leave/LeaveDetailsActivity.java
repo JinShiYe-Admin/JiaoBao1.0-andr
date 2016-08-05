@@ -1,37 +1,19 @@
 package com.jsy_jiaobao.main.leave;
 
-import android.R.bool;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-
 import android.os.Bundle;
-
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
-
-import java.text.BreakIterator;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-
-import org.greenrobot.eventbus.Subscribe;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
@@ -39,19 +21,18 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
-import com.jsy.xuezhuli.utils.GsonUtil;
 import com.jsy.xuezhuli.utils.LeaveUtils;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.po.leave.DateTimePickerDialog;
-import com.jsy_jiaobao.po.leave.Leave;
 import com.jsy_jiaobao.po.leave.LeaveConstant;
 import com.jsy_jiaobao.po.leave.LeaveDetail;
 import com.jsy_jiaobao.po.leave.LeaveTime;
-import com.jsy_jiaobao.po.leave.MyLeaveModel;
-import com.jsy_jiaobao.po.leave.MyLeaves;
 import com.umeng.analytics.MobclickAgent;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
 
 /**
  * 查询请假详情
@@ -62,7 +43,6 @@ import com.umeng.analytics.MobclickAgent;
 
 public class LeaveDetailsActivity extends BaseActivity implements
 		OnClickListener, OnRefreshListener2<ScrollView> {
-	public static final String LEAVE = "leave_details";
 	private final static int TYPE_STU = 0;
 	private final static int TYPE_TEA = 1;
 	private int mType;
@@ -70,7 +50,7 @@ public class LeaveDetailsActivity extends BaseActivity implements
 	private int position;
 	private int leaveRole;// 1一审
 	private int leaveType;// 0查看1审核
-	private boolean state = false;// 判断假条状态，等待中则为true
+
 	private boolean del = false;
 	private boolean change = false;
 	private boolean reflash = false;
@@ -82,8 +62,6 @@ public class LeaveDetailsActivity extends BaseActivity implements
 	private Context mContext;
 	private LinearLayout ly_leave_details;
 	private RelativeLayout rl_buttons;
-	private Button btn_delete;
-	private Button btn_updata;
 	private PullToRefreshScrollView refreshView;
 
 	@Override
@@ -104,14 +82,16 @@ public class LeaveDetailsActivity extends BaseActivity implements
 		LeaveDetailsActivityControl.getInstance().setContext(this);
 		ly_leave_details = (LinearLayout) findViewById(R.id.ly_leave_details);
 		rl_buttons = (RelativeLayout) findViewById(R.id.ry_buttons);
+		Button btn_delete;
 		btn_delete = (Button) findViewById(R.id.btn_del);
+		Button btn_updata;
 		btn_updata = (Button) findViewById(R.id.btn_change);
 		refreshView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
 		refreshView.setOnRefreshListener(this);
 		refreshView.setMode(Mode.PULL_FROM_START);
 
-		leaveNote = new ArrayList<String>();
-		leaveNoteStu = new ArrayList<String>();
+		leaveNote = new ArrayList<>();
+		leaveNoteStu = new ArrayList<>();
 		btn_delete.setOnClickListener(this);
 		btn_updata.setOnClickListener(this);
 		if (leaveType == 1) {
@@ -196,10 +176,9 @@ public class LeaveDetailsActivity extends BaseActivity implements
 		case LeaveConstant.leave_GetLeaveModel:
 			DialogUtil.getInstance().cannleDialog();
 			refreshView.onRefreshComplete();
-			LeaveDetail choseLeaves = (LeaveDetail) list.get(1);
-			choseLeave = choseLeaves;
+			choseLeave = (LeaveDetail) list.get(1);
 			mType = choseLeave.getManType();
-			if (choseLeave != null && !choseLeave.equals("")) {
+			if (choseLeave != null ) {
 				for (int i = 0; i < choseLeave.getTimeList().size(); i++) {
 					String startTime = choseLeave.getTimeList().get(i)
 							.getSdate().replace("T", " ");
@@ -211,9 +190,10 @@ public class LeaveDetailsActivity extends BaseActivity implements
 					choseLeave.getTimeList().get(i).setEdate(endTime);
 				}
 			}
-			if (choseLeave != null && !choseLeave.equals("")
-					&& choseLeave.getStatusStr().equals("等待中")
+			boolean state;// 判断假条状态，等待中则为true
+			if (choseLeave != null && choseLeave.getStatusStr().equals("等待中")
 					&& leaveType == 0) {// 请假记录不为空并且记录状态为等待中则是可见的
+
 				state = true;// 状态为等待中
 				rl_buttons.setVisibility(View.VISIBLE);
 			} else {

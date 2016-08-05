@@ -39,7 +39,7 @@ public class CheckerActivityControler implements ConstantUrl {
 	private static CheckerActivityControler instance;
 	private Context mContext;
 
-	public static synchronized final CheckerActivityControler getInstance() {
+	public static synchronized  CheckerActivityControler getInstance() {
 		if (instance == null) {
 			instance = new CheckerActivityControler();
 		}
@@ -54,7 +54,7 @@ public class CheckerActivityControler implements ConstantUrl {
 	/**
 	 * 审核人员取本单位的请假记录
 	 * 
-	 * @param post
+	 * @param post 请假记录请求参数
 	 */
 	public void GetUnitLeaves(UnitLeavesPost post) {
 		DialogUtil.getInstance().getDialog(mContext, "正在获取列表");
@@ -120,25 +120,25 @@ public class CheckerActivityControler implements ConstantUrl {
 		HttpUtil.InstanceSend(GetStudentSumLeaves, params, callback);
 	}
 
-	/**
-	 * 获取班主任关联班级
-	 * 
-	 * @param jiaobaohao
-	 *            String 教宝号
-	 */
-	public void GetMyAdminClass(String jiaobaohao) {
-		DialogUtil.getInstance().getDialog(mContext, "正在获取关联班级");
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("accId", jiaobaohao);
-		CallBack callback = new CallBack();
-		callback.setUserTag(LeaveConstant.leave_GetMyAdminClass);
-		HttpUtil.InstanceSend(GetMyAdminClass, params, callback);
-	}
+//	/**
+//	 * 获取班主任关联班级
+//	 *
+//	 * @param jiaobaohao
+//	 *            String 教宝号
+//	 */
+//	public void GetMyAdminClass(String jiaobaohao) {
+//		DialogUtil.getInstance().getDialog(mContext, "正在获取关联班级");
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("accId", jiaobaohao);
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(LeaveConstant.leave_GetMyAdminClass);
+//		HttpUtil.InstanceSend(GetMyAdminClass, params, callback);
+//	}
 
 	/**
 	 * 审批人审批假条，并做批注。
 	 * 
-	 * @param post
+	 * @param post 审批假条 上传参数
 	 */
 	public void CheckLeaveModel(CheckLeaveModelPost post) {
 		DialogUtil.getInstance().getDialog(mContext, "正在传输数据");
@@ -257,7 +257,7 @@ public class CheckerActivityControler implements ConstantUrl {
 							dealResponseInfo(jsonObj.getString("Data"),
 									this.getUserTag());
 							Log.i("onSuccess", jsonObj.getString("Data") + "\n"
-									+ (Integer) this.getUserTag());
+									+this.getUserTag());
 							break;
 						case LeaveConstant.leave_UpdateGateInfo://门卫签字
 							dealResponseInfo("0", this.getUserTag());
@@ -296,7 +296,7 @@ public class CheckerActivityControler implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object tag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(tag);
 		switch ((Integer) tag) {
 		case LeaveConstant.leave_GetMyAdminClass://获取关联的班级

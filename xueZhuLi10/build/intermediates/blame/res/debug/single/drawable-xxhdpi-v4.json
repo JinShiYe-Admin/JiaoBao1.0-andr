@@ -1,23 +1,7 @@
 [
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_takepic.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_takepic.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_report.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_report.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_share.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_share.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_against.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_against.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_send.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_send.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curunit_selected.png",
@@ -28,28 +12,16 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_send.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cb_register_checked.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\cb_register_checked.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_pp_like.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_pp_like.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_gallery.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_gallery.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curclass_unselect.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curclass_unselect.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic2.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic2.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workdetails_uncomment.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workdetails_uncomment.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_default_portrait.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_default_portrait.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_login_regeit.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_login_regeit.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_zhuguan.png",
@@ -68,28 +40,16 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_show.png"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_new_message.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_new_message.png"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\logo72.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\logo72.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_checked.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_checked.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_commit.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_commit.png"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_all.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_all.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_addatt.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_addatt.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhip_more.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhip_more.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_gist_.png",
@@ -100,32 +60,32 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_login_resetpwd.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_xin.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_xin.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_zhuguan.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_zhuguan.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_answer_.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_answer_.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_photo.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_photo.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic3.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic3.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_takephoto.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_takephoto.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_pp_like.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_pp_like.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_conversation_bubble_white.9.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_conversation_bubble_white.9.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_register_regist.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_register_regist.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_pp_commit.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_pp_commit.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_like.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_like.png"
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_pp_like.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_pp_like.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_register_regist.png",
@@ -136,32 +96,52 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_answer.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_all_selected.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_all_selected.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_question.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_question.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_invite.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_invite.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_juniorunit.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_juniorunit.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_report.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_report.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_content_.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_content_.png"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workdetails_open.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workdetails_open.png"
+    },
+    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_att_selected.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_att_selected.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curclass_selected.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curclass_selected.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_pp_commit.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_pp_commit.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_all_selected.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_all_selected.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_title1.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_title1.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_photo.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_photo.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_selected.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_selected.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic1.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic1.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_cancel.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_cancel.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_conversation_bubble_white.9.png",
@@ -172,48 +152,52 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic4.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_no.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_no.png"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_nocontent_.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_nocontent_.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_showpp.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_showpp.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_title2.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_title2.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_close.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_close.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curclass_unselect.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curclass_unselect.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curunit_unselect.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curunit_unselect.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_invite.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_invite.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_selected.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_selected.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_xin.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_xin.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curunit_unselect.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curunit_unselect.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_close.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_close.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_local_unselect.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_local_unselect.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_selected.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_selected.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_delete.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_delete.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_open.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_open.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cb_register_uncheck.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\cb_register_uncheck.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_att.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_att.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show2_more.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show2_more.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_new_message.png",
@@ -224,12 +208,8 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_conversation_bubble_blue.9.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic2.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic2.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_normal.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_normal.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_refresh.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_refresh.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_info.png",
@@ -240,56 +220,372 @@
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_sreen.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_removeatt.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_removeatt.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show2_more.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show2_more.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic3.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic3.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_title2.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_title2.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic1.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic1.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_cancel.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_cancel.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_gist_.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_gist_.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic4.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic4.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_local_unselect.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_local_unselect.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_all_unselect.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_all_unselect.png"
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_takephoto.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_takephoto.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_ing.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_ing.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_no.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_no.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workdetails_open.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workdetails_open.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_ing.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_ing.png"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_file.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_file.png"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_question.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_question.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_att_unselect.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_att_unselect.png"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_juniorunit.png",
-        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_juniorunit.png"
-    },
-    {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cb_register_uncheck.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\cb_register_uncheck.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_takepic.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_takepic.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_report.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_report.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_against.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_against.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_share.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_share.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cb_register_checked.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\cb_register_checked.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_gallery.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_gallery.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curclass_unselect.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curclass_unselect.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_default_portrait.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_default_portrait.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_info.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_info.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_login_regeit.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_login_regeit.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_takepic.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_takepic.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_against.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_against.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_gallery.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_gallery.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_answer.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_answer.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_att_unselect.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_att_unselect.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_removeatt.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_removeatt.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_checked.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_checked.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_checked.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_checked.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhip_more.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhip_more.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_commit.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_commit.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_addatt.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_addatt.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhip_more.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhip_more.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_default_portrait.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_default_portrait.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\cb_register_checked.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\cb_register_checked.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_xin.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_xin.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_att.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_att.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_answer_.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_answer_.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_photo.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_photo.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\logo72.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\logo72.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_file.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_file.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_sreen.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_sreen.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_photo.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_photo.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_like.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_like.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_all_selected.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_all_selected.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_answer_.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_answer_.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_nocontent_.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_nocontent_.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_normal.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_normal.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curclass_selected.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curclass_selected.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_all.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_all.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_invert.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_invert.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workdetails_uncomment.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workdetails_uncomment.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_photo.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_photo.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic1.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic1.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curunit_selected.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curunit_selected.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_login_resetpwd.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_login_resetpwd.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rc_conversation_bubble_blue.9.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\rc_conversation_bubble_blue.9.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_no.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_no.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_showpp.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_showpp.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_close.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_close.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_att_selected.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_att_selected.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_open.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_open.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_member.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_member.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_addatt.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_addatt.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_showpp.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_showpp.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_title1.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_title1.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curunit_unselect.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curunit_unselect.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_open.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_open.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show2_more.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show2_more.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_share.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_share.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_ic2.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_ic2.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_content_.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_content_.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_photo.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_photo.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workol_normal.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workol_normal.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_removeatt.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_removeatt.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_delete.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_delete.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_title2.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_title2.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_like.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_like.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_cancel.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_cancel.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_all_unselect.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_all_unselect.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_login_regeit.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_login_regeit.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_show.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_show.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\voice_rcd_btn_ing.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\voice_rcd_btn_ing.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_local_selected.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_local_selected.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_commit.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_commit.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_qiuzhi_question.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_qiuzhi_question.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_curclass_selected.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_curclass_selected.png"
+    },
+    {
+        "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_juniorunit.png",
+        "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_juniorunit.png"
     },
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_refresh.png",
@@ -298,5 +594,9 @@
     {
         "merged": "E:\\XueZhuLi1.0\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_unit_member.png",
         "source": "E:\\XueZhuLi1.0\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_unit_member.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_show_all_unselect.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_show_all_unselect.png"
     }
 ]

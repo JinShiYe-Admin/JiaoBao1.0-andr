@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -18,28 +14,26 @@ import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.main.system.LoginActivityController;
-import com.jsy_jiaobao.po.leave.ClassLeavesPost;
-import com.jsy_jiaobao.po.leave.GateQueryLeavesPost;
 import com.jsy_jiaobao.po.leave.Leave;
 import com.jsy_jiaobao.po.leave.LeaveConstant;
 import com.jsy_jiaobao.po.leave.MyAdminClasses;
 import com.jsy_jiaobao.po.leave.MyLeaves;
 import com.jsy_jiaobao.po.leave.MyLeavesPost;
 import com.jsy_jiaobao.po.leave.UnitClassLeaves;
-import com.jsy_jiaobao.po.leave.UnitLeavesPost;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class LeaveFragmentControl implements ConstantUrl {
-	private static final String TAG = "LeaveFragmentControl";
-	private Fragment mFragment;
-	int mUid = 0, mChapterid = 0;
 	private static LeaveFragmentControl instance;
 	private Context mContext;
 
-	public static synchronized final LeaveFragmentControl getInstance() {
+	public static synchronized  LeaveFragmentControl getInstance() {
 		if (instance == null) {
 			instance = new LeaveFragmentControl();
 		}
@@ -48,7 +42,6 @@ public class LeaveFragmentControl implements ConstantUrl {
 
 	public LeaveFragmentControl setContext(Fragment pActivity) {
 		mContext = pActivity.getActivity();
-		mFragment = pActivity;
 		return this;
 	}
 
@@ -81,7 +74,7 @@ public class LeaveFragmentControl implements ConstantUrl {
 	/**
 	 * 获取本人请假记录
 	 * 
-	 * @param post
+	 * @param post 本人请假申请请求数据
 	 */
 	public void GetMyLeaves(MyLeavesPost post) {
 		DialogUtil.getInstance().getDialog(mContext, "正在获取请假记录");
@@ -93,41 +86,41 @@ public class LeaveFragmentControl implements ConstantUrl {
 		HttpUtil.InstanceSend(GetMyLeaves, params, callback);
 	}
 
-	/**
-	 * 班主任查询本班请假记录
-	 * 
-	 * @param post
-	 */
-	public void GetClassLeaves(ClassLeavesPost post) {
-		RequestParams params = post.getParams();
-		CallBack callback = new CallBack();
-		callback.setUserTag(LeaveConstant.leave_GetClassLeaves);
-		HttpUtil.InstanceSend(GetClassLeaves, params, callback);
-	}
+//	/**
+//	 * 班主任查询本班请假记录
+//	 *
+//	 * @param post 请求数据
+//	 */
+//	public void GetClassLeaves(ClassLeavesPost post) {
+//		RequestParams params = post.getParams();
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(LeaveConstant.leave_GetClassLeaves);
+//		HttpUtil.InstanceSend(GetClassLeaves, params, callback);
+//	}
 
-	/**
-	 * 审核人员取本单位的请假记录 
-	 * 
-	 * @param post
-	 */
-	public void GetUnitLeaves(UnitLeavesPost post) {
-		RequestParams params = post.getParams();
-		CallBack callback = new CallBack();
-		callback.setUserTag(LeaveConstant.leave_GetUnitLeaves);
-		HttpUtil.InstanceSend(GetUnitLeaves, params, callback);
-	}
+//	/**
+//	 * 审核人员取本单位的请假记录
+//	 *
+//	 * @param post 请求数据
+//	 */
+//	public void GetUnitLeaves(UnitLeavesPost post) {
+//		RequestParams params = post.getParams();
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(LeaveConstant.leave_GetUnitLeaves);
+//		HttpUtil.InstanceSend(GetUnitLeaves, params, callback);
+//	}
 
-	/**
-	 * 门卫获取请假记录
-	 * 
-	 * @param post
-	 */
-	public void GetGateLeaves(GateQueryLeavesPost post) {
-		RequestParams params = post.getParams();
-		CallBack callback = new CallBack();
-		callback.setUserTag(LeaveConstant.leave_GetGateLeaves);
-		HttpUtil.InstanceSend(GetGateLeaves, params, callback);
-	}
+//	/**
+//	 * 门卫获取请假记录
+//	 *
+//	 * @param post 请求数据
+//	 */
+//	public void GetGateLeaves(GateQueryLeavesPost post) {
+//		RequestParams params = post.getParams();
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(LeaveConstant.leave_GetGateLeaves);
+//		HttpUtil.InstanceSend(GetGateLeaves, params, callback);
+//	}
 
 	private class CallBack extends RequestCallBack<String> {
 		private int mType;
@@ -198,7 +191,7 @@ public class LeaveFragmentControl implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag, int type) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case LeaveConstant.leave_GetMyAdminClass:
@@ -206,11 +199,6 @@ public class LeaveFragmentControl implements ConstantUrl {
 			Log.i("leave_GetMyAdminClass", result);
 			MyAdminClasses myAdminClasses = GsonUtil.GsonToObject(result,
 					MyAdminClasses.class);
-			if (myAdminClasses != null) {
-				Log.d(TAG + "GetMyAdminClass", myAdminClasses.toString());
-			} else {
-				Log.d(TAG + "GetMyAdminClass", "班主任获取关联班级为空");
-			}
 			post.add(myAdminClasses);
 			break;
 		case LeaveConstant.leave_GetClassLeaves:

@@ -27,15 +27,14 @@ public class SinglePictureDisplayActivity extends BaseActivity {
     private DisplayImageOptions options;
     private String photoPath;
     private ProgressBar spinner;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
-            photoPath = (String) getIntent().getStringExtra("PhotoPath");
+            photoPath = getIntent().getStringExtra("PhotoPath");
         } else {
-            photoPath = (String) savedInstanceState.getString("PhotoPath");
+            photoPath = savedInstanceState.getString("PhotoPath");
         }
         setImageLoader();
         initViews();

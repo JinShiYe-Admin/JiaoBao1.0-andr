@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -28,13 +24,17 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class GenFragmentController implements ConstantUrl {
-	int mUid = 0, mChapterid = 0;
+
 	private static GenFragmentController instance;
-	private Fragment fragment;
+
 	private Context mContext;
 
-	public static synchronized final GenFragmentController getInstance() {
+	public static synchronized  GenFragmentController getInstance() {
 		if (instance == null) {
 			instance = new GenFragmentController();
 		}
@@ -42,7 +42,6 @@ public class GenFragmentController implements ConstantUrl {
 	}
 
 	public GenFragmentController setContext(Fragment fragment) {
-		this.fragment = fragment;
 		mContext = fragment.getActivity();
 		return this;
 	}
@@ -66,7 +65,7 @@ public class GenFragmentController implements ConstantUrl {
 	/**
 	 * 功能说明：生成一条请假条记录
 	 * 
-	 * @param post
+	 * @param post 生成请假记录要传递的数据
 	 */
 	public void NewLeaveModel(Leave post) {
 		DialogUtil.getInstance().getDialog(mContext, "正在发送数据");
@@ -79,7 +78,7 @@ public class GenFragmentController implements ConstantUrl {
 	/**
 	 * 功能说明：获取请假记录列表
 	 * 
-	 * @param post
+	 * @param post 获取请假记录 发送的请求数据
 	 */
 	public void GetMyLeaves(MyLeavesPost post) {
 		DialogUtil.getInstance().getDialog(mContext, "正在发送数据");
@@ -151,12 +150,12 @@ public class GenFragmentController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case LeaveConstant.leave_GetMyStdInfo:
 			result = "{\"list\":" + result + "}";
-			GenStuInfos genStuInfos = (GenStuInfos) GsonUtil.GsonToObject(
+			GenStuInfos genStuInfos =  GsonUtil.GsonToObject(
 					result, GenStuInfos.class);
 			post.add(genStuInfos);
 			break;

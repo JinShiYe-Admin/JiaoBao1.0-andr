@@ -21,7 +21,7 @@ import com.umeng.analytics.MobclickAgent;
 /**
  * Adapter
  */
-public class UnitClassLeavesAdapter<T> extends BaseAdapter {
+public class UnitClassLeavesAdapter extends BaseAdapter {
 	private Activity mActivity;
 	private Context mContext;
 	private int type = 0;// 0可见姓名 1不可见姓名
@@ -192,22 +192,14 @@ public class UnitClassLeavesAdapter<T> extends BaseAdapter {
 	/**
 	 * 0可见 1不可见
 	 * 
-	 * @param type
+	 * @param type 类型
 	 */
 	public void setType(int type) {
 		this.type = type;
 	}
 
-	public int getCheckType() {
-		return checkType;
-	}
-
 	public void setCheckType(int checkType) {
 		this.checkType = checkType;
-	}
-
-	public int getCheckRole() {
-		return checkRole;
 	}
 
 	public void setCheckRole(int checkRole) {
@@ -217,8 +209,8 @@ public class UnitClassLeavesAdapter<T> extends BaseAdapter {
 	/**
 	 * 替换日期格式
 	 * 
-	 * @param date
-	 * @return
+	 * @param date 日期
+	 * @return 指定格式日期
 	 */
 	private static String replaceDate(String date) {
 		String reDate = date;
@@ -232,8 +224,8 @@ public class UnitClassLeavesAdapter<T> extends BaseAdapter {
 	/**
 	 * 替换状态文字
 	 * 
-	 * @param flag
-	 * @return
+	 * @param flag 审核状态
+	 * @return 审核状态
 	 */
 	private static String replaceflag(String flag) {
 		String reDate;

@@ -1,16 +1,6 @@
 package com.jsy_jiaobao.main.leave;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
-import org.greenrobot.eventbus.Subscribe;
-
-import android.R.string;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
 import android.content.Intent;
@@ -28,10 +18,11 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
-import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
@@ -45,6 +36,14 @@ import com.jsy_jiaobao.po.leave.MyLeaves;
 import com.jsy_jiaobao.po.leave.MyLeavesPost;
 import com.jsy_jiaobao.po.leave.SpinnerAdapter;
 import com.umeng.analytics.MobclickAgent;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * 功能说明：家长请假记录查询
@@ -69,11 +68,7 @@ public class GenQueryFragment extends Fragment implements
 	private ArrayList<String> nameList;// 家长的学生
 	private ArrayList<GenStuInfo> mGenStuInfoList;// 获取的学生信息
 	private ArrayList<MyLeaveModel> myLeaveModelList;
-
 	private TextView tv_time;// 选择时间
-	private TextView tv_symbol;// 选择时间
-	private ListView lv_leave;// 假条列表
-	private Spinner spn_leaver;// 请假人
 	private SpinnerAdapter spnAdapter_leaver;// 请假人
 	private UnitClassLeavesAdapter<?> unitClassLeavesAdapter;// 假条列表
 	private PullToRefreshScrollView refreshView;//上拉加载更多，下拉刷新的控件
@@ -100,8 +95,11 @@ public class GenQueryFragment extends Fragment implements
 	private void initViews() {
 		GenFragmentController.getInstance().setContext(this);
 		tv_time = (TextView) view.findViewById(R.id.leave_tv_time);
+		TextView tv_symbol;// 选择时间
 		tv_symbol = (TextView) view.findViewById(R.id.leave_tv_symbol);
+		ListView lv_leave;// 假条列表
 		lv_leave = (ListView) view.findViewById(R.id.leave_cuslistview);
+		Spinner spn_leaver;// 请假人
 		spn_leaver = (Spinner) view.findViewById(R.id.leave_spn_name);
 		refreshView = (PullToRefreshScrollView) view
 				.findViewById(R.id.leave_pulltorefreshscrollview);
@@ -111,8 +109,8 @@ public class GenQueryFragment extends Fragment implements
 		refreshView.setMode(Mode.BOTH);
 		calendar = Calendar.getInstance();
 		mGenStuInfoChose = new GenStuInfo();
-		nameList = new ArrayList<String>();
-		myLeaveModelList = new ArrayList<MyLeaveModel>();
+		nameList = new ArrayList<>();
+		myLeaveModelList = new ArrayList<>();
 		spnAdapter_leaver = new SpinnerAdapter(mContext, nameList);
 		unitClassLeavesAdapter = new UnitClassLeavesAdapter<Object>(this);
 		spn_leaver.setAdapter(spnAdapter_leaver);
@@ -190,7 +188,7 @@ public class GenQueryFragment extends Fragment implements
 			refreshView.onRefreshComplete();
 			MyLeaves myLeaves = (MyLeaves) list.get(1);
 			ArrayList<MyLeaveModel> myLevelList = myLeaves.getList();
-			if (myLevelList.size() == 0 || myLevelList == null) {// 获得的数据为空或者没有数据
+			if (myLevelList.size() == 0) {// 获得的数据为空或者没有数据
 				if (myLeaveModelList.size() == 0) {// 假条列表为空。因为删除一条假条后会获取一条新的记录补充列表，需要增加这个判断
 					ToastUtil.showMessage(mContext, R.string.leave_no_myleaves);
 				}
