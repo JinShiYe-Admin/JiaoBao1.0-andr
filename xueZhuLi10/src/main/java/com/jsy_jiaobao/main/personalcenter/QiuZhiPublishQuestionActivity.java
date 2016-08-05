@@ -1,14 +1,5 @@
 package com.jsy_jiaobao.main.personalcenter;
 
-import java.io.File;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,7 +13,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -31,13 +21,14 @@ import android.view.View.OnTouchListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.TextView.OnEditorActionListener;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
@@ -56,6 +47,15 @@ import com.jsy_jiaobao.po.qiuzhi.CityMessage;
 import com.jsy_jiaobao.po.qiuzhi.Subject;
 import com.jsy_jiaobao.po.qiuzhi.UserInfo;
 import com.lidroid.xutils.http.RequestParams;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.io.File;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 求知发布问题
@@ -505,7 +505,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					bitmap.recycle();
 				} else {
 					// 在edt_content中插入图片Span
-					BaseUtils.insetImage(mContext, edt_conent, img, bitmap);
+					BaseUtils.insetImage(edt_conent, img, bitmap);
 				}
 			}
 			break;

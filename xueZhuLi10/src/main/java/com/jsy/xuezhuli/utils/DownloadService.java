@@ -63,16 +63,13 @@ public class DownloadService extends Service {
 
     public static boolean isServiceRunning(Context context) {
         boolean isRunning = false;
-
         ActivityManager activityManager =
                 (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningServiceInfo> serviceList
                 = activityManager.getRunningServices(Integer.MAX_VALUE);
-
         if (serviceList == null || serviceList.size() == 0) {
             return false;
         }
-
         for (int i = 0; i < serviceList.size(); i++) {
             if (serviceList.get(i).service.getClassName().equals(DownloadService.class.getName())) {
                 isRunning = true;

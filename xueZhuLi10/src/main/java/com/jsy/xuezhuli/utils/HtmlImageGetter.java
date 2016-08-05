@@ -1,9 +1,6 @@
 package com.jsy.xuezhuli.utils;
 
-import java.io.File;
-
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.Html.ImageGetter;
@@ -16,97 +13,79 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
-public class HtmlImageGetter implements ImageGetter,DestroyInterface{
-	private TextView _htmlText;
-	private String _imgPath;
-	private Drawable _defaultDrawable;
-	private String TAG = "HtmlImageGetter";
-	public HtmlImageGetter(TextView htmlText, String imgPath,
-			Drawable defaultDrawable) {
-		_htmlText = htmlText;
-		_imgPath = imgPath;
-		_defaultDrawable = defaultDrawable;
-	}
+import java.io.File;
 
-	@Override
-	public Drawable getDrawable(String imgUrl) {
+public class HtmlImageGetter implements ImageGetter, DestroyInterface {
+    private TextView _htmlText;
+    private String _imgPath;
+    private Drawable _defaultDrawable;
 
-		String imgKey = MD5Encoder.ecode(imgUrl);
-		String path = JSYApplication.getInstance().FILE_PATH + _imgPath;
-		File dir = new File(path);
-		if (!dir.exists()) {
-			dir.mkdir();
-		}
-		imgKey = path + "/" + imgKey + ".jpg";
-//		final URLDrawable urlDrawable = new URLDrawable(_defaultDrawable);
-//		ImageLoader.getInstance().loadImage(imgKey,urlDrawable,_htmlText);
-//		return urlDrawable;
-		File imgK = new File(imgKey);
-		if (imgK.exists()) {
-			Drawable drawable = QiuZhiSuggestShowRecommentActivity.cache.get(imgKey);
-			if(drawable == null){
-				Bitmap bitmap = PictureUtils.getbitmapFromFile(imgK);
-				QiuZhiSuggestShowRecommentActivity.cache.put(imgKey, drawable);
-				drawable = new BitmapDrawable(_htmlText.getResources(),bitmap);
-				int w = (int) (drawable.getIntrinsicWidth());
-				int h = (int) (drawable.getIntrinsicHeight());
-				
-				if (w>0 && h>0) {
-					int width = Constant.ScreenWith/3*2;
-					int height = Constant.ScreenWith/3*2*h/w;
-					drawable.setBounds(0, 0, width,height);
-				}else{
-					drawable.setBounds(0, 0, w,h);
-				}
-			}
-//			if (bitmap != null && !bitmap.isRecycled()) {
-//				bitmap.recycle();
-//				bitmap = null;
-//			}
-			return drawable;
-		}
-//		_htmlText.setText(_htmlText.getText());
-		final URLDrawable urldrawable = new URLDrawable(_defaultDrawable);
-//		new AsyncThread(urlDrawable).execute(imgKey, imgUrl);
-		new HttpUtils().download(imgUrl, imgKey,true, new RequestCallBack<File>() {
-			
-			@Override
-			public void onSuccess(ResponseInfo<File> file) {
-//				Options options = new BitmapFactory.Options(); 
-//				options.inJustDecodeBounds = false; 
-//				int m = (int) (file.result.length()/1024/1024);
-//				options.inSampleSize = m==0?1:m; 
-				
-				try {
-//					Bitmap bitmap = PictureUtils.getbitmapFromFile(file.result);
-//					Bitmap bitmap = PictureUtils.compressImage(BitmapFactory.decodeFile(file.result.getAbsolutePath(), options),file.result.getAbsolutePath());
-					Drawable drawable = QiuZhiSuggestShowRecommentActivity.cache.get(file.result.getPath());
-					if(drawable == null){
-						Bitmap bitmap = PictureUtils.getbitmapFromFile(file.result);
-						QiuZhiSuggestShowRecommentActivity.cache.put(file.result.getPath(), drawable);
-						drawable = new BitmapDrawable(_htmlText.getResources(),bitmap);
-					}
-					urldrawable.setDrawable(drawable);
-//					if (bitmap != null && !bitmap.isRecycled()) {
-//						bitmap.recycle();
-//						bitmap = null;
-//					}
-					_htmlText.requestLayout();
-				} catch (Exception e) {
-				}
-			}
-			
-			@Override
-			public void onFailure(HttpException arg0, String arg1) {
-				
-			}
-		});
-		return urldrawable;
-	}
+    public HtmlImageGetter(TextView htmlText, String imgPath,
+                           Drawable defaultDrawable) {
+        _htmlText = htmlText;
+        _imgPath = imgPath;
+        _defaultDrawable = defaultDrawable;
+    }
 
-	@Override
-	public void Destroy() {
-		System.out.println("-----------html getter destroy");
+    @Override
+    public Drawable getDrawable(String imgUrl) {
+        String imgKey = MD5Encoder.ecode(imgUrl);
+        String path = JSYApplication.getInstance().FILE_PATH + _imgPath;
+        File dir = new File(path);
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+        imgKey = path + "/" + imgKey + ".jpg";
+        File imgK = new File(imgKey);
+        if (imgK.exists()) {
+            Drawable drawable = QiuZhiSuggestShowRecommentActivity.cache.get(imgKey);
+            if (drawable == null) {
+                Bitmap bitmap = PictureUtils.getbitmapFromFile(imgK);
+                QiuZhiSuggestShowRecommentActivity.cache.put(imgKey, null);
+                drawable = new BitmapDrawable(_htmlText.getResources(), bitmap);
+                int w = drawable.getIntrinsicWidth();
+                int h = drawable.getIntrinsicHeight();
+
+                if (w > 0 && h > 0) {
+                    int width = Constant.ScreenWith / 3 * 2;
+                    int height = Constant.ScreenWith / 3 * 2 * h / w;
+                    drawable.setBounds(0, 0, width, height);
+                } else {
+                    drawable.setBounds(0, 0, w, h);
+                }
+            }
+            return drawable;
+        }
+        final URLDrawable urldrawable = new URLDrawable(_defaultDrawable);
+        new HttpUtils().download(imgUrl, imgKey, true, new RequestCallBack<File>() {
+
+            @Override
+            public void onSuccess(ResponseInfo<File> file) {
+                try {
+                    Drawable drawable = QiuZhiSuggestShowRecommentActivity.cache.get(file.result.getPath());
+                    if (drawable == null) {
+                        Bitmap bitmap = PictureUtils.getbitmapFromFile(file.result);
+                        QiuZhiSuggestShowRecommentActivity.cache.put(file.result.getPath(), null);
+                        drawable = new BitmapDrawable(_htmlText.getResources(), bitmap);
+                    }
+                    urldrawable.setDrawable(drawable);
+                    _htmlText.requestLayout();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(HttpException arg0, String arg1) {
+
+            }
+        });
+        return urldrawable;
+    }
+
+    @Override
+    public void Destroy() {
+        System.out.println("-----------html getter destroy");
 //		if (bitmap != null) {
 //			if (!bitmap.isRecycled()) {
 //				bitmap.recycle();
@@ -116,7 +95,7 @@ public class HtmlImageGetter implements ImageGetter,DestroyInterface{
 //		if (drawable != null) {
 //			drawable = null;
 //		}
-	}
+    }
 
 //	private class AsyncThread extends AsyncTask<String, Integer, Drawable> {
 //		private String imgKey;

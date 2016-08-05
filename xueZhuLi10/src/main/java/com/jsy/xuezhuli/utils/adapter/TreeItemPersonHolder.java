@@ -17,8 +17,8 @@ import com.unnamed.b.atv.model.TreeNode;
 public class TreeItemPersonHolder extends TreeNode.BaseNodeViewHolder<TreeItemPersonHolder.TreeItemPerson> {
     private CheckBox cb_1;
     private Handler mHandler;
-    private boolean toggle;
-    public TreeItemPersonHolder(Context context, Handler mHandler) {
+
+	public TreeItemPersonHolder(Context context, Handler mHandler) {
         super(context);
         this.mHandler = mHandler;
     }
@@ -49,7 +49,6 @@ public class TreeItemPersonHolder extends TreeNode.BaseNodeViewHolder<TreeItemPe
 
     /**
      * 父类全取消
-     * @param node
      */
     private void p_n(TreeNode node){
     	getTreeView().selectNode(node, false);
@@ -58,9 +57,9 @@ public class TreeItemPersonHolder extends TreeNode.BaseNodeViewHolder<TreeItemPe
     		p_n(parent);
 		}
     }
+
     /**
      * 父类是否取消
-     * @param node
      */
     private void p_y(TreeNode node){
     	getTreeView().selectNode(node, true);
@@ -70,20 +69,19 @@ public class TreeItemPersonHolder extends TreeNode.BaseNodeViewHolder<TreeItemPe
     		x:for(TreeNode n : parent.getChildren()){
     			if (!n.isSelected()) {
     				isSelect = false;
-    				break x;
+    				break;
 				}
     		}
     		if (!isSelect) {
 				p_n(parent);
 			}else{
-				getTreeView().selectNode(parent, isSelect);
+				getTreeView().selectNode(parent, true);
 			}
     	}
     }
     @Override
     public void toggle(boolean active) {
-    	toggle = active;
-    }
+	}
 	@Override
 	public void toggleSelectionMode(boolean editModeEnabled) {
 		cb_1.setChecked(mNode.isSelected());
@@ -108,6 +106,5 @@ public class TreeItemPersonHolder extends TreeNode.BaseNodeViewHolder<TreeItemPe
 		public String toString() {
 			return name;
 		}
-		
     }
 }

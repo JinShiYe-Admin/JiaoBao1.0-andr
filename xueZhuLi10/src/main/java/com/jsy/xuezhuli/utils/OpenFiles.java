@@ -1,10 +1,10 @@
 package com.jsy.xuezhuli.utils;
 
-import java.io.File;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
+
+import java.io.File;
 
 public class OpenFiles {
 	private static String TAG="OpenFiles";
@@ -69,16 +69,6 @@ public class OpenFiles {
 		intent.putExtra("configchange", 0);
 		Uri uri = Uri.fromFile(file);
 		intent.setDataAndType(uri, "video/*");
-		return intent;
-	}
-
-	// android获取一个用于打开CHM文件的intent
-	public static Intent getChmFileIntent(File file) {
-		Intent intent = new Intent("android.intent.action.VIEW");
-		intent.addCategory("android.intent.category.DEFAULT");
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		Uri uri = Uri.fromFile(file);
-		intent.setDataAndType(uri, "application/x-chm");
 		return intent;
 	}
 

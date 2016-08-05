@@ -1,8 +1,6 @@
 package com.jsy.xuezhuli.utils;
 
-
 import android.text.TextUtils;
-import android.util.Log;
 
 /**
  * 
@@ -12,8 +10,6 @@ public class EmojiUtil {
  
     /**
      * 判断是否有emoji
-     * @param str
-     * @return 
      */
     public static boolean containsEmoji(String str) {
         if (TextUtils.isEmpty(str)) {
@@ -41,11 +37,8 @@ public class EmojiUtil {
  
     /**
      * 过滤emoji 或者 其他非文字类型的字符
-     * @param source
-     * @return
      */
     public static String filterEmoji(String str) {
- 
         if (!containsEmoji(str)) {
             return str;//如果不包含，直接返回
         }
@@ -58,16 +51,12 @@ public class EmojiUtil {
                     buf = new StringBuilder(str.length());
                 }
                 buf.append(codePoint);
-            } else {
-            	
             }
         }
- 
         if (buf == null) {
             return "[:emoji]";//如果全部为 emoji表情，则返回空字符串
         } else {
             return buf.toString();
         }
- 
     }
 }

@@ -7,7 +7,6 @@ import android.graphics.drawable.Drawable;
 public class URLDrawable extends BitmapDrawable {
 
 	private Drawable drawable;
-
 	public URLDrawable(Drawable defaultDraw) {
 		setDrawable(defaultDraw);
 	}
@@ -15,8 +14,8 @@ public class URLDrawable extends BitmapDrawable {
 	public void setDrawable(Drawable ndrawable) {
 		drawable = ndrawable;
 		if (drawable != null) {
-			int w = (int) (drawable.getIntrinsicWidth());
-			int h = (int) (drawable.getIntrinsicHeight());
+			int w = drawable.getIntrinsicWidth();
+			int h = drawable.getIntrinsicHeight();
 			
 			if (w>0 && h>0) {
 				int width = Constant.ScreenWith/3*2;
@@ -27,9 +26,6 @@ public class URLDrawable extends BitmapDrawable {
 				drawable.setBounds(0, 0, w,h);
 				setBounds(0, 0, w,h);
 			}
-			
-//			drawable.setBounds(0, 0, drawable.getIntrinsicWidth(),drawable.getIntrinsicHeight());
-//			setBounds(0, 0, drawable.getIntrinsicWidth(),drawable.getIntrinsicHeight());
 		}
 	}
 

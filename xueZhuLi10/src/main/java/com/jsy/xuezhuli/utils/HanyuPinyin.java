@@ -32,7 +32,7 @@ public class HanyuPinyin {
 	// 转换一个字符串
 	public String getStringPinYin(String str) {
 		StringBuilder sb = new StringBuilder();
-		String tempPinyin = null;
+		String tempPinyin;
 		for (int i = 0; i < str.length(); ++i) {
 			tempPinyin = getCharacterPinYin(str.charAt(i));
 			if (tempPinyin == null) {
