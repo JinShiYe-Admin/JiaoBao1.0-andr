@@ -136,12 +136,12 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_all.png"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_invert.png",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_invert.png"
-    },
-    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_workdetails_uncomment.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\icon_workdetails_uncomment.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_sendmsg_invert.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xxhdpi\\btn_sendmsg_invert.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_pp_commit.png",
