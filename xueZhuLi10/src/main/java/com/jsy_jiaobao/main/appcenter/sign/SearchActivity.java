@@ -1,13 +1,5 @@
 package com.jsy_jiaobao.main.appcenter.sign;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Hashtable;
-import java.util.List;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,14 +16,11 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.SubMenu;
-import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
+import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
@@ -56,6 +45,14 @@ import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Hashtable;
+import java.util.List;
+
 /**
  * Android实现日历控件
  * @Description: Android实现日历控件
@@ -74,7 +71,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 	
 	@ViewInject(R.id.pull_refresh_scrollview)private PullToRefreshScrollView mPullRefreshScrollView;
 	// 生成日历，外层容器
-	private LinearLayout layContent = null;
+
 	private ArrayList<DateWidgetDayCell> days = new ArrayList<DateWidgetDayCell>();
 
 	// 日期变量
@@ -347,6 +344,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 
 	//  生成日历主体
 	private View generateCalendarMain() {
+		LinearLayout layContent ;
 		layContent = createLayout(LinearLayout.VERTICAL);
 		// layContent.setPadding(1, 0, 1, 0);
 		layContent.setBackgroundColor(Color.argb(255, 105, 105, 103));
