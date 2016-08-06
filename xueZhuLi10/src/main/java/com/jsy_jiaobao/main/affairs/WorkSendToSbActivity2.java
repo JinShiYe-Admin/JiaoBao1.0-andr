@@ -672,9 +672,9 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 			final VideoRecorderDialog dialog = new VideoRecorderDialog(
 					mContext, mHandler);
 			dialog.setClickListenerInterface(new ClickListenerInterface() {
-				@Override
-				public void doConfirm() {
-				}
+//				@Override
+//				public void doConfirm() {
+//				}
 
 				@Override
 				public void doCancel(final String filePath) {

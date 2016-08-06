@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.studentrecord;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
@@ -12,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,8 +31,12 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.viewpagerindicator.TabPageIndicator;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+
 public class StudentRecordActivity extends BaseActivity {
-	private static String[] TITLE;//
+
 	@ViewInject(R.id.layout_studentrecord)private LinearLayout layout_ui;
 	@ViewInject(R.id.record_layout_pager)private ViewPager pager;
 	@ViewInject(R.id.record_tab_indicator)private TabPageIndicator indicator;
@@ -45,7 +46,6 @@ public class StudentRecordActivity extends BaseActivity {
 	@ViewInject(R.id.record_tv_sex)private TextView tv_sex;
 	@ViewInject(R.id.record_tv_bitrh)private TextView tv_bitrh;
 	private Context mContext;
-	private FragmentPagerAdapter pagerAdapter;
 	private BitmapUtils bitmapUtils;
 	private TextView newctag;// 最新未读数
 	private TextView schctag;// 校园通知未读数
@@ -67,6 +67,7 @@ public class StudentRecordActivity extends BaseActivity {
 
 	}
 	private void initViews() {
+		String[] TITLE;//
 		TITLE = new String[] {
 				getResources().getString(R.string.record_function_newstop),// 最新\n更新</string>
 				getResources().getString(R.string.record_function_scollnotice),// 学校\n通知</string>
@@ -78,6 +79,7 @@ public class StudentRecordActivity extends BaseActivity {
 		};
 
 		StudentRecordActivityController.getInstance().setContext(this);
+		FragmentPagerAdapter pagerAdapter;
 		pagerAdapter = new TabPageIndicatorAdapter(getSupportFragmentManager(),TITLE);
 		pager.setAdapter(pagerAdapter);
 		indicator.setViewPager(pager);
@@ -168,51 +170,51 @@ public class StudentRecordActivity extends BaseActivity {
 			int newc = baseInfo.getNewc();
 			System.out.println("-----------最新未读数"+newc);
 			if (newc >0) {
-				newctag.setVisibility(0);// 最新未读数
+				newctag.setVisibility(View.VISIBLE);// 最新未读数
 			}else{
-				newctag.setVisibility(8);
+				newctag.setVisibility(View.GONE);
 			}
 			int schc = baseInfo.getSchc();
 			System.out.println("-----------校园通知未读数"+schc);
 			if (schc > 0) {
-				schctag.setVisibility(0); // 校园通知未读数
+				schctag.setVisibility(View.VISIBLE); // 校园通知未读数
 			}else{
-				schctag.setVisibility(8); // 校园通知未读数
+				schctag.setVisibility(View.GONE); // 校园通知未读数
 			}
 			int clsc = baseInfo.getClsc();
 			System.out.println("-----------班级通知未读数"+clsc);
 			if (clsc > 0) {
-				clsctag.setVisibility(0);// 班级通知未读数
+				clsctag.setVisibility(View.VISIBLE);// 班级通知未读数
 			}else{
-				clsctag.setVisibility(8);// 班级通知未读数
+				clsctag.setVisibility(View.GONE);// 班级通知未读数
 			}
 			int bxc = baseInfo.getBxc();
 			System.out.println("-----------日常表现未读数"+bxc);
 			if (bxc > 0) {
-				bxctag.setVisibility(0); // 日常表现未读数
+				bxctag.setVisibility(View.VISIBLE); // 日常表现未读数
 			}else{
-				bxctag.setVisibility(8); // 日常表现未读数
+				bxctag.setVisibility(View.GONE); // 日常表现未读数
 			}
 			int qpc = baseInfo.getQpc();
 			System.out.println("-----------期评未读数"+qpc);
 			if (qpc > 0) {
-				qpctag.setVisibility(0); // 期评未读数
+				qpctag.setVisibility(View.VISIBLE); // 期评未读数
 			}else{
-				qpctag.setVisibility(8); // 期评未读数
+				qpctag.setVisibility(View.GONE); // 期评未读数
 			}
 			int tecc = baseInfo.getTecc();
 			System.out.println("-----------老师留言未读数"+tecc);
 			if (tecc > 0) {
-				tecctag.setVisibility(0); // 老师留言未读数
+				tecctag.setVisibility(View.VISIBLE); // 老师留言未读数
 			}else{
-				tecctag.setVisibility(8); // 老师留言未读数
+				tecctag.setVisibility(View.GONE); // 老师留言未读数
 			}
 			int genc = baseInfo.getGenc();
 			System.out.println("-----------家长留言未读数"+genc);
 			if (genc > 0) {
-				genctag.setVisibility(0); // 家长留言未读数
+				genctag.setVisibility(View.VISIBLE); // 家长留言未读数
 			}else{
-				genctag.setVisibility(8); // 家长留言未读数
+				genctag.setVisibility(View.GONE); // 家长留言未读数
 			}
 			
 			isPack = baseInfo.getIspack();

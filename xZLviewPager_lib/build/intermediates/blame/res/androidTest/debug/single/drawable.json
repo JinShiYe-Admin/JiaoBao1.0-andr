@@ -4,24 +4,8 @@
         "source": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\textview_badview.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\textview_badview.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\textview_badview.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_notice_icon.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_notice_icon.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_topical_icon.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_topical_icon.xml"
-    },
-    {
         "merged": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
         "source": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_work_icon.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_work_icon.xml"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_chat_icon.xml",
@@ -32,20 +16,8 @@
         "source": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_notice_icon.xml"
     },
     {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_show_icon.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_show_icon.xml"
-    },
-    {
         "merged": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_show_icon.xml",
         "source": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_show_icon.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_chat_icon.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\bottom_chat_icon.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bottom_work_icon.xml",

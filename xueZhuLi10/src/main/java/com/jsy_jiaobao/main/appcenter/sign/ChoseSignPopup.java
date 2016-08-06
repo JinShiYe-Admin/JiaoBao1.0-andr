@@ -24,11 +24,11 @@ import com.jsy_jiaobao.po.sign.ParentSignWay;
 public class ChoseSignPopup {
 	// Scrolling flag
 	private boolean scrolling = false;
-	private PopupWindow ppw;
+
 	private Context mcontext;
 	private WheelView parent, child;
 	private int parentLocation;
-	private List<ChildSignWay> children =new ArrayList<ChildSignWay>();
+	private List<ChildSignWay> children =new ArrayList<>();
 	private List<ParentSignWay> childrens = Constant.listParentSignWay;
 	public ChoseSignPopup(Context context) {
 		this.mcontext = context;
@@ -38,7 +38,7 @@ public class ChoseSignPopup {
 		final View popupLayout = inflater.inflate(R.layout.popup_chosesign, null);
 		parent = (WheelView)popupLayout.findViewById(R.id.popup_chosesign_parent);
 		child = (WheelView)popupLayout.findViewById(R.id.popup_chosesign_child);
-		
+		PopupWindow ppw;
 		ppw = new PopupWindow(mcontext);
 		ppw.setBackgroundDrawable(new BitmapDrawable());
 		ppw.setWidth(LayoutParams.MATCH_PARENT);
@@ -147,10 +147,7 @@ public class ChoseSignPopup {
 		
 		@Override
 		public View getItem(int index, View cachedView, ViewGroup parent) {
-			View view = super.getItem(index, cachedView, parent);
-//			ImageView img = (ImageView) view.findViewById(R.id.parent_flag);
-//			img.setImageResource(flags[index]);
-			return view;
+			return super.getItem(index, cachedView, parent);
 		}
 		
 		@Override
@@ -178,8 +175,6 @@ public class ChoseSignPopup {
 		@Override
 		public View getItem(int index, View cachedView, ViewGroup parent) {
 			View view = super.getItem(index, cachedView, parent);
-//			ImageView img = (ImageView) view.findViewById(R.id.parent_flag);
-//			img.setImageResource(flags[index]);
 			return view;
 		}
 

@@ -24,7 +24,7 @@ public class StudentRecordActivityController implements ConstantUrl{
 	private static StudentRecordActivityController instance;
 	private Activity mcontext;
 	private Context mContext;
-	public static synchronized final StudentRecordActivityController getInstance() {
+	public static synchronized  StudentRecordActivityController getInstance() {
 		if (instance == null) {
 			instance = new StudentRecordActivityController();
 		}
@@ -88,7 +88,7 @@ public class StudentRecordActivityController implements ConstantUrl{
 
 	}
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer)userTag) {
 		case Constant.sturecord_home_BaseInfo:
 			post.add(Constant.sturecord_home_BaseInfo);

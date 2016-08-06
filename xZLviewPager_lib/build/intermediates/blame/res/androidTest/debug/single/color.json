@@ -1,13 +1,5 @@
 [
     {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\vpi__light_theme.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\color\\vpi__light_theme.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\vpi__dark_theme.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\color\\vpi__dark_theme.xml"
-    },
-    {
         "merged": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\bottom_text.xml",
         "source": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\color\\bottom_text.xml"
     },
@@ -18,9 +10,5 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\vpi__dark_theme.xml",
         "source": "E:\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\color\\vpi__dark_theme.xml"
-    },
-    {
-        "merged": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\bottom_text.xml",
-        "source": "E:\\XueZhuLi1.0\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\color\\bottom_text.xml"
     }
 ]

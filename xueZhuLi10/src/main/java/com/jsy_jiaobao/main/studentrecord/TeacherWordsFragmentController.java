@@ -25,7 +25,7 @@ public class TeacherWordsFragmentController implements ConstantUrl{
 	private Fragment mcontext;
 	private Context mContext;
 
-	public static synchronized final TeacherWordsFragmentController getInstance() {
+	public static synchronized  TeacherWordsFragmentController getInstance() {
 		if (instance == null) {
 			instance = new TeacherWordsFragmentController();
 		}
@@ -61,7 +61,7 @@ public class TeacherWordsFragmentController implements ConstantUrl{
 	}
 	/**
 	 * 老师获取某学生的某项信息的基本信息
-	 * @param tag 
+	 * @param tag tag
 	 */
 	public void PackTecW(ArrayList<Object> tag, String DATA){
 		RequestParams params = new RequestParams();//Uid|Recid|MsgType|PageSize|CurPage|SchName
@@ -99,7 +99,7 @@ public class TeacherWordsFragmentController implements ConstantUrl{
 		}
 		
 		private void dealResponse(String string, Object userTag) {
-			ArrayList<Object> post = new ArrayList<Object>();
+			ArrayList<Object> post = new ArrayList<>();
 			post.add(Constant.sturecord_home_PackTecW);
 			MsgSch msgSch = GsonUtil.GsonToObject(string, MsgSch.class);
 			post.add(msgSch);
@@ -109,7 +109,7 @@ public class TeacherWordsFragmentController implements ConstantUrl{
 	}
 	/**
 	 * 返回第一页信息列表
-	 * @param tag 
+	 * @param tag tag
 	 */
 	public void StuTecW(ArrayList<Object> tag, String DATA){
 		RequestParams params = new RequestParams();//Uid|Stuid|MsgType|PageSize|CurPage
@@ -144,7 +144,7 @@ public class TeacherWordsFragmentController implements ConstantUrl{
 		}
 		
 		private void dealResponse(String string, Object userTag) {
-			ArrayList<Object> post = new ArrayList<Object>();
+			ArrayList<Object> post = new ArrayList<>();
 			post.add(Constant.sturecord_home_StuTecW);
 			MsgSch msgSch = GsonUtil.GsonToObject(string, MsgSch.class);
 			post.add(msgSch);
@@ -178,7 +178,7 @@ public class TeacherWordsFragmentController implements ConstantUrl{
 
 	}
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		MsgSch msgSch;
 		switch ((Integer)userTag) {
 		case Constant.sturecord_home_PackTecWSch:

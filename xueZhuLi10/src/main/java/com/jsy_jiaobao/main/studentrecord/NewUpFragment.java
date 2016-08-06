@@ -12,19 +12,19 @@ import com.lidroid.xutils.ViewUtils;
 
 public class NewUpFragment extends Fragment {
 
-	public static NewUpFragment newInstance() {
-		NewUpFragment fragment = new NewUpFragment();
-		return fragment;
-	}
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-		return inflater
-				.inflate(R.layout.layout_studentrecord, container, false);
-	}
+    public static NewUpFragment newInstance() {
+        return new NewUpFragment();
+    }
 
-	@Override
-	public void onViewCreated(View view, Bundle savedInstanceState) {
-		ViewUtils.inject(this,view);
-		super.onViewCreated(view, savedInstanceState);
-	}
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater
+                .inflate(R.layout.layout_studentrecord, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        ViewUtils.inject(this, view);
+        super.onViewCreated(view, savedInstanceState);
+    }
 }
