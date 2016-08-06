@@ -102,4 +102,12 @@ public class StringUtils {
         }
         return pics;
     }
+    /**
+     * 返回两个字符串中间的内容
+     */
+    public static String getMiddleString(String all, String start, String end) {
+        int beginIdx = all.indexOf(start) + start.length();
+        int endIdx = all.indexOf(end);
+        return all.substring(beginIdx, endIdx);
+    }
 }
