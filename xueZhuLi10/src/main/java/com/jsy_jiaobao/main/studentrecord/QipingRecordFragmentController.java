@@ -25,7 +25,7 @@ public class QipingRecordFragmentController implements ConstantUrl{
 	private Fragment mcontext;
 	private Context mContext;
 
-	public static synchronized final QipingRecordFragmentController getInstance() {
+	public static synchronized  QipingRecordFragmentController getInstance() {
 		if (instance == null) {
 			instance = new QipingRecordFragmentController();
 		}
@@ -62,7 +62,7 @@ public class QipingRecordFragmentController implements ConstantUrl{
 	}
 	/**
 	 * 老师获取某学生的某项信息的基本信息
-	 * @param tag 
+	 * @param tag tag
 	 */
 	public void PackQp(ArrayList<Object> tag, String DATA){
 		RequestParams params = new RequestParams();//Uid|Recid|MsgType|PageSize|CurPage|SchName
@@ -100,7 +100,7 @@ public class QipingRecordFragmentController implements ConstantUrl{
 		}
 		
 		private void dealResponse(String string, Object userTag) {
-			ArrayList<Object> post = new ArrayList<Object>();
+			ArrayList<Object> post = new ArrayList<>();
 			post.add(Constant.sturecord_home_PackQp);
 			MsgSch msgSch = GsonUtil.GsonToObject(string, MsgSch.class);
 			post.add(msgSch);
@@ -110,7 +110,7 @@ public class QipingRecordFragmentController implements ConstantUrl{
 	}
 	/**
 	 * 返回第一页信息列表
-	 * @param tag 
+	 * @param tag  tag
 	 */
 	public void StuQp(ArrayList<Object> tag, String DATA){
 		RequestParams params = new RequestParams();//Uid|Stuid|MsgType|PageSize|CurPage
@@ -147,7 +147,7 @@ public class QipingRecordFragmentController implements ConstantUrl{
 		}
 		
 		private void dealResponse(String string, Object userTag) {
-			ArrayList<Object> post = new ArrayList<Object>();
+			ArrayList<Object> post = new ArrayList<>();
 			post.add(Constant.sturecord_home_StuQp);
 			MsgSch msgSch = GsonUtil.GsonToObject(string, MsgSch.class);
 			post.add(msgSch);
@@ -183,7 +183,7 @@ public class QipingRecordFragmentController implements ConstantUrl{
 
 	}
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		MsgSch msgSch;
 		switch ((Integer)userTag) {
 		case Constant.sturecord_home_PackQpSch:

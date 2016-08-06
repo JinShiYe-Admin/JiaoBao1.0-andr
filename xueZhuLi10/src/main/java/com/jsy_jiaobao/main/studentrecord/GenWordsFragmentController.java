@@ -25,7 +25,7 @@ public class GenWordsFragmentController implements ConstantUrl {
 	private Fragment mcontext;
 	private Context mContext;
 
-	public static synchronized final GenWordsFragmentController getInstance() {
+	public static synchronized  GenWordsFragmentController getInstance() {
 		if (instance == null) {
 			instance = new GenWordsFragmentController();
 		}
@@ -80,7 +80,7 @@ public class GenWordsFragmentController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer) userTag) {
 		case Constant.sturecord_home_PackGenW:
 			post.add(Constant.sturecord_home_PackGenW);

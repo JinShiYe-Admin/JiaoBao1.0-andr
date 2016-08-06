@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\XueZhuLi1.0\xueZhuLi10\src\main\jniLibs"><file name="armeabi/libBaiduMapSDK_v2_4_2.so" path="E:\XueZhuLi1.0\xueZhuLi10\src\main\jniLibs\armeabi\libBaiduMapSDK_v2_4_2.so"/><file name="armeabi/liblocSDK4b.so" path="E:\XueZhuLi1.0\xueZhuLi10\src\main\jniLibs\armeabi\liblocSDK4b.so"/></source></dataSet><dataSet config="debug"><source path="E:\XueZhuLi1.0\xueZhuLi10\src\debug\jniLibs"/></dataSet></merger>
