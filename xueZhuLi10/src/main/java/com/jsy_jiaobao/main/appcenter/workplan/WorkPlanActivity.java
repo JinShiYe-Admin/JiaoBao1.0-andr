@@ -246,14 +246,14 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     protected void onResume() {
-        EventBusUtil.register(this);
+//        EventBusUtil.register(this);
         getRecord(GetDateShortString(calToday));
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        EventBusUtil.unregister(this);
+//        EventBusUtil.unregister(this);
         super.onPause();
     }
 
