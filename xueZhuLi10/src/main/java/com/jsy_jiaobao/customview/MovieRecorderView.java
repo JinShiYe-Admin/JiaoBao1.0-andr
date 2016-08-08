@@ -1,46 +1,34 @@
 package com.jsy_jiaobao.customview;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import com.jsy.xuezhuli.utils.ToastUtil;
-import com.jsy_jiaobao.main.R;
-
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.hardware.Camera.Size;
-import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
-import android.media.MediaRecorder.AudioEncoder;
-import android.media.MediaRecorder.AudioSource;
 import android.media.MediaRecorder.OnErrorListener;
-import android.media.MediaRecorder.OutputFormat;
-import android.media.MediaRecorder.VideoEncoder;
-import android.media.MediaRecorder.VideoSource;
 import android.os.Build;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.R.*;
+
+import com.jsy.xuezhuli.utils.ToastUtil;
+import com.jsy_jiaobao.main.R;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 一些修改1 2016-4-27 MSL 
@@ -67,8 +55,6 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 	private Timer mTimer;// 计时器
 	private OnRecordFinishListener mOnRecordFinishListener;// 录制完成回调接口
 
-	private int mWidth;// 视频分辨率宽度
-	private int mHeight;// 视频分辨率高度
 	private boolean isOpenCamera;// 是否一开始就打开摄像头
 	private int mRecordMaxTime;// 一次拍摄最长时间
 	private int mTimeCount;// 时间计数
@@ -87,8 +73,6 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public MovieRecorderView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		mWidth = 800;
-		mHeight = 480;
 		isOpenCamera = true;
 		mRecordMaxTime = 10;// 60S改为10S
 
@@ -247,14 +231,6 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// File vecordDir = sampleDir;
-		// // 创建文件
-		// try {
-		// mVecordFile = File.c(fileName, ".mp4", vecordDir);//mp4格式
-		// //LogUtils.i(mVecordFile.getAbsolutePath());
-		// Log.d("Path:",mVecordFile.getAbsolutePath());
-		// } catch (IOException e) {
-		// }
 	}
 
 	/**
@@ -288,10 +264,6 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 		try {
 			mMediaRecorder.prepare();
 			mMediaRecorder.start();
-		} catch (IllegalStateException e) {
-			e.printStackTrace();
-		} catch (RuntimeException e) {
-			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -382,10 +354,6 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 			mMediaRecorder.setPreviewDisplay(null);
 			try {
 				mMediaRecorder.stop();
-			} catch (IllegalStateException e) {
-				e.printStackTrace();
-			} catch (RuntimeException e) {
-				e.printStackTrace();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -404,24 +372,11 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 			try {
 				mMediaRecorder.reset();
 				mMediaRecorder.release();
-			} catch (IllegalStateException e) {
-				e.printStackTrace();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 		mMediaRecorder = null;
-	}
-
-	public int getTimeCount() {
-		return mTimeCount;
-	}
-
-	/**
-	 * @return the mVecordFile
-	 */
-	public File getmVecordFile() {
-		return mVecordFile;
 	}
 
 	/**
@@ -432,7 +387,7 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 	 * @date 2015-3-16
 	 */
 	public interface OnRecordFinishListener {
-		public void onRecordFinish();
+		void onRecordFinish();
 	}
 
 	@Override
@@ -440,8 +395,6 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 		try {
 			if (mr != null)
 				mr.reset();
-		} catch (IllegalStateException e) {
-			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -460,21 +413,5 @@ public class MovieRecorderView extends LinearLayout implements OnErrorListener {
 	public void setHandler(Handler mHandler, Handler layoutHandler) {
 		this.mHandler = mHandler;
 		this.layoutHandler = layoutHandler;
-	}
-
-	public int getSurfaceWidth() {
-		return surfaceWidth;
-	}
-
-	public void setSurfaceWidth(int surfaceWidth) {
-		this.surfaceWidth = surfaceWidth;
-	}
-
-	public int getSurfaceHeight() {
-		return surfaceHeight;
-	}
-
-	public void setSurfaceHeight(int surfaceHeight) {
-		this.surfaceHeight = surfaceHeight;
 	}
 }

@@ -38,6 +38,5 @@ public class IEditText extends EditText {
 			}
 		}
 		return content;
-			
 	}
 }

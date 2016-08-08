@@ -1,11 +1,5 @@
 package com.jsy_jiaobao.customview;
 
-import java.util.Calendar;
-import java.util.List;
-
-import com.jsy_jiaobao.main.appcenter.workplan.WorkPlanActivity;
-
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.LinearGradient;
@@ -19,19 +13,17 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.jsy_jiaobao.main.appcenter.workplan.WorkPlanActivity;
+
+import java.util.Calendar;
 
 /**
  * 日历控件单元格绘制类
  * @Description: 日历控件单元格绘制类
-
- * @FileName: DateWidgetDayCell.java 
-
- * @Package com.calendar.demo 
-
- * @Author Hanyonglu 
-
- * @Date 2012-3-17 下午03:19:34 
-
+ * @FileName: DateWidgetDayCell.java
+ * @Package com.calendar.demo
+ * @Author Hanyonglu
+ * @Date 2012-3-17 下午03:19:34
  * @Version V1.0
  */
 public class DateWidgetDayCellWP extends View {
@@ -54,14 +46,12 @@ public class DateWidgetDayCellWP extends View {
 	private boolean bIsActiveMonth = false;
 	private boolean bToday = false;
 	private boolean bTouchedDown = false;
-	private boolean bHoliday = false;
 	public boolean hasRecord = false;
 
-	private String isNormal = "1";
 	public static int ANIM_ALPHA_DURATION = 100;
 
 	public interface OnItemClick {
-		public void OnClick(DateWidgetDayCellWP item);
+		void OnClick(DateWidgetDayCellWP item);
 	}
 
 	// 构造函数
@@ -83,7 +73,7 @@ public class DateWidgetDayCellWP extends View {
 
 	// 设置变量值
 	public void setData(int iYear, int iMonth, int iDay, Boolean bToday,
-			Boolean bHoliday, int iActiveMonth, boolean hasRecord) {
+						int iActiveMonth, boolean hasRecord) {
 		iDateYear = iYear;
 		iDateMonth = iMonth;
 		iDateDay = iDay;
@@ -92,7 +82,6 @@ public class DateWidgetDayCellWP extends View {
 		this.sDate = Integer.toString(iDateDay);
 		this.bIsActiveMonth = (iDateMonth == iActiveMonth);
 		this.bToday = bToday;
-		this.bHoliday = bHoliday;
 		this.hasRecord = hasRecord;
 		this.invalidate();
 	}
@@ -102,9 +91,7 @@ public class DateWidgetDayCellWP extends View {
 	public int getMonth(){
 		return iDateMonth;
 	}
-	public int getDay(){
-		return iDateDay;
-	}
+
 	// 重载绘制方法
 	@Override
 	protected void onDraw(Canvas canvas) {
@@ -140,15 +127,13 @@ public class DateWidgetDayCellWP extends View {
 						0xff225599, 0xffbbddff, Shader.TileMode.CLAMP);
 			}
 
-			if (lGradBkg != null) {
-				pt.setShader(lGradBkg);
-				canvas.drawRect(rect, pt);
-			}
+			pt.setShader(lGradBkg);
+			canvas.drawRect(rect, pt);
 
 			pt.setShader(null);
 
 		} else {
-			pt.setColor(getColorBkg(bHoliday, bToday));
+			pt.setColor(getColorBkg(bToday));
 			canvas.drawRect(rect, pt);
 		}
 
@@ -196,7 +181,7 @@ public class DateWidgetDayCellWP extends View {
 	}
 
 	// 根据条件返回不同颜色值
-	public static int getColorBkg(boolean bHoliday, boolean bToday) {
+	public static int getColorBkg(boolean bToday) {
 		if (bToday)
 			return WorkPlanActivity.isToday_BgColor;
 		// if (bHoliday) //如需周末有特殊背景色，可去掉注释

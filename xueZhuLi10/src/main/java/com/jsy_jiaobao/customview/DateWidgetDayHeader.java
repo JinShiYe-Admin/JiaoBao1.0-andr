@@ -1,8 +1,6 @@
 package com.jsy_jiaobao.customview;
 
 
-import com.jsy_jiaobao.main.appcenter.sign.SearchActivity;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -10,18 +8,15 @@ import android.graphics.RectF;
 import android.view.View;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.jsy_jiaobao.main.appcenter.sign.SearchActivity;
+
 /**
  * 日历控件头部绘制类
  * @Descriptio.n: 日历控件头部绘制类
-
- * @FileName: DateWidgetDayHeader.java 
-
- * @Package com.calendar.demo 
-
+ * @FileName: DateWidgetDayHeader.java
+ * @Package com.calendar.demo
  * @Author Hanyonglu
-
- * @Date 2012-3-19 下午03:28:39 
-
+ * @Date 2012-3-19 下午03:28:39
  * @Version V1.0
  */
 public class DateWidgetDayHeader extends View {

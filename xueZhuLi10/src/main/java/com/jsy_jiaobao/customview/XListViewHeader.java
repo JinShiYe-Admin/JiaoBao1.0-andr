@@ -6,10 +6,6 @@
  */
 package com.jsy_jiaobao.customview;
 
-
-
-import com.jsy_jiaobao.main.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -22,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.jsy_jiaobao.main.R;
+
 public class XListViewHeader extends LinearLayout {
 	private LinearLayout mContainer;
 	private ImageView mArrowImageView;
@@ -31,9 +29,7 @@ public class XListViewHeader extends LinearLayout {
 
 	private Animation mRotateUpAnim;
 	private Animation mRotateDownAnim;
-	
-	private final int ROTATE_ANIM_DURATION = 180;
-	
+
 	public final static int STATE_NORMAL = 0;
 	public final static int STATE_READY = 1;
 	public final static int STATE_REFRESHING = 2;
@@ -43,10 +39,6 @@ public class XListViewHeader extends LinearLayout {
 		initView(context);
 	}
 
-	/**
-	 * @param context
-	 * @param attrs
-	 */
 	public XListViewHeader(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initView(context);
@@ -68,6 +60,7 @@ public class XListViewHeader extends LinearLayout {
 		mRotateUpAnim = new RotateAnimation(0.0f, -180.0f,
 				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
 				0.5f);
+		int ROTATE_ANIM_DURATION = 180;
 		mRotateUpAnim.setDuration(ROTATE_ANIM_DURATION);
 		mRotateUpAnim.setFillAfter(true);
 		mRotateDownAnim = new RotateAnimation(-180.0f, 0.0f,
