@@ -1,8 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +23,9 @@ import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.main.personalcenter.PersonalSpaceActivity;
 import com.jsy_jiaobao.po.sys.Human;
 import com.jsy_jiaobao.po.sys.UnitGroupInfo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 单位成员列表的Adapter

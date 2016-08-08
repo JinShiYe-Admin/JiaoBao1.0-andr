@@ -1,10 +1,5 @@
 package com.jsy_jiaobao.main.workol;
 
-import java.util.ArrayList;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
@@ -26,7 +21,6 @@ import com.jsy_jiaobao.po.workol.GetUnionChapterList;
 import com.jsy_jiaobao.po.workol.StuErrDetailModel;
 import com.jsy_jiaobao.po.workol.StuErrorModel;
 import com.jsy_jiaobao.po.workol.StuHW;
-import com.jsy_jiaobao.po.workol.StudentErrorPost;
 import com.jsy_jiaobao.po.workol.TeaGrade;
 import com.jsy_jiaobao.po.workol.TeaMode;
 import com.jsy_jiaobao.po.workol.TeaSession;
@@ -37,6 +31,11 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * 筛选界面 的Controller
  * 
@@ -44,12 +43,12 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
  * 
  */
 public class ErrorSreenActivityController implements ConstantUrl {
-	int mUid = 0, mChapterid = 0;
+//	int mUid = 0, mChapterid = 0;
 	private static ErrorSreenActivityController instance;
 	private Context mContext;
-	private String TAG;
+//	private String TAG;
 
-	public static synchronized final ErrorSreenActivityController getInstance() {
+	public static synchronized  ErrorSreenActivityController getInstance() {
 		if (instance == null) {
 			instance = new ErrorSreenActivityController();
 		}
@@ -61,81 +60,81 @@ public class ErrorSreenActivityController implements ConstantUrl {
 		return this;
 	}
 
-	/**
-	 * <pre>
-	 * 功能说明：应用系统通过帐户ID和班级ID，获取帐户指定班级的学生数据（个人信息）
-	 * 参数名称	是否必须	类型	描述
-	 * AccID	是	int	用户帐户ID
-	 * UID	是	int	班级ID，通过获取身份角色信息获得，用户身份须为学生。
-	 */
-	public void getStuInfo(String jiaobaohao, int UID) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("AccID", jiaobaohao);
-		params.addBodyParameter("UID", String.valueOf(UID));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constants.WORKOL_getStuInfo);
-		HttpUtil.InstanceSend(getStuInfo, params, callback);
-	}
+//	/**
+//	 * <pre>
+//	 * 功能说明：应用系统通过帐户ID和班级ID，获取帐户指定班级的学生数据（个人信息）
+//	 * 参数名称	是否必须	类型	描述
+//	 * AccID	是	int	用户帐户ID
+//	 * UID	是	int	班级ID，通过获取身份角色信息获得，用户身份须为学生。
+//	 */
+//	public void getStuInfo(String jiaobaohao, int UID) {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("AccID", jiaobaohao);
+//		params.addBodyParameter("UID", String.valueOf(UID));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constants.WORKOL_getStuInfo);
+//		HttpUtil.InstanceSend(getStuInfo, params, callback);
+//	}
 
-	/**
-	 * 获取错题
-	 * 
-	 * @param HwInfoId
-	 * @param QsId
-	 * @param stuErrorModel
-	 */
-	public void GetStuHWQs(int HwInfoId, int QsId, StuErrorModel stuErrorModel) {
+//	/**
+//	 * 获取错题
+//	 *
+//	 * @param HwInfoId hwIn
+//	 * @param QsId Qs
+//	 * @param stuErrorModel stu
+//	 */
+//	public void GetStuHWQs(int HwInfoId, int QsId, StuErrorModel stuErrorModel) {
+//
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("HwInfoId", String.valueOf(HwInfoId));
+//		params.addBodyParameter("QsId", String.valueOf(QsId));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constants.WORKOL_GetStuHWQs);
+//		callback.setStuErrorModel(stuErrorModel);
+//		HttpUtil.InstanceSend(Constants.GetStuHWQs, params, callback);
+//	}
 
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("HwInfoId", String.valueOf(HwInfoId));
-		params.addBodyParameter("QsId", String.valueOf(QsId));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constants.WORKOL_GetStuHWQs);
-		callback.setStuErrorModel(stuErrorModel);
-		HttpUtil.InstanceSend(Constants.GetStuHWQs, params, callback);
-	}
+//	/**
+//	 * 学生获取当前作业列表
+//	 *
+//	 * @param StuId
+//	 *            :学生id
+//	 * @param IsSelf
+//	 *            : 0=作业,1=练习
+//	 */
+//	public void GetStuHWList(int StuId, int IsSelf) {
+//		DialogUtil.getInstance().getDialog(mContext,
+//				mContext.getResources().getString(R.string.public_loading));
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("StuId", String.valueOf(StuId));
+//		params.addBodyParameter("IsSelf", String.valueOf(IsSelf));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constants.WORKOL_GetStuHWList);
+//		HttpUtil.InstanceSend(Constants.GetStuHWList, params, callback);
+//	}
 
-	/**
-	 * 学生获取当前作业列表
-	 * 
-	 * @param StuId
-	 *            :学生id
-	 * @param IsSelf
-	 *            : 0=作业,1=练习
-	 */
-	public void GetStuHWList(int StuId, int IsSelf) {
-		DialogUtil.getInstance().getDialog(mContext,
-				mContext.getResources().getString(R.string.public_loading));
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("StuId", String.valueOf(StuId));
-		params.addBodyParameter("IsSelf", String.valueOf(IsSelf));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constants.WORKOL_GetStuHWList);
-		HttpUtil.InstanceSend(Constants.GetStuHWList, params, callback);
-	}
-
-	/**
-	 * 获取作业练习列表
-	 * 
-	 * @param StuId
-	 * @param IsSelf
-	 * @param PageIndex
-	 * @param PageSize
-	 */
-	public void GetStuHWListPage(int StuId, int IsSelf, int PageIndex,
-			int PageSize) {
-		DialogUtil.getInstance().getDialog(mContext,
-				mContext.getResources().getString(R.string.public_loading));
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("StuId", String.valueOf(StuId));
-		params.addBodyParameter("IsSelf", String.valueOf(IsSelf));
-		params.addBodyParameter("PageIndex", String.valueOf(PageIndex));
-		Log.d(TAG, PageIndex + "");
-		params.addBodyParameter("PageSize", String.valueOf(PageSize));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constants.WORKOL_GetStuHWListPage);
-		HttpUtil.InstanceSend(Constants.GetStuHWListPage, params, callback);
-	}
+//	/**
+//	 * 获取作业练习列表
+//	 *
+//	 * @param StuId
+//	 * @param IsSelf
+//	 * @param PageIndex
+//	 * @param PageSize
+//	 */
+//	public void GetStuHWListPage(int StuId, int IsSelf, int PageIndex,
+//			int PageSize) {
+//		DialogUtil.getInstance().getDialog(mContext,
+//				mContext.getResources().getString(R.string.public_loading));
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("StuId", String.valueOf(StuId));
+//		params.addBodyParameter("IsSelf", String.valueOf(IsSelf));
+//		params.addBodyParameter("PageIndex", String.valueOf(PageIndex));
+////		Log.d(TAG, PageIndex + "");
+//		params.addBodyParameter("PageSize", String.valueOf(PageSize));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constants.WORKOL_GetStuHWListPage);
+//		HttpUtil.InstanceSend(Constants.GetStuHWListPage, params, callback);
+//	}
 
 	/**
 	 * <pre>
@@ -212,19 +211,19 @@ public class ErrorSreenActivityController implements ConstantUrl {
 		HttpUtil.InstanceSend(Constants.GetGradeList, null, callback);
 	}
 
-	/**
-	 * 获取错题本
-	 * 
-	 * @param post
-	 */
-	public void GetStuErr(StudentErrorPost post) {
-		DialogUtil.getInstance().getDialog(mContext,
-				mContext.getResources().getString(R.string.public_loading));
-		RequestParams params = post.getParams();
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constants.WORKOL_GetStuErr);
-		HttpUtil.InstanceSend(Constants.GetStuErr, params, callback);
-	}
+//	/**
+//	 * 获取错题本
+//	 *
+//	 * @param post
+//	 */
+//	public void GetStuErr(StudentErrorPost post) {
+//		DialogUtil.getInstance().getDialog(mContext,
+//				mContext.getResources().getString(R.string.public_loading));
+//		RequestParams params = post.getParams();
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constants.WORKOL_GetStuErr);
+//		HttpUtil.InstanceSend(Constants.GetStuErr, params, callback);
+//	}
 
 	/**
 	 * 判断某章节是否有试题 参数ChapterId 章节ID 返回：有返回true 没有返回false
@@ -241,38 +240,38 @@ public class ErrorSreenActivityController implements ConstantUrl {
 		}
 	}
 
-	/**
-	 * 
-	 * @param StuId
-	 *            学生id
-	 * @param classID
-	 *            班级id
-	 * @param className
-	 *            班级名称
-	 * @param Unid
-	 *            单位id
-	 * @param chapterID
-	 *            章节id
-	 * @param homeworkName
-	 *            作业名称
-	 */
-	public void StuMakeSelf(int StuId, int classID, String className, int Unid,
-			int chapterID, String homeworkName) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("UserJBH",
-				BaseActivity.sp.getString("JiaoBaoHao", ""));
-		params.addBodyParameter("StuId", String.valueOf(StuId));
-		params.addBodyParameter("classID", String.valueOf(classID));
-		params.addBodyParameter("className", className);
-		params.addBodyParameter("Unid", String.valueOf(Unid));
-		params.addBodyParameter("chapterID", String.valueOf(chapterID));
-		params.addBodyParameter("homeworkName", homeworkName);
-		params.addBodyParameter("schoolName", "");
-		params.addBodyParameter("IsSys", "1");
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constants.WORKOL_StuMakeSelf);
-		HttpUtil.InstanceSend(Constants.StuMakeSelf, params, callback);
-	}
+//	/**
+//	 *
+//	 * @param StuId
+//	 *            学生id
+//	 * @param classID
+//	 *            班级id
+//	 * @param className
+//	 *            班级名称
+//	 * @param Unid
+//	 *            单位id
+//	 * @param chapterID
+//	 *            章节id
+//	 * @param homeworkName
+//	 *            作业名称
+//	 */
+//	public void StuMakeSelf(int StuId, int classID, String className, int Unid,
+//			int chapterID, String homeworkName) {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("UserJBH",
+//				BaseActivity.sp.getString("JiaoBaoHao", ""));
+//		params.addBodyParameter("StuId", String.valueOf(StuId));
+//		params.addBodyParameter("classID", String.valueOf(classID));
+//		params.addBodyParameter("className", className);
+//		params.addBodyParameter("Unid", String.valueOf(Unid));
+//		params.addBodyParameter("chapterID", String.valueOf(chapterID));
+//		params.addBodyParameter("homeworkName", homeworkName);
+//		params.addBodyParameter("schoolName", "");
+//		params.addBodyParameter("IsSys", "1");
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constants.WORKOL_StuMakeSelf);
+//		HttpUtil.InstanceSend(Constants.StuMakeSelf, params, callback);
+//	}
 
 	/**
 	 * 网络请求返回
@@ -342,9 +341,6 @@ public class ErrorSreenActivityController implements ConstantUrl {
 			dealResponseInfo("-1", this.getUserTag());
 		}
 
-		public void setStuErrorModel(StuErrorModel stuErrorModel) {
-			mStuErrorModel = stuErrorModel;
-		}
 
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
@@ -461,11 +457,11 @@ public class ErrorSreenActivityController implements ConstantUrl {
 	/**
 	 * 处理信息并传递
 	 * 
-	 * @param result
-	 * @param userTag
+	 * @param result res
+	 * @param userTag userTag
 	 */
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		//
@@ -527,16 +523,16 @@ public class ErrorSreenActivityController implements ConstantUrl {
 
 	/**
 	 * 处理错题本详情
-	 * 
-	 * @param result
-	 * @param userTag
-	 * @param stuErrorModel
+	 *
+	 * @param result re
+	 * @param userTag us
+	 * @param stuErrorModel stu
 	 */
 
 	public void dealResponseInfo(String result, Object userTag,
 			StuErrorModel stuErrorModel) {
 		// TODO Auto-generated method stub
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		// 错题本详情
@@ -557,13 +553,13 @@ public class ErrorSreenActivityController implements ConstantUrl {
 	/**
 	 * 获取 年级 章节 科目的数据
 	 * 
-	 * @param result
-	 * @param userTag
-	 * @param typeMode
+	 * @param result re
+	 * @param userTag user
+	 * @param typeMode type
 	 */
 
 	public void dealResponseInfo(String result, Object userTag, int typeMode) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_GetUnionChapterList:
@@ -575,6 +571,7 @@ public class ErrorSreenActivityController implements ConstantUrl {
 					list1 = GsonUtil.GsonToObject(result,
 							GetUnionChapterList.class);
 				} catch (Exception e1) {
+					e1.printStackTrace();
 				}
 				if (list1 != null) {
 					UnionChapterList d = new UnionChapterList();
@@ -585,6 +582,7 @@ public class ErrorSreenActivityController implements ConstantUrl {
 								}.getType());
 						d.setArgs1(args1);
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 					try {
 						ArrayList<TeaSubject> args2 = GsonUtil.GsonToList(
@@ -593,6 +591,7 @@ public class ErrorSreenActivityController implements ConstantUrl {
 								}.getType());
 						d.setArgs2(args2);
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 					try {
 						ArrayList<TeaSession> args3 = GsonUtil.GsonToList(
@@ -601,6 +600,7 @@ public class ErrorSreenActivityController implements ConstantUrl {
 								}.getType());
 						d.setArgs3(args3);
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 					d.setArgs4(list1.getArgs4());
 					d.setCallbackType(list1.getCallbackType());

@@ -75,7 +75,7 @@ public class GenHWEduLevelAdapter<T> extends BaseAdapter {
 		// 分数
 		TextView score = viewHolder.getView(R.id.workol_stuhw_tv_score);
 		TextView flag = viewHolder.getView(R.id.workol_stuhw_tv_flag);
-		flag.setVisibility(0);
+		flag.setVisibility(View.VISIBLE);
 		switch (getItemViewType(position)) {
 		// 第一个Item
 		case TYPE_TITLE:

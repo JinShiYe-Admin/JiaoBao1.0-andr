@@ -44,15 +44,9 @@ public class TeacherPublishWorkActivityController {
 	private static TeacherPublishWorkActivityController instance;
 	private Context mContext;
 
-	final static int GTYPE_MODE = 0;// 科目
-	final static int GTYPE_CLAZZ = 1;// 班级
-	final static int GTYPE_GRADE = 2;// 年级
-	final static int GTYPE_SUBJECT = 3;// 教版
-	final static int GTYPE_GOV = 4;// 政府
-	final static int GTYPE_SESSION = 5;// 章节
-	final static int GTYPE_IMPERSONALITY = 6;// 题量先择
 
-	public static synchronized final TeacherPublishWorkActivityController getInstance() {
+
+	public static synchronized  TeacherPublishWorkActivityController getInstance() {
 		if (instance == null) {
 			instance = new TeacherPublishWorkActivityController();
 		}
@@ -66,9 +60,8 @@ public class TeacherPublishWorkActivityController {
 
 	/**
 	 * 取教师关联的班级 
-	 * 
-	 * @param unitID
-	 */
+	 * @param unit unit
+     */
 	public void getmyUserClass(UserUnit unit) {
 		DialogUtil.getInstance().getDialog(mContext,
 				R.string.getting_myGrade_waiting);
@@ -299,10 +292,12 @@ public class TeacherPublishWorkActivityController {
 						try {
 							statusCode = jsonObj.getString("statusCode");
 						} catch (Exception e) {
+							e.printStackTrace();
 						}
 						try {
 							ResultCode = jsonObj.getString("ResultCode");
 						} catch (Exception e) {
+							e.printStackTrace();
 						}
 						if (!TextUtils.isEmpty(statusCode)) {
 							if ("200".equals(statusCode)) {
@@ -374,7 +369,7 @@ public class TeacherPublishWorkActivityController {
 	}
 
 	private void dealResponseInfo(String result, Object userTag, String str) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_TecMakeHW:
@@ -395,7 +390,7 @@ public class TeacherPublishWorkActivityController {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_TecQs:
@@ -433,7 +428,7 @@ public class TeacherPublishWorkActivityController {
 
 	private void dealResponseInfo(String result, Object userTag, int i,
 			int typeMode) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_GetUnionChapterList:
@@ -441,6 +436,7 @@ public class TeacherPublishWorkActivityController {
 			try {
 				list = GsonUtil.GsonToObject(result, GetUnionChapterList.class);
 			} catch (Exception e1) {
+				e1.printStackTrace();
 			}
 			if (list != null) {
 				UnionChapterList d = new UnionChapterList();
@@ -451,6 +447,7 @@ public class TeacherPublishWorkActivityController {
 							}.getType());
 					d.setArgs1(args1);
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
 				try {
 					ArrayList<TeaSubject> args2 = GsonUtil.GsonToList(
@@ -459,6 +456,7 @@ public class TeacherPublishWorkActivityController {
 							}.getType());
 					d.setArgs2(args2);
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
 				try {
 					ArrayList<TeaSession> args3 = GsonUtil.GsonToList(
@@ -467,6 +465,7 @@ public class TeacherPublishWorkActivityController {
 							}.getType());
 					d.setArgs3(args3);
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
 				d.setArgs4(list.getArgs4());
 				d.setCallbackType(list.getCallbackType());

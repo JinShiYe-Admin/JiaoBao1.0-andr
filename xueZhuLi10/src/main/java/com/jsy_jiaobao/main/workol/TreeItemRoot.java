@@ -25,8 +25,8 @@ public class TreeItemRoot {
 	/**
 	 * 年级
 	 * 
-	 * @param name
-	 * @param teaGrade
+	 * @param name d
+	 * @param teaGrade g
 	 */
 	public TreeItemRoot(String name, TeaGrade teaGrade) {
 		this.name = name;
@@ -42,8 +42,8 @@ public class TreeItemRoot {
 	/**
 	 * 科目
 	 * 
-	 * @param name
-	 * @param teaMode
+	 * @param name g
+	 * @param teaMode g
 	 */
 	public TreeItemRoot(String name, TeaMode teaMode) {
 		this.name = name;
@@ -58,10 +58,10 @@ public class TreeItemRoot {
 
 	/**
 	 * 教版
-	 * 
-	 * @param name
-	 * @param teaSubject
-	 * @param i
+	 *
+	 * @param name g
+	 * @param teaSubject g
+	 * @param i g
 	 */
 	public TreeItemRoot(String name, TeaSubject teaSubject, int i) {
 		this.name = name;
@@ -77,10 +77,10 @@ public class TreeItemRoot {
 
 	/**
 	 * 章节
-	 * 
-	 * @param name
-	 * @param session
-	 * @param padding
+	 *
+	 * @param name g
+	 * @param session gh
+	 * @param padding g
 	 */
 	public TreeItemRoot(String name, TeaSession session, int padding) {
 		this.name = name;
@@ -97,8 +97,8 @@ public class TreeItemRoot {
 	/**
 	 * 名称
 	 * 
-	 * @param name
-	 * @param teaSession
+	 * @param name g
+	 * @param teaSession g
 	 */
 	public TreeItemRoot(String name, TeaSession teaSession) {
 		this.name = name;

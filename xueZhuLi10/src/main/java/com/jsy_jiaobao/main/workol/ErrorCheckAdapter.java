@@ -145,11 +145,6 @@ public class ErrorCheckAdapter extends BaseAdapter {
 		mContext = context;
 	}
 
-	// 获取错题本数据
-	public ArrayList<ErrorModel> getErrorModels() {
-		return mErrorModels;
-	}
-
 	// 放置error数据
 	public void setErrorModels(ArrayList<ErrorModel> errorModels) {
 		mErrorModels = errorModels;

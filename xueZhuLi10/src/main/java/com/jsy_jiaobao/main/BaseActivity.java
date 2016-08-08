@@ -65,7 +65,7 @@ public class BaseActivity extends SherlockFragmentActivity implements ConstantUr
 	
 	private TextView title;
 	public ImageView back;
-	public static ArrayList<Object> HttpPost = new ArrayList<Object>();
+	public static ArrayList<Object> HttpPost = new ArrayList<>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -92,13 +92,13 @@ public class BaseActivity extends SherlockFragmentActivity implements ConstantUr
 				finish();
 			}
 		});
-		title.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-//				finish();
-			}
-		});
+//		title.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+////				finish();
+//			}
+//		});
 	}
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
@@ -130,9 +130,9 @@ public class BaseActivity extends SherlockFragmentActivity implements ConstantUr
 
 		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		contentView = inflater.inflate(resId, null);
-		LayoutParams layoutParams = new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT);
+		LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
 		contentView.setLayoutParams(layoutParams);
-		contentView.setBackgroundDrawable(null);
+		contentView.setBackground(null);
 		if (null != ly_content) {
 			ly_content.addView(contentView);
 		}
@@ -152,20 +152,20 @@ public class BaseActivity extends SherlockFragmentActivity implements ConstantUr
 	}
 	
 
-	/**
-	 * 得到内容的View
-	 * 
-	 * @return
-	 */
-	public View getLyContentView() {
-
-		return contentView;
-	}
+//	/**
+//	 * 得到内容的View
+//	 *
+//	 * @return
+//	 */
+//	public View getLyContentView() {
+//
+//		return contentView;
+//	}
 	@Override
 	protected void onResume() {
 		super.onResume(); 
 		if (HttpPost == null) {
-			HttpPost = new ArrayList<Object>();
+			HttpPost = new ArrayList<>();
 		}else{
 			HttpPost.clear();
 		}

@@ -41,7 +41,7 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	private static GenCheckWorkActivityController instance;
 	private Context mContext;
 
-	public static synchronized final GenCheckWorkActivityController getInstance() {
+	public static synchronized  GenCheckWorkActivityController getInstance() {
 		if (instance == null) {
 			instance = new GenCheckWorkActivityController();
 		}
@@ -91,10 +91,10 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	/**
 	 * 获取作业练习列表
 	 * 
-	 * @param StuId
-	 * @param IsSelf
-	 * @param PageIndex
-	 * @param PageSize
+	 * @param StuId de
+	 * @param IsSelf d
+	 * @param PageIndex  de
+	 * @param PageSize d
 	 */
 	public void GetStuHWListPage(int StuId, int IsSelf, int PageIndex,
 			int PageSize) {
@@ -111,14 +111,11 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	}
 
 	/**
-	 * 获取作业练习列表
-	 * 
-	 * @param stuErrorModel
-	 * @param StuId
-	 * @param IsSelf
-	 * @param PageIndex
-	 * @param PageSize
-	 */
+	 *  获取作业练习列表
+	 * @param HwInfoId hw
+	 * @param QsId qs
+	 * @param stuErrorModel stu
+     */
 	public void GetStuHWQs(int HwInfoId, int QsId, StuErrorModel stuErrorModel) {
 
 		RequestParams params = new RequestParams();
@@ -133,7 +130,7 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	/**
 	 * 获取错题本
 	 * 
-	 * @param post
+	 * @param post f
 	 */
 	public void GetStuErr(StudentErrorPost post) {
 		DialogUtil.getInstance().getDialog(mContext,
@@ -318,12 +315,12 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	/**
 	 * 处理信息
 	 * 
-	 * @param result
-	 * @param userTag
+	 * @param result res
+	 * @param userTag user
 	 */
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_getGenInfo:
@@ -367,15 +364,15 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	/**
 	 * 处理错题本详情
 	 * 
-	 * @param result
-	 * @param userTag
-	 * @param stuErrorModel
+	 * @param result re
+	 * @param userTag user
+	 * @param stuErrorModel stu
 	 */
 
 	public void dealResponseInfo(String result, Object userTag,
 			StuErrorModel stuErrorModel) {
 		// TODO Auto-generated method stub
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_GetStuHWQs:
@@ -396,13 +393,13 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 	/**
 	 * 处理学力值
 	 * 
-	 * @param result
-	 * @param userTag
-	 * @param parentID
+	 * @param result re
+	 * @param userTag user
+	 * @param parentID pa
 	 */
 
 	private void dealResponseInfo(String result, Object userTag, String parentID) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_GetStuEduLevel:
@@ -489,7 +486,7 @@ public class GenCheckWorkActivityController implements ConstantUrl {
 			ArrayList<EduLevel> level = GsonUtil.GsonToList(result,
 					new TypeToken<ArrayList<EduLevel>>() {
 					}.getType());
-			ArrayList<Object> post = new ArrayList<Object>();
+			ArrayList<Object> post = new ArrayList<>();
 			if (level == null || level.size() == 0) {
 				Log.e("result", result);
 				item.setHaveChild(false);

@@ -33,8 +33,8 @@ public class TreeItemRootHolder extends
 		name = (TextView) view.findViewById(R.id.tree_root_tv_name);
 		select = (TextView) view.findViewById(R.id.tree_root_tv_select);
 		arrowView = (ImageView) view.findViewById(R.id.tree_root_iv_arrow);
-		name.setText(value.name.toString());
-		select.setText(value.select.toString());
+		name.setText(value.name);
+		select.setText(value.select);
 		return view;
 	}
 
@@ -51,8 +51,8 @@ public class TreeItemRootHolder extends
 
 	@Override
 	public void notifyValue(TreeItemRoot value) {
-		name.setText(value.name.toString());
-		select.setText(value.select.toString());
+		name.setText(value.name);
+		select.setText(value.select);
 	}
 
 }

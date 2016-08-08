@@ -99,7 +99,7 @@ public class UpdateService extends Service{
 	                updateNotification.defaults = Notification.DEFAULT_SOUND;//铃声提醒 
 	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载完成,点击安装。", updatePendingIntent);
 	                updateNotificationManager.notify(0, updateNotification);
-	                ArrayList<Object> post = new ArrayList<Object>();
+	                ArrayList<Object> post = new ArrayList<>();
 	                post.add(Constant.msgcenter_updataversion);
 	                EventBusUtil.post(post);
 	                //停止服务
@@ -109,7 +109,7 @@ public class UpdateService extends Service{
 	                //下载失败
 	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载失败!。", updatePendingIntent);
 	                updateNotificationManager.notify(0, updateNotification);
-	                ArrayList<Object> post1 = new ArrayList<Object>();
+	                ArrayList<Object> post1 = new ArrayList<>();
 	                post1.add(Constant.msgcenter_updataversion);
 	                EventBusUtil.post(post1);
 	                break;
@@ -153,9 +153,8 @@ public class UpdateService extends Service{
 	public long downloadUpdateFile(String downloadUrl, File saveFile) throws Exception {
         //这样的下载代码很多，我就不做过多的说明
         int downloadCount = 0;
-        int currentSize = 0;
         long totalSize = 0;
-        int updateTotalSize = 0;
+        int updateTotalSize;
          
         HttpURLConnection httpConnection = null;
         InputStream is = null;
@@ -165,9 +164,9 @@ public class UpdateService extends Service{
             URL url = new URL(downloadUrl);
             httpConnection = (HttpURLConnection)url.openConnection();
             httpConnection.setRequestProperty("User-Agent", "PacificHttpClient");
-            if(currentSize > 0) {
-                httpConnection.setRequestProperty("RANGE", "bytes=" + currentSize + "-");
-            }
+//            if(currentSize > 0) {
+//                httpConnection.setRequestProperty("RANGE", "bytes=" + currentSize + "-");
+//            }
             httpConnection.setConnectTimeout(10000);
             httpConnection.setReadTimeout(20000);
             updateTotalSize = httpConnection.getContentLength();
@@ -177,7 +176,7 @@ public class UpdateService extends Service{
             is = httpConnection.getInputStream();                   
             fos = new FileOutputStream(saveFile, false);
             byte buffer[] = new byte[4096];
-            int readsize = 0;
+            int readsize ;
             while((readsize = is.read(buffer)) > 0){
                 fos.write(buffer, 0, readsize);
                 totalSize += readsize;

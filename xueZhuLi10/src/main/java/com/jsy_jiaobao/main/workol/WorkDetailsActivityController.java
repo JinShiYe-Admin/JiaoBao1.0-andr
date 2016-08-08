@@ -32,7 +32,7 @@ public class WorkDetailsActivityController implements ConstantUrl {
 	private static WorkDetailsActivityController instance;
 	private Context mContext;
 
-	public static synchronized final WorkDetailsActivityController getInstance() {
+	public static synchronized  WorkDetailsActivityController getInstance() {
 		if (instance == null) {
 			instance = new WorkDetailsActivityController();
 		}
@@ -174,11 +174,11 @@ public class WorkDetailsActivityController implements ConstantUrl {
 	/**
 	 * 根据Tag请求处理结果
 	 * 
-	 * @param result
-	 * @param userTag
+	 * @param result res
+	 * @param userTag user
 	 */
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constants.WORKOL_GetSQLDateTIme:

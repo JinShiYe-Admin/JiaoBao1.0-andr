@@ -74,7 +74,7 @@ public class GenHWListAdapter<T> extends BaseAdapter {
 		TextView edulevel = viewHolder.getView(R.id.workol_stuhw_tv_edulevel);
 		LinearLayout ll_flag = viewHolder.getView(R.id.workol_stuhw_ll_flag);
 		final StuHW stuHW = (StuHW) getItem(position);
-		final ArrayList<Boolean> post = new ArrayList<Boolean>();
+		final ArrayList<Boolean> post = new ArrayList<>();
 		final String name;
 		post.add(true);
 		post.add(true);
@@ -90,7 +90,7 @@ public class GenHWListAdapter<T> extends BaseAdapter {
 			title.setText(stuHW.getHomeworkName());
 			// 题量
 			num.setText(String.valueOf(stuHW.getItemNumber()));
-			String str_time = "";
+			String str_time ;
 			// 过期时间
 			time0.setText(R.string.expiration);
 			// 过期时间
@@ -112,21 +112,21 @@ public class GenHWListAdapter<T> extends BaseAdapter {
 			}
 			time.setText(str_time);
 			if (stuHW.getIsHaveAdd() == 1) {// 主观题
-				icon.setVisibility(0);
+				icon.setVisibility(View.VISIBLE);
 			} else {
-				icon.setVisibility(8);
+				icon.setVisibility(View.GONE);
 			}
 			if (stuHW.getIsHWFinish() == 1) {
-				start.setVisibility(8);
-				ll_flag.setVisibility(0);
+				start.setVisibility(View.GONE);
+				ll_flag.setVisibility(View.VISIBLE);
 				score.setText(String.valueOf(stuHW.getHWScore()));
 				edulevel.setText(String.valueOf(stuHW.getEduLevel()));
 				post.set(0, true);
 			} else {
 				// 未完成
 				start.setText(R.string.unfinish);
-				start.setVisibility(0);
-				ll_flag.setVisibility(8);
+				start.setVisibility(View.VISIBLE);
+				ll_flag.setVisibility(View.GONE);
 				post.set(0, false);
 			}
 			viewHolder.getConvertView().setOnClickListener(
@@ -146,10 +146,6 @@ public class GenHWListAdapter<T> extends BaseAdapter {
 		return viewHolder.getConvertView();
 	}
 
-	// 获取是否作业
-	public Boolean getIsHW() {
-		return isHW;
-	}
 
 	// 设置是否作业
 	public void setIsHW(Boolean isHW) {

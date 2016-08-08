@@ -65,7 +65,7 @@ public class StuHWListAdapter<T> extends BaseAdapter {
 	/**
 	 * 是否完成
 	 * 
-	 * @return
+	 * @return bo
 	 */
 	public boolean getFinishFlag() {
 		boolean isFinish = true;
@@ -103,13 +103,13 @@ public class StuHWListAdapter<T> extends BaseAdapter {
 		TextView edulevel = viewHolder.getView(R.id.workol_stuhw_tv_edulevel);
 		LinearLayout ll_flag = viewHolder.getView(R.id.workol_stuhw_ll_flag);
 		final StuHW stuHW = (StuHW) getItem(position);
-		final ArrayList<Boolean> post = new ArrayList<Boolean>();
+		final ArrayList<Boolean> post = new ArrayList<>();
 		post.add(false);
 		post.add(IsLook);
-		boolean isFinish = false;
+		boolean isFinish ;
 		if (stuHW != null) {
 			num.setText(String.valueOf(stuHW.getItemNumber()));
-			String str_time = "";
+			String str_time ;
 			final String name;
 			title.setText(stuHW.getHomeworkName());
 			// longTime = stuHW.getLongTime();
@@ -152,20 +152,15 @@ public class StuHWListAdapter<T> extends BaseAdapter {
 				String flag = stuHW.getHWStartTime();
 				// 未开始
 				if ("1970-01-01T00:00:00".equals(flag)) {
-					start.setText(mContext.getResources().getString(
-							R.string.work_start)
-							+ name);
-
+					start.setText(mContext.getString(R.string.start_name,name));
 				} else {
 					// 已开始
-					start.setText(mContext.getResources().getString(
-							R.string.work_continue)
-							+ name);
+					start.setText(mContext.getString(R.string.continue_name,name));
 				}
 				// 完成状态 未完成
 				isFinish = false;
-				start.setVisibility(0);
-				ll_flag.setVisibility(8);
+				start.setVisibility(View.VISIBLE);
+				ll_flag.setVisibility(View.GONE);
 			}
 			post.set(0, isFinish);
 			viewHolder.getConvertView().setOnClickListener(
@@ -205,32 +200,32 @@ public class StuHWListAdapter<T> extends BaseAdapter {
 	/**
 	 * 时间String转换成long
 	 * 
-	 * @param date
-	 * @return
+	 * @param date date
+	 * @return time
 	 */
 	private long getDayTime(String date) {
 		// 时间格式
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
-		Date dt2 = null;
+		Date dt2;
 		try {
 			dt2 = sdf.parse(date);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			dt2=new Date();
 		}
 		return dt2.getTime();
 
 	}
 
-	/**
-	 * 
-	 * @return isLook判断是否被查看
-	 */
-
-	public boolean isIsLook() {
-		return IsLook;
-	}
+//	/**
+//	 *
+//	 * @return isLook判断是否被查看
+//	 */
+//
+//	public boolean isIsLook() {
+//		return IsLook;
+//	}
 
 	// 设置是否是查看
 

@@ -40,7 +40,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
     //程序的Context对象  
     private Context mContext;  
     //用来存储设备信息和异常信息  
-    private Map<String, String> infos = new HashMap<String, String>();    
+    private Map<String, String> infos = new HashMap<>();
 //    //用于格式化日期,作为日志文件名的一部分  
 //    private DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss",Locale.getDefault());  
     /** 保证只有一个CrashHandler实例 */  
@@ -55,7 +55,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
     /** 
      * 初始化 
      *  
-     * @param context 
+     * @param context  con
      */  
     public void init(Context context) {  
         mContext = context;  
@@ -77,24 +77,18 @@ public class CrashHandler implements UncaughtExceptionHandler {
             try {  
                 Thread.sleep(3000);  
             } catch (InterruptedException e) {  
-                Log.e(TAG, "error : ", e);  
-            }  finally{
+                Log.e(TAG, "error : ", e);
             	
             }
             JSYApplication.getInstance().onTerminate();
-            //退出程序
-//            ActivityManager am = (ActivityManager)mContext.getSystemService (Context.ACTIVITY_SERVICE);
-//            am.restartPackage(mContext.getPackageName()); 
-//            JSYApplication.getInstance().finishActivities();
-//            android.os.Process.killProcess(android.os.Process.myPid());  
-//            System.exit(0);  
+
         }  
     }  
   
     /** 
      * 自定义错误处理,收集错误信息 发送错误报告等操作均在此完成. 
      *  
-     * @param ex 
+     * @param ex  ex
      * @return true:如果处理了该异常信息;否则返回false. 
      */  
     private boolean handleException(Throwable ex) {  
@@ -119,7 +113,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
       
     /** 
      * 收集设备参数信息 
-     * @param ctx 
+     * @param ctx  ctx
      */  
     public void collectDeviceInfo(Context ctx) {  
         try {  
@@ -159,7 +153,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
     /** 
      * 保存错误信息到文件中 
      *  
-     * @param ex 
+     * @param ex  ex
      * @return  返回文件名称,便于将文件传送到服务器 
      */  
     private String saveCrashInfo2File(Throwable ex) {  
@@ -174,6 +168,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
         try {
 			mobilemsg += "JiaoBaoHao=" + BaseActivity.sp.getString("JiaoBaoHao", "")+ "\r\n"+"UserName=" + BaseActivity.sp.getString("UserName", "")+ "\r\n"+"UnitID=" + BaseActivity.sp.getInt("UnitID", 0)+ "\r\n"+ "UnitName=" +BaseActivity.sp.getString("UnitName", "")+ "\r\n2";
 		} catch (Exception e) {
+            e.printStackTrace();
 		} 
         Writer writer = new StringWriter();  
         PrintWriter printWriter = new PrintWriter(writer);  

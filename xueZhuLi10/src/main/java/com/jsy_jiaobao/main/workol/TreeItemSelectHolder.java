@@ -20,20 +20,9 @@ import com.unnamed.b.atv.model.TreeNode;
  */
 public class TreeItemSelectHolder extends
 		TreeNode.BaseNodeViewHolder<TreeItemRoot> {
-	/** 年级 */
-	final static int TYPE_GRADE = 0;
-	/** 科目 */
-	final static int TYPE_MODE = 1;
-	/** 教版 */
-	final static int TYPE_SUBJECT = 2;
-	/** 章节 */
-	final static int TYPE_SESSION = 3;
-	/** 标题 */
-	final static int TYPE_TITLE = 4;
 	private TreeItemRoot value;
 	private TreeNode node;
 	private Handler mHandler;
-	private TextView name;
 	private ImageView arrowView;
 	private RadioButton radiobutton;
 
@@ -49,6 +38,7 @@ public class TreeItemSelectHolder extends
 		final LayoutInflater inflater = LayoutInflater.from(context);
 		final View view = inflater.inflate(R.layout.tree_workol_stu_select,
 				null, false);
+		TextView name;
 		name = (TextView) view.findViewById(R.id.tree_workol_stu_tv_name);
 		radiobutton = (RadioButton) view
 				.findViewById(R.id.tree_workol_stu_radiobutton);

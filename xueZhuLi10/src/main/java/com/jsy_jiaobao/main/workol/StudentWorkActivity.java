@@ -66,14 +66,13 @@ public class StudentWorkActivity extends BaseActivity implements
 	/** 章节 */
 	final static int TYPE_SESSION = 3;
 	/** 标题 */
-	final static int TYPE_TITLE = 4;
+//	final static int TYPE_TITLE = 4;
 	private Context mContext;// 上下文
 	private PullToRefreshScrollView mPullRefreshScrollView;// scrollView
 	private TextView tv_work;// 作业选项
 	private TextView tv_exercise;// 练习选项
 	private TextView tv_nowork;// 没作业背景
 	private TextView tv_queryEx;// 查询练习
-	private RelativeLayout ly_screen;// 筛选
 	private TextView tv_queryErr;// 筛选结果显示界面
 	// private TextView tv_screenErr;
 	private CusListView listView;
@@ -93,7 +92,6 @@ public class StudentWorkActivity extends BaseActivity implements
 	private StudentErrorPost errorPost;// 查询错题本接口所需数据
 	private LinearLayout ly_big_screen;
 	private int pageIndex = 1;// 起始页
-	private int pageSize = 10;// 每页请求数据条数
 	private final static int TYPE_WORK = 10;// 当前作业
 	private final static int TYPE_DOEX = 11;// 做练习
 	private final static int TYPE_QREX = 12;// 查询练习
@@ -101,7 +99,6 @@ public class StudentWorkActivity extends BaseActivity implements
 	private int mType;
 	private int exPageIndex = 1;// 请求页码 默认为起始页=1
 	private boolean isFinishWork;// 是否完成工作
-	private String mSelect;// 选中的筛选条件的String值
 	private TextView tv_selectName;// 显示筛选条件的空间
 	private ArrayList<StuHW> stuExList; // 练习列表数据 = new ArrayList<StuHW>();
 	private ArrayList<StuErrorModel> getErrList;// 错题本列表数据
@@ -131,14 +128,15 @@ public class StudentWorkActivity extends BaseActivity implements
 		setContentLayout(R.layout.activity_workolstu);
 		mContext = this;
 		setActionBarTitle(R.string.my_homework);
-		workAdapter = new StuHWListAdapter<StuHW>(mContext);
+		workAdapter = new StuHWListAdapter<>(mContext);
 		errorAdapter = new ErrorCheckAdapter(mContext);
-		stuExList = new ArrayList<StuHW>();
-		errArrayList = new ArrayList<ErrorModel>();
+		stuExList = new ArrayList<>();
+		errArrayList = new ArrayList<>();
 		errorPost = new StudentErrorPost();
 		StudentWorkActivityController.getInstance().setContext(this);
 		tv_work = (TextView) findViewById(R.id.workolstu_tv_work);
 		tv_exercise = (TextView) findViewById(R.id.workolstu_tv_exercise);
+		RelativeLayout ly_screen;// 筛选
 		ly_screen = (RelativeLayout) findViewById(R.id.ly_screen);
 		ly_pubEx = (LinearLayout) findViewById(R.id.ly_publish_ex);
 		tv_selectName = (TextView) findViewById(R.id.tv_selectName);
@@ -160,7 +158,7 @@ public class StudentWorkActivity extends BaseActivity implements
 		root = TreeNode.root();
 		btn_make.setClickable(true);
 		btn_make.setOnClickListener(this);
-		layout_tree.setVisibility(8);
+		layout_tree.setVisibility(View.GONE);
 		listView.setAdapter(workAdapter);
 		tv_work.setOnClickListener(this);
 		setViewFocusable(tv_work);
@@ -182,7 +180,7 @@ public class StudentWorkActivity extends BaseActivity implements
 							StudentWorkActivityController.getInstance()
 									.getStuInfo(jiaobaohao,
 											userClass.getClassID());
-							;
+
 						}
 					}
 				}
@@ -381,17 +379,18 @@ public class StudentWorkActivity extends BaseActivity implements
 	/**
 	 * 当用户点击不同控件时 切换数据
 	 * 
-	 * @param modeId
-	 * @param chapterid
+	 * @param modeId s
+	 * @param chapterid s
 	 */
 	private void changeData(int modeId, int chapterid) {
+		int pageSize = 10;// 每页请求数据条数
 		if (stuInfo != null) {
 			switch (mType) {
 			case TYPE_WORK:
 				IsSelf = 0;
-				layout_tree.setVisibility(8);
-				btn_make.setVisibility(8);
-				listView.setVisibility(0);
+				layout_tree.setVisibility(View.GONE);
+				btn_make.setVisibility(View.GONE);
+				listView.setVisibility(View.VISIBLE);
 				isHW = true;
 				workAdapter.setIsLook(false);
 				setViewFocusable(tv_work);
@@ -399,7 +398,7 @@ public class StudentWorkActivity extends BaseActivity implements
 						stuInfo.getStudentID(), IsSelf);
 				break;
 			case TYPE_DOEX:
-				tv_nowork.setVisibility(8);
+				tv_nowork.setVisibility(View.GONE);
 				ly_pubEx.setVisibility(View.VISIBLE);
 				isHW = false;
 				workAdapter.setIsLook(false);
@@ -445,13 +444,10 @@ public class StudentWorkActivity extends BaseActivity implements
 
 	/**
 	 * 获取启动Activity的返回值 ,获取筛选条件
-	 * 
-	 * @GradeCode 年级代码
-	 * @SubCode 教版代码
-	 * @modeId 科目代码
-	 * @chapterId 章节代码
-	 * @mSelect 选中条件名称
-	 */
+	 * @param arg0 e
+	 * @param arg1 d
+	 * @param arg2 d
+     */
 	@Override
 	protected void onActivityResult(int arg0, int arg1, Intent arg2) {
 		// TODO Auto-generated method stub
@@ -464,6 +460,7 @@ public class StudentWorkActivity extends BaseActivity implements
 			subCode = args.getInt("SubCode");
 			modeId = args.getInt("ModeId");
 			chapterId = args.getInt("ChapterId");
+			String mSelect;// 选中的筛选条件的String值
 			mSelect = (String) args.get("Select");
 			Log.d("chapterId", chapterId + "");
 			// ly_webs.removeAllViews();
@@ -627,7 +624,7 @@ public class StudentWorkActivity extends BaseActivity implements
 			mPullRefreshScrollView.onRefreshComplete();
 			ArrayList<StuHW> getStuExList = (ArrayList<StuHW>) list.get(1);
 			layout_tree.setVisibility(View.GONE);
-			btn_make.setVisibility(8);
+			btn_make.setVisibility(View.GONE);
 			if (getStuExList == null || getStuExList.size() == 0) {
 				totalPageNum = 0;
 				if (exPageIndex == 1) {
@@ -660,13 +657,13 @@ public class StudentWorkActivity extends BaseActivity implements
 			btn_make.setClickable(true);
 			if (isHW) {
 				if (getStuHWList == null || getStuHWList.size() == 0) {
-					tv_nowork.setVisibility(0);
+					tv_nowork.setVisibility(View.VISIBLE);
 				} else {
-					tv_nowork.setVisibility(8);
+					tv_nowork.setVisibility(View.GONE);
 				}
-				listView.setVisibility(0);
-				layout_tree.setVisibility(8);
-				btn_make.setVisibility(8);
+				listView.setVisibility(View.VISIBLE);
+				layout_tree.setVisibility(View.GONE);
+				btn_make.setVisibility(View.GONE);
 				workAdapter.setmData(getStuHWList);
 				workAdapter.setIsSelf(IsSelf);
 				workAdapter.notifyDataSetChanged();
@@ -674,12 +671,12 @@ public class StudentWorkActivity extends BaseActivity implements
 			} else {
 				if (getStuHWList == null || getStuHWList.size() == 0) {
 
-					listView.setVisibility(8);
+					listView.setVisibility(View.GONE);
 					StudentWorkActivityController.getInstance().GetGradeList();
 				} else {
-					listView.setVisibility(0);
-					layout_tree.setVisibility(8);
-					btn_make.setVisibility(8);
+					listView.setVisibility(View.VISIBLE);
+					layout_tree.setVisibility(View.GONE);
+					btn_make.setVisibility(View.GONE);
 					workAdapter.setmData(getStuHWList);
 					workAdapter.setIsSelf(IsSelf);
 					workAdapter.notifyDataSetChanged();

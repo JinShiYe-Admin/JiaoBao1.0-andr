@@ -168,7 +168,7 @@ public class ErrorScreenActivity extends BaseActivity implements
 	}
 
 	/**
-	 * @param list
+	 * @param list list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
