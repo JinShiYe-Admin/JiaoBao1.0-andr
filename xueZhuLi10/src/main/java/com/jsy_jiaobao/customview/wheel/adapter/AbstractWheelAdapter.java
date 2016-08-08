@@ -16,12 +16,12 @@
 
 package com.jsy_jiaobao.customview.wheel.adapter;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Abstract Wheel adapter.
@@ -38,7 +38,7 @@ public abstract class AbstractWheelAdapter implements WheelViewAdapter {
     @Override
     public void registerDataSetObserver(DataSetObserver observer) {
         if (datasetObservers == null) {
-            datasetObservers = new LinkedList<DataSetObserver>();
+            datasetObservers = new LinkedList<>();
         }
         datasetObservers.add(observer);
     }
@@ -47,28 +47,6 @@ public abstract class AbstractWheelAdapter implements WheelViewAdapter {
     public void unregisterDataSetObserver(DataSetObserver observer) {
         if (datasetObservers != null) {
             datasetObservers.remove(observer);
-        }
-    }
-    
-    /**
-     * Notifies observers about data changing
-     */
-    protected void notifyDataChangedEvent() {
-        if (datasetObservers != null) {
-            for (DataSetObserver observer : datasetObservers) {
-                observer.onChanged();
-            }
-        }
-    }
-    
-    /**
-     * Notifies observers about invalidating data
-     */
-    protected void notifyDataInvalidatedEvent() {
-        if (datasetObservers != null) {
-            for (DataSetObserver observer : datasetObservers) {
-                observer.onInvalidated();
-            }
         }
     }
 }

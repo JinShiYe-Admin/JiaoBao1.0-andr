@@ -37,10 +37,7 @@ public abstract class AbstractWheelTextAdapter extends AbstractWheelAdapter {
     
     /** Default text color */
     public static final int DEFAULT_TEXT_COLOR = 0xFF101010;
-    
-    /** Default text color */
-    public static final int LABEL_COLOR = 0xFF700070;
-    
+
     /** Default text size */
     public static final int DEFAULT_TEXT_SIZE = 24;
     
@@ -122,31 +119,7 @@ public abstract class AbstractWheelTextAdapter extends AbstractWheelAdapter {
     public void setTextSize(int textSize) {
         this.textSize = textSize;
     }
-    
-    /**
-     * Gets resource Id for items views
-     * @return the item resource Id
-     */
-    public int getItemResource() {
-        return itemResourceId;
-    }
-    
-    /**
-     * Sets resource Id for items views
-     * @param itemResourceId the resource Id to set
-     */
-    public void setItemResource(int itemResourceId) {
-        this.itemResourceId = itemResourceId;
-    }
-    
-    /**
-     * Gets resource Id for text view in item layout 
-     * @return the item text resource Id
-     */
-    public int getItemTextResource() {
-        return itemTextResourceId;
-    }
-    
+
     /**
      * Sets resource Id for text view in item layout 
      * @param itemTextResourceId the item text resource Id to set
@@ -155,23 +128,6 @@ public abstract class AbstractWheelTextAdapter extends AbstractWheelAdapter {
         this.itemTextResourceId = itemTextResourceId;
     }
 
-    /**
-     * Gets resource Id for empty items views
-     * @return the empty item resource Id
-     */
-    public int getEmptyItemResource() {
-        return emptyItemResourceId;
-    }
-
-    /**
-     * Sets resource Id for empty items views
-     * @param emptyItemResourceId the empty item resource Id to set
-     */
-    public void setEmptyItemResource(int emptyItemResourceId) {
-        this.emptyItemResourceId = emptyItemResourceId;
-    }
-    
-    
     /**
      * Returns text for specified item
      * @param index the item index
