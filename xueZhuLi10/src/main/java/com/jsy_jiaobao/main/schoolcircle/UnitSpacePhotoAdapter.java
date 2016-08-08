@@ -58,7 +58,7 @@ public class UnitSpacePhotoAdapter<T> extends BaseAdapter {
 
 	public UnitSpacePhotoAdapter(Context mContext) {
 		this.mContext = mContext;
-		urlMap = new SparseArray<String>();
+		urlMap = new SparseArray<>();
 		// 创建默认的ImageLoader配置参数
 		ImageLoaderConfiguration configuration = ImageLoaderConfiguration
 				.createDefault(mContext);
@@ -116,7 +116,6 @@ public class UnitSpacePhotoAdapter<T> extends BaseAdapter {
 
 	@Override
 	public int getViewTypeCount() {
-		// TODO Auto-generated method stub
 		return 3;
 	}
 
@@ -290,14 +289,12 @@ public class UnitSpacePhotoAdapter<T> extends BaseAdapter {
 						});
 				return viewHolder.getConvertView();
 			} catch (Exception e) {
-				// TODO: handle exception
+				e.printStackTrace();
 				return null;
 			}
-
 		default:
 			return null;
 		}
-
 	}
 
 	private String JiaoBaoHao;
@@ -323,7 +320,6 @@ public class UnitSpacePhotoAdapter<T> extends BaseAdapter {
 		}
 
 		public void setPosition(int position) {
-			// TODO Auto-generated method stub
 			mPosition = position;
 		}
 
@@ -364,8 +360,8 @@ public class UnitSpacePhotoAdapter<T> extends BaseAdapter {
 					cover.setImageResource(R.drawable.rc_image_download_failure);
 				}
 			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 	}
-
 }

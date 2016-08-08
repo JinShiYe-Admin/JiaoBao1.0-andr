@@ -1,11 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -47,11 +42,15 @@ import com.jsy_jiaobao.po.personal.RefComment;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * 文章详情页面
- * 
  * @author admin
- * 
  */
 public class ArticleDetailsActivity extends BaseActivity implements
 		PublicMethod, OnClickListener, OnRefreshListener2<ScrollView> {
@@ -62,11 +61,11 @@ public class ArticleDetailsActivity extends BaseActivity implements
 	private TextView tv_time;// 时间
 	private LinearLayout ly_addWeb;
 	private WebView web_content;
-	private TextView tv_clickcount;
-	private TextView tv_likecount;
+	private TextView tv_clickCount;
+	private TextView tv_likeCount;
 	private LinearLayout layout_like;
-	private TextView tv_viewcount;
-	private TextView tv_likeanimation;
+	private TextView tv_viewCount;
+	private TextView tv_likeAnimation;
 	private ImageView img_like;// 赞
 	private ListView listView;
 	private ArtCommentListAdapter commentAdapter;
@@ -76,10 +75,10 @@ public class ArticleDetailsActivity extends BaseActivity implements
 	private String TabIDStr;
 	private String SectionID;
 	private int pageNum = 1;
-	private ArrayList<Comment> commentsList = new ArrayList<Comment>();// 评论列表
-	private ArrayList<RefComment> refcomments = new ArrayList<RefComment>();// 评论的回复列表
+	private ArrayList<Comment> commentsList = new ArrayList<>();// 评论列表
+	private ArrayList<RefComment> refComments = new ArrayList<>();// 评论的回复列表
 	// private XListViewFooter mFooterView;
-	private boolean havemore = true;
+	private boolean haveMore = true;
 	private boolean clickLike = false;// 点击了赞按钮
 	private ArthInfo getArthInfo;// 文章详情
 	private PullToRefreshScrollView refreshScrollView;
@@ -93,16 +92,11 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			SectionID = getArthInfo.getSectionID();
 			TabIDStr = getArthInfo.getTabIDStr();
 		} else {
-			// 获取Intent携带的数据
-			initPassData();
+			initPassData();// 获取Intent携带的数据
 		}
-		// 初始化界面
-		initViews();
-		// 加载数据
-		initDeatilsData();
-		// 设置监听
-		initListener();
-
+		initViews();// 初始化界面
+		initDeatilsData();// 加载数据
+		initListener();// 设置监听
 	}
 
 	/**
@@ -115,8 +109,10 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			Bundle bundle = getPass.getExtras();
 			if (bundle != null) {
 				getArthInfo = (ArthInfo) bundle.getSerializable("arthInfo");
-				SectionID = getArthInfo.getSectionID();
-				TabIDStr = getArthInfo.getTabIDStr();
+				if(getArthInfo != null) {
+					SectionID = getArthInfo.getSectionID();
+					TabIDStr = getArthInfo.getTabIDStr();
+				}
 			}
 		}
 	}
@@ -141,7 +137,7 @@ public class ArticleDetailsActivity extends BaseActivity implements
 		mContext = this;
 		setActionBarTitle("文章详情");
 		img_like.setEnabled(false);
-		tv_likecount.setEnabled(false);
+		tv_likeCount.setEnabled(false);
 		layout_like.setEnabled(false);
 		ArticleDetailsActivityController.getInstance().setContext(this);
 		WebSetUtils.getWebSetting(this, web_content);
@@ -163,18 +159,18 @@ public class ArticleDetailsActivity extends BaseActivity implements
 		tv_time = (TextView) findViewById(R.id.article_tv_time);
 		ly_addWeb = (LinearLayout) findViewById(R.id.ly_add_web);
 		web_content = new WebView(this);
-		tv_clickcount = (TextView) findViewById(R.id.article_tv_clickcount);
-		tv_likecount = (TextView) findViewById(R.id.article_tv_likecount);
+		tv_clickCount = (TextView) findViewById(R.id.article_tv_clickcount);
+		tv_likeCount = (TextView) findViewById(R.id.article_tv_likecount);
 		layout_like = (LinearLayout) findViewById(R.id.article_like);
-		tv_viewcount = (TextView) findViewById(R.id.article_tv_viewcount);
-		tv_likeanimation = (TextView) findViewById(R.id.articlle_tv_likeanimation);
+		tv_viewCount = (TextView) findViewById(R.id.article_tv_viewcount);
+		tv_likeAnimation = (TextView) findViewById(R.id.articlle_tv_likeanimation);
 		img_like = (ImageView) findViewById(R.id.articlle_img_like);
 		listView = (ListView) findViewById(R.id.article_listview);
 		tv_title.requestFocus();
 		btn_send.setOnClickListener(this);
 		layout_like.setOnClickListener(this);
 		img_like.setOnClickListener(this);
-		tv_likecount.setOnClickListener(this);
+		tv_likeCount.setOnClickListener(this);
 		refreshScrollView.setOnRefreshListener(this);
 	}
 
@@ -196,8 +192,7 @@ public class ArticleDetailsActivity extends BaseActivity implements
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.article_btn_send:
-			// 评论按钮
+		case R.id.article_btn_send:// 评论按钮
 			MobclickAgent.onEvent(
 					mContext,
 					mContext.getResources().getString(
@@ -230,12 +225,9 @@ public class ArticleDetailsActivity extends BaseActivity implements
 				}
 			}
 			break;
-		case R.id.article_like:
-			// 赞
-		case R.id.articlle_img_like:
-			// 图片赞
-		case R.id.article_tv_likecount:
-			// 赞数量
+		case R.id.article_like:// 赞
+		case R.id.articlle_img_like:// 图片赞
+		case R.id.article_tv_likecount:// 赞数量
 			MobclickAgent.onEvent(
 					mContext,
 					mContext.getResources().getString(
@@ -258,9 +250,8 @@ public class ArticleDetailsActivity extends BaseActivity implements
 
 	// 更新数据
 	private void refreshData() {
-		// TODO Auto-generated method stub
 		commentsList.clear();
-		refcomments.clear();
+		refComments.clear();
 		pageNum = 1;
 		ArticleDetailsActivityController.getInstance().CommentsList(TabIDStr,
 				String.valueOf(pageNum));
@@ -268,8 +259,7 @@ public class ArticleDetailsActivity extends BaseActivity implements
 
 	// 加载更多
 	private void loadMore() {
-		// TODO Auto-generated method stub
-		if (havemore) {
+		if (haveMore) {
 			if (commentsList.size() % 10 > 0 || commentsList.size() == 0) {
 				ToastUtil.showMessage(mContext, "没有更多了");
 				refreshScrollView.onRefreshComplete();
@@ -304,7 +294,6 @@ public class ArticleDetailsActivity extends BaseActivity implements
 	 * EventBus功能模块
 	 * 
 	 * @功能 获取数据并处理
-	 * @param list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
@@ -321,7 +310,7 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			addArthInfo = (ArthInfo) list.get(1);
 			mHandler.sendEmptyMessage(1);
 			commentsList.clear();
-			refcomments.clear();
+			refComments.clear();
 			pageNum = 1;
 			if (addArthInfo.getFeeBackCount() > 0) {
 				ArticleDetailsActivityController.getInstance().CommentsList(
@@ -334,29 +323,27 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			if ("-1".equals(result)) {
 				getArthInfo.setLikeflag(1);
 				getArthInfo.setLikeCount(getArthInfo.getLikeCount() + 1);
-
 				img_like.setEnabled(false);
-				tv_likecount.setEnabled(false);
+				tv_likeCount.setEnabled(false);
 				layout_like.setEnabled(false);
 				if (null != ShowFragment2.clickArthInfo) {
 					ShowFragment2.clickArthInfo
 							.setLikeCount(ShowFragment2.clickArthInfo
 									.getLikeCount() + 1);
 					ShowFragment2.clickArthInfo.setLikeflag(1);
-					ArrayList<Object> post = new ArrayList<Object>();
+					ArrayList<Object> post = new ArrayList<>();
 					post.add(Constant.msgcenter_articlelist_addComment);
 					EventBusUtil.post(post);
 				}
-
 				img_like.setBackgroundResource(R.drawable.icon_art3_2);
 				Animation animation = AnimationUtils.loadAnimation(mContext,
 						R.anim.zan);
-				tv_likeanimation.setVisibility(View.VISIBLE);
-				tv_likeanimation.startAnimation(animation);
+				tv_likeAnimation.setVisibility(View.VISIBLE);
+				tv_likeAnimation.startAnimation(animation);
 				new Handler().postDelayed(new Runnable() {
 					public void run() {
-						tv_likeanimation.setVisibility(View.GONE);
-						tv_likecount.setText(String.valueOf(addArthInfo
+						tv_likeAnimation.setVisibility(View.GONE);
+						tv_likeCount.setText(String.valueOf(addArthInfo
 								.getLikeCount() + 1));
 					}
 				}, 1000);
@@ -364,14 +351,13 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			break;
 		case Constant.msgcenter_article_addComment:// 评论
 			btn_send.setEnabled(true);
-			String addresult = (String) list.get(1);
-			if ("0".equals(addresult)) {
-
+			String addResult = (String) list.get(1);
+			if ("0".equals(addResult)) {
 				ToastUtil.showMessage(mContext, "回复成功");
 				edt_keywords.setText("");
 				commentsList.clear();
-				refcomments.clear();
-				havemore = true;
+				refComments.clear();
+				haveMore = true;
 				pageNum = 1;
 				ArticleDetailsActivityController.getInstance().CommentsList(
 						TabIDStr, String.valueOf(pageNum));
@@ -469,18 +455,18 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			refreshScrollView.onRefreshComplete();
 			CommentsList comList = (CommentsList) list.get(1);
 			if (null == comList) {
-				havemore = false;
+				haveMore = false;
 			} else if (comList.getCommentsList().size() == 0) {
-				havemore = false;
+				haveMore = false;
 			} else {
-				havemore = true;
+				haveMore = true;
 				ArrayList<Comment> back = comList.getCommentsList();
 				try {
 					for (Comment item : back) {
 						String[] number = item.getNumber().split("楼");
 						int num = Integer.parseInt(number[0]);
 						if (num <= 1) {
-							havemore = false;
+							haveMore = false;
 							break;
 						}
 					}
@@ -488,8 +474,8 @@ public class ArticleDetailsActivity extends BaseActivity implements
 					e.printStackTrace();
 				}
 				commentsList.addAll(back);
-				refcomments.addAll(comList.getRefcomments());
-				commentAdapter.setRefCommentsData(refcomments);
+				refComments.addAll(comList.getRefcomments());
+				commentAdapter.setRefCommentsData(refComments);
 				commentAdapter.setCommentsData(commentsList);
 				commentAdapter.notifyDataSetChanged();
 				DialogUtil.getInstance().cannleDialog();
@@ -532,20 +518,20 @@ public class ArticleDetailsActivity extends BaseActivity implements
 				case 1:
 					if (addArthInfo.getLikeflag() == 0) {
 						img_like.setEnabled(true);
-						tv_likecount.setEnabled(true);
+						tv_likeCount.setEnabled(true);
 						layout_like.setEnabled(true);
 						img_like.setBackgroundResource(R.drawable.icon_art3);
 					} else {
 						img_like.setEnabled(false);
-						tv_likecount.setEnabled(false);
+						tv_likeCount.setEnabled(false);
 						layout_like.setEnabled(false);
 						img_like.setBackgroundResource(R.drawable.icon_art3_2);
 					}
-					tv_clickcount.setText(String.valueOf(addArthInfo
+					tv_clickCount.setText(String.valueOf(addArthInfo
 							.getClickCount()));
-					tv_likecount.setText(String.valueOf(addArthInfo
+					tv_likeCount.setText(String.valueOf(addArthInfo
 							.getLikeCount()));
-					tv_viewcount.setText(String.valueOf(addArthInfo
+					tv_viewCount.setText(String.valueOf(addArthInfo
 							.getViewCount()));
 					break;
 				default:
@@ -554,7 +540,7 @@ public class ArticleDetailsActivity extends BaseActivity implements
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		};
+		}
 	};
 
 	/**
@@ -597,9 +583,7 @@ public class ArticleDetailsActivity extends BaseActivity implements
 	 */
 	@Override
 	public void onPullDownToRefresh(PullToRefreshBase<ScrollView> refreshView) {
-		// TODO Auto-generated method stub
-		// 刷新数据
-		refreshData();
+		refreshData();// 刷新数据
 	}
 
 	/**
@@ -607,14 +591,10 @@ public class ArticleDetailsActivity extends BaseActivity implements
 	 */
 	@Override
 	public void onPullUpToRefresh(PullToRefreshBase<ScrollView> refreshView) {
-		// TODO Auto-generated method stub
-		// 加载更多
 		loadMore();
 	}
 
 	@Override
 	public void onPullPageChanging(boolean isChanging) {
-		// TODO Auto-generated method stub
-
 	}
 }

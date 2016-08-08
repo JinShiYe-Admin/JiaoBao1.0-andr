@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.content.res.Resources.NotFoundException;
 
@@ -31,17 +27,20 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * 单位空间的Controller
  * 
  * @author admin
- * 
  */
 public class UnitSpaceActivityController implements ConstantUrl {
 	private static UnitSpaceActivityController instance;
 	private Activity mcontext;
 
-	public static synchronized final UnitSpaceActivityController getInstance() {
+	public static synchronized UnitSpaceActivityController getInstance() {
 		if (instance == null) {
 			instance = new UnitSpaceActivityController();
 		}
@@ -71,7 +70,6 @@ public class UnitSpaceActivityController implements ConstantUrl {
 			e.printStackTrace();
 			dealResponseInfo("", Constant.msgcenter_unitspace_GetUnitNewPhoto);
 		}
-
 	}
 
 	/**
@@ -93,13 +91,10 @@ public class UnitSpaceActivityController implements ConstantUrl {
 			dealResponseInfo("", Constant.msgcenter_unitspace_GetUnitPGroup);
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
 	 * 取相册
-	 * 
-	 * @param params
 	 */
 	public void GetUnitPhotoByGroupID(int UID, int GroupID) {
 		try {
@@ -117,13 +112,10 @@ public class UnitSpaceActivityController implements ConstantUrl {
 					Constant.msgcenter_unitspace_GetUnitPhotoByGroupID);
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
 	 * 取相册下相片
-	 * 
-	 * @param params
 	 */
 	public void GetPhotoByGroup(int UID, String GroupID) {
 		try {
@@ -140,7 +132,6 @@ public class UnitSpaceActivityController implements ConstantUrl {
 			dealResponseInfo("", Constant.msgcenter_unitspace_GetPhotoByGroup);
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -165,8 +156,6 @@ public class UnitSpaceActivityController implements ConstantUrl {
 
 	/**
 	 * 取教师关联的班级 
-	 * 
-	 * @param unitID
 	 */
 	public void getmyUserClass(int UnitID) {
 		DialogUtil.getInstance().getDialog(mcontext,
@@ -209,7 +198,6 @@ public class UnitSpaceActivityController implements ConstantUrl {
 											"ClientKey", ""));
 							dealResponseInfo(data, this.getUserTag());
 							break;
-
 						default:
 							dealResponseInfo(jsonObj.getString("Data"),
 									this.getUserTag());
@@ -222,7 +210,6 @@ public class UnitSpaceActivityController implements ConstantUrl {
 						dealResponseInfo("", this.getUserTag());
 					} else {
 						dealResponseInfo("", this.getUserTag());
-						// ToastUtil.showMessage(mcontext,jsonObj.getString("ResultDesc"));
 					}
 				} catch (Exception e) {
 					dealResponseInfo("", this.getUserTag());
@@ -235,7 +222,7 @@ public class UnitSpaceActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_unitspace_GetUnitPGroup:
@@ -280,5 +267,4 @@ public class UnitSpaceActivityController implements ConstantUrl {
 		}
 		EventBusUtil.post(post);
 	}
-
 }

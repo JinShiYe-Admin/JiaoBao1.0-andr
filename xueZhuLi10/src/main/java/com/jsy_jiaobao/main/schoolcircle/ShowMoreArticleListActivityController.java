@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 
 import com.google.gson.reflect.TypeToken;
@@ -24,11 +20,15 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class ShowMoreArticleListActivityController implements ConstantUrl{
 	private static ShowMoreArticleListActivityController instance;
-	private Activity mcontext;
+	private Activity mContext;
 
-	public static synchronized final ShowMoreArticleListActivityController getInstance() {
+	public static synchronized ShowMoreArticleListActivityController getInstance() {
 		if (instance == null) {
 			instance = new ShowMoreArticleListActivityController();
 		}
@@ -36,13 +36,12 @@ public class ShowMoreArticleListActivityController implements ConstantUrl{
 	}
 
 	public ShowMoreArticleListActivityController setContext(Activity pActivity) {
-		mcontext = pActivity;
+		mContext = pActivity;
 		return this;
 	}
 	/**
 	 * 取本单位栏目文章
 	 * 客户端通过本接口获取本单位栏目文章。
-	 * @param params
 	 */
 	public void UnitArthListIndex(RequestParams params){
 		params.addBodyParameter("numPerPage",String.valueOf(20));
@@ -52,12 +51,10 @@ public class ShowMoreArticleListActivityController implements ConstantUrl{
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_show_UnitArthListIndex_more);
 		HttpUtil.InstanceSend(UnitArthListIndex, params, callback);
-		
 	}
 	/**
 	 * 取本单位栏目文章
 	 * 客户端通过本接口获取本单位栏目文章。
-	 * @param params
 	 */
 	public void AllMyClassArthList(RequestParams params){
 		params.addBodyParameter("sectionFlag",String.valueOf(2));
@@ -65,29 +62,15 @@ public class ShowMoreArticleListActivityController implements ConstantUrl{
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_show_AllMyClassArthList_more);
 		HttpUtil.InstanceSend(AllMyClassArthList, params, callback);
-		
-	}
-	/**
-	 * 取本单位栏目文章
-	 * 客户端通过本接口获取本单位栏目文章。
-	 * @param params
-	 */
-	public void ArthListIndex(RequestParams params){
-		params.addBodyParameter("sectionFlag",String.valueOf(2));
-		params.addBodyParameter("numPerPage",String.valueOf(20));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_show_AllMyClassArthList_more_select);
-		HttpUtil.InstanceSend(UnitArthListIndex, params, callback);
-		
 	}
 
 	private class CallBack extends RequestCallBack<String>{
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
-			if (null != mcontext) {
-				if(BaseUtils.isNetworkAvailable(mcontext)){
-					ToastUtil.showMessage(mcontext,R.string.phone_no_web);
+			if (null != mContext) {
+				if(BaseUtils.isNetworkAvailable(mContext)){
+					ToastUtil.showMessage(mContext,R.string.phone_no_web);
 				}
 				dealResponseInfo("",this.getUserTag());
 			}
@@ -95,7 +78,7 @@ public class ShowMoreArticleListActivityController implements ConstantUrl{
 
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
-			if (null != mcontext) {
+			if (null != mContext) {
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
 					String ResultCode = jsonObj.getString("ResultCode");
@@ -113,18 +96,17 @@ public class ShowMoreArticleListActivityController implements ConstantUrl{
 						}
 					}else if("8".equals(ResultCode)){
 						dealResponseInfo("",this.getUserTag());
-						LoginActivityController.getInstance().helloService(mcontext);
+						LoginActivityController.getInstance().helloService(mContext);
 					} else {
-						ToastUtil.showMessage(mcontext,jsonObj.getString("ResultDesc"));
+						ToastUtil.showMessage(mContext,jsonObj.getString("ResultDesc"));
 						dealResponseInfo("",this.getUserTag());
 					}
 				} catch (Exception e) {
 					dealResponseInfo("",this.getUserTag());
-					ToastUtil.showMessage(mcontext, mcontext.getResources().getString(R.string.error_serverconnect)+"r1002");
+					ToastUtil.showMessage(mContext, mContext.getResources().getString(R.string.error_serverconnect)+"r1002");
 				} 
 			}
 		}
-
 	}
 	private void dealResponseInfo(String result, Object userTag) {
 		ArrayList<Object> post = new ArrayList<Object>();

@@ -37,7 +37,7 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 	private static ArticleDetailsActivityController instance;
 	private Activity mContext;
 
-	public static synchronized final ArticleDetailsActivityController getInstance() {
+	public static synchronized ArticleDetailsActivityController getInstance() {
 		if (instance == null) {
 			instance = new ArticleDetailsActivityController();
 		}
@@ -51,8 +51,6 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 
 	/**
 	 * 取本单位栏目文章 详情 客户端通过本接口获取本单位栏目文章。详情
-	 * 
-	 * @param params
 	 */
 	public void ShowArthDetail(RequestParams params) {
 		DialogUtil.getInstance().getDialog(mContext,
@@ -76,8 +74,6 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 
 	/**
 	 * 功能：对文章进行点赞操作。一篇文章一个用户 （以教宝号为准）只能赞一次。
-	 * 
-	 * @param params
 	 */
 	public void LikeIt(String aid, String goflag) {
 		RequestParams params = new RequestParams();
@@ -91,13 +87,9 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 	/**
 	 * 功能：发表评论。发表评论可以在别人评论的基础上再次评论，称为引用评论。
 	 * 
-	 * @param aid
-	 *            文章加密ID
-	 * @param comment
-	 *            内容
-	 * @param refid
-	 *            加密的引用评语ID
-	 * 
+	 * @param aid 文章加密ID
+	 * @param comment 内容
+	 * @param refid 加密的引用评语ID
 	 */
 	public void addComment(String aid, String comment, String refid) {
 		RequestParams params = new RequestParams();
@@ -112,13 +104,9 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 	/**
 	 * 功能：获取文章评论列表。
 	 * 
-	 * @param aid
-	 *            文章加密ID
-	 * @param comment
-	 *            内容
-	 * @param refid
-	 *            加密的引用评语ID
-	 * 
+	 * @param aid 文章加密ID
+	 * @param comment 内容
+	 * @param refid 加密的引用评语ID
 	 */
 	public void CommentsList(String aid, String pageNum) {
 		DialogUtil.getInstance().getDialog(mContext, R.string.loading);
@@ -134,11 +122,8 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 	/**
 	 * 功能：对评论进行顶的操作。
 	 * 
-	 * @param comment_like
-	 *            文章加密ID
-	 * @param tp
-	 *            顶=1，踩=0
-	 * 
+	 * @param comment_like 文章加密ID
+	 * @param tp 顶=1，踩=0
 	 */
 	public void AddScoreCommon(Comment comment, String tp) {
 		RequestParams params = new RequestParams();
@@ -152,11 +137,8 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 	/**
 	 * 功能：对评论进行踩的操作。
 	 * 
-	 * @param comment_like
-	 *            文章加密ID
-	 * @param tp
-	 *            顶=1，踩=0
-	 * 
+	 * @param comment_like 文章加密ID
+	 * @param tp 顶=1，踩=0
 	 */
 	public void AddScoreRefCom(RefComment comment, String tp) {
 		RequestParams params = new RequestParams();
@@ -193,7 +175,7 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 					JSONObject jsonObj = new JSONObject(arg0.result);
 					String ResultCode = jsonObj.getString("ResultCode");
 					if ("0".equals(ResultCode)) {
-						ArrayList<Object> post = new ArrayList<Object>();
+						ArrayList<Object> post = new ArrayList<>();
 						post.add(Constant.msgcenter_article_AddScore_callback);
 						post.add(this.getUserTag());
 						post.add(tp);
@@ -286,7 +268,7 @@ public class ArticleDetailsActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_notice_ShowArthDetail:

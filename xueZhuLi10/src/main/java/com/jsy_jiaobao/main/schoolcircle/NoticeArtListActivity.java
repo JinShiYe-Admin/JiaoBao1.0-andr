@@ -1,13 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.EventBusUtil;
@@ -32,6 +25,14 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 /**
  * 展示文章界面
  * 
@@ -46,7 +47,7 @@ public class NoticeArtListActivity extends BaseActivity implements
 	@ViewInject(R.id.noticeartlist_btn_send)
 	private Button btn_send;
 
-	private List<ArthInfo> arthList = new ArrayList<ArthInfo>();
+	private List<ArthInfo> arthList = new ArrayList<>();
 	private NoticeArtListAdapter listAdapter;
 	private Context mContext;
 	private int currPage = 1;
@@ -166,8 +167,7 @@ public class NoticeArtListActivity extends BaseActivity implements
 		listView.setPullRefreshEnable(true);
 		listView.setXListViewListener(this);
 		mCache = ACache.get(getApplicationContext());
-		// 刷新数据
-		onRefresh();
+		onRefresh();// 刷新数据
 	}
 
 	/**

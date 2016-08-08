@@ -1,11 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,8 +12,8 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
+import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
@@ -32,29 +26,13 @@ import com.jsy_jiaobao.po.personal.ArthInfo;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
- * <pre>
- * 
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                   O\  =  /O
- *                ____/`---'\____
- *              .'  \\|     |//  `.
- *             /  \\|||  :  |||//  \
- *            /  _||||| -:- |||||-  \
- *            |   | \\\  -  /// |   |
- *            | \_|  ''\---/''  |   |
- *            \  .-\__  `-`  ___/-. /
- *          ___`. .'  /--.--\  `. . __
- *       ."" '<  `.___\_<|>_/___.'  >'"".
- *      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *      \  \ `-.   \_ __\ /__ _/   .-` /  /
- * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- * 			               佛祖保佑       永无BUG
  * 新版单位展示（学校圈）
  */
 public class ShowFragment2 extends SherlockFragment implements OnClickListener,
@@ -73,7 +51,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 	private ImageView btn_all;// 全部
 	private CusListView listView;//
 	private Show2ArtListAdapter adapter;
-	// private Intent intent = new Intent();
 	private int curPageNum = 1;// 本单位页码
 	private int classPageNum = 1;// 本班页码
 	private int localPageNum = 1;// 本地页码
@@ -86,15 +63,15 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 	private boolean allHaveMore = true;
 	private boolean attHaveMore = true;
 	// 本单位
-	private ArrayList<ArthInfo> curUnitArtList = new ArrayList<ArthInfo>();
+	private ArrayList<ArthInfo> curUnitArtList = new ArrayList<>();
 	// 本班
-	private ArrayList<ArthInfo> curClassArtList = new ArrayList<ArthInfo>();
+	private ArrayList<ArthInfo> curClassArtList = new ArrayList<>();
 	// 本地
-	private ArrayList<ArthInfo> localUnitArtList = new ArrayList<ArthInfo>();
+	private ArrayList<ArthInfo> localUnitArtList = new ArrayList<>();
 	// 全部
-	private ArrayList<ArthInfo> allUnitArtList = new ArrayList<ArthInfo>();
+	private ArrayList<ArthInfo> allUnitArtList = new ArrayList<>();
 	// 关注
-	private ArrayList<ArthInfo> attUnitArtList = new ArrayList<ArthInfo>();
+	private ArrayList<ArthInfo> attUnitArtList = new ArrayList<>();
 
 	public static CommitAdapter commitAdapter;
 
@@ -150,7 +127,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 	 * 设置Button监听事件
 	 */
 	private void setOnClickListeners() {
-		// TODO Auto-generated method stub
 		btn_curunit.setOnClickListener(this);
 		btn_curclass.setOnClickListener(this);// 本班
 		btn_local.setOnClickListener(this);// 本地
@@ -176,19 +152,14 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 		adapter.setParentView(getActivity().findViewById(
 				R.id.fragment_personal_show2));
 		if (BaseActivity.sp.getInt("UnitID", 0) != 0) {
-			// 有单位
-			ShowingUnitArthListAll();
+			ShowingUnitArthListAll();// 有单位
 		} else {
-			// 无单位
-			ToastUtil.showMessage(getActivity(), R.string.public_error_nounit);
+			ToastUtil.showMessage(getActivity(), R.string.public_error_nounit);// 无单位
 		}
-
 	}
 
 	/**
 	 * 设置Tab背景
-	 * 
-	 * @param position
 	 */
 	private void setSelectIndicator(int position) {
 		try {
@@ -217,7 +188,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 			case pos_all:
 				btn_all.setImageResource(R.drawable.icon_show_all_selected);
 				break;
-
 			default:
 				break;
 			}
@@ -251,13 +221,11 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 	 */
 	private void getPersonShowArt() {
 		if (BaseActivity.sp.getInt("UnitID", 0) != 0) {
-
 			if (curPageNum > 1) {
 				DialogUtil.getInstance().getDialog(
 						getActivity(),
 						getActivity().getResources().getString(
 								R.string.public_loading));
-
 				DialogUtil.getInstance().setCanCancel(false);
 			}
 			RequestParams params = new RequestParams();
@@ -370,8 +338,7 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.unitshow_btn_curunit:
-			// 本单位
+		case R.id.unitshow_btn_curunit:// 本单位
 			MobclickAgent.onEvent(getActivity(),
 					getResources().getString(R.string.ShowFragment2_curunit));
 			setSelectIndicator(pos_curunit);
@@ -387,8 +354,7 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				}
 			}
 			break;
-		case R.id.unitshow_btn_curclass:
-			// 本班
+		case R.id.unitshow_btn_curclass:// 本班
 			MobclickAgent.onEvent(getActivity(),
 					getResources().getString(R.string.ShowFragment2_curclass));
 			setSelectIndicator(pos_curclass);
@@ -403,8 +369,7 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				}
 			}
 			break;
-		case R.id.unitshow_btn_curlocal:
-			// 本地
+		case R.id.unitshow_btn_curlocal:// 本地
 			MobclickAgent.onEvent(getActivity(),
 					getResources().getString(R.string.ShowFragment2_curlocal));
 			setSelectIndicator(pos_local);
@@ -419,8 +384,7 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				}
 			}
 			break;
-		case R.id.unitshow_btn_att:
-			// 关注
+		case R.id.unitshow_btn_att:// 关注
 			MobclickAgent.onEvent(getActivity(),
 					getResources().getString(R.string.ShowFragment2_att));
 			setSelectIndicator(pos_att);
@@ -435,8 +399,7 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				}
 			}
 			break;
-		case R.id.unitshow_btn_all:
-			// 全部
+		case R.id.unitshow_btn_all:// 全部
 			MobclickAgent.onEvent(getActivity(),
 					getResources().getString(R.string.ShowFragment2_all));
 			setSelectIndicator(pos_all);
@@ -451,7 +414,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				}
 			}
 			break;
-
 		default:
 			break;
 		}
@@ -490,7 +452,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 	 * EventBus功能模块
 	 * 
 	 * @功能 获取网络请求返回数据并处理
-	 * @param list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
@@ -633,7 +594,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				localHaveMore = false;
 			}
 			adapter.notifyDataSetChanged();
-			// DialogUtil.getInstance().cannleDialog();
 			timer.schedule(new TimerTask() {
 				public void run() {
 					DialogUtil.getInstance().cannleDialog();
@@ -659,7 +619,6 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				allHaveMore = false;
 			}
 			adapter.notifyDataSetChanged();
-			// DialogUtil.getInstance().cannleDialog();
 			timer.schedule(new TimerTask() {
 				public void run() {
 					DialogUtil.getInstance().cannleDialog();
@@ -685,15 +644,13 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 				attHaveMore = false;
 			}
 			adapter.notifyDataSetChanged();
-			// DialogUtil.getInstance().cannleDialog();
 			timer.schedule(new TimerTask() {
 				public void run() {
 					DialogUtil.getInstance().cannleDialog();
 				}
 			}, 1000);
 			break;
-		case Constant.msgcenter_articlelist_addComment:
-			// 评论结果
+		case Constant.msgcenter_articlelist_addComment:// 评论结果
 			DialogUtil.getInstance().cannleDialog();
 			adapter.notifyDataSetChanged();
 			break;
@@ -856,6 +813,5 @@ public class ShowFragment2 extends SherlockFragment implements OnClickListener,
 
 	@Override
 	public void onPullPageChanging(boolean isChanging) {
-		// TODO Auto-generated method stub
 	}
 }

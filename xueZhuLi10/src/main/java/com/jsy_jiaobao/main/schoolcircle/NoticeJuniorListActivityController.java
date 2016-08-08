@@ -1,10 +1,7 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
+
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -25,15 +22,18 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * 下级单位列表界面controller
  * 
  * @author admin
- * 
  */
 public class NoticeJuniorListActivityController implements ConstantUrl {
 	private static NoticeJuniorListActivityController instance;
-	private Activity mcontext;
+	private Activity mContext;
 
 	public static synchronized final NoticeJuniorListActivityController getInstance() {
 		if (instance == null) {
@@ -43,14 +43,12 @@ public class NoticeJuniorListActivityController implements ConstantUrl {
 	}
 
 	public NoticeJuniorListActivityController setContext(Activity pActivity) {
-		mcontext = pActivity;
+		mContext = pActivity;
 		return this;
 	}
 
 	/**
 	 * 取教师关联的班级 
-	 * 
-	 * @param unitID
 	 */
 	public void getmyUserClass(int UnitID) {
 		RequestParams params = new RequestParams();
@@ -89,18 +87,18 @@ public class NoticeJuniorListActivityController implements ConstantUrl {
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
-			if (mcontext != null) {
-				if (!mcontext.isFinishing()) {
+			if (mContext != null) {
+				if (!mContext.isFinishing()) {
 				}
-				if (BaseUtils.isNetworkAvailable(mcontext)) {
-					ToastUtil.showMessage(mcontext, R.string.phone_no_web);
+				if (BaseUtils.isNetworkAvailable(mContext)) {
+					ToastUtil.showMessage(mContext, R.string.phone_no_web);
 				}
 			}
 		}
 
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
-			if (!mcontext.isFinishing()) {
+			if (!mContext.isFinishing()) {
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
 					String ResultCode = jsonObj.getString("ResultCode");
@@ -112,22 +110,21 @@ public class NoticeJuniorListActivityController implements ConstantUrl {
 
 					} else if ("8".equals(ResultCode)) {
 						LoginActivityController.getInstance().helloService(
-								mcontext);
+								mContext);
 					} else {
-						ToastUtil.showMessage(mcontext,
+						ToastUtil.showMessage(mContext,
 								jsonObj.getString("ResultDesc"));
 					}
 				} catch (Exception e) {
-					ToastUtil.showMessage(mcontext, mcontext.getResources()
+					ToastUtil.showMessage(mContext, mContext.getResources()
 							.getString(R.string.error_serverconnect) + "r1002");
 				}
 			}
 		}
-
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_notice_getMySubUnitInfo:
 			post.add(Constant.msgcenter_notice_getMySubUnitInfo);

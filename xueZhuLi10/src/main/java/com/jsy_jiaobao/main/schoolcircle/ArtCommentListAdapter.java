@@ -1,10 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
-
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
@@ -16,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -30,21 +26,21 @@ import com.jsy_jiaobao.po.personal.RefComment;
 import com.lidroid.xutils.BitmapUtils;
 import com.umeng.analytics.MobclickAgent;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * 文章回复列表的Adapter
- * 
  * @author admin
- * 
  * @param <T>
  */
 public class ArtCommentListAdapter<T> extends BaseAdapter {
 
 	private Context mContext;
 	private BitmapUtils bitmap;
-	private String str_todaytime;
-	private String[] str_todaytimes;
-	private SimpleDateFormat dateFormat;
-	private Date today;
+	private String[] str_todayTimes;
 	private ArrayList<Comment> commentsList;
 	private ArrayList<RefComment> refcomments;
 	private String mainURL;
@@ -52,11 +48,11 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 	public ArtCommentListAdapter(Context mContext) {
 		this.mContext = mContext;
 		bitmap = JSYApplication.getInstance().bitmap;
-		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
-		today = new Date(System.currentTimeMillis());
-		str_todaytime = dateFormat.format(today);
-		str_todaytimes = str_todaytime.split(" ");
+		Date today = new Date(System.currentTimeMillis());
+		String str_todaytime = dateFormat.format(today);
+		str_todayTimes = str_todaytime.split(" ");
 		mainURL = ACache.get(mContext.getApplicationContext()).getAsString(
 				"MainUrl");
 	}
@@ -116,7 +112,7 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 		layout_refcomments.removeAllViews();
 		tv_number.setText(comment.getNumber());
 		String[] str_times = comment.getRecDate().split("T");
-		if (str_times[0].equals(str_todaytimes[0])) {
+		if (str_times[0].equals(str_todayTimes[0])) {
 			tv_time.setText(str_times[1]);
 		} else {
 			tv_time.setText(str_times[0]);
@@ -131,10 +127,10 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 		tv_cai.setText("踩(" + comment.getCaiCount() + ")");
 		if (!TextUtils.isEmpty(comment.getRefID())) {
 			String[] refIDs = comment.getRefID().split(",");
-			for (int i = 0; i < refIDs.length; i++) {
+			for (String refID : refIDs) {
 				for (int j = 0; j < refcomments.size(); j++) {
 					RefComment refComment = refcomments.get(j);
-					if (refIDs[i].equals(String.valueOf(refComment.getTabID()))) {
+					if (refID.equals(String.valueOf(refComment.getTabID()))) {
 						layout_refcomments.addView(creatRefView(refComment,
 								parent));
 					}
@@ -161,7 +157,7 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 			public void onClick(View v) {
 				MobclickAgent.onEvent(mContext, mContext.getResources()
 						.getString(R.string.ArticleDetailsActivity_listLike));
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(Constant.msgcenter_article_AddScore_like);
 				post.add(comment);
 				EventBusUtil.post(post);
@@ -177,7 +173,7 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 								mContext.getResources()
 										.getString(
 												R.string.ArticleDetailsActivity_listAgainst));
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(Constant.msgcenter_article_AddScore_cai);
 				post.add(comment);
 				EventBusUtil.post(post);
@@ -189,7 +185,7 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 			public void onClick(View v) {
 				MobclickAgent.onEvent(mContext, mContext.getResources()
 						.getString(R.string.ArticleDetailsActivity_listReply));
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(Constant.msgcenter_article_click_reply);
 				post.add(comment);
 				EventBusUtil.post(post);
@@ -229,13 +225,13 @@ public class ArtCommentListAdapter<T> extends BaseAdapter {
 			RefComment refComment = (RefComment) v.getTag();
 			switch (v.getId()) {
 			case R.id.artcomment_refcom_tv_like:
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(Constant.msgcenter_article_AddScore_like_ref);
 				post.add(refComment);
 				EventBusUtil.post(post);
 				break;
 			case R.id.artcomment_refcom_tv_cai:
-				ArrayList<Object> post1 = new ArrayList<Object>();
+				ArrayList<Object> post1 = new ArrayList<>();
 				post1.add(Constant.msgcenter_article_AddScore_cai_ref);
 				post1.add(refComment);
 				EventBusUtil.post(post1);
