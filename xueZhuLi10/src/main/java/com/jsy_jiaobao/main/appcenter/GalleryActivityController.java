@@ -28,7 +28,7 @@ public class GalleryActivityController implements ConstantUrl{
 
 	private static GalleryActivityController instance;
 	private Activity mcontext;
-	public static synchronized final GalleryActivityController getInstance() {
+	public static synchronized  GalleryActivityController getInstance() {
 		if (instance == null) {
 			instance = new GalleryActivityController();
 		}
@@ -51,7 +51,7 @@ public class GalleryActivityController implements ConstantUrl{
 	}
 	/**
 	 * 个人相册上传图片
-	 * @param params
+	 * @param params d
 	 */
 	public void uploadSectionImg(File file, RequestParams params){
 		uploadSectionImgCallBack callback = new uploadSectionImgCallBack();
@@ -60,7 +60,7 @@ public class GalleryActivityController implements ConstantUrl{
 	}
 	/**
 	 * 单位相册上传图片
-	 * @param params
+	 * @param params d
 	 */
 	public void UpLoadPhotoUnit(File file, RequestParams params){
 		uploadSectionImgCallBack callback = new uploadSectionImgCallBack();
@@ -73,7 +73,7 @@ public class GalleryActivityController implements ConstantUrl{
 		public void onFailure(HttpException arg0, String arg1) {
 			if (null != mcontext) {
 				LogUtils.e(arg1);
-				ArrayList<Object> post = new ArrayList<Object>();
+				ArrayList<Object> post = new ArrayList<>();
 				post.add(Constant.appcenter_gallery_UpLoadPhotofailed);
 				EventBusUtil.post(post);
 			}
@@ -90,7 +90,7 @@ public class GalleryActivityController implements ConstantUrl{
 					if ("0".equals(ResultCode)) {
 //						String data = Des.decrypt(jsonObj.getString("Data"), BaseActivity.sp_sys.getString("ClientKey", ""));
 						File tag = (File) this.getUserTag();
-						ArrayList<Object> post = new ArrayList<Object>();
+						ArrayList<Object> post = new ArrayList<>();
 						post.add(Constant.appcenter_gallery_UpLoadPhoto);
 						post.add(tag);
 						EventBusUtil.post(post);
@@ -142,7 +142,7 @@ public class GalleryActivityController implements ConstantUrl{
 		}
 	}
 	private void dealResponseInfo(String result, Object tag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer)tag) {
 		case Constant.appcenter_gallery_GetPhotoList:
 			post.add(Constant.appcenter_gallery_GetPhotoList);

@@ -2,7 +2,6 @@ package com.jsy_jiaobao.main.appcenter.sign;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,7 +11,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.Vibrator;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -38,7 +36,6 @@ import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 import com.actionbarsherlock.view.SubMenu;
 import com.baidu.location.BDGeofence;
 import com.baidu.location.BDLocation;
-import com.baidu.location.GeofenceClient.OnGeofenceTriggerListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.BMapManager;
@@ -410,7 +407,6 @@ public class LocationActivity extends BaseActivity {
             }
         }
 
-        ;
     };
 
     /**
@@ -958,8 +954,6 @@ public class LocationActivity extends BaseActivity {
         }
         if (str_signWay == 4) {
             spinner.setVisibility(View.VISIBLE);
-            // customsignname = customList.get(0).get("name").toString();
-            // customsignid = (Integer) customList.get(0).get("id");
             SimpleAdapter adapter = new SimpleAdapter(this, customList,
                     android.R.layout.simple_list_item_1,
                     new String[]{"name"}, new int[]{android.R.id.text1});
@@ -972,9 +966,6 @@ public class LocationActivity extends BaseActivity {
                 @Override
                 public void onItemSelected(AdapterView<?> arg0, View arg1,
                                            int arg2, long arg3) {
-                    // customsignname = customList.get(arg2).get("name")
-                    // .toString();
-                    // customsignid = (Integer) customList.get(arg2).get("id");
                 }
 
                 @Override
