@@ -37,7 +37,7 @@ public class PublishArticleActivityController implements ConstantUrl {
 	private static PublishArticleActivityController instance;
 	private Activity mcontext;
 
-	public static synchronized final PublishArticleActivityController getInstance() {
+	public static synchronized  PublishArticleActivityController getInstance() {
 		if (instance == null) {
 			instance = new PublishArticleActivityController();
 		}
@@ -49,49 +49,49 @@ public class PublishArticleActivityController implements ConstantUrl {
 		return this;
 	}
 
-	/**
-	 * 切换到当前单位
-	 * 
-	 * @param params
-	 */
-	public void changeUnit(RequestParams params) {
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_notice_changeUnit);
-		HttpUtil.InstanceSend(changeCurUnit, params, callback);
-	}
+//	/**
+//	 * 切换到当前单位
+//	 *
+//	 * @param params
+//	 */
+//	public void changeUnit(RequestParams params) {
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_notice_changeUnit);
+//		HttpUtil.InstanceSend(changeCurUnit, params, callback);
+//	}
 
-	/**
-	 * 上传音频
-	 * 
-	 * @param params
-	 */
-	public void uploadSectionAudio(RequestParams params) {
-		DialogUtil.getInstance().getDialog(mcontext,
-				mcontext.getResources().getString(R.string.public_loading));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_notice_uploadSectionAudio);
-		HttpUtil.InstanceSend(uploadSectionImg, params, callback);
+//	/**
+//	 * 上传音频
+//	 *
+//	 * @param params
+//	 */
+//	public void uploadSectionAudio(RequestParams params) {
+//		DialogUtil.getInstance().getDialog(mcontext,
+//				mcontext.getResources().getString(R.string.public_loading));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_notice_uploadSectionAudio);
+//		HttpUtil.InstanceSend(uploadSectionImg, params, callback);
+//
+//	}
 
-	}
-
-	/**
-	 * 上传视频
-	 * 
-	 * @param params
-	 */
-	public void uploadSectionVideo(RequestParams params) {
-		DialogUtil.getInstance().getDialog(mcontext,
-				mcontext.getResources().getString(R.string.public_loading));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_notice_uploadSectionVideo);
-		HttpUtil.InstanceSend(uploadSectionImg, params, callback);
-
-	}
+//	/**
+//	 * 上传视频
+//	 *
+//	 * @param params
+//	 */
+//	public void uploadSectionVideo(RequestParams params) {
+//		DialogUtil.getInstance().getDialog(mcontext,
+//				mcontext.getResources().getString(R.string.public_loading));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_notice_uploadSectionVideo);
+//		HttpUtil.InstanceSend(uploadSectionImg, params, callback);
+//
+//	}
 
 	/**
 	 * 上传图片
 	 * 
-	 * @param params
+	 * @param params 请求数据
 	 */
 	public void uploadSectionImg(RequestParams params) {
 		DialogUtil.getInstance().getDialog(mcontext,
@@ -105,7 +105,7 @@ public class PublishArticleActivityController implements ConstantUrl {
 	/**
 	 * 发布文章
 	 * 
-	 * @param params
+	 * @param params 请求数据
 	 */
 	public void savepublishArticle(RequestParams params) {
 		DialogUtil.getInstance().getDialog(mcontext,
@@ -177,7 +177,7 @@ public class PublishArticleActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		// 上传图片后返回的数据

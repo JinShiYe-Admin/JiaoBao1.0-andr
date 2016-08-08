@@ -36,15 +36,15 @@ public class QiuZhiSiftListAdapter<T> extends BaseAdapter {
 	private Context mContext;
 	private List<T> mData;// 数据
 	private BitmapUtils bitmap;
-	private SimpleDateFormat dateFormat;
-	private Date today;
-	private String str_todaytime;
 	private String[] str_todaytimes;
 	private String mainURL;
 
 	public QiuZhiSiftListAdapter(Context mContext) {
 		this.mContext = mContext;
 		bitmap = JSYApplication.getInstance().bitmap;
+		SimpleDateFormat dateFormat;
+		Date today;
+		String str_todaytime;
 		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
 		today = new Date(System.currentTimeMillis());

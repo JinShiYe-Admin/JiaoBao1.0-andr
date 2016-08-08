@@ -32,7 +32,7 @@ public class QiuZhiPublishQuestionActivityController implements ConstantUrl {
 	private static QiuZhiPublishQuestionActivityController instance;
 	private Activity mContext;
 
-	public static synchronized final QiuZhiPublishQuestionActivityController getInstance() {
+	public static synchronized  QiuZhiPublishQuestionActivityController getInstance() {
 		if (instance == null) {
 			instance = new QiuZhiPublishQuestionActivityController();
 		}
@@ -47,7 +47,7 @@ public class QiuZhiPublishQuestionActivityController implements ConstantUrl {
 	/**
 	 * 上传图片
 	 * 
-	 * @param params
+	 * @param params r
 	 */
 	public void uploadSectionImg(RequestParams params) {
 		CallBack callback = new CallBack();
@@ -55,15 +55,15 @@ public class QiuZhiPublishQuestionActivityController implements ConstantUrl {
 		HttpUtil.InstanceSend(uploadSectionImg, params, callback);
 	}
 
-	public void GetAccIdbyNickname(String[] inputnames) {
-		RequestParams params = new RequestParams();
-		for (int i = 0; i < inputnames.length; i++) {
-			params.addBodyParameter("nicknames", inputnames[i]);
-		}
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_qiuzhi_GetAccIdbyNickname);
-		HttpUtil.InstanceSend(GetAccIdbyNickname, params, callback);
-	}
+//	public void GetAccIdbyNickname(String[] inputnames) {
+//		RequestParams params = new RequestParams();
+//		for (int i = 0; i < inputnames.length; i++) {
+//			params.addBodyParameter("nicknames", inputnames[i]);
+//		}
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_qiuzhi_GetAccIdbyNickname);
+//		HttpUtil.InstanceSend(GetAccIdbyNickname, params, callback);
+//	}
 
 	/**
 	 * <pre>
@@ -241,7 +241,7 @@ public class QiuZhiPublishQuestionActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_qiuzhi_GetCounty:

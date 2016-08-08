@@ -36,9 +36,8 @@ public class QiuZhiAnswerCommentsListAdapter<T> extends BaseAdapter {
 	private Context mContext;
 	private List<T> mData;// 数据
 	private ArrayList<AnswerRefcomment> refcomments;// 答案评论列表
-	private SimpleDateFormat dateFormat;
-	private Date today;// 日期
-	private String str_todaytime;// 日期的格式化
+
+
 	private String[] str_todaytimes;// 日期的Array
 	private String mainURL;// 主Url
 
@@ -46,9 +45,12 @@ public class QiuZhiAnswerCommentsListAdapter<T> extends BaseAdapter {
 		this.mContext = mContext;
 		// bitmap = JSYApplication.getInstance().bitmap;
 		// 日期格式
+		SimpleDateFormat dateFormat;
 		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
 		// 当前日期
+		Date today;// 日期
+		String str_todaytime;// 日期的格式化
 		today = new Date();
 		// 格式化
 		str_todaytime = dateFormat.format(today);
@@ -126,8 +128,8 @@ public class QiuZhiAnswerCommentsListAdapter<T> extends BaseAdapter {
 					.getColor(R.color.black));
 			author.setText(item.getUserName() == null ? item.getJiaoBaoHao()
 					+ ":" : item.getUserName() + ":");
-			against.setText("反对(" + item.getCaiCount() + ")");
-			like.setText("赞(" + item.getLikeCount() + ")");
+			against.setText(mContext.getString(R.string.against, (int)item.getCaiCount()));
+			like.setText(mContext.getString(R.string.like,item.getLikeCount()));
 			against.setEnabled(!item.isAddScore());
 			like.setEnabled(!item.isAddScore());
 			String[] str_times = item.getRecDate().split("T");
@@ -148,9 +150,9 @@ public class QiuZhiAnswerCommentsListAdapter<T> extends BaseAdapter {
 
 							String str = ref.getUserName();
 							if (TextUtils.isEmpty(str)) {
-								str = ref.getJiaoBaoHao() + "";
+								str = ref.getJiaoBaoHao() + ":\n";
 							}
-							tv.setText(str + ":\n   " + ref.getWContent());
+							tv.setText(str +String.valueOf(ref.getWContent()) );
 							tv.setTextSize(12);
 							tv.setPadding(0, 10, 0, 10);
 							layout_ref.addView(tv);
@@ -198,9 +200,6 @@ public class QiuZhiAnswerCommentsListAdapter<T> extends BaseAdapter {
 		return viewHolder.getConvertView();
 	}
 
-	public ArrayList<AnswerRefcomment> getRefcomments() {
-		return refcomments;
-	}
 
 	public void setRefcomments(ArrayList<AnswerRefcomment> refcomments) {
 		this.refcomments = refcomments;

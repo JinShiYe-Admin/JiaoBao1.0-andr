@@ -43,10 +43,9 @@ public class QiuZhiPickedBaseActivity extends BaseActivity implements
 	private Context mContext;
 	private LinearLayout layout;
 	private LinearLayout layout_wv;
-	private TextView tv_question;
+
 	private WebView web_describe;
 	private TextView tv_time;
-	private TextView tv_yuanwen;
 	private PullToRefreshScrollView refreshScrollView;
 	private int mQId;
 
@@ -83,17 +82,18 @@ public class QiuZhiPickedBaseActivity extends BaseActivity implements
 		mContext = this;
 		QiuZhiSiftListActivityController.getInstance().setContext(this);
 		layout = (LinearLayout) findViewById(R.id.qiuzhi_basepicked_layout);
+		TextView tv_question;
 		tv_question = (TextView) findViewById(R.id.qiuzhi_answer_tv_question);
 		refreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
 		layout_wv = (LinearLayout) findViewById(R.id.qiuzhi_basepick_ll_wv);
 		tv_time = (TextView) findViewById(R.id.qiuzhi_basepick_tv_time);
+		TextView tv_yuanwen;
 		tv_yuanwen = (TextView) findViewById(R.id.qiuzhi_answer_tv_question1);
 		tv_yuanwen.setOnClickListener(this);
 		refreshScrollView.setOnRefreshListener(this);
 		if (null != question) {
 			QiuZhiSiftListActivityController.getInstance().ShowPicked(
 					question.getTabID());
-			;
 			setActionBarTitle(question.getTitle());
 			tv_question.setText(question.getTitle());
 		}
@@ -147,9 +147,7 @@ public class QiuZhiPickedBaseActivity extends BaseActivity implements
 				if (!TextUtils.isEmpty(time)) {
 					String[] times = time.split("T");
 					if (times.length == 2) {
-						tv_time.setText(getResources().getString(
-								R.string.edit_at)
-								+ times[0]);
+						tv_time.setText(mContext.getString(R.string.edit_at_string,times[0]));
 					}
 				}
 				// 跳转到下个Activity

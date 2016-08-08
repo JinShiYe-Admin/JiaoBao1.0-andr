@@ -51,7 +51,7 @@ public class QiuZhiChoseClazzActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (savedInstanceState != null) {
-			TabID = (int) savedInstanceState.getInt("TabID");
+			TabID =  savedInstanceState.getInt("TabID");
 			isIndex = savedInstanceState.getBoolean("isIndex");
 		} else {
 			Intent getPass = getIntent();
@@ -75,7 +75,7 @@ public class QiuZhiChoseClazzActivity extends BaseActivity {
 			ArrayList<GetAllCategory> allCategory = (ArrayList<GetAllCategory>) ACache
 					.get(getApplicationContext(), "qiuzhi").getAsObject(
 							"GetAllCategory");
-			ArrayList<GetAllCategory> data = new ArrayList<GetAllCategory>();
+			ArrayList<GetAllCategory> data = new ArrayList<>();
 			if (TabID == 0) {
 				for (GetAllCategory item : allCategory) {
 					data.add(item);
@@ -189,7 +189,7 @@ public class QiuZhiChoseClazzActivity extends BaseActivity {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_qiuzhi_AddMyattCate:
@@ -227,10 +227,10 @@ public class QiuZhiChoseClazzActivity extends BaseActivity {
 	}
 
 	/**
-	 * @view 保存menu
-	 * 
-	 * @功能 保存选择关注状态
-	 */
+	 *
+	 * @param menu menu
+	 * @return return
+     */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		SubMenu sub_search = menu.addSubMenu(R.string.save);

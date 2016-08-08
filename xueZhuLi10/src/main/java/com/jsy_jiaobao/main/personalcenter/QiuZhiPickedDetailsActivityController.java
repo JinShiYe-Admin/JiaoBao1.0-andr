@@ -33,7 +33,7 @@ public class QiuZhiPickedDetailsActivityController implements ConstantUrl {
 	private static QiuZhiPickedDetailsActivityController instance;
 	private Activity mContext;
 
-	public static synchronized final QiuZhiPickedDetailsActivityController getInstance() {
+	public static synchronized  QiuZhiPickedDetailsActivityController getInstance() {
 		if (instance == null) {
 			instance = new QiuZhiPickedDetailsActivityController();
 		}
@@ -118,7 +118,7 @@ public class QiuZhiPickedDetailsActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_qiuzhi_GetPickedById_pd:

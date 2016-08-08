@@ -1,14 +1,5 @@
 package com.jsy_jiaobao.main.personalcenter;
 
-import java.util.ArrayList;
-import org.json.JSONArray;
-import org.json.JSONException;
-import com.jsy.xuezhuli.utils.adapter.ViewHolder;
-import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.po.qiuzhi.GetAllCategory;
-import com.jsy_jiaobao.po.qiuzhi.Subject;
-import com.umeng.analytics.MobclickAgent;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -24,6 +15,17 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jsy.xuezhuli.utils.adapter.ViewHolder;
+import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.po.qiuzhi.GetAllCategory;
+import com.jsy_jiaobao.po.qiuzhi.Subject;
+import com.umeng.analytics.MobclickAgent;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+
 /**
  * 自定义Adapter
  * 
@@ -31,8 +33,8 @@ import android.widget.TextView;
  * 
  */
 public class QiuZhiExpandableListViewAdapter extends BaseExpandableListAdapter {
-	public ArrayList<Subject> group = new ArrayList<Subject>();
-	public ArrayList<ArrayList<Subject>> gridViewChild = new ArrayList<ArrayList<Subject>>();
+	public ArrayList<Subject> group = new ArrayList<>();
+	public ArrayList<ArrayList<Subject>> gridViewChild = new ArrayList<>();
 	LayoutInflater mInflater;
 	Activity context;
 	private boolean isIndex;
@@ -162,7 +164,7 @@ public class QiuZhiExpandableListViewAdapter extends BaseExpandableListAdapter {
 	/**
 	 * 设置gridView点击事件监听
 	 * 
-	 * @param gridView
+	 * @param gridView d
 	 */
 	private void setGridViewListener(final GridView gridView) {
 		gridView.setOnItemClickListener(new GridView.OnItemClickListener() {
@@ -248,7 +250,7 @@ public class QiuZhiExpandableListViewAdapter extends BaseExpandableListAdapter {
 	}
 
 	public ArrayList<Integer> getSelectedSubject() {
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<Integer> list = new ArrayList<>();
 		for (int i = 0; i < gridViewChild.size(); i++) {
 			ArrayList<Subject> child = gridViewChild.get(i);
 			for (Subject children : child) {

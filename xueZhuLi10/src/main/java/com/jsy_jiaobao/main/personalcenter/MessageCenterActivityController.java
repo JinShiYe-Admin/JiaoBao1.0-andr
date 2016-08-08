@@ -1,10 +1,7 @@
 package com.jsy_jiaobao.main.personalcenter;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
+
 import com.google.gson.reflect.TypeToken;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
@@ -19,26 +16,25 @@ import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.main.system.LoginActivityController;
 import com.jsy_jiaobao.po.leave.LeaveConstant;
-import com.jsy_jiaobao.po.leave.UnitLeave;
 import com.jsy_jiaobao.po.personal.GetUnitSectionMessage;
 import com.jsy_jiaobao.po.personal.NoticeGetUnitInfo;
 import com.jsy_jiaobao.po.personal.PublishPermission;
 import com.jsy_jiaobao.po.sys.UserClass;
-import com.jsy_jiaobao.po.sys.VersionInfo;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-import com.lidroid.xutils.http.client.HttpRequest;
-import com.lidroid.xutils.util.LogUtils;
+
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class MessageCenterActivityController implements ConstantUrl {
 
 	private static MessageCenterActivityController instance;
 	private Activity mcontext;
-	private static final String TAG = "MessageCenterActivityController";
 
-	public static synchronized final MessageCenterActivityController getInstance() {
+	public static synchronized  MessageCenterActivityController getInstance() {
 		if (instance == null) {
 			instance = new MessageCenterActivityController();
 		}
@@ -50,105 +46,105 @@ public class MessageCenterActivityController implements ConstantUrl {
 		return this;
 	}
 
-	public void checkVersion() {
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_checkversion);
-		HttpUtil.getInstance().send(HttpRequest.HttpMethod.GET,
-				AndroidCurrVersionInfo, new RequestCallBack<String>() {
-
-					@Override
-					public void onFailure(HttpException arg0, String arg1) {
-						if (mcontext != null) {
-							LogUtils.e(arg1);
-							if (BaseUtils.isNetworkAvailable(mcontext)) {
-								ToastUtil.showMessage(mcontext,
-										R.string.phone_no_web);
-							}
-						}
-					}
-
-					@Override
-					public void onSuccess(ResponseInfo<String> arg0) {
-						ArrayList<Object> post = new ArrayList<Object>();
-						post.add(Constant.msgcenter_checkversion);
-						VersionInfo versionInfo = GsonUtil.GsonToObject(
-								arg0.result, VersionInfo.class);
-						post.add(versionInfo);
-						EventBusUtil.post(post);
-					}
-				});
-	}
-
-	/**
-	 * 取本单位的基础信息 客户端通过本接口获取单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等
-	 * 
-	 * @param params
-	 */
-	public void GetMyFriends(String JiaoBaoHao) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("JiaoBaoHao", JiaoBaoHao);
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_GetMyFriends);
-		HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST, GetMyFriends,
-				params, callback);
-	}
-
-	/**
-	 * 取本单位的基础信息 客户端通过本接口获取单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等
-	 * 
-	 * @param params
-	 */
-	public void getMyUnitInfo(int UnitID) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("UID", String.valueOf(UnitID));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_getMyUnitInfo);
-		HttpUtil.InstanceSend(getMyUnitInfo, params, callback);
-	}
-
-	/**
-	 * 取本单位的所有上级单位基础信息
-	 * 客户端通过本接口获取上级单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等。 
-	 */
-	public void getMyParentUnitInfo(int UnitID) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("UID", String.valueOf(UnitID));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_getMyParentUnitInfo);
-		HttpUtil.InstanceSend(getMyParentUnitInfo, params, callback);
-	}
-
-	/**
-	 * 取最新未读数量---------分享
-	 * 
-	 * @param params
-	 */
-	public void getSectionMessageNew() {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("SectionID", "_2");
-		params.addBodyParameter("TopFlags", "1");
-		params.addBodyParameter("AccID",
-				MessageCenterActivity.sp.getString("JiaoBaoHao", ""));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_notice_getSectionMessageNew);
-		HttpUtil.InstanceSend(getSectionMessage, params, callback);
-	}
-
-	/**
-	 * 取推荐未读数量---------分享
-	 * 
-	 * @param params
-	 */
-	public void getSectionMessageSuggest() {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("SectionID", "_2");
-		params.addBodyParameter("TopFlags", "2");
-		params.addBodyParameter("AccID",
-				MessageCenterActivity.sp.getString("JiaoBaoHao", ""));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_notice_getSectionMessageSuggest);
-		HttpUtil.InstanceSend(getSectionMessage, params, callback);
-	}
+//	public void checkVersion() {
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_checkversion);
+//		HttpUtil.getInstance().send(HttpRequest.HttpMethod.GET,
+//				AndroidCurrVersionInfo, new RequestCallBack<String>() {
+//
+//					@Override
+//					public void onFailure(HttpException arg0, String arg1) {
+//						if (mcontext != null) {
+//							LogUtils.e(arg1);
+//							if (BaseUtils.isNetworkAvailable(mcontext)) {
+//								ToastUtil.showMessage(mcontext,
+//										R.string.phone_no_web);
+//							}
+//						}
+//					}
+//
+//					@Override
+//					public void onSuccess(ResponseInfo<String> arg0) {
+//						ArrayList<Object> post = new ArrayList<Object>();
+//						post.add(Constant.msgcenter_checkversion);
+//						VersionInfo versionInfo = GsonUtil.GsonToObject(
+//								arg0.result, VersionInfo.class);
+//						post.add(versionInfo);
+//						EventBusUtil.post(post);
+//					}
+//				});
+//	}
+//
+//	/**
+//	 * 取本单位的基础信息 客户端通过本接口获取单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等
+//	 *
+//	 * @param params
+//	 */
+//	public void GetMyFriends(String JiaoBaoHao) {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("JiaoBaoHao", JiaoBaoHao);
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_GetMyFriends);
+//		HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST, GetMyFriends,
+//				params, callback);
+//	}
+//
+//	/**
+//	 * 取本单位的基础信息 客户端通过本接口获取单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等
+//	 *
+//	 * @param params
+//	 */
+//	public void getMyUnitInfo(int UnitID) {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("UID", String.valueOf(UnitID));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_getMyUnitInfo);
+//		HttpUtil.InstanceSend(getMyUnitInfo, params, callback);
+//	}
+//
+//	/**
+//	 * 取本单位的所有上级单位基础信息
+//	 * 客户端通过本接口获取上级单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等。 
+//	 */
+//	public void getMyParentUnitInfo(int UnitID) {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("UID", String.valueOf(UnitID));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_getMyParentUnitInfo);
+//		HttpUtil.InstanceSend(getMyParentUnitInfo, params, callback);
+//	}
+//
+//	/**
+//	 * 取最新未读数量---------分享
+//	 *
+//	 * @param params
+//	 */
+//	public void getSectionMessageNew() {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("SectionID", "_2");
+//		params.addBodyParameter("TopFlags", "1");
+//		params.addBodyParameter("AccID",
+//				MessageCenterActivity.sp.getString("JiaoBaoHao", ""));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_notice_getSectionMessageNew);
+//		HttpUtil.InstanceSend(getSectionMessage, params, callback);
+//	}
+//
+//	/**
+//	 * 取推荐未读数量---------分享
+//	 *
+//	 * @param params
+//	 */
+//	public void getSectionMessageSuggest() {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("SectionID", "_2");
+//		params.addBodyParameter("TopFlags", "2");
+//		params.addBodyParameter("AccID",
+//				MessageCenterActivity.sp.getString("JiaoBaoHao", ""));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_notice_getSectionMessageSuggest);
+//		HttpUtil.InstanceSend(getSectionMessage, params, callback);
+//	}
 
 	// /**
 	// * 取我相关单位的列表及栏目未读文章数量---------分享
@@ -178,34 +174,34 @@ public class MessageCenterActivityController implements ConstantUrl {
 	// HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST,
 	// getSectionMessage, params, callback);
 	// }
-	/**
-	 * 取推荐未读数量---------展示
-	 * 
-	 * @param params
-	 */
-	public void getShowSectionMessageSuggest() {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("SectionID", "_1");
-		params.addBodyParameter("TopFlags", "2");
-		params.addBodyParameter("AccID",
-				MessageCenterActivity.sp.getString("JiaoBaoHao", ""));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_show_getSectionMessageSuggest);
-		HttpUtil.InstanceSend(getSectionMessage, params, callback);
-	}
+//	/**
+//	 * 取推荐未读数量---------展示
+//	 *
+//	 * @param params
+//	 */
+//	public void getShowSectionMessageSuggest() {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("SectionID", "_1");
+//		params.addBodyParameter("TopFlags", "2");
+//		params.addBodyParameter("AccID",
+//				MessageCenterActivity.sp.getString("JiaoBaoHao", ""));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_show_getSectionMessageSuggest);
+//		HttpUtil.InstanceSend(getSectionMessage, params, callback);
+//	}
 
-	/**
-	 * 取我相关单位的列表及栏目未读文章数量---------展示
-	 */
-	public void getShowUnitSectionMessages() {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("SectionID", "2");
-		params.addBodyParameter("AccID",
-				BaseActivity.sp.getString("JiaoBaoHao", ""));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_show_getUnitSectionMessages);
-		HttpUtil.InstanceSend(getUnitSectionMessages, params, callback);
-	}
+//	/**
+//	 * 取我相关单位的列表及栏目未读文章数量---------展示
+//	 */
+//	public void getShowUnitSectionMessages() {
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("SectionID", "2");
+//		params.addBodyParameter("AccID",
+//				BaseActivity.sp.getString("JiaoBaoHao", ""));
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_show_getUnitSectionMessages);
+//		HttpUtil.InstanceSend(getUnitSectionMessages, params, callback);
+//	}
 
 	/**
 	 * 取我可发动态的单位
@@ -222,7 +218,7 @@ public class MessageCenterActivityController implements ConstantUrl {
 	/**
 	 * 取教师关联的班级 
 	 * 
-	 * @param unitID
+	 * @param UnitID y
 	 */
 	public void getmyUserClass(int UnitID) {
 		DialogUtil.getInstance().getDialog(mcontext,
@@ -297,10 +293,9 @@ public class MessageCenterActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object tag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(tag);
-		NoticeGetUnitInfo getUnitInfo = null;
-		UnitLeave unitLeave = null;
+		NoticeGetUnitInfo getUnitInfo;
 		switch ((Integer) tag) {
 		case Constant.msgcenter_GetMyFriends:
 			// result = "{\"list\":["+result+"]}";

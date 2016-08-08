@@ -36,7 +36,7 @@ public class QiuZhiQuestionDetailsActivityController implements ConstantUrl {
 	private static QiuZhiQuestionDetailsActivityController instance;
 	private Activity mContext;
 
-	public static synchronized final QiuZhiQuestionDetailsActivityController getInstance() {
+	public static synchronized  QiuZhiQuestionDetailsActivityController getInstance() {
 		if (instance == null) {
 			instance = new QiuZhiQuestionDetailsActivityController();
 		}
@@ -124,7 +124,7 @@ public class QiuZhiQuestionDetailsActivityController implements ConstantUrl {
 	/**
 	 * 上传图片
 	 * 
-	 * @param params
+	 * @param params 请求数据
 	 */
 	public void uploadSectionImg(RequestParams params) {
 		CallBack callback = new CallBack();
@@ -191,7 +191,7 @@ public class QiuZhiQuestionDetailsActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_qiuzhi_QuestionDetail:

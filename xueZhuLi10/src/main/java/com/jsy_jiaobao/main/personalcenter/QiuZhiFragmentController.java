@@ -100,9 +100,9 @@ public class QiuZhiFragmentController implements ConstantUrl {
 	 * RowCount	是	int	记录数量，第一页赋值0，第二页由结果对象中的rowCount中取值
 	 * flag	是	int	回答标志1，求真回答，0普通回答，-1取全部
 	 * uid	是	int	话题Id，
-	 * @param pageNum
-	 * @param RowCount
-	 * @param flag
+	 * @param pageNum p
+	 * @param RowCount r
+ 	 * @param flag f
 	 */
 	public void CategoryIndexQuestion(int pageNum, int RowCount, int uid,
 			int flag) {
@@ -120,23 +120,23 @@ public class QiuZhiFragmentController implements ConstantUrl {
 		HttpUtil.InstanceSend(CategoryIndexQuestion, params, callback);
 	}
 
-	/**
-	 * <pre>
-	 * 参数名称	是否必须	类型	描述
-	 * parentId	否	int	父级话题ID，不提供该参数或参数为null则按Subject查询全部话题
-	 * subject	否	string	话题名称关键字，按话题名称相等来查询
-	 */
-	public void GetCategory(String parentId, String subject) {
-		DialogUtil.getInstance().getDialog(mcontext.getActivity(),
-				mcontext.getResources().getString(R.string.public_loading));
-		DialogUtil.getInstance().setCanCancel(false);
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("parentId", parentId);
-		params.addBodyParameter("subject", subject);
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_qiuzhi_GetCategory);
-		HttpUtil.InstanceSend(GetCategory, params, callback);
-	}
+//	/**
+//	 * <pre>
+//	 * 参数名称	是否必须	类型	描述
+//	 * parentId	否	int	父级话题ID，不提供该参数或参数为null则按Subject查询全部话题
+//	 * subject	否	string	话题名称关键字，按话题名称相等来查询
+//	 */
+//	public void GetCategory(String parentId, String subject) {
+//		DialogUtil.getInstance().getDialog(mcontext.getActivity(),
+//				mcontext.getResources().getString(R.string.public_loading));
+//		DialogUtil.getInstance().setCanCancel(false);
+//		RequestParams params = new RequestParams();
+//		params.addBodyParameter("parentId", parentId);
+//		params.addBodyParameter("subject", subject);
+//		CallBack callback = new CallBack();
+//		callback.setUserTag(Constant.msgcenter_qiuzhi_GetCategory);
+//		HttpUtil.InstanceSend(GetCategory, params, callback);
+//	}
 
 	/** 获取主题列表 */
 	public void GetAllCategory() {
@@ -190,7 +190,7 @@ public class QiuZhiFragmentController implements ConstantUrl {
 										.getString("ResultCode");
 
 								if ("0".equals(ResultCode)) {
-									ArrayList<Object> post = new ArrayList<Object>();
+									ArrayList<Object> post = new ArrayList<>();
 									post.add(Constant.msgcenter_qiuzhi_GetCategoryTopQ);
 									ArrayList<QuestionIndexItem> top = GsonUtil.GsonToList(
 											jsonObj.getString("Data"),
@@ -298,7 +298,7 @@ public class QiuZhiFragmentController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object tag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(tag);
 		switch ((Integer) tag) {
 		case Constant.msgcenter_qiuzhi_GetAllCategory:
