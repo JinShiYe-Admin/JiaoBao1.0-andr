@@ -1,10 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +31,11 @@ import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.personal.Photo;
 import com.lidroid.xutils.BitmapUtils;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * 单位空间
  */
@@ -57,7 +57,7 @@ public class UnitSpaceActivity extends BaseActivity {
 	private int IsMyUnit;
 	private BitmapUtils bitmap;
 	private SamplePagerAdapter pagerAdapter;
-	private ArrayList<String> photoUrlList = new ArrayList<String>();
+	private ArrayList<String> photoUrlList = new ArrayList<>();
 	private TextView[] textViews;
 
 	@Override
@@ -118,7 +118,6 @@ public class UnitSpaceActivity extends BaseActivity {
 			outState.putInt("UnitType", UnitType);
 			outState.putInt("IsMyUnit", IsMyUnit);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -129,7 +128,6 @@ public class UnitSpaceActivity extends BaseActivity {
 	private void initViews() {
 		setContentView(R.layout.activity_unitspace);
 		gridView = (GridView) findViewById(R.id.unitspace_gridview);
-		// layout_top = (FrameLayout) findViewById(R.id.unitspace_layout_top);
 		mViewPager = (ViewPager) findViewById(R.id.unitspace_slider_viewpager);
 		slider_viewGroup = (LinearLayout) findViewById(R.id.unitspace_slider_viewGroup);
 		mContext = this;
@@ -144,7 +142,7 @@ public class UnitSpaceActivity extends BaseActivity {
 		bitmap.configDiskCacheEnabled(true);
 		bitmap.configMemoryCacheEnabled(true);
 		@SuppressWarnings("deprecation")
-		int height = (int) (getWindowManager().getDefaultDisplay().getHeight() / 3);
+		int height = getWindowManager().getDefaultDisplay().getHeight() / 3;
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, height);
 		lp.gravity = Gravity.TOP;
@@ -156,8 +154,8 @@ public class UnitSpaceActivity extends BaseActivity {
 
 			@Override
 			public void onPageSelected(int arg0) {
-				for (int i = 0; i < textViews.length; i++) {
-					textViews[i].setBackgroundResource(R.drawable.radio);
+				for (TextView textView : textViews) {
+					textView.setBackgroundResource(R.drawable.radio);
 				}
 				textViews[arg0].setBackgroundResource(R.drawable.radio_sel);
 			}
@@ -170,9 +168,9 @@ public class UnitSpaceActivity extends BaseActivity {
 			public void onPageScrollStateChanged(int arg0) {
 			}
 		});
-		ArrayList<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
+		ArrayList<HashMap<String, Object>> data = new ArrayList<>();
 		for (int i = 0; i < items.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
+			HashMap<String, Object> map = new HashMap<>();
 			map.put("item_image", drawables[i]);
 			data.add(map);
 		}
@@ -189,8 +187,7 @@ public class UnitSpaceActivity extends BaseActivity {
 				Intent intent = new Intent();
 				Bundle bundle = new Bundle();
 				switch (position) {
-				// 单位简介
-				case 0:
+				case 0:// 单位简介
 					intent.setClass(mContext, UnitSpaceBriefInfo.class);
 					bundle.putInt("UnitID", UnitID);
 					bundle.putInt("UnitType", UnitType);
@@ -199,8 +196,7 @@ public class UnitSpaceActivity extends BaseActivity {
 					intent.putExtras(bundle);
 					startActivity(intent);
 					break;
-				// 展示文章
-				case 1:
+				case 1:// 展示文章
 					intent.setClass(mContext, NoticeArtListActivity.class);
 					bundle.putInt("UnitID", UnitID);
 					bundle.putInt("UnitType", UnitType);
@@ -214,10 +210,8 @@ public class UnitSpaceActivity extends BaseActivity {
 					intent.putExtras(bundle);
 					startActivity(intent);
 					break;
-				// 分享文章
-				case 2:
+				case 2:// 分享文章
 					intent.setClass(mContext, NoticeArtListActivity.class);
-
 					bundle.putInt("UnitID", UnitID);
 					bundle.putInt("UnitType", UnitType);
 					bundle.putString("UnitName", UnitName);
@@ -229,10 +223,8 @@ public class UnitSpaceActivity extends BaseActivity {
 					}
 					intent.putExtras(bundle);
 					startActivity(intent);
-
 					break;
-				// 单位成员
-				case 3:
+				case 3:// 单位成员
 					if (UnitType < 3) {
 						intent.setClass(mContext, UnitSpaceExpActivity.class);
 						bundle.putInt("UnitID", UnitID);
@@ -246,8 +238,7 @@ public class UnitSpaceActivity extends BaseActivity {
 								R.string.class_notContain_unitMember);
 					}
 					break;
-				// 下级单位
-				case 4:
+				case 4:// 下级单位
 					if (UnitType < 3) {
 						intent.setClass(mContext,
 								NoticeJuniorListActivity.class);
@@ -261,8 +252,7 @@ public class UnitSpaceActivity extends BaseActivity {
 						ToastUtil.showMessage(mContext, R.string.noLower_unit);
 					}
 					break;
-				// 单位相册
-				case 5:
+				case 5:// 单位相册
 					intent.setClass(mContext, UnitSpacePhotoGroupActivity.class);
 					bundle.putString("UnitID", "" + UnitID);
 					bundle.putInt("UnitType", UnitType);
@@ -306,16 +296,13 @@ public class UnitSpaceActivity extends BaseActivity {
 
 		@Override
 		public void destroyItem(ViewGroup container, int position, Object object) {
-			if (null != null) {
-				container.removeView((View) object);
-			}
+			container.removeView((View) object);
 		}
 
 		@Override
 		public boolean isViewFromObject(View view, Object object) {
 			return view == object;
 		}
-
 	}
 
 	@Override
@@ -339,12 +326,12 @@ public class UnitSpaceActivity extends BaseActivity {
 			@SuppressWarnings("unchecked")
 			ArrayList<Photo> getPhotoList111 = (ArrayList<Photo>) list.get(1);
 			if (null == getPhotoList111) {
-				getPhotoList111 = new ArrayList<Photo>();
+				getPhotoList111 = new ArrayList<>();
 				ToastUtil.showMessage(mContext, R.string.no_photo);
 			}
 			for (int i = 0; i < getPhotoList111.size(); i++) {
 				String[] urls = getPhotoList111.get(i).getSMPhotoPath()
-						.split("\\/");
+						.split("/");
 				String[] names = urls[urls.length - 1].split("\\.");
 				String formt = names[names.length - 1];
 				String str = "";
@@ -374,8 +361,7 @@ public class UnitSpaceActivity extends BaseActivity {
 				textView.setLayoutParams(l);
 				textView.setPadding(0, 0, 20, 0);
 				textViews[j] = textView;
-				if (j == 0) {
-					// 默认进入程序后第一张图片被选中;
+				if (j == 0) {// 默认进入程序后第一张图片被选中;
 					textViews[j].setBackgroundResource(R.drawable.radio_sel);
 				} else {
 					textViews[j].setBackgroundResource(R.drawable.radio);

@@ -26,19 +26,17 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
  */
 public class SinglePictureDisplayActivity extends BaseActivity {
 
-	private ImageView imageView;
 	private DisplayImageOptions options;
 	private String photoPath;
 	private ProgressBar spinner;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		if (savedInstanceState == null) {
-			photoPath = (String) getIntent().getStringExtra("PhotoPath");
+			photoPath = getIntent().getStringExtra("PhotoPath");
 		} else {
-			photoPath = (String) savedInstanceState.getString("PhotoPath");
+			photoPath = savedInstanceState.getString("PhotoPath");
 		}
 		setImageLoader();
 		initViews();
@@ -51,17 +49,14 @@ public class SinglePictureDisplayActivity extends BaseActivity {
 	 */
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
-		// TODO Auto-generated method stub
 		outState.putString("PhotoPath", photoPath);
 		super.onSaveInstanceState(outState);
 	}
 
 	private void setImageLoader() {
-		// TODO Auto-generated method stub
 		// 创建默认的ImageLoader配置参数
 		ImageLoaderConfiguration configuration = ImageLoaderConfiguration
 				.createDefault(this);
-
 		// Initialize ImageLoader with configuration.
 		ImageLoader.getInstance().init(configuration);
 		options = new DisplayImageOptions.Builder()
@@ -77,9 +72,8 @@ public class SinglePictureDisplayActivity extends BaseActivity {
 	 * 初始化界面
 	 */
 	private void initViews() {
-		// TODO Auto-generated method stub
 		setContentLayout(R.layout.item_pager_image);
-		imageView = (ImageView) findViewById(R.id.imageView);
+		ImageView imageView = (ImageView) findViewById(R.id.imageView);
 		spinner = (ProgressBar) findViewById(R.id.loading);
 		photoPath = "file://" + photoPath;
 		ImageLoader.getInstance().displayImage(photoPath, imageView, options,
@@ -127,7 +121,6 @@ public class SinglePictureDisplayActivity extends BaseActivity {
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 	}
 
@@ -142,5 +135,4 @@ public class SinglePictureDisplayActivity extends BaseActivity {
 		}
 		return super.onKeyDown(keyCode, event);
 	}
-
 }

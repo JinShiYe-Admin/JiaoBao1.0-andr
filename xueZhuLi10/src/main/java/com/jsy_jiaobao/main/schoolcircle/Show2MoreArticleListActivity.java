@@ -1,13 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,8 +11,8 @@ import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.XListView;
-import com.jsy_jiaobao.customview.XListViewFooter;
 import com.jsy_jiaobao.customview.XListView.IXListViewListener;
+import com.jsy_jiaobao.customview.XListViewFooter;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.personal.ArthInfo;
@@ -28,11 +20,17 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * 本单位||本班更多文章界面
- * 
  * @author admin
- * 
  */
 public class Show2MoreArticleListActivity extends BaseActivity implements
 		IXListViewListener {

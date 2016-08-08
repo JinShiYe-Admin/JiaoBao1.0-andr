@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 
 import com.jsy.xuezhuli.utils.ACache;
@@ -21,11 +17,15 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class SpacePhotoCreateActivityController implements ConstantUrl{
 	private static SpacePhotoCreateActivityController instance;
-	private Activity mcontext;
+	private Activity mContext;
 
-	public static synchronized final SpacePhotoCreateActivityController getInstance() {
+	public static synchronized SpacePhotoCreateActivityController getInstance() {
 		if (instance == null) {
 			instance = new SpacePhotoCreateActivityController();
 		}
@@ -33,46 +33,43 @@ public class SpacePhotoCreateActivityController implements ConstantUrl{
 	}
 
 	public SpacePhotoCreateActivityController setContext(Activity pActivity) {
-		mcontext = pActivity;
+		mContext = pActivity;
 		return this;
 	}
 	/**
 	 * 个人空间添加相册
-	 * @param params
 	 */
 	public void AddPhotoGroup(RequestParams params){
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_unitspace_AddPhotoGroup);
-		HttpUtil.InstanceNewSend(ACache.get(mcontext.getApplicationContext()).getAsString("MainUrl")+ AddPhotoGroup, params, callback);
+		HttpUtil.InstanceNewSend(ACache.get(mContext.getApplicationContext()).getAsString("MainUrl")+ AddPhotoGroup, params, callback);
 
 	}
 	/**
 	 * 创建单位相册
-	 * @param params
 	 */
 	public void CreateUnitPhotoGroup(RequestParams params){
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_unitspace_CreateUnitPhotoGroup);
-		HttpUtil.InstanceNewSend(ACache.get(mcontext.getApplicationContext()).getAsString("MainUrl")+ CreateUnitPhotoGroup, params, callback);
+		HttpUtil.InstanceNewSend(ACache.get(mContext.getApplicationContext()).getAsString("MainUrl")+ CreateUnitPhotoGroup, params, callback);
 
 	}
 	private class CallBack extends RequestCallBack<String>{
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
-			if (null != mcontext) {
+			if (null != mContext) {
 				DialogUtil.getInstance().cannleDialog();
 				dealResponseInfo("",this.getUserTag());
-				if(BaseUtils.isNetworkAvailable(mcontext)){
-					ToastUtil.showMessage(mcontext,R.string.phone_no_web);
-					
+				if(BaseUtils.isNetworkAvailable(mContext)){
+					ToastUtil.showMessage(mContext,R.string.phone_no_web);
 				}
 			}
 		}
 
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
-			if (null != mcontext) {
+			if (null != mContext) {
 				DialogUtil.getInstance().cannleDialog();
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
@@ -82,21 +79,21 @@ public class SpacePhotoCreateActivityController implements ConstantUrl{
 
 					}else if("8".equals(ResultCode)){
 						dealResponseInfo("",this.getUserTag());
-						LoginActivityController.getInstance().helloService(mcontext);
+						LoginActivityController.getInstance().helloService(mContext);
 					} else {
 						dealResponseInfo("",this.getUserTag());
-						ToastUtil.showMessage(mcontext,jsonObj.getString("ResultDesc"));
+						ToastUtil.showMessage(mContext,jsonObj.getString("ResultDesc"));
 					}
 				} catch (Exception e) {
 					dealResponseInfo("",this.getUserTag());
-					ToastUtil.showMessage(mcontext, mcontext.getResources().getString(R.string.error_serverconnect)+"r1002");
+					ToastUtil.showMessage(mContext, mContext.getResources().getString(R.string.error_serverconnect)+"r1002");
 				} 
 			}
 		}
 
 	}
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer)userTag) {
 		case Constant.msgcenter_unitspace_AddPhotoGroup:
 			post.add(Constant.msgcenter_unitspace_AddPhotoGroup);
@@ -107,11 +104,8 @@ public class SpacePhotoCreateActivityController implements ConstantUrl{
 			post.add(result);
 			break;
 		default:
-
 			break;
 		}
 		EventBusUtil.post(post);
 	}
-
-
 }

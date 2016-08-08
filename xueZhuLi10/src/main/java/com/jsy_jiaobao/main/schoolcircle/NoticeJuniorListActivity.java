@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +19,13 @@ import com.jsy_jiaobao.po.personal.UnitInfo;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * 下级单位列表界面
  * 
@@ -37,7 +37,6 @@ public class NoticeJuniorListActivity extends BaseActivity implements
 	@ViewInject(R.id.layout_listview)
 	private ListView listView;
 	private NoticeUnitsAdapter listAdapter;// 列表Adapter
-	private Context mContext;
 	private int UnitID = 0;// 单位Id
 	private int UnitType = 0;// 1教育局2学校3班级
 
@@ -83,7 +82,7 @@ public class NoticeJuniorListActivity extends BaseActivity implements
 	public void initViews() {
 		setContentLayout(R.layout.layout_listview);
 		ViewUtils.inject(this);
-		mContext = this;
+		Context mContext = this;
 		NoticeJuniorListActivityController.getInstance().setContext(this);
 		listAdapter = new NoticeUnitsAdapter(mContext, 0);
 		listView.setAdapter(listAdapter);
@@ -150,9 +149,7 @@ public class NoticeJuniorListActivity extends BaseActivity implements
 
 	/**
 	 * EventBus 功能组件
-	 * 
 	 * @功能 获取信息并处理
-	 * @param list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {

@@ -1,7 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,53 +17,28 @@ import android.widget.Toast;
 
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.Coder;
-import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy_jiaobao.customview.MyViewPager;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.personal.Photo;
-import com.lidroid.xutils.bitmap.BitmapDisplayConfig;
-import com.lidroid.xutils.bitmap.callback.BitmapLoadFrom;
-import com.lidroid.xutils.bitmap.callback.DefaultBitmapLoadCallBack;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
+import java.util.ArrayList;
+
 /**
- * <pre>
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                   O\  =  /O
- *                ____/`---'\____
- *              .'  \\|     |//  `.
- *             /  \\|||  :  |||//  \
- *            /  _||||| -:- |||||-  \
- *            |   | \\\  -  /// |   |
- *            | \_|  ''\---/''  |   |
- *            \  .-\__  `-`  ___/-. /
- *          ___`. .'  /--.--\  `. . __
- *       ."" '<  `.___\_<|>_/___.'  >'"".
- *      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *      \  \ `-.   \_ __\ /__ _/   .-` /  /
- * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- * 佛祖保佑       永无BUG
  * 相册图片列表界面
  */
 public class UnitSpacePhotoExpActivity extends BaseActivity {
 
-	private LinearLayout layout_body;
 	private Context mContext;
-
 	private ArrayList<Photo> getPgroupList;
-	private ArrayList<String> photoUrlList = new ArrayList<String>();
+	private ArrayList<String> photoUrlList = new ArrayList<>();
 	private int position;
 	private String nameStr;
 
@@ -78,11 +51,11 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 				position = savedInstanceState.getInt("position");
 				getPgroupList = (ArrayList<Photo>) savedInstanceState
 						.getSerializable("photoList");
-				nameStr = (String) savedInstanceState.getString("NameStr");
+				nameStr = savedInstanceState.getString("NameStr");
 				for (int i = 0; i < getPgroupList.size(); i++) {
 					try {
 						String[] urls = getPgroupList.get(i).getBIGPhotoPath()
-								.split("\\/");
+								.split("/");
 						String[] names = urls[urls.length - 1].split("\\.");
 						String formt = names[names.length - 1];
 						String str = "";
@@ -104,7 +77,6 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 					}
 				}
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} else {
@@ -113,7 +85,6 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 		// 创建默认的ImageLoader配置参数
 		ImageLoaderConfiguration configuration = ImageLoaderConfiguration
 				.createDefault(this);
-
 		// Initialize ImageLoader with configuration.
 		ImageLoader.getInstance().init(configuration);
 		initViews();
@@ -130,7 +101,7 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 					position = bundle.getInt("position");
 					getPgroupList = (ArrayList<Photo>) bundle
 							.getSerializable("photoList");
-					nameStr = (String) bundle.getString("NameStr");
+					nameStr = bundle.getString("NameStr");
 					for (int i = 0; i < getPgroupList.size(); i++) {
 						try {
 							String[] urls = getPgroupList.get(i)
@@ -156,7 +127,6 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 						}
 					}
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -171,7 +141,6 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 			outState.putSerializable("photoList", getPgroupList);
 			outState.putString("NameStr", nameStr);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -181,7 +150,7 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 	 */
 	private void initViews() {
 		setContentLayout(R.layout.activity_unitspace_photo);
-		layout_body = (LinearLayout) findViewById(R.id.unitspace_layout_body);
+		LinearLayout layout_body = (LinearLayout) findViewById(R.id.unitspace_layout_body);
 		mContext = this;
 		mCache = ACache.get(getApplicationContext(), "chat");
 		UnitSpaceExpActivityController.getInstance().setContext(this);
@@ -198,7 +167,6 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 	private static class ImageAdapter extends PagerAdapter {
 
 		private ArrayList<String> IMAGE_URLS;
-
 		private LayoutInflater inflater;
 		private DisplayImageOptions options;
 
@@ -295,30 +263,6 @@ public class UnitSpacePhotoExpActivity extends BaseActivity {
 		@Override
 		public Parcelable saveState() {
 			return null;
-		}
-	}
-
-	public class CustomBitmapLoadCallBack extends
-			DefaultBitmapLoadCallBack<ImageView> {
-		private final ProgressBar holder;
-
-		public CustomBitmapLoadCallBack(ProgressBar progressBar) {
-			this.holder = progressBar;
-		}
-
-		@Override
-		public void onLoading(ImageView container, String uri,
-				BitmapDisplayConfig config, long total, long current) {
-			this.holder.setProgress((int) (current * 100 / total));
-			DialogUtil.getInstance().getDialog(mContext, R.string.loading);
-		}
-
-		@Override
-		public void onLoadCompleted(ImageView container, String uri,
-				Bitmap bitmap, BitmapDisplayConfig config, BitmapLoadFrom from) {
-			// super.onLoadCompleted(container, uri, bitmap, config, from);
-			this.holder.setProgress(100);
-			DialogUtil.getInstance().cannleDialog();
 		}
 	}
 

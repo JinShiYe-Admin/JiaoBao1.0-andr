@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,41 +19,21 @@ import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.personal.Photo;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+
 /**
- * <pre>
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                   O\  =  /O
- *                ____/`---'\____
- *              .'  \\|     |//  `.
- *             /  \\|||  :  |||//  \
- *            /  _||||| -:- |||||-  \
- *            |   | \\\  -  /// |   |
- *            | \_|  ''\---/''  |   |
- *            \  .-\__  `-`  ___/-. /
- *          ___`. .'  /--.--\  `. . __
- *       ."" '<  `.___\_<|>_/___.'  >'"".
- *      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *      \  \ `-.   \_ __\ /__ _/   .-` /  /
- * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- * 			               佛祖保佑       永无BUG
  * 相册列表
  */
 public class UnitSpacePhotoActivity extends BaseActivity {
 
-	private LinearLayout layout_body;
 	private Context mContext;
 	private String NameStr;
 	private String GroupInfo;
 	private int UnitID;
 	private int TabID;
 	private int CreateByjiaobaohao;
-	// private ACache mCache;
-	private GridView gridView;
 	private UnitSpacePhotoAdapter adapter;
 
 	@Override
@@ -81,7 +57,6 @@ public class UnitSpacePhotoActivity extends BaseActivity {
 	 * 获取Intent携带的数据
 	 */
 	private void initPass() {
-
 		Intent getPass = getIntent();
 		if (getPass != null) {
 			Bundle bundle = getPass.getExtras();
@@ -110,12 +85,12 @@ public class UnitSpacePhotoActivity extends BaseActivity {
 	 */
 	private void initViews() {
 		setContentLayout(R.layout.activity_unitspace_photo);
-		layout_body = (LinearLayout) findViewById(R.id.unitspace_layout_body);
+		LinearLayout layout_body = (LinearLayout) findViewById(R.id.unitspace_layout_body);
 		mContext = this;
 		mCache = ACache.get(getApplicationContext(), "chat");
 		UnitSpaceExpActivityController.getInstance().setContext(this);
 		setActionBarTitle(NameStr);
-		gridView = new GridView(this);
+		GridView gridView = new GridView(this);
 		gridView.setNumColumns(3);
 		layout_body.addView(gridView);
 		adapter = new UnitSpacePhotoAdapter(mContext);
@@ -133,8 +108,7 @@ public class UnitSpacePhotoActivity extends BaseActivity {
 					Bundle bundle = new Bundle();
 					bundle.putInt("position", position);
 					bundle.putSerializable("photoList", getPgroupList);
-					// 名字
-					bundle.putString("NameStr", NameStr);
+					bundle.putString("NameStr", NameStr);// 名字
 					intent.putExtras(bundle);
 					startActivity(intent);
 				}
@@ -167,12 +141,10 @@ public class UnitSpacePhotoActivity extends BaseActivity {
 		super.onPause();
 	}
 
-	private ArrayList<Photo> getPgroupList = new ArrayList<Photo>();
+	private ArrayList<Photo> getPgroupList = new ArrayList<>();
 
 	/**
 	 * EventBus 功能模块
-	 * 
-	 * @param list
 	 */
 	@SuppressWarnings("unchecked")
 	@Subscribe
@@ -184,14 +156,12 @@ public class UnitSpacePhotoActivity extends BaseActivity {
 			getPgroupList = (ArrayList<Photo>) list.get(1);
 			adapter.setData(getPgroupList);
 			adapter.notifyDataSetChanged();
-
 			break;
 		case Constant.msgcenter_unitspace_GetPhotoByGroup:
 			// 通过相册Id 获取的照片列表
 			getPgroupList = (ArrayList<Photo>) list.get(1);
 			adapter.setData(getPgroupList);
 			adapter.notifyDataSetChanged();
-
 			break;
 		default:
 			break;

@@ -1,31 +1,20 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
 import android.text.Html;
-import android.text.Html.ImageGetter;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
@@ -34,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
@@ -62,34 +52,36 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.umeng.analytics.MobclickAgent;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
 /**
  * 学校圈主界面 list 的Adapter
- * 
  * @author admin
- * 
  * @param <T>
  */
 public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
-
 	private Context mContext;
 	private PopupWindow popupWindow;
 	private PopupWindow popupWindowComment;// 评论的Popup
 	private View parentView;
 	private List<T> mData;
 	private BitmapUtils bitmap;
-	private String str_todaytime;
 	private String[] str_todaytimes;
-	private SimpleDateFormat dateFormat;
-	private Date today;
-	String mainUrl;
+	private String mainUrl;
 	private ShowClickType clickType;
-	private ArrayList<PictureAdapter> picAdapterList = new ArrayList<PictureAdapter>();
-	private ArrayList<CommitAdapter> commitListUnit = new ArrayList<CommitAdapter>();
-	private ArrayList<CommitAdapter> commitListClass = new ArrayList<CommitAdapter>();
-	private ArrayList<CommitAdapter> commitListLocation = new ArrayList<CommitAdapter>();
-	private ArrayList<CommitAdapter> commitListAtt = new ArrayList<CommitAdapter>();
-	private ArrayList<CommitAdapter> commitListAll = new ArrayList<CommitAdapter>();
-
+	private ArrayList<PictureAdapter> picAdapterList = new ArrayList<>();
+	private ArrayList<CommitAdapter> commitListUnit = new ArrayList<>();
+	private ArrayList<CommitAdapter> commitListClass = new ArrayList<>();
+	private ArrayList<CommitAdapter> commitListLocation = new ArrayList<>();
+	private ArrayList<CommitAdapter> commitListAtt = new ArrayList<>();
+	private ArrayList<CommitAdapter> commitListAll = new ArrayList<>();
 	private ImageView pp_like;
 	private ImageView pp_commit;
 	/**
@@ -103,10 +95,10 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 		this.mContext = mContext;
 		bitmap = JSYApplication.getInstance().bitmap;
 		// 日期格式化
-		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
-		today = new Date(System.currentTimeMillis());
-		str_todaytime = dateFormat.format(today);
+		Date today = new Date(System.currentTimeMillis());
+		String str_todaytime = dateFormat.format(today);
 		str_todaytimes = str_todaytime.split(" ");
 		mainUrl = ACache.get(mContext.getApplicationContext()).getAsString(
 				"MainUrl");
@@ -149,8 +141,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 
 	/**
 	 * 功能：对文章进行点赞操作。一篇文章一个用户 （以教宝号为准）只能赞一次。
-	 * 
-	 * @param params
 	 */
 	public void LikeIt(final ArthInfo arth) {
 		RequestParams params = new RequestParams();
@@ -164,18 +154,18 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 					try {
 						JSONObject jsonObj = new JSONObject(arg0.result);
 						String ResultCode = jsonObj.getString("ResultCode");
-
 						if ("0".equals(ResultCode)) {
 							arth.setLikeCount(arth.getLikeCount() + 1);
 							arth.setLikeflag(1);
 							popupWindow.dismiss();
 							ToastUtil.showMessage(mContext,
 									R.string.praise_success);
-							ArrayList<Object> post = new ArrayList<Object>();
+							ArrayList<Object> post = new ArrayList<>();
 							post.add(Constant.msgcenter_articlelist_addComment);
 							EventBusUtil.post(post);
 						}
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 				}
 			}
@@ -190,9 +180,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 
 	/**
 	 * 取本单位栏目文章 详情 客户端通过本接口获取本单位栏目文章。详情
-	 * 
-	 * @param arth
-	 * @param params
 	 */
 	public void GetArthInfo(final ArthInfo arth) {
 		RequestParams params = new RequestParams();
@@ -208,7 +195,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
 										.getString("ResultCode");
-
 								if ("0".equals(ResultCode)) {
 									String data = Des.decrypt(jsonObj
 											.getString("Data"),
@@ -216,7 +202,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 													"ClientKey", ""));
 									ArthInfo GetArthInfo = GsonUtil
 											.GsonToObject(data, ArthInfo.class);
-
 									if (GetArthInfo.getLikeflag() == 0) {
 										LikeIt(arth);
 									} else {
@@ -225,14 +210,13 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 									}
 								}
 							} catch (Exception e) {
+								e.printStackTrace();
 							}
 						}
 					}
 
 					@Override
 					public void onFailure(HttpException arg0, String arg1) {
-						// TODO Auto-generated method stub
-
 					}
 				});
 	}
@@ -335,10 +319,9 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 											pp_input.setText("");
 											DialogUtil.getInstance()
 													.cannleDialog();
-											ArrayList<Object> post = new ArrayList<Object>();
+											ArrayList<Object> post = new ArrayList<>();
 											post.add(Constant.msgcenter_articlelist_addComment);
 											EventBusUtil.post(post);
-											// BaseUtils.hidepan(mContext);
 											popupWindowComment.dismiss();
 										} else {
 											popupWindowComment.dismiss();
@@ -367,8 +350,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 
 	/**
 	 * 显示popWindow
-	 * 
-	 * @param y2
 	 * */
 	public void showPop(View parent, int with, int x, int y) {
 		// 设置popwindow显示位置
@@ -414,14 +395,12 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 				.getView(R.id.item_show2_layout_content);
 		TextView typeName = viewHolder.getView(R.id.item_show2_typename);
 		ImageView openMore = viewHolder.getView(R.id.item_show2_more);
-
 		TextView author = viewHolder.getView(R.id.item_show2_author);
 		TextView unit = viewHolder.getView(R.id.item_show2_unit);
 		TextView title = viewHolder.getView(R.id.item_show2_title);
 		TextView content = viewHolder.getView(R.id.item_show2_content);
 		TextView time = viewHolder.getView(R.id.item_show2_time);
 		TextView like = viewHolder.getView(R.id.item_show2_like);
-		// TextView comment = viewHolder.getView(R.id.item_show2_comment);
 		final TextView showpp = viewHolder.getView(R.id.item_show2_showpp);
 		TextView click = viewHolder.getView(R.id.item_show2_click);
 		CusGridView gridView = viewHolder.getView(R.id.item_show2_gridview);
@@ -429,7 +408,7 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 				.getView(R.id.item_show2_listview);
 		ImageView photo = viewHolder.getView(R.id.item_show2_photo);
 		typeLayout.setVisibility(View.GONE);
-		boolean isShow = false;
+		boolean isShow;
 		try {
 			final ArthInfo arthInfo = (ArthInfo) getItem(position);
 
@@ -490,7 +469,7 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 						showPop(viewHolder.getConvertView(), showpp.getWidth(),
 								x, y);
 						pp_like.setTag(arthInfo);
-						ArrayList<Object> tag = new ArrayList<Object>();
+						ArrayList<Object> tag = new ArrayList<>();
 						tag.add(arthInfo);
 						tag.add(listView);
 						pp_commit.setTag(tag);
@@ -544,7 +523,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 					time.setText(str_times[0]);
 				}
 				like.setText(String.valueOf(arthInfo.getLikeCount()));
-				// comment.setText(String.valueOf(arthInfo.getFeeBackCount()));
 				click.setText(String.valueOf(arthInfo.getClickCount()));
 				// 图片链接
 				String thumbnail = arthInfo.getThumbnail();
@@ -577,7 +555,7 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 				}
 				String unittext = "";
 				if (!TextUtils.isEmpty(SectionID)) {
-					String[] sectionIDs = SectionID.split("\\_");
+					String[] sectionIDs = SectionID.split("_");
 					if (sectionIDs.length > 1) {
 						if (sectionIDs[1].equals("1")) {
 							String url = mainUrl + ConstantUrl.getUnitlogo
@@ -783,7 +761,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 						typeLayout.setVisibility(View.GONE);
 					}
 				} else if (clickType == ShowClickType.classmore) {
-					// unit.setTextColor(mContext.getResources().getColor(R.color.color_b2b2b2));
 					author.setText(arthInfo.getUserName());
 					unittext = arthInfo.getUnitName();
 					boolean b = false;
@@ -814,7 +791,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 						HttpUtil.InstanceSend(CommentsList, params, callback);
 					}
 				} else if (clickType == ShowClickType.unitmore) {
-					// unit.setTextColor(mContext.getResources().getColor(R.color.color_b2b2b2));
 					author.setText(arthInfo.getUserName());
 					unittext = arthInfo.getUnitName();
 					boolean b = false;
@@ -968,8 +944,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 
 							@Override
 							public void onClick(View v) {
-								// MobclickAgent.onEvent(mContext,
-								// mContext.getResources().getString(R.string.));
 							}
 						});
 				if (TextUtils.isEmpty(unittext)) {
@@ -993,7 +967,7 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 
 		private Context mContext;
 		private String userTag;
-		private ArrayList<Comment> commentsList = new ArrayList<Comment>();
+		private ArrayList<Comment> commentsList = new ArrayList<>();
 
 		public CommitAdapter(Context mContext) {
 			this.mContext = mContext;
@@ -1061,7 +1035,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 			if (TextUtils.isEmpty(username)) {
 				username = comment.getJiaoBaoHao() + "";
 			}
-			// String comments = EmojiUtil.filterEmoji(comment.getCommnets());
 			if (getCount() == 6) {
 				if (position == getCount() - 1) {
 					item.setText(Html.fromHtml("<font color=#5a6992>"
@@ -1073,43 +1046,10 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 			} else {
 				item.setText(Html.fromHtml("<font color=#5a6992>" + username
 						+ "</font>" + ":" + comments));
-
 			}
-			//
 			return viewHolder.getConvertView();
 		}
 
-		/**
-		 * ImageGetter用于text图文混排
-		 * 
-		 * @return
-		 */
-		public ImageGetter getImageGetterInstance() {
-			ImageGetter imgGetter = new Html.ImageGetter() {
-				@Override
-				public Drawable getDrawable(String source) {
-					int id = Integer.parseInt(source);
-					@SuppressWarnings("deprecation")
-					Drawable d = mContext.getResources().getDrawable(id);
-					d.setBounds(0, 0, d.getIntrinsicWidth(),
-							d.getIntrinsicHeight());
-					return d;
-				}
-			};
-			return imgGetter;
-		}
-	}
-
-	public static String ToSBC(String input) {
-		char c[] = input.toCharArray();
-		for (int i = 0; i < c.length; i++) {
-			if (c[i] == ' ') {
-				c[i] = '\u3000';
-			} else if (c[i] < '\177') {
-				c[i] = (char) (c[i] + 65248);
-			}
-		}
-		return new String(c);
 	}
 
 	private class CallBack extends RequestCallBack<String> {
@@ -1117,8 +1057,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
-			if (null != mContext) {
-			}
 		}
 
 		public void setListView(CusListView listView) {
@@ -1131,7 +1069,6 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
 					String ResultCode = jsonObj.getString("ResultCode");
-
 					if ("0".equals(ResultCode)) {
 						String data = Des.decrypt(jsonObj.getString("Data"),
 								BaseActivity.sp_sys.getString("ClientKey", ""));
@@ -1141,24 +1078,21 @@ public class Show2ArtListAdapter<T> extends BaseAdapter implements ConstantUrl {
 								.getUserTag();
 						ArrayList<Comment> a = commentsList.getCommentsList();
 						if (a.size() > 0) {
-
 							listView.setVisibility(View.VISIBLE);
 							adapter.setData(a);
 							adapter.notifyDataSetChanged();
 						} else {
 							listView.setVisibility(View.GONE);
 						}
-
 					}
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
 			}
 		}
-
 	}
 
 	public void setParentView(View findViewById) {
-		// TODO Auto-generated method stub
 		this.parentView = findViewById;
 	}
 }

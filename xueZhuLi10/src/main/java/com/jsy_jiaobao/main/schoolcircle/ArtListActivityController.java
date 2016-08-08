@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 
 import com.jsy.xuezhuli.utils.BaseUtils;
@@ -28,35 +24,18 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
- * <pre>
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                   O\  =  /O
- *                ____/`---'\____
- *              .'  \\|     |//  `.
- *             /  \\|||  :  |||//  \
- *            /  _||||| -:- |||||-  \
- *            |   | \\\  -  /// |   |
- *            | \_|  ''\---/''  |   |
- *            \  .-\__  `-`  ___/-. /
- *          ___`. .'  /--.--\  `. . __
- *       ."" '<  `.___\_<|>_/___.'  >'"".
- *      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *      \  \ `-.   \_ __\ /__ _/   .-` /  /
- * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *          		    佛祖保佑       永无BUG
  * 文章列表的Controller
  */
 public class ArtListActivityController implements ConstantUrl {
 	private static ArtListActivityController instance;
-	private Activity mcontext;
+	private Activity mContext;
 
-	public static synchronized final ArtListActivityController getInstance() {
+	public static synchronized ArtListActivityController getInstance() {
 		if (instance == null) {
 			instance = new ArtListActivityController();
 		}
@@ -64,39 +43,24 @@ public class ArtListActivityController implements ConstantUrl {
 	}
 
 	public ArtListActivityController setContext(Activity pActivity) {
-		mcontext = pActivity;
+		mContext = pActivity;
 		return this;
 	}
 
 	/**
 	 * 取本单位栏目文章 客户端通过本接口获取本单位栏目文章。
-	 * 
-	 * @param params
 	 */
 	public void ArthListIndex(RequestParams params) {
-		DialogUtil.getInstance().getDialog(mcontext,
-				mcontext.getResources().getString(R.string.public_loading));
+		DialogUtil.getInstance().getDialog(mContext,
+				mContext.getResources().getString(R.string.public_loading));
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_notice_ArthListIndex);
 		HttpUtil.InstanceSend(ArthListIndex, params, callback);
 	}
 
 	/**
-	 * 取本单位通知 客户端通过本接口获取本单位通知
-	 * 
-	 * @param params
-	 */
-	public void getUnitNotics(RequestParams params) {
-		// DialogUtil.getInstance().getDialog(mcontext,
-		// mcontext.getResources().getString(R.string.public_loading));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_train_getUnitNotics);
-		HttpUtil.InstanceSend(getUnitNotics, params, callback);
-	}
-
-	/**
 	 * 切换单位
-	 * 
+	 *
 	 * @param userClass
 	 */
 	private UserClass userClass;
@@ -117,8 +81,8 @@ public class ArtListActivityController implements ConstantUrl {
 				break;
 			}
 		}
-		DialogUtil.getInstance().getDialog(mcontext,
-				mcontext.getResources().getString(R.string.public_loading));
+		DialogUtil.getInstance().getDialog(mContext,
+				mContext.getResources().getString(R.string.public_loading));
 		RequestParams params = new RequestParams();
 		params.addBodyParameter("UID", String.valueOf(userClass.getSchoolID()));
 		params.addBodyParameter("uType", String.valueOf(RoleIdentity));
@@ -144,13 +108,13 @@ public class ArtListActivityController implements ConstantUrl {
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
-			if (mcontext != null) {
-				if (!mcontext.isFinishing()) {
+			if (mContext != null) {
+				if (!mContext.isFinishing()) {
 					DialogUtil.getInstance().cannleDialog();
 					dealResponseInfo("", this.getUserTag());
 				}
-				if (BaseUtils.isNetworkAvailable(mcontext)) {
-					ToastUtil.showMessage(mcontext, R.string.phone_no_web);
+				if (BaseUtils.isNetworkAvailable(mContext)) {
+					ToastUtil.showMessage(mContext, R.string.phone_no_web);
 
 				}
 			}
@@ -158,7 +122,7 @@ public class ArtListActivityController implements ConstantUrl {
 
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
-			if (!mcontext.isFinishing()) {
+			if (!mContext.isFinishing()) {
 
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
@@ -172,15 +136,15 @@ public class ArtListActivityController implements ConstantUrl {
 					} else if ("8".equals(ResultCode)) {
 						dealResponseInfo("", this.getUserTag());
 						LoginActivityController.getInstance().helloService(
-								mcontext);
+								mContext);
 					} else {
 						dealResponseInfo("", this.getUserTag());
-						ToastUtil.showMessage(mcontext,
+						ToastUtil.showMessage(mContext,
 								jsonObj.getString("ResultDesc"));
 					}
 				} catch (Exception e) {
 					dealResponseInfo("", this.getUserTag());
-					ToastUtil.showMessage(mcontext, mcontext.getResources()
+					ToastUtil.showMessage(mContext, mContext.getResources()
 							.getString(R.string.error_serverconnect) + "r1002");
 				}
 			}
@@ -189,7 +153,7 @@ public class ArtListActivityController implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_notice_ArthListIndex:
 			DialogUtil.getInstance().cannleDialog();

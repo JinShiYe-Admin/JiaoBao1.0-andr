@@ -1,10 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
@@ -14,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.ConstantUrl;
 import com.jsy.xuezhuli.utils.adapter.ViewHolder;
@@ -23,6 +19,11 @@ import com.jsy_jiaobao.main.personalcenter.PersonalSpaceActivity;
 import com.jsy_jiaobao.po.personal.ArthInfo;
 import com.lidroid.xutils.BitmapUtils;
 import com.umeng.analytics.MobclickAgent;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * 单位展示||个人空间文章列表的Adapter
@@ -36,27 +37,21 @@ public class NoticeArtListAdapter<T> extends BaseAdapter {
 	private Context mContext;
 	private List<T> mData;
 	private BitmapUtils bitmap;
-	private String str_todaytime;
 	private String[] str_todaytimes;
-	private SimpleDateFormat dateFormat;
-	private Date today;
 	private String mainURL;
 	private boolean ispc = false;
 
 	/**
-	 * 
-	 * @param mContext
-	 * @param ispc
-	 *            是否是个人空间的文章列表
+	 * @param ispc 是否是个人空间的文章列表
 	 */
 	public NoticeArtListAdapter(Context mContext, boolean ispc) {
 		this.mContext = mContext;
 		this.ispc = ispc;
 		bitmap = JSYApplication.getInstance().bitmap;
-		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
-		today = new Date(System.currentTimeMillis());
-		str_todaytime = dateFormat.format(today);
+		Date today = new Date(System.currentTimeMillis());
+		String str_todaytime = dateFormat.format(today);
 		str_todaytimes = str_todaytime.split(" ");
 		mainURL = ACache.get(mContext.getApplicationContext()).getAsString(
 				"MainUrl");
@@ -156,5 +151,4 @@ public class NoticeArtListAdapter<T> extends BaseAdapter {
 		}
 		return viewHolder.getConvertView();
 	}
-
 }

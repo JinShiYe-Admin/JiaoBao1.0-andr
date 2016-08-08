@@ -1,11 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,29 +26,13 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * 
- * <pre>
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                   O\  =  /O
- *                ____/`---'\____
- *              .'  \\|     |//  `.
- *             /  \\|||  :  |||//  \
- *            /  _||||| -:- |||||-  \
- *            |   | \\\  -  /// |   |
- *            | \_|  ''\---/''  |   |
- *            \  .-\__  `-`  ___/-. /
- *          ___`. .'  /--.--\  `. . __
- *       ."" '<  `.___\_<|>_/___.'  >'"".
- *      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *      \  \ `-.   \_ __\ /__ _/   .-` /  /
- * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- * 			               佛祖保佑       永无BUG
  * 创建相册
  */
 public class SpacePhotoCreateActivity extends BaseActivity {
@@ -68,7 +46,7 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 	private int UnitType;
 	private String Viewtype;
 	private boolean create = false;
-	private ArrayList<Map<String, String>> spdata = new ArrayList<Map<String, String>>();
+	private ArrayList<Map<String, String>> spdata = new ArrayList<>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -80,14 +58,12 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 			initPass();
 		}
 		initViews();
-		initDatas();
 	}
 
 	/**
 	 * 获取Intent携带的数据
 	 */
 	private void initPass() {
-
 		Intent getPass = getIntent();
 		if (getPass != null) {
 			Bundle bundle = getPass.getExtras();
@@ -117,15 +93,14 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 		mContext = this;
 		SpacePhotoCreateActivityController.getInstance().setContext(this);
 		setActionBarTitle("创建相册");
-		initViewtype();
-
+		initViewType();
 		getActionBarBackView().setOnClickListener(backListener);
 		getActionBarTitleView().setOnClickListener(backListener);
 	}
 
 	/**
 	 * ActionBar的监听事件
-	 * 
+	 *
 	 * @功能 存放数据 结束当前Activity
 	 */
 	OnClickListener backListener = new OnClickListener() {
@@ -143,31 +118,31 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 	/**
 	 * 设置相册权限数据
 	 */
-	private void initViewtype() {
+	private void initViewType() {
 		if (UnitType == 9) {
-			Map<String, String> map = new HashMap<String, String>();
+			Map<String, String> map = new HashMap<>();
 			map.put("ID", "0");// Viewtype 相册访问权限:0:私有；1：好友可访问；2：关注可访问；3：游客可访问
 			map.put("Viewtype", "私有");
 			spdata.add(map);
-			Map<String, String> map1 = new HashMap<String, String>();
+			Map<String, String> map1 = new HashMap<>();
 			map1.put("ID", "1");// Viewtype 相册访问权限:0:私有；1：好友可访问；2：关注可访问；3：游客可访问
 			map1.put("Viewtype", "好友可访问");
 			spdata.add(map1);
-			Map<String, String> map11 = new HashMap<String, String>();
+			Map<String, String> map11 = new HashMap<>();
 			map11.put("ID", "2");// Viewtype 相册访问权限:0:私有；1：好友可访问；2：关注可访问；3：游客可访问
 			map11.put("Viewtype", "关注可访问");
 			spdata.add(map11);
-			Map<String, String> map111 = new HashMap<String, String>();
+			Map<String, String> map111 = new HashMap<>();
 			map111.put("ID", "3");// Viewtype
 									// 相册访问权限:0:私有；1：好友可访问；2：关注可访问；3：游客可访问
 			map111.put("Viewtype", "游客可访问");
 			spdata.add(map111);
 		} else {
-			Map<String, String> map = new HashMap<String, String>();
+			Map<String, String> map = new HashMap<>();
 			map.put("ID", "0");// Viewtype 0无限制，1单位内可见
 			map.put("Viewtype", "无限制");
 			spdata.add(map);
-			Map<String, String> map1 = new HashMap<String, String>();
+			Map<String, String> map1 = new HashMap<>();
 			map1.put("ID", "1");// Viewtype 0无限制，1单位内可见
 			map1.put("Viewtype", "单位内可见");
 			spdata.add(map1);
@@ -188,14 +163,10 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 
 			@Override
 			public void onNothingSelected(AdapterView<?> parent) {
-
 			}
 		});
 	}
 
-	private void initDatas() {
-
-	}
 
 	@Override
 	public void onResume() {
@@ -211,9 +182,8 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 
 	/**
 	 * EventBus 功能模块
-	 * 
+	 *
 	 * @功能 网络请求数据的接收和处理
-	 * @param list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
@@ -290,7 +260,7 @@ public class SpacePhotoCreateActivity extends BaseActivity {
 
 	/**
 	 * 系统返回键
-	 * 
+	 *
 	 * @功能 保存数据 关闭当前Activity
 	 */
 	@Override

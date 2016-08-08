@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 
 import com.google.gson.reflect.TypeToken;
@@ -29,17 +25,18 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * 单位成员的Controller
- * 
- * @author admin
- * 
  */
 public class UnitSpaceExpActivityController implements ConstantUrl {
 	private static UnitSpaceExpActivityController instance;
 	private Activity mcontext;
 
-	public static synchronized final UnitSpaceExpActivityController getInstance() {
+	public static synchronized UnitSpaceExpActivityController getInstance() {
 		if (instance == null) {
 			instance = new UnitSpaceExpActivityController();
 		}
@@ -69,8 +66,6 @@ public class UnitSpaceExpActivityController implements ConstantUrl {
 
 	/**
 	 * 取单位内所有组 应用系统通过单位ID，获取单位所有组
-	 * 
-	 * @param params
 	 */
 	public void getUnitGroups(int UID) {
 		RequestParams params = new RequestParams();
@@ -78,13 +73,10 @@ public class UnitSpaceExpActivityController implements ConstantUrl {
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_chat_getUnitGroups);
 		HttpUtil.InstanceSend(getUnitGroups, params, callback);
-
 	}
 
 	/**
 	 * 取单位内所有人员
-	 * 
-	 * @param unitID
 	 */
 	public void getUserInfoByUnitID(int unitID) {
 		RequestParams params = new RequestParams();
@@ -93,32 +85,6 @@ public class UnitSpaceExpActivityController implements ConstantUrl {
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.msgcenter_chat_getUserInfoByUnitID);
 		HttpUtil.InstanceSend(getUserInfoByUnitID, params, callback);
-
-	}
-
-	/**
-	 * 取本单位的所有下级单位基础信息
-	 * 客户端通过本接口获取上级单位的基础信息数据。基础信息数据包括名称，类型，区域，上级单位ID，栏目文章数量和文章更新数据等。 
-	 */
-	public void getMySubUnitInfo(int UnitID) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("UID", String.valueOf(UnitID));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_notice_getMySubUnitInfo);
-		HttpUtil.InstanceSend(getMySubUnitInfo, params, callback);
-
-	}
-
-	/**
-	 * 获取指定学校的所有班级基础数据 客户端通过本接口获取指定学校的所有班级基础数据。基础信息数据包括名称，单位ID，栏目文章数量和文章更新数据等
-	 */
-	public void getSchoolClassInfo(int UnitID) {
-		RequestParams params = new RequestParams();
-		params.addBodyParameter("UID", String.valueOf(UnitID));
-		CallBack callback = new CallBack();
-		callback.setUserTag(Constant.msgcenter_show_getSchoolClassInfo);
-		HttpUtil.InstanceSend(getSchoolClassInfo, params, callback);
-
 	}
 
 	private class CallBack extends RequestCallBack<String> {
@@ -196,7 +162,6 @@ public class UnitSpaceExpActivityController implements ConstantUrl {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
 			break;
 		case Constant.msgcenter_notice_getMySubUnitInfo:
 			post.add(Constant.msgcenter_notice_getMySubUnitInfo);
@@ -225,10 +190,8 @@ public class UnitSpaceExpActivityController implements ConstantUrl {
 			}
 			break;
 		default:
-
 			break;
 		}
 		EventBusUtil.post(post);
 	}
-
 }

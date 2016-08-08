@@ -1,17 +1,12 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -27,20 +22,20 @@ import com.jsy_jiaobao.main.personalcenter.PersonalSpaceActivity;
 import com.jsy_jiaobao.po.sys.Human;
 import com.jsy_jiaobao.po.sys.UnitGroupInfo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 单位成员列表的Adapter
- * 
  * @author admin
- * 
  */
 public class ChatCrowdAdapter extends BaseExpandableListAdapter {
-	public int userId;
 	private int pp = 1;
 	private Context mContext;
 	private ArrayList<UnitGroupInfo> groupList;
 	private ArrayList<ArrayList<Human>> childList;
 	private boolean checkBoxVisible = false;
-	private ArrayList<Human> checkHumanList = new ArrayList<Human>();
+	private ArrayList<Human> checkHumanList = new ArrayList<>();
 
 	public ChatCrowdAdapter(Context fragmentActivity) {
 		this.mContext = fragmentActivity;
@@ -51,18 +46,6 @@ public class ChatCrowdAdapter extends BaseExpandableListAdapter {
 		this.groupList = list;
 		this.childList = child;
 		notifyDataSetChanged();
-	}
-
-	public ArrayList<ArrayList<Human>> getChildList() {
-		return childList;
-	}
-
-	public ArrayList<Human> getCheckedHuman() {
-		return checkHumanList;
-	}
-
-	public void setCheckBoxVisible(boolean checkBoxVisible) {
-		this.checkBoxVisible = checkBoxVisible;
 	}
 
 	public void setPagePosition(int PagePosition) {
@@ -106,7 +89,8 @@ public class ChatCrowdAdapter extends BaseExpandableListAdapter {
 		final Human child = (Human) getChild(groupPosition, childPosition);
 		if (child.getUserID().split("_")[1].equals("0")) {
 			viewHolder.getConvertView().setEnabled(false);
-			nick.setText(child.getUserName() + "(无账号)");
+			String string=child.getUserName() + "(无账号)";
+			nick.setText(string);
 		} else {
 			viewHolder.getConvertView().setEnabled(true);
 			nick.setText(child.getUserName());
@@ -155,28 +139,22 @@ public class ChatCrowdAdapter extends BaseExpandableListAdapter {
 					});
 		} else {
 			checkBox.setVisibility(View.INVISIBLE);
-
 			viewHolder.getConvertView().setOnClickListener(
 					new OnClickListener() {
 
 						@Override
 						public void onClick(View v) {
-							String nickstr = child.getUserName();
-							if (TextUtils.isEmpty(nickstr)) {
-								nickstr = child.getUserID().split("_")[1];
+							String nickStr = child.getUserName();
+							if (TextUtils.isEmpty(nickStr)) {
+								nickStr = child.getUserID().split("_")[1];
 							}
-							if (1 == pp) {
-								// String userID = child.getUserID()+"";
-								// RongClsoud.getInstance().getRongIM().startPrivateChat(mContext,
-								// userID, nickstr);
-							} else {
-								//
+							if (1 != pp) {
 								Intent intent = new Intent(mContext,
 										PersonalSpaceActivity.class);
 								Bundle args = new Bundle();
 								args.putString("JiaoBaoHao", child.getUserID()
 										.split("_")[1]);
-								args.putString("UserName", nickstr);
+								args.putString("UserName", nickStr);
 								args.putString("UserID", child.getUserID() + "");
 								intent.putExtras(args);
 								mContext.startActivity(intent);
@@ -189,7 +167,6 @@ public class ChatCrowdAdapter extends BaseExpandableListAdapter {
 	}
 
 	// ----------------Group----------------//
-
 	@Override
 	public Object getGroup(int groupPosition) {
 		return groupList.get(groupPosition);
@@ -218,11 +195,6 @@ public class ChatCrowdAdapter extends BaseExpandableListAdapter {
 		UnitGroupInfo string = groupList.get(groupPosition);
 		flag.setVisibility(View.INVISIBLE);
 		name.setText(string.getGroupName());
-		// if (isExpanded) {
-		// flag.setImageResource(R.drawable.expan_group_minus);
-		// }else{
-		// flag.setImageResource(R.drawable.expan_group_plus);
-		// }
 		return viewHolder.getConvertView();
 	}
 
@@ -235,25 +207,4 @@ public class ChatCrowdAdapter extends BaseExpandableListAdapter {
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
 		return true;
 	}
-
-	// 创建组/子视图
-	public TextView getGenericView(String s) {
-		// Layout parameters for the ExpandableListView
-		AbsListView.LayoutParams lp = new AbsListView.LayoutParams(
-				ViewGroup.LayoutParams.MATCH_PARENT, 70);
-
-		TextView text = new TextView(mContext);
-		text.setLayoutParams(lp);
-		text.setTextSize(16);
-		text.setBackgroundColor(mContext.getResources().getColor(
-				R.color.sendmessage_bg));
-		// Center the text vertically
-		text.setGravity(Gravity.CENTER_VERTICAL | Gravity.START);
-		// Set the text starting position
-		text.setPadding(50, 2, 0, 2);
-
-		text.setText(s);
-		return text;
-	}
-
 }

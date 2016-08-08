@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.schoolcircle;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,11 +25,13 @@ import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.jsy_jiaobao.po.sys.UserUnit;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+
 /**
  * 相册列表界面
- * 
  * @author admin
- * 
  */
 public class UnitSpacePhotoGroupActivity extends BaseActivity {
 
@@ -45,8 +43,6 @@ public class UnitSpacePhotoGroupActivity extends BaseActivity {
 	private String UnitID;
 	/** 个人相册时为9 */
 	private int UnitType;
-	// private ACache mCache;
-	private GridView gridView;
 	private UnitSpacePhotoAdapter adapter;
 
 	@Override
@@ -58,13 +54,10 @@ public class UnitSpacePhotoGroupActivity extends BaseActivity {
 			UnitName = savedInstanceState.getString("UnitName");
 			UnitID = savedInstanceState.getString("UnitID");
 		} else {
-			// 获取Intent携带的数据
-			initPass();
+			initPass();// 获取Intent携带的数据
 		}
-		// 初始化界面
-		initViews();
-		// 加载数据
-		initDatas();
+		initViews();// 初始化界面
+		initDatas();// 加载数据
 	}
 
 	/***
@@ -108,7 +101,7 @@ public class UnitSpacePhotoGroupActivity extends BaseActivity {
 		mCache = ACache.get(getApplicationContext(), "chat");
 		UnitSpaceActivityController.getInstance().setContext(this);
 		setActionBarTitle(ClickName);
-		gridView = new GridView(this);
+		GridView gridView = new GridView(this);
 		gridView.setNumColumns(3);
 		layout_body.addView(gridView);
 		adapter = new UnitSpacePhotoAdapter(mContext);
@@ -177,29 +170,24 @@ public class UnitSpacePhotoGroupActivity extends BaseActivity {
 	 * EventBus 功能模块
 	 * 
 	 * @功能 获取网络请求返回数据 并处理
-	 * @param list
 	 */
 	@SuppressWarnings("unchecked")
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
 		int tag = (Integer) list.get(0);
 		switch (tag) {
-		case Constant.msgcenter_unitspace_GetUnitPGroup:
-			// 获取相册数组
+		case Constant.msgcenter_unitspace_GetUnitPGroup:// 获取相册数组
 			getPgroupList = (ArrayList<UnitPGroup>) list.get(1);
 			adapter.setData(getPgroupList);
 			adapter.notifyDataSetChanged();
 			break;
-		case Constant.msgcenter_personalspace_GetPhotoList:
-			// 获取照片列表
+		case Constant.msgcenter_personalspace_GetPhotoList:// 获取照片列表
 			ArrayList<Gallery> getMyList = (ArrayList<Gallery>) list.get(1);
 			adapter.setData(getMyList);
 			adapter.setJiaoBaoHao(UnitID);
 			adapter.notifyDataSetChanged();
-
 			break;
-		case Constant.msgcenter_publish_getmyUserClass:
-			// 获取我的班级
+		case Constant.msgcenter_publish_getmyUserClass:// 获取我的班级
 			ArrayList<UserClass> list1 = (ArrayList<UserClass>) list.get(1);
 			for (int i = 0; i < list1.size(); i++) {
 				if (UnitID.equals(String
@@ -228,12 +216,10 @@ public class UnitSpacePhotoGroupActivity extends BaseActivity {
 
 	/**
 	 * ActionBar上的按钮
-	 * 
 	 * @功能 创建相册 上传照片
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
 		SubMenu sub_menu = menu.addSubMenu(R.string.system).setIcon(
 				R.drawable.top_btn_menu);
 		sub_menu.add(1, 1011, 0, R.string.new_album);
@@ -361,7 +347,6 @@ public class UnitSpacePhotoGroupActivity extends BaseActivity {
 			}
 			break;
 		}
-
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 }
