@@ -64,10 +64,10 @@ public class ShowPopup implements ConstantUrl{
 	
 	private int uType;
 	
-	List<String> childData = new ArrayList<String>();
+	List<String> childData = new ArrayList<>();
 	public ShowPopup(Context context){
 		this.mcontext = context;
-		sp = mcontext.getSharedPreferences(Constant.SP_TB_USER, mcontext.MODE_PRIVATE);
+		sp = mcontext.getSharedPreferences(Constant.SP_TB_USER,Context.MODE_PRIVATE);
 		editor = sp.edit();
 		dialog = BaseUtils.showDialog(mcontext, R.string.getting_checkAttendanceModel_message_waiting);
 		dialog.setCanceledOnTouchOutside(false);
@@ -92,7 +92,7 @@ public class ShowPopup implements ConstantUrl{
 		ppw.setFocusable(true);
 		ppw.setContentView(popupLayout);
 		ppw.showAtLocation(layout, Gravity.CENTER|Gravity.TOP, 0, y);
-		List<String> parentData = new ArrayList<String>();
+		List<String> parentData = new ArrayList<>();
 		for (int i = 0; i < listUserIdentity.size(); i++) {
 			parentData.add(listUserIdentity.get(i).getRoleIdName());
 		}
@@ -101,7 +101,7 @@ public class ShowPopup implements ConstantUrl{
 		parentAdapter.setSelect(0);
 		uType = listUserIdentity.get(0).getRoleIdentity();
 		childData = getChildData(0);
-		childAdapter = new ArrayAdapter<String>(mcontext,android.R.layout.simple_list_item_1,childData);
+		childAdapter = new ArrayAdapter<>(mcontext,android.R.layout.simple_list_item_1,childData);
 		parent.setAdapter(parentAdapter);
 		child.setAdapter(childAdapter);
 		parent.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -182,7 +182,7 @@ public class ShowPopup implements ConstantUrl{
      * classId	是	int	班级ID
      * accountId	是	int	教宝号
      * accountType	是	int	角色(1、家长2、学生)
-     * @param i 
+     * @param i  e
      */
     private void GetLogin(int i){
     	int RoleIdentity = sp.getInt("RoleIdentity", 0);
@@ -198,11 +198,11 @@ public class ShowPopup implements ConstantUrl{
 	private class ParentAdapter extends BaseAdapter{
 		List<String> list;
 		Context context;
-		private LayoutInflater mInflater;
+//		private LayoutInflater mInflater;
 		int flag;
 		public ParentAdapter(Context context){
 			this.context = context;
-			mInflater = LayoutInflater.from(context);
+//			mInflater = LayoutInflater.from(context);
 		}
 		public void setData(List<String> list){
 			this.list = list;

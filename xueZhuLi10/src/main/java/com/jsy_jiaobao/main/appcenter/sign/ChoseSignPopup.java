@@ -174,8 +174,7 @@ public class ChoseSignPopup {
 
 		@Override
 		public View getItem(int index, View cachedView, ViewGroup parent) {
-			View view = super.getItem(index, cachedView, parent);
-			return view;
+			return super.getItem(index, cachedView, parent);
 		}
 
 		@Override

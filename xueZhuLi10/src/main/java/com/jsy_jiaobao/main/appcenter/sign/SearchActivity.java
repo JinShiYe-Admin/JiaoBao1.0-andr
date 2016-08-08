@@ -2,15 +2,14 @@ package com.jsy_jiaobao.main.appcenter.sign;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
@@ -55,24 +54,13 @@ import java.util.List;
 
 /**
  * Android实现日历控件
- * @Description: Android实现日历控件
-
- * @File: MainActivity.java
-
- * @Package com.calendar.demo
-
- * @Author Hanyonglu
-
- * @Date 2012-6-21 上午11:42:32
-
- * @Version V1.0
  */
 public class SearchActivity extends BaseActivity implements OnRefreshListener2<ScrollView>{
 	
 	@ViewInject(R.id.pull_refresh_scrollview)private PullToRefreshScrollView mPullRefreshScrollView;
 	// 生成日历，外层容器
 
-	private ArrayList<DateWidgetDayCell> days = new ArrayList<DateWidgetDayCell>();
+	private ArrayList<DateWidgetDayCell> days = new ArrayList<>();
 
 	// 日期变量
 	public static Calendar calStartDate = Calendar.getInstance();
@@ -84,16 +72,9 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 	private int iMonthViewCurrentMonth = 0;
 	private int iMonthViewCurrentYear = 0;
 	private int iFirstDayOfWeek = Calendar.MONDAY;
-
-	private int Calendar_Width = 0;
 	private int Cell_Width = 0;
-	
 	// 页面控件
 	@ViewInject(R.id.search_Top_Date)TextView Top_Date;
-	@ViewInject(R.id.search_btn_pre_month)Button btn_pre_month;
-	@ViewInject(R.id.search_btn_pre_year)Button btn_pre_year;
-	@ViewInject(R.id.search_btn_next_month)Button btn_next_month;
-	@ViewInject(R.id.search_btn_next_year)Button btn_next_year;
 	private Context mContext;
 	CusListView signlist = null;
 	LinearLayout mainLayout = null;
@@ -101,7 +82,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 
 	// 数据源
 	ArrayList<String> Calendar_Source = null;
-	Hashtable<Integer, Integer> calendar_Hashtable = new Hashtable<Integer, Integer>();
+	Hashtable<Integer, Integer> calendar_Hashtable = new Hashtable<>();
 	Boolean[] flag = null;
 	Calendar startDate = null;
 	Calendar endDate = null;
@@ -120,7 +101,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 
 	String UserName = "";
 	private int UserId;
-	private SharedPreferences sp;
+
 	private List<GetDaySign> list_month;
 	
 	private SignListAdapter signAdapter;
@@ -192,7 +173,6 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 							GetSignInfo getListMonth = GsonUtil.GsonToObject(arg0.result, GetSignInfo.class);
 							list_month = getListMonth.getData();
 							updateCalendar();
-						} else {
 						}
 					} catch (JSONException e) {
 						BaseUtils.shortToast(mContext, getResources().getString(R.string.error_serverconnect));
@@ -215,10 +195,11 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 		// 获得屏幕宽和高，并計算出屏幕寬度分七等份的大小
 		WindowManager windowManager = getWindowManager();
 		Display display = windowManager.getDefaultDisplay();
-		int screenWidth = display.getWidth();
-		Calendar_Width = screenWidth;
+		Point size = new Point();
+		display.getSize(size);
+		int Calendar_Width;
+		Calendar_Width = size.x;
 		Cell_Width = Calendar_Width / 7 + 1;
-
 		// 制定布局文件，并设置属性
 		// mainLayout.setPadding(2, 0, 2, 0);
 		setContentLayout(R.layout.activity_calendar);
@@ -283,13 +264,13 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 		isNormal_backColor = this.getResources().getColor(R.color.mediumvioletred);
 	}
 
-	protected String GetDateShortString(Calendar date) {
-		String returnString = date.get(Calendar.YEAR) + "/";
-		returnString += date.get(Calendar.MONTH) + 1 + "/";
-		returnString += date.get(Calendar.DAY_OF_MONTH);
-		
-		return returnString;
-	}
+//	protected String GetDateShortString(Calendar date) {
+//		String returnString = date.get(Calendar.YEAR) + "/";
+//		returnString += date.get(Calendar.MONTH) + 1 + "/";
+//		returnString += date.get(Calendar.DAY_OF_MONTH);
+//
+//		return returnString;
+//	}
 
 	//得到当天在日历中的序号
 	private int GetNumFromDate(Calendar now, Calendar returnDate) {
@@ -301,9 +282,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 		long todayMs = cNow.getTimeInMillis();
 		long returnMs = cReturnDate.getTimeInMillis();
 		long intervalMs = todayMs - returnMs;
-		int index = millisecondsToDays(intervalMs);
-		
-		return index;
+		return millisecondsToDays(intervalMs);
 	}
 
 	private int millisecondsToDays(long intervalMs) {
@@ -421,14 +400,13 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 	private DateWidgetDayCell updateCalendar() {
 		boolean begin = false;
 		DateWidgetDayCell daySelected = null;
-		boolean bSelected = false;
+		boolean bSelected;
 		final boolean bIsSelection = (calSelected.getTimeInMillis() != 0);
 		final int iSelectedYear = calSelected.get(Calendar.YEAR);
 		final int iSelectedMonth = calSelected.get(Calendar.MONTH);
 		final int iSelectedDay = calSelected.get(Calendar.DAY_OF_MONTH);
 		calCalendar.setTimeInMillis(calStartDate.getTimeInMillis());
 		int j =0;
-		int daynumber = BaseUtils.getDayNumber(iMonthViewCurrentYear, iMonthViewCurrentMonth+1);
 		for (int i = 0; i < days.size(); i++) {
 			
 			List<SignInfo> list_day =null;
@@ -519,7 +497,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 			//是否有记录
 			boolean hasRecord = false;
 			
-			if (flag != null && flag[i] == true && calendar_Hashtable != null&& calendar_Hashtable.containsKey(i)) {
+			if (flag != null && flag[i] && calendar_Hashtable != null&& calendar_Hashtable.containsKey(i)) {
 				// hasRecord = flag[i];
 				hasRecord = Calendar_Source.get(calendar_Hashtable.get(i)).contains(UserName);
 			}
@@ -704,7 +682,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 
 	// 得到当前日历中的第一天
 	public Calendar GetStartDate() {
-		int iDay = 0;
+		int iDay ;
 		Calendar cal_Now = Calendar.getInstance();
 		cal_Now.set(Calendar.DAY_OF_MONTH, 1);
 		cal_Now.set(Calendar.HOUR_OF_DAY, 0);
@@ -725,7 +703,7 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 
 	public Calendar GetEndDate(Calendar startDate) {
 		// Calendar end = GetStartDate(enddate);
-		Calendar endDate = Calendar.getInstance();
+		Calendar endDate ;
 		endDate = (Calendar) startDate.clone();
 		endDate.add(Calendar.DAY_OF_MONTH, 41);
 		return endDate;

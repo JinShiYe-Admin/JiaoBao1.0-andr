@@ -1,9 +1,6 @@
 package com.jsy_jiaobao.main.appcenter.sign;
 
-import java.util.List;
-
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,13 +10,15 @@ import com.jsy.xuezhuli.utils.adapter.ViewHolder;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.sign.search.SignInfo;
 
+import java.util.List;
+
 public class SignListAdapter extends BaseAdapter {
-	private LayoutInflater mInflater;
+//	private LayoutInflater mInflater;
 	private Context context;
 	private List<SignInfo> list_daysignInfo;
 	public SignListAdapter(Context context){
 		this.context = context;
-		mInflater = LayoutInflater.from(context);
+//		mInflater = LayoutInflater.from(context);
 	}
 	public void setListData(List<SignInfo> list_daysignInfo){
 		this.list_daysignInfo = list_daysignInfo;	
