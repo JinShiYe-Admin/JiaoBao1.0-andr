@@ -1,7 +1,6 @@
 package com.jsy_jiaobao.customview;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ExpandableListView;
 

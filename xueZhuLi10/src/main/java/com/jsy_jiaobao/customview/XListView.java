@@ -8,14 +8,10 @@
  */
 package com.jsy_jiaobao.customview;
 
-
-import com.jsy_jiaobao.main.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.MeasureSpec;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.AbsListView;
@@ -25,6 +21,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
+
+import com.jsy_jiaobao.main.R;
 
 public class XListView extends ListView implements OnScrollListener {
 
@@ -66,9 +64,6 @@ public class XListView extends ListView implements OnScrollListener {
 	private final static float OFFSET_RADIO = 1.8f; // support iOS like pull
 													// feature.
 
-	/**
-	 * @param context
-	 */
 	public XListView(Context context) {
 		super(context);
 		initWithContext(context);
@@ -115,7 +110,7 @@ public class XListView extends ListView implements OnScrollListener {
 	@Override
 	public void setAdapter(ListAdapter adapter) {
 		// make sure XListViewFooter is the last footer view, and only add once.
-		if (mIsFooterReady == false) {
+		if (!mIsFooterReady) {
 			mIsFooterReady = true;
 			addFooterView(mFooterView);
 		}
@@ -124,8 +119,6 @@ public class XListView extends ListView implements OnScrollListener {
 
 	/**
 	 * enable or disable pull down refresh feature.
-	 * 
-	 * @param enable
 	 */
 	public void setPullRefreshEnable(boolean enable) {
 		mEnablePullRefresh = enable;
@@ -138,8 +131,6 @@ public class XListView extends ListView implements OnScrollListener {
 
 	/**
 	 * enable or disable pull up load more feature.
-	 * 
-	 * @param enable
 	 */
 	public void setPullLoadEnable(boolean enable) {
 		mEnablePullLoad = enable;
@@ -164,7 +155,7 @@ public class XListView extends ListView implements OnScrollListener {
 	 * stop refresh, reset header view.
 	 */
 	public void stopRefresh() {
-		if (mPullRefreshing == true) {
+		if (mPullRefreshing) {
 			mPullRefreshing = false;
 			resetHeaderHeight();
 		}
@@ -174,7 +165,7 @@ public class XListView extends ListView implements OnScrollListener {
 	 * stop load more, reset footer view.
 	 */
 	public void stopLoadMore() {
-		if (mPullLoading == true) {
+		if (mPullLoading) {
 			mPullLoading = false;
 			mFooterView.setState(XListViewFooter.STATE_NORMAL);
 		}
@@ -182,8 +173,6 @@ public class XListView extends ListView implements OnScrollListener {
 
 	/**
 	 * set last refresh time
-	 * 
-	 * @param time
 	 */
 	public void setRefreshTime(String time) {
 		mHeaderTimeView.setText(time);
@@ -361,23 +350,18 @@ public class XListView extends ListView implements OnScrollListener {
 	 * onXScrolling when header/footer scroll back.
 	 */
 	public interface OnXScrollListener extends OnScrollListener {
-		public void onXScrolling(View view);
+		void onXScrolling(View view);
 	}
 
 	/**
 	 * implements this interface to get refresh/load more event.
 	 */
 	public interface IXListViewListener {
-		public void onRefresh();
-		public void onLoadMore();
+		void onRefresh();
+		void onLoadMore();
 	}
 
 	public XListViewFooter getmFooterView() {
 		return mFooterView;
 	}
-
-	public void setmFooterView(XListViewFooter mFooterView) {
-		this.mFooterView = mFooterView;
-	}
-
 }

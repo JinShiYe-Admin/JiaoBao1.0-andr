@@ -5,15 +5,10 @@ import java.util.Calendar;
 /**
  * 日历控件样式绘制类
  * @Description: 日历控件样式绘制类
-
- * @FileName: DayStyle.java 
-
- * @Package com.calendar.demo 
-
+ * @FileName: DayStyle.java
+ * @Package com.calendar.demo
  * @Author Hanyonglu
-
- * @Date 2012-3-18 下午03:33:42 
-
+ * @Date 2012-3-18 下午03:33:42
  * @Version V1.0
  */
 public class DayStyle {

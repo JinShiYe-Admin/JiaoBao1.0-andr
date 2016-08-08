@@ -1,8 +1,5 @@
 package com.jsy_jiaobao.customview;
 
-import java.util.Calendar;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.LinearGradient;
@@ -19,18 +16,16 @@ import android.widget.LinearLayout.LayoutParams;
 import com.jsy_jiaobao.main.appcenter.sign.SearchActivity;
 import com.jsy_jiaobao.po.sign.search.SignInfo;
 
+import java.util.Calendar;
+import java.util.List;
+
 /**
  * 日历控件单元格绘制类
  * @Description: 日历控件单元格绘制类
-
- * @FileName: DateWidgetDayCell.java 
-
- * @Package com.calendar.demo 
-
- * @Author Hanyonglu 
-
- * @Date 2012-3-17 下午03:19:34 
-
+ * @FileName: DateWidgetDayCell.java
+ * @Package com.calendar.demo
+ * @Author Hanyonglu
+ * @Date 2012-3-17 下午03:19:34
  * @Version V1.0
  */
 public class DateWidgetDayCell extends View {
@@ -61,7 +56,7 @@ public class DateWidgetDayCell extends View {
 	public static int ANIM_ALPHA_DURATION = 100;
 
 	public interface OnItemClick {
-		public void OnClick(DateWidgetDayCell item);
+		void OnClick(DateWidgetDayCell item);
 	}
 
 	// 构造函数
@@ -136,15 +131,13 @@ public class DateWidgetDayCell extends View {
 						0xff225599, 0xffbbddff, Shader.TileMode.CLAMP);
 			}
 
-			if (lGradBkg != null) {
-				pt.setShader(lGradBkg);
-				canvas.drawRect(rect, pt);
-			}
+			pt.setShader(lGradBkg);
+			canvas.drawRect(rect, pt);
 
 			pt.setShader(null);
 
 		} else {
-			pt.setColor(getColorBkg(bHoliday, bToday));
+			pt.setColor(getColorBkg(bToday));
 			canvas.drawRect(rect, pt);
 		}
 
@@ -195,7 +188,7 @@ public class DateWidgetDayCell extends View {
 	}
 
 	// 根据条件返回不同颜色值
-	public static int getColorBkg(boolean bHoliday, boolean bToday) {
+	public static int getColorBkg(boolean bToday) {
 		if (bToday)
 			return SearchActivity.isToday_BgColor;
 		// if (bHoliday) //如需周末有特殊背景色，可去掉注释

@@ -1,22 +1,15 @@
 package com.jsy_jiaobao.customview;
 
-import java.util.List;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.main.affairs.WorkListAdapter;
-import com.jsy_jiaobao.po.personal.CommMsg;
-import com.jsy_jiaobao.po.personal.FeeBack;
 /**
  * 三级列表
  * @author Administrator
@@ -117,15 +110,9 @@ public class PCWorkItemView extends LinearLayout{
 			child2_flagview.setBackgroundResource(R.drawable.img_unexpan);
 		}
 	}
-	public void setParentMoreVisiblity(int visibility){
-		parent_more.setVisibility(visibility);
-	}
+
 	/**
 	 * 两个孩子列表
-	 * @param icon
-	 * @param parent
-	 * @param child1
-	 * @param child2
 	 */
 	public void create(int icon,String parent,String child1,String child2){
 		parent_icon.setBackgroundResource(icon);
@@ -142,59 +129,17 @@ public class PCWorkItemView extends LinearLayout{
 	}
 	/**
 	 * 一个孩子列表
-	 * @param icon
-	 * @param parent
-	 * @param child1
 	 */
 	public void create(int icon,String parent,String child1){
 		parent_icon.setBackgroundResource(icon);
 		parent_text.setText(parent);
 		child1_text.setText(child1);
-		layout_child2.setVisibility(8);
+		layout_child2.setVisibility(GONE);
 	}
 	public void create(int icon,String parent){
 		parent_icon.setBackgroundResource(icon);
 		parent_text.setText(parent);
-		child1_text.setVisibility(8);
-		layout_child2.setVisibility(8);
+		child1_text.setVisibility(GONE);
+		layout_child2.setVisibility(GONE);
 	}
-	
-	public ListView getListView1(){
-		if (listview1 != null) {
-			return listview1;
-		}
-		return null;
-	}
-	public ListView getListView2(){
-		if (listview2 != null) {
-			return listview2;
-		}
-		return null;
-	}
-	public void setListData(List<CommMsg> list, WorkListAdapter adapter) {
-		adapter.setData(list);
-		adapter.notifyDataSetChanged();
-	}
-	public void setListFBData(List<FeeBack> list,WorkListAdapter adapter) {
-		adapter.setFBData(list);
-		adapter.notifyDataSetChanged();
-	}
-	public void setList1Adapter(BaseAdapter adapter){
-		listview1.setAdapter(adapter);
-	}
-	public void setList2Adapter(BaseAdapter adapter){
-		listview2.setAdapter(adapter);
-	}
-	/**
-	 * @return 0:layout_parent,
-	 * 		   1:layout_child1,
-	 * 		   2:layout_child2,
-	 * 		   3:listview1,
-	 * 		   4:listview2;
-	 * 		   5img_child1more,6img_child2more
-	 */
-	public View[] getViews(){
-		return new View[]{layout_parent,layout_child1,layout_child2,listview1,listview2,img_child1more,img_child2more};
-	}
-
 }

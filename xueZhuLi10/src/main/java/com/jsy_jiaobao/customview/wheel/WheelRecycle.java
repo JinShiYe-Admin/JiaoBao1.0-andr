@@ -19,11 +19,11 @@
 
 package com.jsy_jiaobao.customview.wheel;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import android.view.View;
 import android.widget.LinearLayout;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Recycle stores wheel items to reuse. 
@@ -109,7 +109,7 @@ public class WheelRecycle {
 	 */
 	private List<View> addView(View view, List<View> cache) {
 		if (cache == null) {
-			cache = new LinkedList<View>();
+			cache = new LinkedList<>();
 		}
 		
 		cache.add(view);
@@ -131,7 +131,6 @@ public class WheelRecycle {
 			while (index < 0) {
 				index = count + index;
 			}
-			index %= count;
 			items = addView(view, items);
 		}
 	}
@@ -149,5 +148,4 @@ public class WheelRecycle {
 		}
 		return null;
 	}
-
 }

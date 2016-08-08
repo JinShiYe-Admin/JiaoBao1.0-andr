@@ -19,11 +19,6 @@
 
 package com.jsy_jiaobao.customview.wheel;
 
-import java.util.LinkedList;
-import java.util.List;
-import com.jsy_jiaobao.customview.wheel.adapter.WheelViewAdapter;
-import com.jsy_jiaobao.main.R;
-
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.graphics.Canvas;
@@ -34,8 +29,13 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
+
+import com.jsy_jiaobao.customview.wheel.adapter.WheelViewAdapter;
+import com.jsy_jiaobao.main.R;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Numeric wheel view.
@@ -69,16 +69,9 @@ public class WheelView extends View {
 	// Center Line
 	private Drawable centerDrawable;
 
-	// Wheel drawables
-	private int wheelBackground = R.drawable.wheel_bg;
-	private int wheelForeground = R.drawable.wheel_val;
-
 	// Shadows drawables
 	private GradientDrawable topShadow;
 	private GradientDrawable bottomShadow;
-
-	// Draw Shadows
-	private boolean drawShadows = true;
 
 	// Scrolling
 	private WheelScroller scroller;
@@ -101,16 +94,16 @@ public class WheelView extends View {
 	private WheelRecycle recycle = new WheelRecycle(this);
 
 	// Listeners
-	private List<OnWheelChangedListener> changingListeners = new LinkedList<OnWheelChangedListener>();
-	private List<OnWheelScrollListener> scrollingListeners = new LinkedList<OnWheelScrollListener>();
-	private List<OnWheelClickedListener> clickingListeners = new LinkedList<OnWheelClickedListener>();
+	private List<OnWheelChangedListener> changingListeners = new LinkedList<>();
+	private List<OnWheelScrollListener> scrollingListeners = new LinkedList<>();
+	private List<OnWheelClickedListener> clickingListeners = new LinkedList<>();
 
 	/**
 	 * Constructor
 	 */
 	public WheelView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		initData(context);
+		initData();
 	}
 
 	/**
@@ -118,7 +111,7 @@ public class WheelView extends View {
 	 */
 	public WheelView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initData(context);
+		initData();
 	}
 
 	/**
@@ -126,14 +119,13 @@ public class WheelView extends View {
 	 */
 	public WheelView(Context context) {
 		super(context);
-		initData(context);
+		initData();
 	}
 
 	/**
 	 * Initializes class data
-	 * @param context the context
 	 */
-	private void initData(Context context) {
+	private void initData() {
 		scroller = new WheelScroller(getContext(), scrollingListener);
 	}
 
@@ -177,23 +169,6 @@ public class WheelView extends View {
 			}
 		}
 	};
-
-	/**
-	 * Set the the specified scrolling interpolator
-	 * @param interpolator the interpolator
-	 */
-	public void setInterpolator(Interpolator interpolator) {
-		scroller.setInterpolator(interpolator);
-	}
-
-	/**
-	 * Gets count of visible items
-	 * 
-	 * @return the count of visible items
-	 */
-	public int getVisibleItems() {
-		return visibleItems;
-	}
 
 	/**
 	 * Sets the desired count of visible items.
@@ -254,14 +229,6 @@ public class WheelView extends View {
 	}
 
 	/**
-	 * Removes wheel changing listener
-	 * @param listener the listener
-	 */
-	public void removeChangingListener(OnWheelChangedListener listener) {
-		changingListeners.remove(listener);
-	}
-
-	/**
 	 * Notifies changing listeners
 	 * @param oldValue the old wheel value
 	 * @param newValue the new wheel value
@@ -281,14 +248,6 @@ public class WheelView extends View {
 	}
 
 	/**
-	 * Removes wheel scrolling listener
-	 * @param listener the listener
-	 */
-	public void removeScrollingListener(OnWheelScrollListener listener) {
-		scrollingListeners.remove(listener);
-	}
-
-	/**
 	 * Notifies listeners about starting scrolling
 	 */
 	protected void notifyScrollingListenersAboutStart() {
@@ -304,22 +263,6 @@ public class WheelView extends View {
 		for (OnWheelScrollListener listener : scrollingListeners) {
 			listener.onScrollingFinished(this);
 		}
-	}
-
-	/**
-	 * Adds wheel clicking listener
-	 * @param listener the listener
-	 */
-	public void addClickingListener(OnWheelClickedListener listener) {
-		clickingListeners.add(listener);
-	}
-
-	/**
-	 * Removes wheel clicking listener
-	 * @param listener the listener
-	 */
-	public void removeClickingListener(OnWheelClickedListener listener) {
-		clickingListeners.remove(listener);
 	}
 
 	/**
@@ -403,59 +346,6 @@ public class WheelView extends View {
 	}
 
 	/**
-	 * Set wheel cyclic flag
-	 * @param isCyclic the flag to set
-	 */
-	public void setCyclic(boolean isCyclic) {
-		this.isCyclic = isCyclic;
-		invalidateWheel(false);
-	}
-
-	/**
-	 * Determine whether shadows are drawn
-	 * @return true is shadows are drawn
-	 */
-	public boolean drawShadows() {
-		return drawShadows;
-	}
-
-	/**
-	 * Set whether shadows should be drawn
-	 * @param drawShadows flag as true or false
-	 */
-	public void setDrawShadows(boolean drawShadows) {
-		this.drawShadows = drawShadows;
-	}
-
-	/**
-	 * Set the shadow gradient color
-	 * @param start
-	 * @param middle
-	 * @param end
-	 */
-	public void setShadowColor(int start, int middle, int end) {
-		SHADOWS_COLORS = new int[] {start, middle, end};
-	}
-
-	/**
-	 * Sets the drawable for the wheel background
-	 * @param resource
-	 */
-	public void setWheelBackground(int resource) {
-		wheelBackground = resource;
-		setBackgroundResource(wheelBackground);
-	}
-
-	/**
-	 * Sets the drawable for the wheel foreground
-	 * @param resource
-	 */
-	public void setWheelForeground(int resource) {
-		wheelForeground = resource;
-		centerDrawable = getContext().getResources().getDrawable(wheelForeground);
-	}
-
-	/**
 	 * Invalidates wheel
 	 * @param clearCaches if true then cached views will be clear
 	 */
@@ -479,6 +369,7 @@ public class WheelView extends View {
 	 */
 	private void initResourcesIfNecessary() {
 		if (centerDrawable == null) {
+			int wheelForeground = R.drawable.wheel_val;
 			centerDrawable = getContext().getResources().getDrawable(wheelForeground);
 		}
 
@@ -490,6 +381,7 @@ public class WheelView extends View {
 			bottomShadow = new GradientDrawable(Orientation.BOTTOM_TOP, SHADOWS_COLORS);
 		}
 
+		int wheelBackground = R.drawable.wheel_bg;
 		setBackgroundResource(wheelBackground);
 	}
 
@@ -613,6 +505,7 @@ public class WheelView extends View {
 			drawCenterRect(canvas);
 		}
 
+		boolean drawShadows = true;
 		if (drawShadows) drawShadows(canvas);
 	}
 
@@ -795,7 +688,7 @@ public class WheelView extends View {
 	 * @return true if items are rebuilt
 	 */
 	private boolean rebuildItems() {
-		boolean updated = false;
+		boolean updated;
 		ItemsRange range = getItemsRange();
 		if (itemsLayout != null) {
 			int first = recycle.recycleItems(itemsLayout, firstItem, range);
@@ -807,9 +700,11 @@ public class WheelView extends View {
 		}
 
 		if (!updated) {
+			assert range != null;
 			updated = firstItem != range.getFirst() || itemsLayout.getChildCount() != range.getCount();
 		}
 
+		assert range != null;
 		if (firstItem > range.getFirst() && firstItem <= range.getLast()) {
 			for (int i = firstItem - 1; i >= range.getFirst(); i--) {
 				if (!addViewItem(i, true)) {
@@ -923,12 +818,5 @@ public class WheelView extends View {
 
 		index %= count;
 		return viewAdapter.getItem(index, recycle.getItem(), itemsLayout);
-	}
-
-	/**
-	 * Stops scrolling
-	 */
-	public void stopScrolling() {
-		scroller.stopScrolling();
 	}
 }

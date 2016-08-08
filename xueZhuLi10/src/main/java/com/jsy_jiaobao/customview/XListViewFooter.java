@@ -6,9 +6,6 @@
  */
 package com.jsy_jiaobao.customview;
 
-
-import com.jsy_jiaobao.main.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -16,12 +13,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.jsy_jiaobao.main.R;
+
 public class XListViewFooter extends LinearLayout {
 	public final static int STATE_NORMAL = 0;
 	public final static int STATE_READY = 1;
 	public final static int STATE_LOADING = 2;
-
-	private Context mContext;
 
 	private View mContentView;
 	private View mProgressBar;
@@ -64,17 +61,7 @@ public class XListViewFooter extends LinearLayout {
 		LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams)mContentView.getLayoutParams();
 		return lp.bottomMargin;
 	}
-	
-	
-	/**
-	 * normal status
-	 */
-	public void normal() {
-		mHintView.setVisibility(View.VISIBLE);
-		mProgressBar.setVisibility(View.GONE);
-	}
-	
-	
+
 	/**
 	 * loading status 
 	 */
@@ -102,8 +89,7 @@ public class XListViewFooter extends LinearLayout {
 	}
 	
 	private void initView(Context context) {
-		mContext = context;
-		LinearLayout moreView = (LinearLayout)LayoutInflater.from(mContext).inflate(R.layout.xlistview_footer, null);
+		LinearLayout moreView = (LinearLayout)LayoutInflater.from(context).inflate(R.layout.xlistview_footer, null);
 		addView(moreView);
 		moreView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 		

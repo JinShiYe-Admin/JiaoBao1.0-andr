@@ -1,6 +1,5 @@
 package com.jsy_jiaobao.customview;
 
-
 /*
  * Copyright (C) 2006 The Android Open Source Project
  *
@@ -128,7 +127,7 @@ public class RadioGroup extends LinearLayout {
     public void addView(final View child, int index, ViewGroup.LayoutParams params) {
         if (child instanceof RadioButton) {
         	
-        	((RadioButton) child).setOnTouchListener(new OnTouchListener() {
+        	child.setOnTouchListener(new OnTouchListener() {
 				
 				@Override
 				public boolean onTouch(View v, MotionEvent event) {
@@ -149,12 +148,12 @@ public class RadioGroup extends LinearLayout {
                     final RadioButton button = (RadioButton) view;
 
                 	
-                	((RadioButton) button).setOnTouchListener(new OnTouchListener() {
+                	button.setOnTouchListener(new OnTouchListener() {
         				
         				@Override
         				public boolean onTouch(View v, MotionEvent event) {
-        					((RadioButton) button).setChecked(true);
-        					checkRadioButton((RadioButton) button);
+        					button.setChecked(true);
+        					checkRadioButton(button);
         					if(mOnCheckedChangeListener != null){
         						mOnCheckedChangeListener.onCheckedChanged(RadioGroup.this, button.getId());
         					}
@@ -189,7 +188,7 @@ public class RadioGroup extends LinearLayout {
     	    			if(button == radioButton){
     	    				// do nothing
     	    			} else {
-    	    				((RadioButton) button).setChecked(false);
+    	    				button.setChecked(false);
     	    			}
     				}
     			}
@@ -391,7 +390,7 @@ public class RadioGroup extends LinearLayout {
          * @param group the group in which the checked radio button has changed
          * @param checkedId the unique identifier of the newly checked radio button
          */
-        public void onCheckedChanged(RadioGroup group, int checkedId);
+        void onCheckedChanged(RadioGroup group, int checkedId);
     }
 
     private class CheckedStateTracker implements CompoundButton.OnCheckedChangeListener {
