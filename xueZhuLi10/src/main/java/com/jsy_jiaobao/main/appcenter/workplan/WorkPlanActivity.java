@@ -530,7 +530,7 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
             if (bSelected)
                 daySelected = dayCell;
 
-            dayCell.setData(iYear, iMonth, iDay, bToday, bHoliday,
+            dayCell.setData(iYear, iMonth, iDay, bToday,
                     iMonthViewCurrentMonth, hasRecord);
 
             calCalendar.add(Calendar.DAY_OF_MONTH, 1);

@@ -654,6 +654,8 @@
     <string name="addTimeLayout_start">addTimeLayout_start</string>
     <string name="add_follow">添加关注</string>
     <string name="address">地点</string>
+    <string name="against">反对(%d)</string>
+    <string name="against_number">反对(%d)</string>
     <string name="album">相册</string>
     <string name="album_get_picture">相册取图</string>
     <string name="album_introduce">相册介绍</string>
@@ -752,6 +754,7 @@
     <string name="comment">评论</string>
     <string name="comment_">评论:</string>
     <string name="comment_i_made">我做出的评论</string>
+    <string name="comment_number">评论(%d)</string>
     <string name="commit">提交</string>
     <string name="commit_i_made">我做出的评论</string>
     <string name="commit_success">提交成功</string>
@@ -785,6 +788,7 @@
     <string name="do_homework">做作业</string>
     <string name="edit">编辑</string>
     <string name="edit_at">编辑于</string>
+    <string name="edit_at_string">编辑于%s</string>
     <string name="enclosure">附件</string>
     <string name="error_indenity_get">获取身份信息失败</string>
     <string name="error_indenity_login_again">长时间未操作，已登出，重新登录</string>
@@ -863,6 +867,7 @@
     <string name="have_no_answer">暂无回答</string>
     <string name="have_no_more">没有更多了</string>
     <string name="have_prove">有证据</string>
+    <string name="have_some_shield">有%d条问题因答案被屏蔽或被删除无法查看</string>
     <string name="hello_world">Hello world!</string>
     <string name="hint">提交</string>
     <string name="home_page">首页</string>
@@ -934,6 +939,7 @@
     <string name="leave_time_noMoreThanFive">超出限制</string>
     <string name="leave_uncheck">待审核</string>
     <string name="leave_withdraw">删除</string>
+    <string name="like">赞(%d)</string>
     <string name="load_failed">下载失败</string>
     <string name="load_progress">下载进度</string>
     <string name="loading">加载中…</string>
@@ -1057,6 +1063,7 @@
     <string name="note_inputed_wrong">验证码输入错误</string>
     <string name="nothing">无</string>
     <string name="notice_details">通知详情</string>
+    <string name="number_like">%d赞</string>
     <string name="of_member">的成员</string>
     <string name="of_parent">的家长</string>
     <string name="of_student">的学生</string>
