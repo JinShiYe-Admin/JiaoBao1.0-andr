@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.personalcenter;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +8,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -30,13 +26,14 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+
 public class PersonalInfoActivity extends BaseActivity implements OnClickListener{
-	public static String ActivityTag = "PersonalInfoActivity";
 	@ViewInject(R.id.personalspace_img_photo)private ImageView imageView;
 	@ViewInject(R.id.personalspace_tv_name)private TextView tv_name;
 	@ViewInject(R.id.personalspace_gridview)private CusGridView gridView;
-	@ViewInject(R.id.personalinfo_btn_chat)private Button btn_chat;
-	@ViewInject(R.id.personalinfo_btn_space)private Button btn_space;
 	private Context mContext;
 	private String JiaoBaoHao;
 	private String UserName;

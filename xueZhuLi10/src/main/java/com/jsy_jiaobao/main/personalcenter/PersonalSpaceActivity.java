@@ -118,7 +118,7 @@ public class PersonalSpaceActivity extends BaseActivity implements
 		}
 		setActionBarTitle(UserName + "的空间");
 		tv_name.setText(UserName);
-		title_more.setVisibility(8);
+		title_more.setVisibility(View.GONE);
 		listAdapter = new NoticeArtListAdapter(this, true);
 		listView.setAdapter(listAdapter);
 		String url = ACache.get(getApplicationContext()).getAsString("MainUrl")
@@ -230,7 +230,7 @@ public class PersonalSpaceActivity extends BaseActivity implements
 	/**
 	 * 获取到的数据处理
 	 * 
-	 * @param list
+	 * @param list list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
@@ -241,7 +241,7 @@ public class PersonalSpaceActivity extends BaseActivity implements
 			NoticeGetArthInfo getArthInfo = (NoticeGetArthInfo) list.get(1);
 			if (null != getArthInfo && getArthInfo.getList().size() == 0) {
 				havemore = false;
-			} else {
+			} else if(getArthInfo!=null&&getArthInfo.getList().size()>0){
 				arthList.addAll(getArthInfo.getList());
 				listAdapter.setData(arthList);
 				listAdapter.notifyDataSetChanged();
@@ -250,7 +250,7 @@ public class PersonalSpaceActivity extends BaseActivity implements
 		case Constant.msgcenter_personalspace_GetNewPhoto:
 			ArrayList<Photo> myGList = (ArrayList<Photo>) list.get(1);
 			if (myGList == null || myGList.size() == 0) {
-				myGList = new ArrayList<Photo>();
+				myGList = new ArrayList<>();
 				Photo photo = new Photo();
 				photo.setSMPhotoPath("assets/drawable/pic_no.png");
 				myGList.add(photo);

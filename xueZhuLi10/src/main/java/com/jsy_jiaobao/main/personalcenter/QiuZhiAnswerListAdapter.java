@@ -43,17 +43,17 @@ public class QiuZhiAnswerListAdapter<T> extends BaseAdapter implements Watcher {
 	private Context mContext;
 	private List<T> mData;
 	private BitmapUtils bitmap;// 图片
-	private SimpleDateFormat dateFormat;// 日期格式
-	private Date today;// 今天
-	private String str_todaytime;// 今天日期格式化
 	private String[] str_todaytimes;// 日期 和时间 分开
 	private String mainURL;
 
 	public QiuZhiAnswerListAdapter(Context mContext) {
 		this.mContext = mContext;
 		bitmap = JSYApplication.getInstance().bitmap;
+		SimpleDateFormat dateFormat;// 日期格式
 		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
 				Locale.getDefault());
+		Date today;// 今天
+		String str_todaytime;// 今天日期格式化
 		today = new Date(System.currentTimeMillis());
 		str_todaytime = dateFormat.format(today);
 		str_todaytimes = str_todaytime.split(" ");
@@ -125,8 +125,7 @@ public class QiuZhiAnswerListAdapter<T> extends BaseAdapter implements Watcher {
 							.setLayoutParams(new LinearLayout.LayoutParams(
 									LayoutParams.MATCH_PARENT,
 									LayoutParams.WRAP_CONTENT));
-					tv_likenum.setText(String.valueOf(answer.getLikeCount())
-							+ "赞");
+					tv_likenum.setText(mContext.getString(R.string.number_like,answer.getLikeCount()));
 					if (TextUtils.isEmpty(answer.getIdFlag())) {// 匿名
 						tv_author.setText(R.string.anonymity);
 						iv_photo.setImageResource(R.drawable.photo);

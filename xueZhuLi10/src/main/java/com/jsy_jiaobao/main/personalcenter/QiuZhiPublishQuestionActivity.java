@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -65,25 +64,23 @@ import java.util.Map;
  */
 public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 		OnClickListener {
-	public static HashMap<String, Drawable> cache = new HashMap<String, Drawable>();
 	private static Context mContext;
 	private Uri photoUri;
-	private TextView tv_questionStar;
-	private LinearLayout layout_root;
+
 	private IEditText edt_title;// 标题输入框
 	private IEditText edt_conent;// 内容输入框
-	private TextView tv_takpic;// 插入图片
+
 	private TextView tv_clazz;
 	private IEditText edt_invite;// 邀请回答
-	private Spinner sp_province;// 省份下拉框
+
 	private Spinner sp_city;// 城市下拉框
-	private Spinner sp_county;// 地区下拉框
+
 	// 省数据
-	private ArrayList<Map<String, String>> provinceData = new ArrayList<Map<String, String>>();
+	private ArrayList<Map<String, String>> provinceData = new ArrayList<>();
 	// 城市数据
-	private ArrayList<Map<String, String>> cityData = new ArrayList<Map<String, String>>();
+	private ArrayList<Map<String, String>> cityData = new ArrayList<>();
 	// 地区数据
-	private ArrayList<Map<String, String>> countyData = new ArrayList<Map<String, String>>();
+	private ArrayList<Map<String, String>> countyData = new ArrayList<>();
 	// 省Spinner的Adapter
 	private SimpleAdapter provinceAdapter;
 	// 城市Spinner的Adapter
@@ -95,9 +92,9 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 	// 选项
 	private CheckBox checkBox;
 	private String AreaCode = "";
-	private String publishedQid;
-	// 图片路径列表
-	private List<Object> photoPathList;
+
+//	// 图片路径列表
+//	private List<Object> photoPathList;
 	// 图片路径
 	private String photoPath;
 	/** 被邀请人 */
@@ -114,17 +111,17 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 		} else {
 			initPassData();
 		}
-		photoPathList = new ArrayList<Object>();
+//		photoPathList = new ArrayList<Object>();
 		initViews();
 	}
 
 	public void initPassData() {
-		Intent getPass = getIntent();
-		if (getPass != null) {
-			Bundle bundle = getPass.getExtras();
-			if (bundle != null) {
-			}
-		}
+//		Intent getPass = getIntent();
+//		if (getPass != null) {
+//			Bundle bundle = getPass.getExtras();
+//			if (bundle != null) {
+//			}
+//		}
 	}
 
 	@Override
@@ -139,15 +136,20 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 		QiuZhiPublishQuestionActivityController.getInstance().setContext(this);
 		QiuZhiPublishQuestionActivityController.getInstance().GetProvice();
 		setActionBarTitle(R.string.release_question);
+		TextView tv_questionStar;
+		LinearLayout layout_root;
 		tv_questionStar = (TextView) findViewById(R.id.tv_questionStar);
 		layout_root = (LinearLayout) findViewById(R.id.qiuzhi_publish_root);
 		edt_title = (IEditText) findViewById(R.id.qiuzhi_publish_edt_title);
 		edt_conent = (IEditText) findViewById(R.id.qiuzhi_publish_edt_content);
+		TextView tv_takpic;// 插入图片
 		tv_takpic = (TextView) findViewById(R.id.qiuzhi_publish_tv_takepic);
 		tv_clazz = (TextView) findViewById(R.id.qiuzhi_publish_tv_clazz);
 		edt_invite = (IEditText) findViewById(R.id.qiuzhi_publish_edt_invite);
+		Spinner sp_province;// 省份下拉框
 		sp_province = (Spinner) findViewById(R.id.qiuzhi_publish_sp_province);
 		sp_city = (Spinner) findViewById(R.id.qiuzhi_publish_sp_city);
+		Spinner sp_county;// 地区下拉框
 		sp_county = (Spinner) findViewById(R.id.qiuzhi_publish_sp_county);
 		tv_publish = (TextView) findViewById(R.id.qiuzhi_publish_tv_publish);
 		checkBox = (CheckBox) findViewById(R.id.qiuzhi_publish_cb);
@@ -167,7 +169,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 				return false;
 			}
 		});
-		Map<String, String> map1 = new HashMap<String, String>();
+		Map<String, String> map1 = new HashMap<>();
 		map1.put("CityCode", "-1");
 		map1.put("CnName", getResources().getString(R.string.please_choose));
 		provinceData.add(map1);
@@ -215,7 +217,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 				if ("-1".equals(map.get("CityCode"))) {
 					cityData.clear();
 					countyData.clear();
-					Map<String, String> map1 = new HashMap<String, String>();
+					Map<String, String> map1 = new HashMap<>();
 					map1.put("CityCode", "-1");
 					map1.put("CnName",
 							getResources().getString(R.string.please_choose));
@@ -238,7 +240,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 				if (provinceData.size() > 0) {
 					Map<String, String> map = provinceData.get(0);
 					if ("-1".equals(map.get("CityCode"))) {
-						Map<String, String> map1 = new HashMap<String, String>();
+						Map<String, String> map1 = new HashMap<>();
 						map1.put("CityCode", "-1");
 						map1.put("CnName",
 								getResources()
@@ -268,7 +270,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 				Map<String, String> map = cityData.get(position);
 				if ("-1".equals(map.get("CityCode"))) {
 					countyData.clear();
-					Map<String, String> map1 = new HashMap<String, String>();
+					Map<String, String> map1 = new HashMap<>();
 					map1.put("CityCode", "-1");
 					map1.put("CnName", "请选择");
 					countyData.add(map1);
@@ -288,7 +290,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					Map<String, String> map = cityData.get(0);
 
 					if ("-1".equals(map.get("CityCode"))) {
-						Map<String, String> map1 = new HashMap<String, String>();
+						Map<String, String> map1 = new HashMap<>();
 						map1.put("CityCode", "-1");
 						map1.put("CnName",
 								getResources()
@@ -346,7 +348,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 	 * EventBus功能模块
 	 * 
 	 * @功能 获取到数据并做处理
-	 * @param list
+	 * @param list list
 	 */
 	@Subscribe
 	public void onEventMainThread(ArrayList<Object> list) {
@@ -359,13 +361,13 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					.get(1);
 			if (null != countylist && countylist.size() > 0) {
 				countyData.clear();
-				Map<String, String> map1 = new HashMap<String, String>();
+				Map<String, String> map1 = new HashMap<>();
 				map1.put("CityCode", "-1");
 				map1.put("CnName",
 						getResources().getString(R.string.please_choose));
 				countyData.add(map1);
 				for (int i = 0; i < countylist.size(); i++) {
-					Map<String, String> map = new HashMap<String, String>();
+					Map<String, String> map = new HashMap<>();
 					map.put("CityCode", countylist.get(i).getCityCode());
 					map.put("CnName", countylist.get(i).getCnName());
 					countyData.add(map);
@@ -380,13 +382,13 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					.get(1);
 			if (null != citylist && citylist.size() > 0) {
 				cityData.clear();
-				Map<String, String> map1 = new HashMap<String, String>();
+				Map<String, String> map1 = new HashMap<>();
 				map1.put("CityCode", "-1");
 				map1.put("CnName",
 						getResources().getString(R.string.please_choose));
 				cityData.add(map1);
 				for (int i = 0; i < citylist.size(); i++) {
-					Map<String, String> map = new HashMap<String, String>();
+					Map<String, String> map = new HashMap<>();
 					map.put("CityCode", citylist.get(i).getCityCode());
 					map.put("CnName", citylist.get(i).getCnName());
 					cityData.add(map);
@@ -408,12 +410,12 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					.get(1);
 			if (null != provicelist && provicelist.size() > 0) {
 				provinceData.clear();
-				Map<String, String> map1 = new HashMap<String, String>();
+				Map<String, String> map1 = new HashMap<>();
 				map1.put("CityCode", "-1");
 				map1.put("CnName", "选择省");
 				provinceData.add(map1);
 				for (int i = 0; i < provicelist.size(); i++) {
-					Map<String, String> map = new HashMap<String, String>();
+					Map<String, String> map = new HashMap<>();
 					map.put("CityCode", provicelist.get(i).getCityCode());
 					map.put("CnName", provicelist.get(i).getCnName());
 					provinceData.add(map);
@@ -458,6 +460,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 		case Constant.msgcenter_qiuzhi_NewQuestion:
 			// 发布问题的结果
 			tv_publish.setEnabled(true);
+			String publishedQid;
 			publishedQid = (String) list.get(1);
 			if ("".equals(publishedQid)) {
 				ToastUtil.showMessage(mContext,
@@ -494,9 +497,8 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					bitmap = ResizeBitmap(bitmap, 120);
 				}
 				String img = "<img src=\"" + upFile.getUrl() + "\"/><br>";
-				Map<String, String> map = new HashMap<String, String>();
-				map.put(upFile.getUrl(), photoPath);
-				photoPathList.add(map);
+//				Map<String, String> map = new HashMap<>();
+//				map.put(upFile.getUrl(), photoPath);
 				int length = img.length() + edt_conent.getTextString().length();
 				if (length > 4000) {
 					ToastUtil.showMessage(mContext, "字数超出限制,请删除"
@@ -536,12 +538,12 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 	 * 自定义方法
 	 * 
 	 * @功能 判断图片数量 如果小于20 返回真 否则返回false
-	 * @return
+	 * @return f
 	 */
 	private boolean CheckPicEnough() {
 		String xml = edt_conent.getText().toString();
 		int size = StringUtils.getImgStr(xml).size();
-		return size <= 20 ? true : false;
+		return size <= 20 ;
 	}
 
 	/**
@@ -558,8 +560,8 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 			break;
 		case R.id.qiuzhi_publish_tv_takepic:
 			// 获取图片
-			List<String> list = StringUtils.getImgStr1(edt_conent.getText()
-					.toString());
+//			List<String> list = StringUtils.getImgStr1(edt_conent.getText()
+//					.toString());
 			if (CheckPicEnough()) {
 				if (edt_conent.getTextString().length() >= 4000) {
 					ToastUtil.showMessage(mContext, "已达四千字上限,请删除多余内容后上传");
@@ -712,12 +714,14 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 					Uri uri1 = data.getData();
 					Cursor cursor = this.getContentResolver().query(uri1, null,
 							null, null, null);
-					cursor.moveToFirst();
-					photoPath = cursor.getString(1);
-					DialogUtil.getInstance().getDialog(mContext,
-							R.string.loading);
-					// 创建线程 获取图片
-					createThread();
+					if(cursor!=null&&cursor.moveToFirst()){
+						photoPath = cursor.getString(1);
+						DialogUtil.getInstance().getDialog(mContext,
+								R.string.loading);
+						// 创建线程 获取图片
+						createThread();
+						cursor.close();
+					}
 				}
 			} catch (Exception e) {
 				bitmap = null;
@@ -729,9 +733,11 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 			try {
 				Bundle b = data.getExtras(); // data为B中回传的Intent
 				Subject subject = (Subject) b.getSerializable("Subject");
-				String str_name = subject.getSubject().trim();
-				CategoryId = subject.getTabID();
-				tv_clazz.setText(str_name);
+				if(subject!=null){
+					String str_name = subject.getSubject().trim();
+					CategoryId = subject.getTabID();
+					tv_clazz.setText(str_name);
+				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -773,10 +779,9 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 	IncomingHandler handler = new IncomingHandler(this);
 
 	/**
-	 * @method selfDefine
-	 * @功能 上传图片文件
-	 * @param file
-	 */
+	 *
+	 * @param file file
+     */
 	private static void uploadFile(File file) {
 		DialogUtil.getInstance().getDialog(mContext, R.string.uploading);
 		DialogUtil.getInstance().setCanCancel(false);
@@ -789,14 +794,11 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 	private int CategoryId;
 
 	/**
-	 * @method self defined
-	 * @功能 压缩图片
-	 * @param bitmap
-	 *            需要处理的bitmap
-	 * @param newWidth
-	 *            图片目标宽度
-	 * @return 处理过后的bitmap
-	 */
+	 *
+	 * @param bitmap bit
+	 * @param newWidth w
+     * @return bt
+     */
 
 	public static Bitmap ResizeBitmap(Bitmap bitmap, int newWidth) {
 		Bitmap resizedBitmap = null;
@@ -857,7 +859,7 @@ public class QiuZhiPublishQuestionActivity extends BaseActivity implements
 		private final WeakReference<QiuZhiPublishQuestionActivity> mService;
 
 		IncomingHandler(QiuZhiPublishQuestionActivity service) {
-			mService = new WeakReference<QiuZhiPublishQuestionActivity>(service);
+			mService = new WeakReference<>(service);
 		}
 
 		@Override

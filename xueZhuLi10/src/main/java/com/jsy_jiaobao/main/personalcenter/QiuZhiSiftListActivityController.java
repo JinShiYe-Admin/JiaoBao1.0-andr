@@ -37,7 +37,7 @@ public class QiuZhiSiftListActivityController implements ConstantUrl {
 	private static QiuZhiSiftListActivityController instance;
 	private Activity mContext;
 
-	public static synchronized final QiuZhiSiftListActivityController getInstance() {
+	public static synchronized  QiuZhiSiftListActivityController getInstance() {
 		if (instance == null) {
 			instance = new QiuZhiSiftListActivityController();
 		}
@@ -152,7 +152,7 @@ public class QiuZhiSiftListActivityController implements ConstantUrl {
 
 	private void dealResponseInfo(String result, Object userTag) {
 		DialogUtil.getInstance().cannleDialog();
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.msgcenter_qiuzhi_ShowPicked:

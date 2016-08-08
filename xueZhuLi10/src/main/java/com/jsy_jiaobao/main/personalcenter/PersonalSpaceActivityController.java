@@ -57,7 +57,7 @@ public class PersonalSpaceActivityController implements ConstantUrl{
 	/**
 	 * 取本单位栏目文章
 	 * 客户端通过本接口获取本单位栏目文章。
-	 * @param params
+	 * @param params p
 	 */
 	public void ArthListIndex(RequestParams params){
 		DialogUtil.getInstance().getDialog(mcontext, mcontext.getResources().getString(R.string.public_loading));
@@ -120,7 +120,7 @@ public class PersonalSpaceActivityController implements ConstantUrl{
 
 	}
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer)userTag) {
 		case Constant.msgcenter_notice_ArthListIndex:
 			try {

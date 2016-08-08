@@ -73,7 +73,7 @@ public class PictureAdapter extends BaseAdapter {
 
 			@Override
 			public void onClick(View v) {
-				ArrayList<Photo> list = new ArrayList<Photo>();
+				ArrayList<Photo> list = new ArrayList<>();
 				for (int i = 0; i < jsonarray.length(); i++) {
 					Photo photo = new Photo();
 					try {

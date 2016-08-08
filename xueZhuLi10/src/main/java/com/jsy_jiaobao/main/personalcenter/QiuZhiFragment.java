@@ -1,15 +1,11 @@
 package com.jsy_jiaobao.main.personalcenter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.Gravity;
@@ -47,6 +43,11 @@ import com.jsy_jiaobao.po.qiuzhi.Watcher;
 import com.lidroid.xutils.bitmap.PauseOnScrollListener;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * 求知界面
  */
@@ -67,9 +68,9 @@ public class QiuZhiFragment extends SherlockFragment implements
 	private LinearLayout layout_chose;
 	private RelativeLayout layout_topic;
 	private TextView tv_topic;
-	private TextView tv_moretopic;
+
 	private TextView tv_all, tv_evidence, tv_discuss, tv_dismiss;
-	private ArrayList<View> tabViewList = new ArrayList<View>();
+	private ArrayList<View> tabViewList = new ArrayList<>();
 	private int selectedTab = 0;
 	private int selectedTabID = 0;
 	private TextView mNoContent;
@@ -79,18 +80,18 @@ public class QiuZhiFragment extends SherlockFragment implements
 	// private QiuZhiIndexTopAdapter adapterTop;
 	/** <pre>	一级话题id	flag=全部，有证据，在讨论。 	数据 */
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, HashMap<Integer, ArrayList<Object>>> dataMap = new HashMap<Integer, HashMap<Integer, ArrayList<Object>>>();
+	private HashMap<Integer, HashMap<Integer, ArrayList<Object>>> dataMap = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, Integer> tabRowCountMap = new HashMap<Integer, Integer>();
+	private HashMap<Integer, Integer> tabRowCountMap = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, Integer> tabPageNumMap = new HashMap<Integer, Integer>();
+	private HashMap<Integer, Integer> tabPageNumMap = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, Integer> categoryFlagMap = new HashMap<Integer, Integer>();
+	private HashMap<Integer, Integer> categoryFlagMap = new HashMap<>();
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, Integer> dismissMap = new HashMap<Integer, Integer>();
+	private HashMap<Integer, Integer> dismissMap = new HashMap<>();
 	// 二级话题id 数据列表
 	@SuppressLint("UseSparseArrays")
-	private HashMap<Integer, ArrayList<Object>> topDataMap = new HashMap<Integer, ArrayList<Object>>();
+	private HashMap<Integer, ArrayList<Object>> topDataMap = new HashMap<>();
 	private int hiddenNum = 0;// 隐藏数量
 	private int mark = 0;// 标记
 
@@ -107,7 +108,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 			try {
 				allCategory = (ArrayList<GetAllCategory>) savedInstanceState
 						.getSerializable("allCategory");
-				selectedTabID = (Integer) savedInstanceState
+				selectedTabID = savedInstanceState
 						.getInt("selectedTabID");
 				dataMap = (HashMap<Integer, HashMap<Integer, ArrayList<Object>>>) savedInstanceState
 						.getSerializable("dataMap");
@@ -119,14 +120,15 @@ public class QiuZhiFragment extends SherlockFragment implements
 						.getSerializable("categoryFlagMap");
 				dismissMap = (HashMap<Integer, Integer>) savedInstanceState
 						.getSerializable("dismissMap");
-				selectedTab = (Integer) savedInstanceState
+				selectedTab =  savedInstanceState
 						.getInt("selectedTab");
-				mark = (Integer) savedInstanceState.getInt("Mark");
+				mark =  savedInstanceState.getInt("Mark");
 				// 数据容易丢失
 				questionList = (ArrayList<Object>) savedInstanceState
 						.getSerializable("questionList");
 			} catch (Exception e) {
 				// TODO: handle exception
+				e.printStackTrace();
 			}
 			if (mark != 7) {
 				reLogin();
@@ -157,7 +159,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		QiuZhiFragmentController.getInstance().setContext(this);
 		initViews(view);
-		questionList = new ArrayList<Object>();
+		questionList = new ArrayList<>();
 		super.onViewCreated(view, savedInstanceState);
 	}
 
@@ -213,6 +215,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 		layout_topic = (RelativeLayout) view
 				.findViewById(R.id.qiuzhi_index_layout_topic);
 		tv_topic = (TextView) view.findViewById(R.id.qiuzh_index_tv_topic);
+		TextView tv_moretopic;
 		tv_moretopic = (TextView) view.findViewById(R.id.qiuzhi_tv_moretopic);
 		tv_all = (TextView) view.findViewById(R.id.qiuzhi_index_tv_all);
 		tv_evidence = (TextView) view
@@ -239,7 +242,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 	/**
 	 * 二级菜单选项
 	 * 
-	 * @param flag
+	 * @param flag flag
 	 */
 	@SuppressWarnings("deprecation")
 	private void choseTabFlag(int flag) {
@@ -298,7 +301,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 	/**
 	 * 选择话题
 	 * 
-	 * @param isTabView
+	 * @param isTabView d
 	 */
 	private void choseTab(boolean isTabView) {
 		questionList.clear();
@@ -340,7 +343,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 				tabRowCountMap.put(CATEGORY_INDEX, 0);
 				UserIndexQuestion(tabPageNumMap.get(CATEGORY_INDEX),
 						tabRowCountMap.get(CATEGORY_INDEX), flag);
-				list = new ArrayList<Object>();
+				list = new ArrayList<>();
 				dataMap.get(selectedTabID).put(flag, list);
 			}
 			adapterIndex.setData(dataMap.get(selectedTabID).get(flag));
@@ -352,7 +355,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 				tabRowCountMap.put(CATEGORY_RECOMMENT, 0);
 				RecommentIndex(tabPageNumMap.get(CATEGORY_RECOMMENT),
 						tabRowCountMap.get(CATEGORY_RECOMMENT));
-				list = new ArrayList<Object>();
+				list = new ArrayList<>();
 				dataMap.get(selectedTabID).put(flag, list);
 			}
 			adapterIndex.setData(dataMap.get(selectedTabID).get(flag));
@@ -362,10 +365,10 @@ public class QiuZhiFragment extends SherlockFragment implements
 			// listView.setMode(Mode.PULL_FROM_START);
 			if (null == list || list.size() == 0) {
 				GetPickedById(0);
-				list = new ArrayList<Object>();
+				list = new ArrayList<>();
 				dataMap.get(selectedTabID).put(flag, list);
-			} else {
-				// listViewTop.setVisibility(0);
+//			} else {
+//				// listViewTop.setVisibility(0);
 			}
 			adapterIndex.setTopData(topDataMap.get(selectedTabID));
 			adapterIndex.setData(dataMap.get(selectedTabID).get(flag));
@@ -407,7 +410,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 				tabRowCountMap.put(selectedTabID, 0);
 				CategoryIndexQuestion(tabPageNumMap.get(selectedTabID),
 						tabRowCountMap.get(selectedTabID), selectedTabID, flag);
-				list = new ArrayList<Object>();
+				list = new ArrayList<>();
 				dataMap.get(selectedTabID).put(flag, list);
 			}
 			adapterIndex.setData(dataMap.get(selectedTabID).get(flag));
@@ -517,9 +520,11 @@ public class QiuZhiFragment extends SherlockFragment implements
 
 	/**
 	 * 获取问题列表（推荐后面的）。
-	 * 
-	 * @param flag
-	 */
+	 * @param pageNum 页码
+	 * @param rowCount 总数
+	 * @param CategoryId id
+     * @param flag flag
+     */
 	public void CategoryIndexQuestion(int pageNum, int rowCount,
 			int CategoryId, int flag) {
 		QiuZhiFragmentController.getInstance().CategoryIndexQuestion(pageNum,
@@ -545,6 +550,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 				dataRefresh();
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		adapterIndex.notifyDataSetChanged();
 	}
@@ -582,7 +588,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 	/**
 	 * eventBus 获取到的数据的处理
 	 * 
-	 * @param list
+	 * @param list list
 	 */
 	@SuppressLint("UseSparseArrays")
 	@SuppressWarnings("unchecked")
@@ -602,7 +608,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 			// 精选列表
 			ArrayList<PickedIndex> pickList = getPicked.getPickContent();
 			// 置顶列表
-			ArrayList<Object> topList = new ArrayList<Object>();
+			ArrayList<Object> topList = new ArrayList<>();
 			topList.add(getPicked);
 			topDataMap.get(selectedTabID).clear();
 			topDataMap.get(selectedTabID).addAll(topList);
@@ -625,7 +631,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 				// listViewTop.setVisibility(View.VISIBLE);
 				topDataMap.get(selectedTabID).clear();
 				topDataMap.get(selectedTabID).addAll(top);
-			} else {
+//			} else {
 				// listViewTop.setVisibility(View.GONE);
 			}
 			break;
@@ -724,6 +730,8 @@ public class QiuZhiFragment extends SherlockFragment implements
 			 */
 			Display display = getActivity().getWindowManager()
 					.getDefaultDisplay();
+			Point size=new Point();
+			display.getSize(size);
 			LayoutInflater inflater = getActivity().getLayoutInflater();
 			String[] top3 = new String[] { "首页", "推荐", "精选" };
 			for (int i = 0; i < top3.length; i++) {
@@ -740,7 +748,7 @@ public class QiuZhiFragment extends SherlockFragment implements
 				tabView.setTextColor(getResources().getColor(R.color.black));
 				tabView.setGravity(Gravity.CENTER);
 				layout_tabscroll.addView(tabView,
-						(int) (display.getWidth() / 5),
+						 size.x / 5,
 						LayoutParams.MATCH_PARENT);
 				tabViewList.add(i, tabView);
 				tabPageNumMap.put(i * -1 - 1, 1);
@@ -748,10 +756,10 @@ public class QiuZhiFragment extends SherlockFragment implements
 				categoryFlagMap.put(i * -1 - 1, 1);
 				dismissMap.put(i * -1 - 1, 0);
 				if (i == 2) {
-					topDataMap.put(i * -1 - 1, new ArrayList<Object>());
+					topDataMap.put(i * -1 - 1, new ArrayList<>());
 				}
-				HashMap<Integer, ArrayList<Object>> map = new HashMap<Integer, ArrayList<Object>>();
-				map.put(-1, new ArrayList<Object>());
+				HashMap<Integer, ArrayList<Object>> map = new HashMap<>();
+				map.put(-1, new ArrayList<>());
 				dataMap.put(i * -1 - 1, map);
 				mark = 7;
 			}
@@ -776,18 +784,18 @@ public class QiuZhiFragment extends SherlockFragment implements
 					tabView.setTextColor(getResources().getColor(R.color.black));
 					tabView.setGravity(Gravity.CENTER);
 					layout_tabscroll.addView(tabView,
-							(int) (display.getWidth() / 5),
-							LayoutParams.FILL_PARENT);
+							size.x / 5,
+							LayoutParams.MATCH_PARENT);
 
 					tabViewList.add(i + 3, tabView);
 					tabPageNumMap.put(tabid, 1);
 					tabRowCountMap.put(tabid, 0);
 					categoryFlagMap.put(tabid, -1);
 					dismissMap.put(tabid, 0);
-					HashMap<Integer, ArrayList<Object>> map = new HashMap<Integer, ArrayList<Object>>();
-					map.put(CATEGORY_LV2_ALL, new ArrayList<Object>());
-					map.put(CATEGORY_LV2_EVIDENCE, new ArrayList<Object>());
-					map.put(CATEGORY_LV2_DISCUSS, new ArrayList<Object>());
+					HashMap<Integer, ArrayList<Object>> map = new HashMap<>();
+					map.put(CATEGORY_LV2_ALL, new ArrayList<>());
+					map.put(CATEGORY_LV2_EVIDENCE, new ArrayList<>());
+					map.put(CATEGORY_LV2_DISCUSS, new ArrayList<>());
 					dataMap.put(tabid, map);
 				}
 			}
@@ -861,10 +869,10 @@ public class QiuZhiFragment extends SherlockFragment implements
 	private void setDismissText() {
 		int dismiss = dismissMap.get(selectedTabID);
 		if (dismiss == 0) {
-			tv_dismiss.setVisibility(8);
+			tv_dismiss.setVisibility(View.GONE);
 		} else {
-			tv_dismiss.setVisibility(0);
-			tv_dismiss.setText("有" + dismiss + "条问题因答案被屏蔽或被删除无法查看");
+			tv_dismiss.setVisibility(View.VISIBLE);
+			tv_dismiss.setText(mContext.getString(R.string.have_some_shield,dismiss));
 		}
 	}
 
@@ -1051,15 +1059,15 @@ public class QiuZhiFragment extends SherlockFragment implements
 		tabRowCountMap.put(selectedTabID, 0);
 		categoryFlagMap.put(selectedTabID, -1);
 		dismissMap.put(selectedTabID, 0);
-		HashMap<Integer, ArrayList<Object>> map = new HashMap<Integer, ArrayList<Object>>();
-		map.put(CATEGORY_LV2_ALL, new ArrayList<Object>());
-		map.put(CATEGORY_LV2_EVIDENCE, new ArrayList<Object>());
-		map.put(CATEGORY_LV2_DISCUSS, new ArrayList<Object>());
+		HashMap<Integer, ArrayList<Object>> map = new HashMap<>();
+		map.put(CATEGORY_LV2_ALL, new ArrayList<>());
+		map.put(CATEGORY_LV2_EVIDENCE, new ArrayList<>());
+		map.put(CATEGORY_LV2_DISCUSS, new ArrayList<>());
 		dataMap.put(selectedTabID, map);
 		QiuZhiFragmentController.getInstance().GetCategoryTopQ(selectedTabID);
 		CategoryIndexQuestion(tabPageNumMap.get(selectedTabID),
 				tabRowCountMap.get(selectedTabID), selectedTabID, -1);
-		topDataMap.put(selectedTabID, new ArrayList<Object>());
+		topDataMap.put(selectedTabID, new ArrayList<>());
 		int flag = categoryFlagMap.get(selectedTabID);
 		adapterIndex.setTopData(topDataMap.get(selectedTabID));
 		adapterIndex.setData(dataMap.get(selectedTabID).get(flag));

@@ -246,14 +246,14 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     protected void onResume() {
-        EventBusUtil.register(this);
+//        EventBusUtil.register(this);
         getRecord(GetDateShortString(calToday));
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        EventBusUtil.unregister(this);
+//        EventBusUtil.unregister(this);
         super.onPause();
     }
 
@@ -530,7 +530,7 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
             if (bSelected)
                 daySelected = dayCell;
 
-            dayCell.setData(iYear, iMonth, iDay, bToday, bHoliday,
+            dayCell.setData(iYear, iMonth, iDay, bToday,
                     iMonthViewCurrentMonth, hasRecord);
 
             calCalendar.add(Calendar.DAY_OF_MONTH, 1);
