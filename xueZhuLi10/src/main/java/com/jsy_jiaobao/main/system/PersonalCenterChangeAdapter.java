@@ -1,9 +1,12 @@
 package com.jsy_jiaobao.main.system;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONObject;
+import android.app.Activity;
+import android.content.Context;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -22,25 +25,19 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
-import android.app.Activity;
-import android.content.Context;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.TextView;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 个人中心修改昵称，姓名，密码，加入单位的Adapter
- * 
- * @author admin
- * 
  */
 public class PersonalCenterChangeAdapter extends BaseAdapter implements
 		ConstantUrl {
 
 	private Context mContext;
-	private List<MyMobileUnit> mData = new ArrayList<MyMobileUnit>();
+	private List<MyMobileUnit> mData = new ArrayList<>();
 
 	public PersonalCenterChangeAdapter(Context mContext) {
 		this.mContext = mContext;
@@ -55,7 +52,7 @@ public class PersonalCenterChangeAdapter extends BaseAdapter implements
 					x: for (int i1 = 0; i1 < Constant.listUserIdentity.size(); i1++) {
 						UserIdentity userIdentity = Constant.listUserIdentity
 								.get(i1);
-						if (userIdentity.getRoleIdentity() == 1) {
+						if (userIdentity.getRoleIdentity() == 1) {//教育局
 							List<UserUnit> UserUnits = userIdentity
 									.getUserUnits();
 							if (UserUnits != null) {
@@ -68,8 +65,7 @@ public class PersonalCenterChangeAdapter extends BaseAdapter implements
 									}
 								}
 							}
-							// 老师
-						} else if (userIdentity.getRoleIdentity() == 2) {
+						} else if (userIdentity.getRoleIdentity() == 2) {// 老师
 							List<UserUnit> UserUnits = userIdentity
 									.getUserUnits();
 							if (UserUnits != null) {
@@ -94,8 +90,7 @@ public class PersonalCenterChangeAdapter extends BaseAdapter implements
 									}
 								}
 							}
-							// 家长
-						} else if (userIdentity.getRoleIdentity() == 3) {
+						} else if (userIdentity.getRoleIdentity() == 3) {// 家长
 							List<UserClass> userClasses = userIdentity
 									.getUserClasses();
 							if (userClasses != null) {
@@ -108,8 +103,7 @@ public class PersonalCenterChangeAdapter extends BaseAdapter implements
 									}
 								}
 							}
-							// 学生
-						} else if (userIdentity.getRoleIdentity() == 4) {
+						} else if (userIdentity.getRoleIdentity() == 4) {// 学生
 							List<UserClass> userClasses = userIdentity
 									.getUserClasses();
 							if (userClasses != null) {
@@ -168,7 +162,7 @@ public class PersonalCenterChangeAdapter extends BaseAdapter implements
 				+ mContext.getResources().getString(R.string.name_)
 				+ item.getMName());
 		if (item.getAccId() == 0) {
-			join.setVisibility(0);
+			join.setVisibility(View.VISIBLE);
 		} else {
 			join.setVisibility(View.GONE);
 		}
@@ -244,5 +238,4 @@ public class PersonalCenterChangeAdapter extends BaseAdapter implements
 		});
 		return viewHolder.getConvertView();
 	}
-
 }

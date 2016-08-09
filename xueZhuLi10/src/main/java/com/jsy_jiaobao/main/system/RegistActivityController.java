@@ -1,13 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
@@ -33,6 +25,14 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.util.LogUtils;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+
 public class RegistActivityController implements ConstantUrl{
 	private static RegistActivityController instance;
 	private BitmapUtils bitmapUtils;
@@ -51,7 +51,6 @@ public class RegistActivityController implements ConstantUrl{
 	}
 	/**
 	 * 检查手机是否重复 功能：检查手机号码是否重复（已注册），true没有注册，false有注册
-	 * @param phone
 	 */
 	public void checkMobileAcc(String phone){
 		RequestParams params = new RequestParams();
@@ -62,8 +61,6 @@ public class RegistActivityController implements ConstantUrl{
 	}
 	/**
 	 * 功能：用户输入手机号码，并输入图片验证码，app客户端把图片验证码和手机发回服务器，服务器验证后向手机发送验证码（6位数字）。
-	 * @param phone
-	 * @param picnumber
 	 */
 	public void SendCheckCode(String phone,String picnumber){
 		RequestParams params = new RequestParams();
@@ -75,8 +72,6 @@ public class RegistActivityController implements ConstantUrl{
 	}
 	/**
 	 * 功能：重置用户密码时发送手机验证码，系统会检查手机号码对应的帐户信息是否存在，存在才能发送。
-	 * @param phone
-	 * @param picnumber
 	 */
 	public void ReSendCheckCode(String phone,String picnumber){
 		RequestParams params = new RequestParams();
@@ -88,9 +83,6 @@ public class RegistActivityController implements ConstantUrl{
 	}
 	/**
 	 * 功能：用户输入收到的验证码，并输入图片验证码，app客户端把图片验证码和手机验证码发回服务器，检查用户输入是否正确。
-	 * @param phone
-	 * @param picnumber
-	 * @param phonenumber
 	 */
 	public void RegCheckMobileVcode(String phone,String picnumber,String phonenumber){
 		RequestParams params = new RequestParams();
@@ -103,9 +95,6 @@ public class RegistActivityController implements ConstantUrl{
 	}
 	/**
 	 * 功能：用于在重置密码时验证用户手机（与注册时验证手机的接口不一样）。
-	 * @param phone
-	 * @param picnumber
-	 * @param phonenumber
 	 */
 	public void CheckMobileVcode(String phone,String picnumber,String phonenumber){
 		RequestParams params = new RequestParams();
@@ -118,9 +107,6 @@ public class RegistActivityController implements ConstantUrl{
 	}
 	/**
 	 * 验证手机号码正确后，用户输入输入密码，app把用户注册手机和密码发给服务器完成注册手续
-	 * @param phone
-	 * @param pwd
-	 * @param time
 	 */
 	public void RegAccId(String phone,String pwd,String time){
 		try {
@@ -139,15 +125,10 @@ public class RegistActivityController implements ConstantUrl{
 			callback.setUserTag(Constant.user_regist_RegAccId);
 			HttpUtil.InstanceSend(RegAccId,params, callback);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	/**
-	 * @param phone
-	 * @param pwd
-	 * @param time
-	 */
+
 	public void ResetAccPw(String phone,String pwd){
 		try {
 			LogUtils.e("----------ResetAccPw");
@@ -159,7 +140,6 @@ public class RegistActivityController implements ConstantUrl{
 			callback.setUserTag(Constant.user_regist_ResetAccPw);
 			HttpUtil.InstanceSend(ResetAccPw,params, callback);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -206,7 +186,6 @@ public class RegistActivityController implements ConstantUrl{
 
 						}else if("8".equals(ResultCode)){
 							dealResponseInfo("",this.getUserTag());
-//							LoginActivityController.getInstance().helloService(mContext);
 						} else {
 							ToastUtil.showMessage(mContext, jsonObj.getString("ResultDesc"));
 							dealResponseInfo("false",this.getUserTag());
@@ -217,11 +196,10 @@ public class RegistActivityController implements ConstantUrl{
 					} 
 					break;
 				}
-				
 			}
 		}
-
 	}
+
 	private void dealResponseInfo(String result, Object userTag) {
 		ArrayList<Object> post = new ArrayList<Object>();
 		post.add(userTag);
@@ -248,6 +226,7 @@ public class RegistActivityController implements ConstantUrl{
 		}
 		EventBusUtil.post(post);
 	}
+
     /**
      * 通讯握手
      * base64(MD5(Ver + IAMSCID + hellostr + ClientKey))
@@ -281,6 +260,7 @@ public class RegistActivityController implements ConstantUrl{
 					String str_time = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.getDefault()).format(date);
 					dealResponseInfo(str_time,Constant.user_regist_getTime);
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
 			}
 			
@@ -307,7 +287,6 @@ public class RegistActivityController implements ConstantUrl{
 			
 			@Override
 			public void onSuccess(ResponseInfo<File> arg0) {
-//				System.out.println("--------下载完了"+filePath);
 				bitmapUtils.display(iv_first_picnumber, filePath);
 				Log.i("GetValidateCode", "onSuccess");
 			}

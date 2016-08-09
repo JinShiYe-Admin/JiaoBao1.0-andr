@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.io.File;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -42,6 +38,10 @@ import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 
+import org.json.JSONObject;
+
+import java.io.File;
+
 public class SystemActivity extends BaseActivity implements PublicMethod{
 	private Context mContext;
 	@ViewInject(R.id.system_btn_exit) private Button btn_exit;
@@ -59,13 +59,12 @@ public class SystemActivity extends BaseActivity implements PublicMethod{
 		super.onCreate(savedInstanceState);
 
 		initParentView();
-		
 		initPassData();
 		initViews();
 		initDeatilsData();
 		initListener();
-
 	}
+
 	@OnClick({R.id.system_btn_exit,R.id.system_btn_loginout
 		,R.id.system_img_photo,R.id.system_btn_upphoto
 		})
@@ -92,10 +91,12 @@ public class SystemActivity extends BaseActivity implements PublicMethod{
 			break;
 		}
 	}
+
 	@Override
 	public void initPassData() {
 		
 	}
+
 	@Override
 	public void initViews() {
 		setContentLayout(R.layout.ui_system);
@@ -108,30 +109,23 @@ public class SystemActivity extends BaseActivity implements PublicMethod{
 		bitmapUtils.configDefaultLoadFailedImage(R.drawable.photo);
 		bitmapUtils.configDefaultLoadingImage(R.drawable.photo);
 		sp = getSharedPreferences(Constant.SP_TB_USER, MODE_PRIVATE);
-//		sys_sp = getSharedPreferences(Constant.SP_TB_SYS, MODE_PRIVATE);
 		bitmapUtils.display(img_photo, ACache.get(mContext.getApplicationContext()).getAsString("MainUrl")+ConstantUrl.photoURL+"?AccID="+sp.getString("JiaoBaoHao", ""));
-	
-		
 	}
 	@Override
 	public void initDeatilsData() {
-		
+
 	}
 	@Override
 	public void initListener() {
 		
 	}
 	private void initParentView() {
-//		setTitle(R.string.function_system);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setTitle(getResources().getString(R.string.function_system));
-//		getRadio4().setChecked(true);
 	}
 
 	@Override  
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == Activity.RESULT_OK) {
-			
 			super.onActivityResult(requestCode, resultCode, data);  
 			switch (requestCode) {
 			case 1:
@@ -170,7 +164,6 @@ public class SystemActivity extends BaseActivity implements PublicMethod{
 		try {
 			RequestParams params = new RequestParams();
 	        params.addBodyParameter("file", file);
-
 	        HttpUtil.getInstanceNew().send(HttpRequest.HttpMethod.POST, 
 	        		ACache.get(mContext.getApplicationContext()).getAsString("MainUrl")+updatefaceimg, params, 
 	        		new RequestCallBack<String>() {
@@ -215,6 +208,7 @@ public class SystemActivity extends BaseActivity implements PublicMethod{
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){   

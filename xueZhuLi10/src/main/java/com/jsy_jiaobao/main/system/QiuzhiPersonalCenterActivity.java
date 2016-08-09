@@ -1,11 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.io.File;
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.json.JSONObject;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -44,11 +38,14 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.util.LogUtils;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  * 求知个人中心
- * 
- * @author admin
- * 
  */
 public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 		OnClickListener {
@@ -56,23 +53,12 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 	final static int Q_TYPE_MYQUESTION = 2;// 我提问过的问题
 	final static int Q_TYPE_MYANSWER = 3;// 我回答过的问题
 	final static int Q_TYPE_ATME = 4;// /邀请我回答的问题
-	final static int Q_TYPE_ATTP = 5;// 我关注的人
 	final static int Q_TYPE_ATTC = 6;// 我关注的话题
-	final static int Q_TYPE_ATTM = 7;// 关注我的人
 	final static int Q_TYPE_MYCOMMENT = 8;// 我做出的评论
 	Intent intent = new Intent();
 	private Context mContext;
 	private ImageView iv_photo;// 头像
-	private TextView tv_name;// 姓名
 	private TextView tv_score;// 积分
-	private TextView tv_attc;// 我关注的话题
-	private TextView tv_attp;// 我关注的人
-	private TextView tv_attm;// 关注我的人
-	private TextView tv_answeredq;// 我回答过的问题
-	private TextView tv_question;// 我提问过的问题
-	private TextView tv_attquestion;// 我关注的问题
-	private TextView tv_atme;// 邀请我回答的问题
-	private TextView tv_mycomment;// 我做出的评论
 	private Uri photoUri;
 	private String photourl;
 
@@ -81,10 +67,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 		super.onCreate(savedInstanceState);
 		if (savedInstanceState != null) {
 			photoUri = savedInstanceState.getParcelable("photoUri");
-		} else {
-			Bundle bundle = getIntent().getExtras();
-			if (bundle != null) {
-			}
 		}
 		initView();
 	}
@@ -100,18 +82,15 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 		mContext = this;
 		iv_photo = (ImageView) findViewById(R.id.qiuzhip_iv_photo);
 		tv_score = (TextView) findViewById(R.id.qiuzhip_tv_score);
-		tv_name = (TextView) findViewById(R.id.qiuzhip_tv_name);
-		tv_answeredq = (TextView) findViewById(R.id.qiuzhip_tv_answeredq);
-		tv_attm = (TextView) findViewById(R.id.qiuzhip_tv_attm);
-		// tv_attmnum = (TextView) findViewById(R.id.qiuzhip_tv_attmnum);
-		tv_attp = (TextView) findViewById(R.id.qiuzhip_tv_attp);
-		// tv_attpnum = (TextView) findViewById(R.id.qiuzhip_tv_attpnum);
-		tv_attc = (TextView) findViewById(R.id.qiuzhip_tv_attc);
-		// tv_attcnum = (TextView) findViewById(R.id.qiuzhip_tv_attcnum);
-		tv_question = (TextView) findViewById(R.id.qiuzhip_tv_question);
-		tv_attquestion = (TextView) findViewById(R.id.qiuzhip_tv_attquestion);
-		tv_atme = (TextView) findViewById(R.id.qiuzhip_tv_atme);
-		tv_mycomment = (TextView) findViewById(R.id.qiuzhip_tv_mycomment);
+		TextView tv_name = (TextView) findViewById(R.id.qiuzhip_tv_name);
+		TextView tv_answeredq = (TextView) findViewById(R.id.qiuzhip_tv_answeredq);
+		TextView tv_attm = (TextView) findViewById(R.id.qiuzhip_tv_attm);
+		TextView tv_attp = (TextView) findViewById(R.id.qiuzhip_tv_attp);
+		TextView tv_attc = (TextView) findViewById(R.id.qiuzhip_tv_attc);
+		TextView tv_question = (TextView) findViewById(R.id.qiuzhip_tv_question);
+		TextView tv_attquestion = (TextView) findViewById(R.id.qiuzhip_tv_attquestion);
+		TextView tv_atme = (TextView) findViewById(R.id.qiuzhip_tv_atme);
+		TextView tv_mycomment = (TextView) findViewById(R.id.qiuzhip_tv_mycomment);
 		tv_question.setOnClickListener(this);
 		tv_answeredq.setOnClickListener(this);
 		tv_attquestion.setOnClickListener(this);
@@ -137,45 +116,33 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		// 我关注的人
-		case R.id.qiuzhip_tv_attp:
+		case R.id.qiuzhip_tv_attp:// 我关注的人
 			ToastUtil.showMessage(mContext, "该功能暂未开放");
-			// intent.putExtra("Q_TYPE", Q_TYPE_ATTP);
-			// startActivity(intent);
 			break;
-		// 我关注的话题
-		case R.id.qiuzhip_tv_attc:
+		case R.id.qiuzhip_tv_attc:// 我关注的话题
 			intent.putExtra("Q_TYPE", Q_TYPE_ATTC);
 			startActivity(intent);
 			break;
-		// 关注我的人
-		case R.id.qiuzhip_tv_attm:
+		case R.id.qiuzhip_tv_attm:// 关注我的人
 			ToastUtil.showMessage(mContext, "该功能暂未开放");
-			// intent.putExtra("Q_TYPE", Q_TYPE_ATTM);
-			// startActivity(intent);
 			break;
-		// 我提问过的问题
-		case R.id.qiuzhip_tv_question:
+		case R.id.qiuzhip_tv_question:// 我提问过的问题
 			intent.putExtra("Q_TYPE", Q_TYPE_MYQUESTION);
 			startActivity(intent);
 			break;
-		// 我回答过的问题
-		case R.id.qiuzhip_tv_answeredq:
+		case R.id.qiuzhip_tv_answeredq:// 我回答过的问题
 			intent.putExtra("Q_TYPE", Q_TYPE_MYANSWER);
 			startActivity(intent);
 			break;
-		// 我关注的问题
-		case R.id.qiuzhip_tv_attquestion:
+		case R.id.qiuzhip_tv_attquestion:// 我关注的问题
 			intent.putExtra("Q_TYPE", Q_TYPE_MYATT);
 			startActivity(intent);
 			break;
-		// 邀请我回答的问题
-		case R.id.qiuzhip_tv_atme:
+		case R.id.qiuzhip_tv_atme:// 邀请我回答的问题
 			intent.putExtra("Q_TYPE", Q_TYPE_ATME);
 			startActivity(intent);
 			break;
-		// 我做出的评论
-		case R.id.qiuzhip_tv_mycomment:
+		case R.id.qiuzhip_tv_mycomment:// 我做出的评论
 			intent.putExtra("Q_TYPE", Q_TYPE_MYCOMMENT);
 			startActivity(intent);
 			break;
@@ -282,7 +249,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 						try {
 							JSONObject jsonObj = new JSONObject(arg0.result);
 							String ResultCode = jsonObj.getString("ResultCode");
-
 							if ("0".equals(ResultCode)) {
 								QiuZhiPoint point = GsonUtil.GsonToObject(
 										jsonObj.getString("Data"),
@@ -294,6 +260,7 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 										+ todayPoint);
 							}
 						} catch (Exception e) {
+							e.printStackTrace();
 						}
 					}
 				});
@@ -330,6 +297,7 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 								GetMyPointsDay();
 							}
 						} catch (Exception e) {
+							e.printStackTrace();
 						}
 					}
 				});
@@ -347,12 +315,10 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 			try {
 				DialogUtil.getInstance().getDialog(mContext, R.string.loading);
 				createThread();
-
 			} catch (Exception e1) {
 				bitmap = null;
 				e1.printStackTrace();
 			}
-
 			break;
 		case 2:
 			try {
@@ -367,7 +333,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 							R.string.loading);
 					createThread();
 				}
-
 			} catch (Exception e) {
 				bitmap = null;
 				e.printStackTrace();
@@ -376,7 +341,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 		default:
 			break;
 		}
-
 	}
 
 	/**
@@ -388,7 +352,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
 					bitmap = PictureUtils.getbitmapFromURL(photoPath);
 					if (bitmap == null) {
 						file = null;
@@ -407,7 +370,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 
 		@Override
 		public void handleMessage(Message msg) {
-			// TODO Auto-generated method stub
 			switch (msg.what) {
 			case 789:
 				DialogUtil.getInstance().cannleDialog();
@@ -415,8 +377,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 				thread = null;
 				if (file != null) {
 					uploadFile(file);
-					// /*}else{
-					// ToastUtil.showMessage(mContext, "文件为空");*/
 				}
 				break;
 			default:
@@ -428,7 +388,6 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 
 	private void uploadFile(File file) {
 		DialogUtil.getInstance().getDialog(mContext, R.string.uploading);
-		// TODO Auto-generated method stub
 		RequestParams params = new RequestParams();
 		params.addBodyParameter("file", file);
 		HttpUtil.getInstanceNew().send(
@@ -477,8 +436,5 @@ public class QiuzhiPersonalCenterActivity extends BaseActivity implements
 				});
 	}
 
-	// 上传图片
-
 	private File file;
-
 }

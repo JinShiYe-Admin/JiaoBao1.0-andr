@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,30 +24,14 @@ import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.IEditText;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 /**
- * 
- * <pre>
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                   O\  =  /O
- *                ____/`---'\____
- *              .'  \\|     |//  `.
- *             /  \\|||  :  |||//  \
- *            /  _||||| -:- |||||-  \
- *            |   | \\\  -  /// |   |
- *            | \_|  ''\---/''  |   |
- *            \  .-\__  `-`  ___/-. /
- *          ___`. .'  /--.--\  `. . __
- *       ."" '<  `.___\_<|>_/___.'  >'"".
- *      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *      \  \ `-.   \_ __\ /__ _/   .-` /  /
- * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- * 			               佛祖保佑       永无BUG
- * 
  * 注册用户,重置密码
  */
 public class RegistActivity extends BaseActivity implements OnClickListener {
@@ -66,15 +43,11 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 	private ImageView iv_second_picnumber;
 	
 	private TextView tv_first_getmsgnumber;
-	private TextView tv_second_check;
-	private TextView tv_third_regist;
 	private IEditText edt_send_phone;
 	private IEditText edt_pwd1;
 	private IEditText edt_pwd2;
-//	private ImageView iv_regist;
-	private ViewPagerAdapter adapter;
 	private ViewPager viewpager;
-	private List<View> lists = new ArrayList<View>();  
+	private List<View> lists = new ArrayList<>();
 	
 	private String pageWhat =  "regeit";
 	@Override
@@ -109,14 +82,13 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 		lists.add(view1);
 		lists.add(view2);
 		lists.add(view3);
-		adapter = new ViewPagerAdapter(lists);
+		ViewPagerAdapter adapter = new ViewPagerAdapter(lists);
 		viewpager.setAdapter(adapter);
 		viewpager.setCurrentItem(0);
 		viewpager.setOnTouchListener(new View.OnTouchListener() {
 			
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
 				if (viewpager.getCurrentItem()== 0||viewpager.getCurrentItem()== 1||viewpager.getCurrentItem()== 2) {
 					return true;
 				}
@@ -151,7 +123,7 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 	private void initThird(View view) {
 		edt_pwd1 = (IEditText) view.findViewById(R.id.regist_edt_pwd);
 		edt_pwd2 = (IEditText) view.findViewById(R.id.regist_edt_pwd2);
-		tv_third_regist = (TextView) view.findViewById(R.id.regist_tv_thirdregist);
+		TextView tv_third_regist = (TextView) view.findViewById(R.id.regist_tv_thirdregist);
 		tv_third_regist.setOnClickListener(this);
 		if ("regeit".equals(pageWhat)) {
 			tv_third_regist.setText(R.string.register);
@@ -161,7 +133,7 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 	}
 	private void initSecond(View view) {
 		edt_send_phone = (IEditText) view.findViewById(R.id.regist_edt_phonechecknumber);
-		tv_second_check = (TextView) view.findViewById(R.id.regist_tv_secondcheck);
+		TextView tv_second_check = (TextView) view.findViewById(R.id.regist_tv_secondcheck);
 		tv_second_check.setOnClickListener(this);
 		iv_second_picnumber = (ImageView) view.findViewById(R.id.retist_iv_second_picnumber);
 		iv_second_picnumber.setOnClickListener(this);
@@ -182,7 +154,6 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 			public void onFocusChange(View v, boolean hasFocus) {
 				if (!hasFocus) {
 					String str = edt_first_phone.getTextString();
-//					if (StringUtils.isMobileNO(str)) {
 						if (!TextUtils.isEmpty(oldPhoneNumber)) {
 							if (!str.equals(oldPhoneNumber)) {
 								tv_first_getmsgnumber.setEnabled(true);
@@ -194,16 +165,8 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 							}
 						}
 						oldPhoneNumber = str;
-//						if ("regeit".equals(pageWhat)) {
-//							DialogUtil.getInstance().getDialog(mContext, "正在验证手机号...");
-//							RegistActivityController.getInstance().checkMobileAcc(str);
-//						}else if ("reset".equals(pageWhat)) {
-							DialogUtil.getInstance().getDialog(mContext, R.string.verifying_phone_number);
-							RegistActivityController.getInstance().checkMobileAcc(str);
-//						}
-//					}else{
-//						ToastUtil.showMessage(mContext, "手机号不正确");
-//					}
+						DialogUtil.getInstance().getDialog(mContext, R.string.verifying_phone_number);
+					RegistActivityController.getInstance().checkMobileAcc(str);
 				}
 			}
 		});
@@ -238,7 +201,6 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 		case R.id.regist_tv_getmsgnumber://获取短信验证码
 			String str_phone1 = edt_first_phone.getTextString();
 			String str_pic1 = edt_first_picnumber.getTextString();
-
 			if (TextUtils.isEmpty(str_phone1)) {
 				ToastUtil.showMessage(mContext, R.string.input_phone_number);
 			}else if(TextUtils.isEmpty(str_pic1)){
@@ -339,8 +301,6 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 				if ("regeit".equals(pageWhat)) {
 					edt_first_phone.setText("");
 					ToastUtil.showMessage(mContext, R.string.phone_hasRegistered_orError);
-				}else if ("reset".equals(pageWhat)) {
-					
 				}
 			}else{//未注册
 				if ("regeit".equals(pageWhat)) {
@@ -360,7 +320,6 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 			if ("success".equals(checkcode)) {
 				viewpager.setCurrentItem(1);
 				pageNumber = 1;
-				
 				tv_first_getmsgnumber.setEnabled(false);
 				timer = new Timer();
 				countdown = 60;
@@ -393,7 +352,6 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 				ToastUtil.showMessage(mContext, R.string.smsNote_inputedWrong);
 			}
 			break;
-			
 		default:
 			break;
 		}
@@ -463,6 +421,5 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 			((ViewPager) view).addView(viewLists.get(position), 0);
 			return viewLists.get(position);
 		}
-
 	}
 }

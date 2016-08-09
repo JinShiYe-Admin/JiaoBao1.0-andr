@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.content.Context;
 
 import com.google.gson.reflect.TypeToken;
@@ -24,17 +20,18 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * 个人中心修改昵称，姓名，密码，加入单位的Activity的Controller
- * 
- * @author admin
- * 
  */
 public class PersonalCenterChangeActivityController implements ConstantUrl {
 	private static PersonalCenterChangeActivityController instance;
 	private Context mContext;
 
-	public static synchronized final PersonalCenterChangeActivityController getInstance() {
+	public static synchronized PersonalCenterChangeActivityController getInstance() {
 		if (instance == null) {
 			instance = new PersonalCenterChangeActivityController();
 		}
@@ -101,7 +98,6 @@ public class PersonalCenterChangeActivityController implements ConstantUrl {
 				} else {
 					ToastUtil.showMessage(mContext, R.string.error_internet);
 				}
-
 			}
 		}
 
@@ -120,7 +116,6 @@ public class PersonalCenterChangeActivityController implements ConstantUrl {
 							break;
 						case Constant.user_regist_UpateRecAcc:
 						case Constant.user_regist_ChangePW:
-							// case Constant.user_regist_JoinUnitOP:
 							dealResponseInfo("success", this.getUserTag());
 							break;
 						default:
@@ -131,7 +126,6 @@ public class PersonalCenterChangeActivityController implements ConstantUrl {
 							dealResponseInfo(data, this.getUserTag());
 							break;
 						}
-
 					} else if ("8".equals(ResultCode)) {
 						dealResponseInfo("false", this.getUserTag());
 						LoginActivityController.getInstance().helloService(
@@ -148,17 +142,15 @@ public class PersonalCenterChangeActivityController implements ConstantUrl {
 				}
 			}
 		}
-
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {
 		case Constant.user_regist_checkAccN:
 		case Constant.user_regist_UpateRecAcc:
 		case Constant.user_regist_ChangePW:
-			// case Constant.user_regist_JoinUnitOP:
 			post.add(result);
 			break;
 		case Constant.user_regist_GetMyMobileUnitList:

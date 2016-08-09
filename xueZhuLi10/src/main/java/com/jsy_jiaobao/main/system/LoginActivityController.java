@@ -1,14 +1,7 @@
 package com.jsy_jiaobao.main.system;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Context;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.Base64Helper;
 import com.jsy.xuezhuli.utils.BaseUtils;
@@ -29,17 +22,22 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.util.LogUtils;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * LoginActivity的Controller
- * 
- * @author admin
- * 
  */
 public class LoginActivityController implements ConstantUrl {
 	private static LoginActivityController instance;
 	private Context mContext;
 
-	public static synchronized final LoginActivityController getInstance() {
+	public static synchronized LoginActivityController getInstance() {
 		if (instance == null) {
 			instance = new LoginActivityController();
 		}
@@ -51,13 +49,7 @@ public class LoginActivityController implements ConstantUrl {
 		return this;
 	}
 
-	public void search(RequestParams params) {
-
-	}
-
-
 	String str_time;
-	boolean isHello = false;
 	boolean getInternet = false;
 
 	// 获取网络时间
@@ -77,15 +69,9 @@ public class LoginActivityController implements ConstantUrl {
 								str_time = new SimpleDateFormat(
 										"yyyy-MM-dd HH:mm:ss", Locale
 												.getDefault()).format(date);
-
-								// if (isHello) {
 								httpUserLogin();
-								// }else {
-								// helloService();
-								// }
 							}
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}
@@ -97,13 +83,8 @@ public class LoginActivityController implements ConstantUrl {
 								getInternet = true;
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								str_time = jsonObj.getString("Data");
-								// if (isHello) {
 								httpUserLogin();
-								// }else {
-								// helloService();
-								// }
 							}
-
 						} catch (JSONException e) {
 							e.printStackTrace();
 						}
@@ -156,7 +137,6 @@ public class LoginActivityController implements ConstantUrl {
 					+ "\",\"UserPW\":\""
 					+ BaseActivity.sp.getString("UserPW", "")
 					+ "\",\"TimeStamp\":\"" + str_time + "\"}";
-
 			String rsaLoginstr = RsaHelper.encryptDataFromStr(loginClass);
 
 			String sign = BaseUtils.getVersion(mContext) + rsaLoginstr
@@ -201,7 +181,7 @@ public class LoginActivityController implements ConstantUrl {
 					if ("0".equals(ResultCode)) {
 						ToastUtil.showMessage(mContext,
 								R.string.login_loginSuccess);
-						ArrayList<Object> post = new ArrayList<Object>();
+						ArrayList<Object> post = new ArrayList<>();
 						post.add(Constant.system_login_again);
 						EventBusUtil.post(post);
 						try {
@@ -220,7 +200,6 @@ public class LoginActivityController implements ConstantUrl {
 									HttpRequest.HttpMethod.POST, url, params,
 									callback);
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 						getToken();
@@ -238,7 +217,6 @@ public class LoginActivityController implements ConstantUrl {
 						if (data.equals(hellostr)) {
 							getTime();
 						}
-					} else {
 					}
 				}
 			} catch (Exception e) {
@@ -267,7 +245,6 @@ public class LoginActivityController implements ConstantUrl {
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
 										.getString("ResultCode");
-
 								if ("0".equals(ResultCode)) {
 									String data = Des.decrypt(jsonObj
 											.getString("Data"),
@@ -288,9 +265,9 @@ public class LoginActivityController implements ConstantUrl {
 																	.getString("ResultDesc"));
 								}
 							} catch (Exception e) {
+								e.printStackTrace();
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -299,7 +276,6 @@ public class LoginActivityController implements ConstantUrl {
 
 	protected void loginJBApp(String data) {
 		try {
-
 			LogUtils.e("----------loginJBApp");
 			RequestParams params = new RequestParams();
 			params.addBodyParameter("cliToken", data);
@@ -312,21 +288,11 @@ public class LoginActivityController implements ConstantUrl {
 
 						@Override
 						public void onFailure(HttpException arg0, String arg1) {
-							// dialog.dismiss();
 						}
 
 						@Override
 						public void onSuccess(ResponseInfo<String> arg0) {
-
-							// try {
-							// JSONObject jsonObj = new JSONObject(arg0.result);
-							// String ResultCode =
-							// jsonObj.getString("ResultCode");
-							// } catch (Exception e) {
-							// dialog.dismiss();
-							// }
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();

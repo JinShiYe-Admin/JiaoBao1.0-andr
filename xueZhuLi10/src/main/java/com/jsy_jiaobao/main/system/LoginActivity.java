@@ -1,18 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import static com.jsy.xuezhuli.utils.Constant.listUserIdentity;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.UUID;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
@@ -69,11 +56,21 @@ import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.util.LogUtils;
 import com.umeng.analytics.MobclickAgent;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
+
+import static com.jsy.xuezhuli.utils.Constant.listUserIdentity;
+
 /**
  * 登陆界面
- * 
- * @author admin
- * 
  */
 public class LoginActivity extends SherlockActivity implements ConstantUrl,
 		OnClickListener {
@@ -84,7 +81,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 	private TextView tv_isAuto;// 是否自动登陆
 	private TextView cb_isAuto;
 	private TextView tv_version;
-	// private LinearLayout layout_bottom;
 	private LinearLayout layout_parent;
 	private ImageView iv_register;// 注册
 	private ImageView iv_resetpwd;// 重置密码
@@ -97,12 +93,10 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 	private SharedPreferences sp;
 	private Editor editor, editor_sys;
 	private boolean isAuto = false;
-	// private boolean isHello = false;
 	private boolean isFirst = true;
 	private boolean isClick = false;
 	private int failure = 1;
 	private String hellostr;
-	// private ACache mCache;
 	private int mVisibleHeight;
 
 	@Override
@@ -156,10 +150,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 			String ClientKey = BaseUtils.getRandomString(8);
 			editor_sys.putString("ClientKey", ClientKey).commit();
 			getTime();
-		} else {
-			// helloService();
 		}
-
 		String currCode = BaseUtils.getVersion(getApplicationContext());
 		tv_version.setText(currCode);
 		DisplayMetrics dm = new DisplayMetrics();
@@ -167,7 +158,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 		Constant.ScreenWith = dm.widthPixels;// 宽度
 		Constant.ScreenHeight = dm.heightPixels;// 高度
 		getSupportActionBar().hide();
-
 		layout_parent.getViewTreeObserver().addOnGlobalLayoutListener(
 				new ViewTreeObserver.OnGlobalLayoutListener() {
 					@Override
@@ -195,9 +185,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 	 * @功能 初始化界面 加载监听事件
 	 */
 	private void findViews() {
-		// TODO Auto-generated method stub
 		btn_login = (Button) findViewById(R.id.login_btn_take);
-
 		edt_pwd = (IEditText) findViewById(R.id.login_edt_pwd);
 		edt_username = (IEditText) findViewById(R.id.login_edt_username);
 		tv_isAuto = (TextView) findViewById(R.id.login_tv_autologin);
@@ -248,8 +236,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.login_btn_take:
-			// 登陆
+		case R.id.login_btn_take:// 登陆
 			MobclickAgent.onEvent(this,
 					getResources().getString(R.string.login_button));
 			str_pwd = edt_pwd.getTextString();
@@ -282,16 +269,14 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 			}
 			setIsAutoBackgound();
 			break;
-		case R.id.login_iv_regeit:
-			// 注册
+		case R.id.login_iv_regeit:// 注册
 			MobclickAgent.onEvent(this,
 					getResources().getString(R.string.login_register));
 			Intent intent = new Intent(mContext, RegistActivity.class);
 			intent.putExtra("page", "regeit");
 			startActivity(intent);
 			break;
-		case R.id.login_iv_resetpwd:
-			// 重置密码
+		case R.id.login_iv_resetpwd:// 重置密码
 			MobclickAgent.onEvent(this,
 					getResources().getString(R.string.login_reset_passwords));
 			Intent intent1 = new Intent(mContext, RegistActivity.class);
@@ -313,7 +298,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 			String loginClass = "{\"UserName\":\"" + str_username
 					+ "\",\"UserPW\":\"" + str_pwd + "\",\"TimeStamp\":\""
 					+ str_time + "\"}";
-
 			String rsaLoginstr = RsaHelper.encryptDataFromStr(loginClass);
 			String sign = BaseUtils.getVersion(mContext) + rsaLoginstr
 					+ sp_sys.getString("ClientKey", "") + str_time;
@@ -324,7 +308,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 			params.addBodyParameter("Loginstr", rsaLoginstr);
 			params.addBodyParameter("TimeStamp", str_time);
 			params.addBodyParameter("Sign", enMD5);
-
 			HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST,
 					user_login, params, new RequestCallBack<String>() {
 
@@ -341,7 +324,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
 										.getString("ResultCode");
-
 								if ("0".equals(ResultCode)) {
 									String data = Des.decrypt(
 											jsonObj.getString("Data"),
@@ -517,7 +499,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 												}
 											}
 										} else {
-											int uid = 0;
+											int uid;
 											x: for (int i = 0; i < listUserIdentity
 													.size(); i++) {
 												UserIdentity userIdentity = listUserIdentity
@@ -555,8 +537,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 												}
 											}
 										}
-									} else {
-
 									}
 									VisitPublicHttp.getInstance()
 											.httpGetLeaveSetting();
@@ -590,7 +570,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 																		R.string.login_error_login));
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -619,7 +598,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
 										.getString("ResultCode");
-
 								if ("0".equals(ResultCode)) {
 									String data = Des.decrypt(
 											jsonObj.getString("Data"),
@@ -662,7 +640,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 																		R.string.login_error_login));
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -724,7 +701,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 																		R.string.login_error_login));
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -732,7 +708,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 	}
 	/**
 	 * 登陆JBApp
-	 * @param data
 	 */
 	protected void loginJBApp(String data) {
 		try {
@@ -789,7 +764,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 																		R.string.login_error_login));
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -874,38 +848,11 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 																		R.string.login_error_login));
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * 获取融云token
-	 */
-	// private int getRongCloudTokenError = 0;
-
-	// private void getRongCloudToken() {
-	// LogUtils.e("----------getRongCloudToken");
-	// RequestParams params = new RequestParams();
-	// params.addBodyParameter("AccID", sp.getString("JiaoBaoHao", ""));
-	// params.addBodyParameter("TrueName", sp.getString("TrueName", ""));
-	// HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST,
-	// getRongYunToken, params, new RequestCallBack<String>() {
-	//
-	// @Override
-	// public void onFailure(HttpException arg0, String arg1) {
-	// dialog.dismiss();
-	// ToastUtil.showMessage(mContext, getResources()
-	// .getString(R.string.login_loginFailed));
-	// }
-	//
-	// @Override
-	// public void onSuccess(ResponseInfo<String> arg0) {
-	// }
-	// });
-	// }
 
 	/**
 	 * 客户端注册
@@ -921,7 +868,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 		params.addBodyParameter("CliVer",
 				BaseUtils.getVersion(getApplicationContext()));
 		params.addBodyParameter("regstr", regstr);
-
 		HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST, sys_regClient,
 				params, new RequestCallBack<String>() {
 
@@ -1009,7 +955,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 
 						@Override
 						public void onFailure(HttpException arg0, String arg1) {
-							// TODO Auto-generated method stub
 							dialog.dismiss();
 							System.out.println(arg1);
 						}
@@ -1032,7 +977,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 									}
 								} else {
 									failure++;
-
 									if (failure > 2) {
 										String ClientKey = BaseUtils
 												.getRandomString(8);
@@ -1092,7 +1036,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 								}
 							}
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}
@@ -1157,7 +1100,6 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 	 * 提示框
 	 */
 	protected void dialog_version(final VersionInfo versionInfo) {
-
 		AlertDialog.Builder builder = new Builder(mContext);
 		builder.setMessage(versionInfo.getIntroduce());
 		MobclickAgent.onEvent(this,
@@ -1173,12 +1115,10 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 				}
 			});
 		}
-
 		builder.setNeutralButton(R.string.up_grade,
 				new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-
 						dialog.dismiss();
 						String url = versionInfo.getUrl();
 						Intent updateIntent = new Intent(mContext,

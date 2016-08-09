@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.util.ArrayList;
-
-import org.json.JSONObject;
-
 import android.content.Context;
 
 import com.google.gson.reflect.TypeToken;
@@ -26,10 +22,14 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class QiuzhiQuestionListActivityController implements ConstantUrl{
 	private static QiuzhiQuestionListActivityController instance;
 	private Context mContext;
-	public static synchronized final QiuzhiQuestionListActivityController getInstance() {
+	public static synchronized QiuzhiQuestionListActivityController getInstance() {
 		if (instance == null) {
 			instance = new QiuzhiQuestionListActivityController();
 		}
@@ -147,7 +147,6 @@ public class QiuzhiQuestionListActivityController implements ConstantUrl{
 	 * 功能：获取一个答案明细信息，包括问题内容;
 	 * 参数名称	是否必须	类型	描述
 	 * AId	是	int	答案ID
-	 * @param item 
 	 */
 	public void AnswerDetail(int AId, MyComms item){
 		RequestParams params = new RequestParams();
@@ -266,7 +265,7 @@ public class QiuzhiQuestionListActivityController implements ConstantUrl{
 
 	}
 	private void dealResponseInfo(String result, Object userTag,MyComms myComms) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		AnswerDetails answer = GsonUtil.GsonToObject(result, AnswerDetails.class);
 		if (answer != null) {
@@ -282,7 +281,7 @@ public class QiuzhiQuestionListActivityController implements ConstantUrl{
 	}
 	ArrayList<String> hiddens;
 	private void dealResponseInfo(String result, Object userTag) {
-		ArrayList<Object> post = new ArrayList<Object>();
+		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer)userTag) {
 		case Constant.msgcenter_qiuzhi_AddMyattCate:

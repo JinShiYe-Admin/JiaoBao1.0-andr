@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.io.File;
-import java.util.List;
-import org.json.JSONObject;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,6 +16,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
@@ -40,23 +37,20 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.List;
+
 /**
  * 个人中心界面
- * 
- * @author admin
- * 
  */
 public class PersonalCenterActivity extends BaseActivity implements
 		OnClickListener {
-
 	private Context mContext;
 	private ImageView iv_photo;// 头像
 	private TextView tv_nickname;// 昵称
 	private TextView tv_truename;
-	private TextView tv_jiaobaohao;// 教宝号
-	private TextView tv_qiuzhi;// 求知个人中心
-	private TextView tv_pwd;// 密码
-	private TextView tv_getunit;// 所有单位
 	private TextView tv_myunits;// 我的单位
 	private String photourl;
 	private Intent intent = new Intent();
@@ -73,7 +67,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 	/**
 	 * 保存可能意外销毁的数据
-	 * 
 	 * @功能 保存图片URI
 	 */
 	@Override
@@ -100,10 +93,10 @@ public class PersonalCenterActivity extends BaseActivity implements
 		iv_photo = (ImageView) findViewById(R.id.personal_iv_photo);
 		tv_nickname = (TextView) findViewById(R.id.personal_tv_nickname);
 		tv_truename = (TextView) findViewById(R.id.personal_tv_truename);
-		tv_jiaobaohao = (TextView) findViewById(R.id.personal_tv_jiaobaohao);
-		tv_qiuzhi = (TextView) findViewById(R.id.personal_tv_qiuzhi);
-		tv_pwd = (TextView) findViewById(R.id.personal_tv_pwd);
-		tv_getunit = (TextView) findViewById(R.id.personal_tv_getunit);
+		TextView tv_jiaobaohao = (TextView) findViewById(R.id.personal_tv_jiaobaohao);
+		TextView tv_qiuzhi = (TextView) findViewById(R.id.personal_tv_qiuzhi);
+		TextView tv_pwd = (TextView) findViewById(R.id.personal_tv_pwd);
+		TextView tv_getunit = (TextView) findViewById(R.id.personal_tv_getunit);
 		tv_myunits = (TextView) findViewById(R.id.personal_tv_units);
 		photourl = ACache.get(mContext.getApplicationContext()).getAsString(
 				"MainUrl")
@@ -111,7 +104,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 				+ "?AccID="
 				+ BaseActivity.sp.getString("JiaoBaoHao", "");
 		JSYApplication.getInstance().bitmap.clearCache(photourl);
-		// JSYApplication.getInstance().bitmap.display(iv_photo, photourl);
 		tv_jiaobaohao.setText(BaseActivity.sp.getString("JiaoBaoHao", ""));
 		// view加入监听
 		tv_pwd.setOnClickListener(this);
@@ -120,9 +112,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 		tv_truename.setOnClickListener(this);
 		iv_photo.setOnClickListener(this);
 		tv_qiuzhi.setOnClickListener(this);
-		// 获取单位
-		setUnits();
-
+		setUnits();// 获取单位
 	}
 
 	/*
@@ -135,8 +125,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 		if (Constant.listUserIdentity != null) {
 			for (int i = 0; i < Constant.listUserIdentity.size(); i++) {
 				UserIdentity userIdentity = Constant.listUserIdentity.get(i);
-				// 教育局
-				if (userIdentity.getRoleIdentity() == 1) {
+				if (userIdentity.getRoleIdentity() == 1) {// 教育局
 					List<UserUnit> UserUnits = userIdentity.getUserUnits();
 					if (UserUnits != null) {
 						for (int j = 0; j < UserUnits.size(); j++) {
@@ -147,8 +136,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 									+ "-" + unit.getUnitName() + "\n";
 						}
 					}
-					// 老师
-				} else if (userIdentity.getRoleIdentity() == 2) {
+				} else if (userIdentity.getRoleIdentity() == 2) {// 老师
 					List<UserUnit> UserUnits = userIdentity.getUserUnits();
 					if (UserUnits != null) {
 						for (int j = 0; j < UserUnits.size(); j++) {
@@ -167,8 +155,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 									+ "-" + unit.getClassName() + "\n";
 						}
 					}
-					// 家长
-				} else if (userIdentity.getRoleIdentity() == 3) {
+				} else if (userIdentity.getRoleIdentity() == 3) {// 家长
 					List<UserClass> userClasses = userIdentity.getUserClasses();
 					if (userClasses != null) {
 						for (int j = 0; j < userClasses.size(); j++) {
@@ -178,8 +165,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 									+ "-" + unit.getClassName() + "\n";
 						}
 					}
-					// 学生
-				} else if (userIdentity.getRoleIdentity() == 4) {
+				} else if (userIdentity.getRoleIdentity() == 4) {// 学生
 					List<UserClass> userClasses = userIdentity.getUserClasses();
 					if (userClasses != null) {
 						for (int j = 0; j < userClasses.size(); j++) {
@@ -205,43 +191,36 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 	/**
 	 * 点击事件接口
-	 * 
 	 * @功能 view点击事件监听
 	 */
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.personal_tv_qiuzhi:
-			// 求知个人中心
+		case R.id.personal_tv_qiuzhi:// 求知个人中心
 			intent.setClass(mContext, QiuzhiPersonalCenterActivity.class);
 			startActivity(intent);
 			break;
-		case R.id.personal_tv_pwd:
-			// 重置密码
+		case R.id.personal_tv_pwd:// 重置密码
 			intent.setClass(mContext, PersonalCenterChangeActivity.class);
 			intent.putExtra("way", "pwd");
 			startActivity(intent);
 			break;
-		case R.id.personal_tv_getunit:
-			// 加入单位
+		case R.id.personal_tv_getunit:// 加入单位
 			intent.setClass(mContext, PersonalCenterChangeActivity.class);
 			intent.putExtra("way", "unit");
 			startActivity(intent);
 			break;
-		case R.id.personal_tv_truename:
-			// 姓名
+		case R.id.personal_tv_truename:// 姓名
 			intent.setClass(mContext, PersonalCenterChangeActivity.class);
 			intent.putExtra("way", "name");
 			startActivity(intent);
 			break;
-		case R.id.personal_tv_nickname:
-			// 昵称
+		case R.id.personal_tv_nickname:// 昵称
 			intent.setClass(mContext, PersonalCenterChangeActivity.class);
 			intent.putExtra("way", "name");
 			startActivity(intent);
 			break;
-		case R.id.personal_iv_photo:
-			// 头像
+		case R.id.personal_iv_photo:// 头像
 			AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
 			builder.setIcon(android.R.drawable.ic_menu_gallery);
 			builder.setTitle(R.string.choose_source);
@@ -264,7 +243,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 								ToastUtil.showMessage(mContext,
 										R.string.open_camera_abnormal);
 							}
-
 						}
 					});
 			builder.setNegativeButton(R.string.album,
@@ -280,7 +258,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 					});
 			builder.create().show();
 			break;
-
 		default:
 			break;
 		}
@@ -305,7 +282,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 	/**
 	 * 接收上个组件留存的数据
-	 * 
 	 * @功能 从相机或相册获取到出片并处理
 	 */
 	@Override
@@ -314,7 +290,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 		switch (requestCode) {
 		case 1:// 相机
 			try {
-
 				DialogUtil.getInstance().getDialog(mContext, R.string.loading);
 				creatThread();
 			} catch (Exception e1) {
@@ -334,7 +309,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 							R.string.loading);
 					creatThread();
 				}
-
 			} catch (Exception e) {
 				bitmap = null;
 				e.printStackTrace();
@@ -343,12 +317,10 @@ public class PersonalCenterActivity extends BaseActivity implements
 		default:
 			break;
 		}
-
 	}
 
 	/**
 	 * 创建线程
-	 * 
 	 * @功能 处理图片
 	 */
 	private void creatThread() {
@@ -357,7 +329,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 				@Override
 				public void run() {
-					// TODO Auto-generated method stub
 					bitmap = PictureUtils.getbitmapFromURL(photoPath);
 					if (bitmap == null) {
 						file = null;
@@ -379,7 +350,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 		@Override
 		public void handleMessage(Message msg) {
-			// TODO Auto-generated method stub
 			switch (msg.what) {
 			case 789:
 				DialogUtil.getInstance().cannleDialog();
@@ -398,10 +368,8 @@ public class PersonalCenterActivity extends BaseActivity implements
 	/**
 	 * @method 自定义方法
 	 * @功能 上传图片文件
-	 * @param file
 	 */
 	private void uploadFile(File file) {
-		// TODO Auto-generated method stub
 		DialogUtil.getInstance().getDialog(mContext, R.string.uploading);
 		RequestParams params = new RequestParams();
 		params.addBodyParameter("file", file);
@@ -410,7 +378,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 				ACache.get(mContext.getApplicationContext()).getAsString(
 						"MainUrl")
 						+ updatefaceimg, params, new RequestCallBack<String>() {
-
 					@Override
 					public void onFailure(HttpException arg0, String arg1) {
 						if (mContext != null) {
@@ -453,7 +420,6 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 	/**
 	 * 系统返回按键
-	 * 
 	 * @功能 结束当前Activity
 	 */
 	@Override

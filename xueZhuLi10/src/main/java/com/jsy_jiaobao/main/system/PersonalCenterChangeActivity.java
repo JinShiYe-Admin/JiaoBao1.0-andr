@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import java.util.ArrayList;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +7,6 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -28,24 +23,21 @@ import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.qiuzhi.UserInfo;
 import com.jsy_jiaobao.po.sys.MyMobileUnit;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+
 /**
  * 个人中心修改昵称，姓名，密码，加入单位的Activity
- * 
- * @author
  */
 public class PersonalCenterChangeActivity extends BaseActivity implements
 		OnClickListener {
-
 	private Context mContext;
 	private IEditText edt_nickname;// 昵称
 	private IEditText edt_truename;// 真实姓名
 	private IEditText edt_oldpwd;// 原密码
 	private IEditText edt_newpwd;// 新密码
 	private TextView tv_change;// 确定
-
-	private CusListView listView;
-	private LinearLayout layout_name;
-	private LinearLayout layout_pwd;
 	private String way;
 
 	private PersonalCenterChangeAdapter adapter;
@@ -73,32 +65,29 @@ public class PersonalCenterChangeActivity extends BaseActivity implements
 	private void initView() {
 		setContentLayout(R.layout.activity_personalcenter_change);
 		mContext = this;
-
 		PersonalCenterChangeActivityController.getInstance().setContext(this);
-		layout_name = (LinearLayout) findViewById(R.id.personal_layout_name);
-		layout_pwd = (LinearLayout) findViewById(R.id.personal_layout_pwd);
+		LinearLayout layout_name = (LinearLayout) findViewById(R.id.personal_layout_name);
+		LinearLayout layout_pwd = (LinearLayout) findViewById(R.id.personal_layout_pwd);
 		edt_nickname = (IEditText) findViewById(R.id.personal_edt_nickname);
 		edt_truename = (IEditText) findViewById(R.id.personal_edt_truename);
 		edt_oldpwd = (IEditText) findViewById(R.id.personal_edt_oldpwd);
 		edt_newpwd = (IEditText) findViewById(R.id.personal_edt_newpwd);
 		tv_change = (TextView) findViewById(R.id.personal_tv_change);
-		listView = (CusListView) findViewById(R.id.personal_listview);
+		CusListView listView = (CusListView) findViewById(R.id.personal_listview);
 		tv_change.setOnClickListener(this);
-
 		edt_nickname.setText(BaseActivity.sp.getString("Nickname",
 				getResources().getString(R.string.new_user)));
 		edt_truename.setText(BaseActivity.sp.getString("TrueName",
 				getResources().getString(R.string.new_user)));
-
 		if ("name".equals(way)) {
 			setActionBarTitle(R.string.change_name);
-			layout_name.setVisibility(0);
+			layout_name.setVisibility(View.VISIBLE);
 		} else if ("pwd".equals(way)) {
 			setActionBarTitle(R.string.change_passwords);
-			layout_pwd.setVisibility(0);
+			layout_pwd.setVisibility(View.VISIBLE);
 		} else if ("unit".equals(way)) {
 			setActionBarTitle(R.string.join_unit);
-			listView.setVisibility(0);
+			listView.setVisibility(View.VISIBLE);
 			tv_change.setVisibility(View.GONE);
 			adapter = new PersonalCenterChangeAdapter(this);
 			listView.setAdapter(adapter);
@@ -161,10 +150,7 @@ public class PersonalCenterChangeActivity extends BaseActivity implements
 				} else {
 					ToastUtil.showMessage(mContext, R.string.cannot_empty);
 				}
-			} else if ("unit".equals(way)) {
-
 			}
-
 		}
 	}
 
@@ -239,7 +225,6 @@ public class PersonalCenterChangeActivity extends BaseActivity implements
 				ToastUtil.showMessage(mContext, "暂无可加入单位");
 			}
 			break;
-
 		default:
 			break;
 		}
@@ -253,5 +238,4 @@ public class PersonalCenterChangeActivity extends BaseActivity implements
 		}
 		return super.onKeyDown(keyCode, event);
 	}
-
 }

@@ -1,12 +1,5 @@
 package com.jsy_jiaobao.main.system;
 
-import static com.jsy.xuezhuli.utils.Constant.listUserIdentity;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -43,14 +36,17 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.jsy.xuezhuli.utils.Constant.listUserIdentity;
+
 /**
  * 登陆访问服务器
- * 
- * @author admin
- * 
  */
 public class VisitPublicHttp implements ConstantUrl {
-
 	private static VisitPublicHttp instance;
 	private Activity mContext;
 	private ProgressDialog dialog;
@@ -58,9 +54,7 @@ public class VisitPublicHttp implements ConstantUrl {
 	private Editor editor;
 	private boolean sendmsg;
 
-	// private final static String TAG = "VisitPublicHttp";
-
-	public static synchronized final VisitPublicHttp getInstance() {
+	public static synchronized  VisitPublicHttp getInstance() {
 		if (instance == null) {
 			instance = new VisitPublicHttp();
 		}
@@ -82,8 +76,6 @@ public class VisitPublicHttp implements ConstantUrl {
 
 	/**
 	 * 切换单位
-	 * 
-	 * @param b
 	 */
 	public void changeCurUnit(boolean b) {
 		this.sendmsg = b;
@@ -94,7 +86,6 @@ public class VisitPublicHttp implements ConstantUrl {
 							mContext,
 							mContext.getResources().getString(
 									R.string.public_loading));
-
 				}
 				RequestParams params = new RequestParams();
 				params.addBodyParameter("UID", user_sp.getInt("UnitID", 0) + "");
@@ -127,12 +118,7 @@ public class VisitPublicHttp implements ConstantUrl {
 												.getString("ResultCode");
 
 										if ("0".equals(ResultCode)) {
-											// String data = Des.decrypt(jsonObj
-											// .getString("Data"), sys_sp
-											// .getString("ClientKey", ""));
 											httpGetUserInfo();
-											// httpGetLeaveSetting();
-											// getRoleIdentity();
 										} else if ("8".equals(ResultCode)) {
 											LoginActivityController
 													.getInstance()
@@ -193,7 +179,6 @@ public class VisitPublicHttp implements ConstantUrl {
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
 										.getString("ResultCode");
-
 								if ("0".equals(ResultCode)) {
 									String data = Des.decrypt(
 											jsonObj.getString("Data"),
@@ -335,8 +320,6 @@ public class VisitPublicHttp implements ConstantUrl {
 												}
 
 											}
-										} else {
-
 										}
 										RequestParams params = new RequestParams();
 										params.addBodyParameter("UID",
@@ -351,10 +334,8 @@ public class VisitPublicHttp implements ConstantUrl {
 												changeCurUnit, params, null);
 
 										httpGetUserInfo();
-										// httpGetLeaveSetting();
 									}
 									changeGenStuUserName();
-
 								} else {
 									BaseUtils
 											.shortToast(
@@ -368,9 +349,9 @@ public class VisitPublicHttp implements ConstantUrl {
 																	.getString("ResultDesc"));
 								}
 							} catch (Exception e) {
+								e.printStackTrace();
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -453,15 +434,14 @@ public class VisitPublicHttp implements ConstantUrl {
 												jsonObj.getString("ResultDesc"));
 									}
 								} catch (Exception e) {
-
+										e.printStackTrace();
 								}
-								ArrayList<Object> list = new ArrayList<Object>();
+								ArrayList<Object> list = new ArrayList<>();
 								list.add(Constant.msgcenter_work_change);
 								list.add(sendmsg);
 								EventBusUtil.post(list);
 							}
 						}
-
 					});
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -472,7 +452,6 @@ public class VisitPublicHttp implements ConstantUrl {
 	 * 如果是学生或者家长 获取学生或家长信息
 	 */
 	private void changeGenStuUserName() {
-		// TODO Auto-generated method stub
 		int role = user_sp.getInt("RoleIdentity", 1);
 		if (role == 3) {
 			httpGetGenInfo();
@@ -485,7 +464,6 @@ public class VisitPublicHttp implements ConstantUrl {
 	 * 获取学生嘻嘻你
 	 */
 	public void httpGetStuInfo() {
-		// TODO Auto-generated method stub
 		String jiaobaohao = user_sp.getString("JiaoBaoHao", "");
 		if (!"".equals(jiaobaohao)) {
 			if (Constant.listUserIdentity != null) {
@@ -505,12 +483,8 @@ public class VisitPublicHttp implements ConstantUrl {
 
 	/**
 	 * 获取学生信息，接口 和返回值
-	 * 
-	 * @param jiaobaohao
-	 * @param classID
 	 */
 	private void getStuInfo(String jiaobaohao, int classID) {
-		// TODO Auto-generated method stub
 		RequestParams params = new RequestParams();
 		params.addBodyParameter("AccID", jiaobaohao);
 		params.addBodyParameter("UID", String.valueOf(classID));
@@ -539,7 +513,7 @@ public class VisitPublicHttp implements ConstantUrl {
 							} catch (Exception e1) {
 								e1.printStackTrace();
 							}
-							StuInfo stuInfo = null;
+							StuInfo stuInfo;
 							try {
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
@@ -562,14 +536,13 @@ public class VisitPublicHttp implements ConstantUrl {
 											jsonObj.getString("ResultDesc"));
 								}
 							} catch (Exception e) {
-
+								e.printStackTrace();
 							}
 							ArrayList<Object> list = new ArrayList<Object>();
 							list.add(Constants.WORKOL_getStuInfo);
 							EventBusUtil.post(list);
 						}
 					}
-
 				});
 	}
 
@@ -577,7 +550,6 @@ public class VisitPublicHttp implements ConstantUrl {
 	 * 获取家长信息
 	 */
 	public void httpGetGenInfo() {
-		// TODO Auto-generated method stub
 		String jiaobaohao = user_sp.getString("JiaoBaoHao", "");
 		if (!"".equals(jiaobaohao)) {
 			if (Constant.listUserIdentity != null) {
@@ -595,17 +567,12 @@ public class VisitPublicHttp implements ConstantUrl {
 				}
 			}
 		}
-
 	}
 
 	/**
 	 * 获取家长信息接口和返回值
-	 * 
-	 * @param jiaobaohao
-	 * @param UID
 	 */
 	private void getGenInfo(String jiaobaohao, int UID) {
-		// TODO Auto-generated method stub
 		RequestParams params = new RequestParams();
 		params.addBodyParameter("AccID", jiaobaohao);
 		params.addBodyParameter("UID", String.valueOf(UID));
@@ -635,7 +602,7 @@ public class VisitPublicHttp implements ConstantUrl {
 							} catch (Exception e1) {
 								e1.printStackTrace();
 							}
-							GenInfo genInfo = null;
+							GenInfo genInfo;
 							try {
 								JSONObject jsonObj = new JSONObject(arg0.result);
 								String ResultCode = jsonObj
@@ -662,14 +629,13 @@ public class VisitPublicHttp implements ConstantUrl {
 											jsonObj.getString("ResultDesc"));
 								}
 							} catch (Exception e) {
-
+								e.printStackTrace();
 							}
-							ArrayList<Object> list = new ArrayList<Object>();
+							ArrayList<Object> list = new ArrayList<>();
 							list.add(Constants.WORKOL_getGenInfo);
 							EventBusUtil.post(list);
 						}
 					}
-
 				});
 	}
 
@@ -681,10 +647,7 @@ public class VisitPublicHttp implements ConstantUrl {
 			/**
 			 * 取本单位的请假信息 客户端通过本接口获取单位的基础信息数据。是否启用学生请假系统,学生请假审核级数（1-5级）
 			 * 学生请假的各级审核流程的名称 son ApproveListStd 当前帐户在学生请假各个审批流程中的权限
-			 * 
-			 * @param params
 			 */
-
 			RequestParams params = new RequestParams();
 			params.addBodyParameter("unitId",
 					String.valueOf(user_sp.getInt("UnitID", 0)));
@@ -844,9 +807,9 @@ public class VisitPublicHttp implements ConstantUrl {
 												jsonObj.getString("ResultDesc"));
 									}
 								} catch (Exception e) {
-
+									e.printStackTrace();
 								}
-								ArrayList<Object> list = new ArrayList<Object>();
+								ArrayList<Object> list = new ArrayList<>();
 								list.add(LeaveConstant.leave_GetLeaveSetting);
 								list.add(sendmsg);
 								EventBusUtil.post(list);
@@ -857,5 +820,4 @@ public class VisitPublicHttp implements ConstantUrl {
 			e.printStackTrace();
 		}
 	}
-
 }
