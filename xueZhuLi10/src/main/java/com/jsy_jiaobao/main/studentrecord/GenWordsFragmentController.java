@@ -1,9 +1,8 @@
 package com.jsy_jiaobao.main.studentrecord;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
+
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -19,6 +18,8 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+
+import java.util.ArrayList;
 
 public class GenWordsFragmentController implements ConstantUrl {
 	private static GenWordsFragmentController instance;
@@ -76,7 +77,6 @@ public class GenWordsFragmentController implements ConstantUrl {
 				dealResponseInfo(arg0.result, this.getUserTag());
 			}
 		}
-
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {

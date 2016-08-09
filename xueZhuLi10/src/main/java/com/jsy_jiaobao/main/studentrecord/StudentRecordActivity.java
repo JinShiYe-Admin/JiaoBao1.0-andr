@@ -27,8 +27,6 @@ import com.jsy_jiaobao.main.system.LoginActivity;
 import com.jsy_jiaobao.po.sturecord.BaseInfo;
 import com.jsy_jiaobao.po.sturecord.StuRecGenPackage;
 import com.lidroid.xutils.BitmapUtils;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
 import com.viewpagerindicator.TabPageIndicator;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -37,14 +35,14 @@ import java.util.ArrayList;
 
 public class StudentRecordActivity extends BaseActivity {
 
-	@ViewInject(R.id.layout_studentrecord)private LinearLayout layout_ui;
-	@ViewInject(R.id.record_layout_pager)private ViewPager pager;
-	@ViewInject(R.id.record_tab_indicator)private TabPageIndicator indicator;
-	@ViewInject(R.id.record_img_photo)private ImageView img_photo;
-	@ViewInject(R.id.record_tv_username)private TextView tv_username;
-	@ViewInject(R.id.record_tv_unit)private TextView tv_unit;
-	@ViewInject(R.id.record_tv_sex)private TextView tv_sex;
-	@ViewInject(R.id.record_tv_bitrh)private TextView tv_bitrh;
+	private LinearLayout layout_ui;
+	private ViewPager pager;
+	private TabPageIndicator indicator;
+	private ImageView img_photo;
+	private TextView tv_username;
+	private TextView tv_unit;
+	private TextView tv_sex;
+	private TextView tv_birth;
 	private Context mContext;
 	private BitmapUtils bitmapUtils;
 	private TextView newctag;// 最新未读数
@@ -54,7 +52,6 @@ public class StudentRecordActivity extends BaseActivity {
 	private TextView qpctag;// 期评未读数
 	private TextView tecctag;// 老师留言未读数
 	private TextView genctag;// 家长留言未读数
-	
 	public static boolean initBaseInfo = false;
 	public static int isPack = 0;//1:选择的孩子为档案包类型,0为学生类型
     public static int packid;//档案包ID;
@@ -64,10 +61,10 @@ public class StudentRecordActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		initParentView();
 		initViews();
-
 	}
+
 	private void initViews() {
-		String[] TITLE;//
+		String[] TITLE;
 		TITLE = new String[] {
 				getResources().getString(R.string.record_function_newstop),// 最新\n更新</string>
 				getResources().getString(R.string.record_function_scollnotice),// 学校\n通知</string>
@@ -84,8 +81,6 @@ public class StudentRecordActivity extends BaseActivity {
 		pager.setAdapter(pagerAdapter);
 		indicator.setViewPager(pager);
 		indicator.setOnPageChangeListener(pageListener);
-//		indicator.mTabLayout.setBackgroundColor(getResources().getColor(R.color.moccasin));
-		
 		newctag =  (TextView) indicator.findViewWithTag(TITLE[0]);// 最新未读数
 		schctag =  (TextView) indicator.findViewWithTag(TITLE[1]);// 校园通知未读数
 		clsctag =  (TextView) indicator.findViewWithTag(TITLE[2]);// 班级通知未读数
@@ -93,16 +88,26 @@ public class StudentRecordActivity extends BaseActivity {
 		qpctag =  (TextView) indicator.findViewWithTag(TITLE[4]);// 期评未读数
 		tecctag =  (TextView) indicator.findViewWithTag(TITLE[5]);// 老师留言未读数
 		genctag =  (TextView) indicator.findViewWithTag(TITLE[6]);// 家长留言未读数
-		
 		initBaseInfo = false;
         StudentRecordActivityController.getInstance().BaseInfo();
 	}
 	private void initParentView() {
 		setContentLayout(R.layout.ui_studentrecord);
-		ViewUtils.inject(this);
+		findViewById();
 		bitmapUtils = JSYApplication.getInstance().bitmap;
 		mContext = this;
 		getSupportActionBar().setTitle(getResources().getString(R.string.function_studentrecord));
+	}
+
+	private void findViewById() {
+		layout_ui = (LinearLayout) findViewById(R.id.layout_studentrecord);
+		pager = (ViewPager) findViewById(R.id.record_layout_pager);
+		indicator = (TabPageIndicator) findViewById(R.id.record_tab_indicator);
+		img_photo = (ImageView) findViewById(R.id.record_img_photo);
+		tv_username = (TextView) findViewById(R.id.record_tv_username);
+		tv_unit = (TextView) findViewById(R.id.record_tv_unit);
+		tv_sex = (TextView) findViewById(R.id.record_tv_sex);
+		tv_birth = (TextView) findViewById(R.id.record_tv_bitrh);
 	}
 
 	/**
@@ -153,7 +158,6 @@ public class StudentRecordActivity extends BaseActivity {
 			case 4:
 				DATA = DATA+getResources().getString(R.string.of_student);
 				break;
-
 			default:
 				break;
 			}
@@ -163,7 +167,7 @@ public class StudentRecordActivity extends BaseActivity {
 				String photoPath = stubase.getPHOTO_PATH().substring(1);
 				bitmapUtils.display(img_photo, ConstantUrl.StuRecordUrl+photoPath);
 			}
-			tv_bitrh.setText(stubase.getCHI_BIRTH());
+			tv_birth.setText(stubase.getCHI_BIRTH());
 			tv_sex.setText(stubase.getCHI_SEX());
 			tv_unit.setText(DATA);
 			tv_username.setText(stubase.getCHI_NAME());
@@ -216,7 +220,6 @@ public class StudentRecordActivity extends BaseActivity {
 			}else{
 				genctag.setVisibility(View.GONE); // 家长留言未读数
 			}
-			
 			isPack = baseInfo.getIspack();
 			packid = baseInfo.getPackid();
 			stuid = baseInfo.getStuid();
@@ -232,13 +235,11 @@ public class StudentRecordActivity extends BaseActivity {
     	sub_menu.add(2, 1021, 0, getResources().getString(R.string.function_changeunit));
     	sub_menu.add(2, 1022, 0, getResources().getString(R.string.function_changeuser));
     	sub_menu.getItem().setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-       
         SubMenu sys_menu = menu.addSubMenu(R.string.system).setIcon(R.drawable.top_btn_menu);
         sys_menu.add(1, 1011, 0, getResources().getString(R.string.function_changeunit));
         sys_menu.add(1, 1012, 0, getResources().getString(R.string.function_changeuser));
         sys_menu.add(1, 1013, 0, getResources().getString(R.string.function_exit));
         sys_menu.getItem().setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-       
         return true;
     }
     @Override
@@ -252,7 +253,6 @@ public class StudentRecordActivity extends BaseActivity {
 			int statusBarHeight = frame.top;
 			ShowPopup showPopup = new ShowPopup(mContext);
 			showPopup.showPop(layout_ui,statusBarHeight+getSupportActionBar().getHeight()+2,Constant.listUserIdentity,null);
-			
 			break;
 		case 1012:
 			httpLogout();
@@ -263,7 +263,6 @@ public class StudentRecordActivity extends BaseActivity {
 			httpLogout();
 			JSYApplication.getInstance().finishActivities();
 			break;
-
 		default:
 			break;
 		}
@@ -280,5 +279,4 @@ public class StudentRecordActivity extends BaseActivity {
 		}
 		return false;
 	}
-
 }

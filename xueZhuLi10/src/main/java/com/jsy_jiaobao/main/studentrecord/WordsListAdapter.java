@@ -18,7 +18,6 @@ public class WordsListAdapter<T> extends BaseAdapter {
 	private Context mContext;
 	private List<T> mData;
 
-	// private BitmapUtils bitmap;
 	public WordsListAdapter(Context mContext) {
 		this.mContext = mContext;
 	}
@@ -35,10 +34,6 @@ public class WordsListAdapter<T> extends BaseAdapter {
 			return 0;
 		}
 	}
-
-//	private void notifyItem() {
-//		notifyDataSetChanged();
-//	}
 
 	@Override
 	public Object getItem(int position) {
@@ -70,49 +65,4 @@ public class WordsListAdapter<T> extends BaseAdapter {
 		}
 		return viewHolder.getConvertView();
 	}
-
-//	ImageGetter imgGetter = new Html.ImageGetter() {
-//		public Drawable getDrawable(String source) {
-//			Drawable drawable = null;
-//			String fileString = JSYApplication.getInstance().FILE_PATH
-//					+ String.valueOf(source.hashCode());
-//			// 判断SD卡里面是否存在图片文件
-//			if (new File(fileString).exists()) {
-//				// 获取本地文件返回Drawable
-//				drawable = Drawable.createFromPath(fileString);
-//				// 设置图片边界
-//				int with = drawable.getIntrinsicWidth();
-//				int height = drawable.getIntrinsicHeight();
-//				System.out.println();
-//				float scan = height / with;
-//				if (with > Constant.ScreenWith) {
-//					height = (int) (Constant.ScreenWith * scan);
-//					with = Constant.ScreenWith;
-//				}
-//
-//				drawable.setBounds(0, 0, with, height);
-//				return drawable;
-//			} else {
-//				// 启动新线程下载
-//				HttpUtil.getInstance().download(
-//						source,
-//						JSYApplication.getInstance().FILE_PATH
-//								+ String.valueOf(source.hashCode()), callBack);
-//				return drawable;
-//			}
-//		}
-//	};
-//	RequestCallBack<File> callBack = new RequestCallBack<File>() {
-//
-//		@Override
-//		public void onFailure(HttpException arg0, String arg1) {
-//
-//		}
-//
-//		@Override
-//		public void onSuccess(ResponseInfo<File> arg0) {
-//			notifyItem();
-//		}
-//
-//	};
 }

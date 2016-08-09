@@ -98,7 +98,6 @@ public class GenWordsFragment extends Fragment implements IXListViewListener {
         switch (tag) {
             case Constant.sturecord_home_BaseInfo:
                 BaseInfo baseInfo = (BaseInfo) list.get(1);
-//			StuRecGenPackage stubase = baseInfo.getStubase();
                 isPack = baseInfo.getIspack();
                 packid = baseInfo.getPackid();
                 stuid = baseInfo.getStuid();
@@ -114,7 +113,6 @@ public class GenWordsFragment extends Fragment implements IXListViewListener {
                     havemore = false;
                 }
                 genwordsList.addAll(wordsList);
-                // listView.setRefreshTime(mCache.getAsString(UnitID+"refreshTime"));
                 listAdapter.setData(genwordsList);
                 listAdapter.notifyDataSetChanged();
 

@@ -23,7 +23,6 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class SchoolNoticeFragment extends Fragment {
     @ViewInject(R.id.studengrecord_layout)
     private LinearLayout layout_body;
@@ -99,7 +98,6 @@ public class SchoolNoticeFragment extends Fragment {
         switch (tag) {
             case Constant.sturecord_home_BaseInfo:
                 BaseInfo baseInfo = (BaseInfo) list.get(1);
-//			StuRecGenPackage stubase = baseInfo.getStubase();
                 isPack = baseInfo.getIspack();
                 packid = baseInfo.getPackid();
                 stuid = baseInfo.getStuid();
@@ -108,7 +106,6 @@ public class SchoolNoticeFragment extends Fragment {
             case Constant.sturecord_home_PackMsgSch_sch:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("\\|");
                         HashMap<String, String> map = new HashMap<>();
@@ -122,7 +119,6 @@ public class SchoolNoticeFragment extends Fragment {
             case Constant.sturecord_home_StuMsgSch_sch:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("|");
                         HashMap<String, String> map = new HashMap<>();
@@ -133,12 +129,6 @@ public class SchoolNoticeFragment extends Fragment {
                     initSchoolList();
                 }
                 break;
-//		case Constant.sturecord_home_StuMsg_sch:
-//			ArrayList<Object> stuMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
-//		case Constant.sturecord_home_PackMsg_sch:
-//			ArrayList<Object> packMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
             default:
                 break;
         }
@@ -201,7 +191,6 @@ public class SchoolNoticeFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-
         }
     };
 }

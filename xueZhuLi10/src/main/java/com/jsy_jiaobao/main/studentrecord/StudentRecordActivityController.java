@@ -1,9 +1,8 @@
 package com.jsy_jiaobao.main.studentrecord;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Context;
+
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -19,6 +18,8 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+
+import java.util.ArrayList;
 
 public class StudentRecordActivityController implements ConstantUrl{
 	private static StudentRecordActivityController instance;
@@ -45,7 +46,6 @@ public class StudentRecordActivityController implements ConstantUrl{
 		CallBack callback = new CallBack();
 		callback.setUserTag(Constant.sturecord_home_BaseInfo);
 		HttpUtil.getInstance().send(HttpRequest.HttpMethod.POST, StuRecordDataGet, params, callback);
-
 	}
 	private class CallBack extends RequestCallBack<String>{
 
@@ -57,7 +57,6 @@ public class StudentRecordActivityController implements ConstantUrl{
 				}
 				if(BaseUtils.isNetworkAvailable(mContext)){
 					ToastUtil.showMessage(mContext,R.string.phone_no_web);
-					
 				}
 			}
 		}
@@ -67,26 +66,10 @@ public class StudentRecordActivityController implements ConstantUrl{
 			if (!mcontext.isFinishing()) {
 				DialogUtil.getInstance().cannleDialog();
 				dealResponseInfo(arg0.result,this.getUserTag());
-				
-//				try {
-//					JSONObject jsonObj = new JSONObject(arg0.result);
-//					String ResultCode = jsonObj.getString("ResultCode");
-//					if ("0".equals(ResultCode)) {
-//						String data = Des.decrypt(jsonObj.getString("Data"), MessageCenterActivity.sp_sys.getString("ClientKey", ""));
-//						dealResponseInfo(data,this.getUserTag());
-//
-//					}else if("8".equals(ResultCode)){
-//						LoginActivityController.getInstance().helloService();
-//					} else {
-//						ToastUtil.showMessage(mcontext,jsonObj.getString("ResultDesc"));
-//					}
-//				} catch (Exception e) {
-//					ToastUtil.showMessage(mcontext, mcontext.getResources().getString(R.string.error_serverconnect)+"r1002");
-//				} 
 			}
 		}
-
 	}
+
 	private void dealResponseInfo(String result, Object userTag) {
 		ArrayList<Object> post = new ArrayList<>();
 		switch ((Integer)userTag) {

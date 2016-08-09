@@ -23,18 +23,16 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class DailyExpressionFragment extends Fragment {
     @ViewInject(R.id.studengrecord_layout)
     private LinearLayout layout_body;
     public static int isPack = 0;//1:选择的孩子为档案包类型,0为学生类型
-    public static int packid;//档案包ID;
-    public static int stuid;//学生ID
+    public static int packId;//档案包ID;
+    public static int stuId;//学生ID
 
     private ArrayList<HashMap<String, String>> schoolList = new ArrayList<>();
 
     public static DailyExpressionFragment newInstance() {
-
         return new DailyExpressionFragment();
     }
 
@@ -54,8 +52,8 @@ public class DailyExpressionFragment extends Fragment {
     private void initData() {
         if (StudentRecordActivity.initBaseInfo) {
             isPack = StudentRecordActivity.isPack;
-            packid = StudentRecordActivity.packid;
-            stuid = StudentRecordActivity.stuid;
+            packId = StudentRecordActivity.packid;
+            stuId = StudentRecordActivity.stuid;
             StuOrPackMsgSch();
         }
     }
@@ -64,11 +62,11 @@ public class DailyExpressionFragment extends Fragment {
         schoolList.clear();
         String DATA;//Uid|Stuid|MsgType
         if (isPack == 0) {
-            DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + stuid + "|" + getResources().getString(R.string.record_function_dayshow).replace("\n", "");
+            DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + stuId + "|" + getResources().getString(R.string.record_function_dayshow).replace("\n", "");
             DailyExpressionFragmentController.getInstance().StuMsgSch(DATA);
 
         } else if (isPack == 1) {
-            DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + packid + "|" + getResources().getString(R.string.record_function_dayshow).replace("\n", "");
+            DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + packId + "|" + getResources().getString(R.string.record_function_dayshow).replace("\n", "");
             DailyExpressionFragmentController.getInstance().PackMsgSch(DATA);
         }
     }
@@ -92,16 +90,14 @@ public class DailyExpressionFragment extends Fragment {
         switch (tag) {
             case Constant.sturecord_home_BaseInfo:
                 BaseInfo baseInfo = (BaseInfo) list.get(1);
-//			StuRecGenPackage stubase = baseInfo.getStubase();
                 isPack = baseInfo.getIspack();
-                packid = baseInfo.getPackid();
-                stuid = baseInfo.getStuid();
+                packId = baseInfo.getPackid();
+                stuId = baseInfo.getStuid();
                 StuOrPackMsgSch();
                 break;
             case Constant.sturecord_home_PackMsgSch_daily:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("\\|");
                         HashMap<String, String> map = new HashMap<>();
@@ -115,7 +111,6 @@ public class DailyExpressionFragment extends Fragment {
             case Constant.sturecord_home_StuMsgSch_daily:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("\\|");
                         HashMap<String, String> map = new HashMap<>();
@@ -126,12 +121,6 @@ public class DailyExpressionFragment extends Fragment {
                     initSchoolList();
                 }
                 break;
-//		case Constant.sturecord_home_StuMsg_daily:
-////			ArrayList<Object> stuMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
-//		case Constant.sturecord_home_PackMsg_daily:
-////			ArrayList<Object> packMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
             default:
                 break;
         }
@@ -179,12 +168,12 @@ public class DailyExpressionFragment extends Fragment {
             if (layoutitem.listview1.getVisibility() == View.GONE) {
                 layoutitem.setExpanChild(0);
                 if (isPack == 0) {
-                    DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + stuid + "|" + getResources().getString(R.string.record_function_dayshow).replace("\n", "") + "|20|" + CurPage + "|" + SchName;
+                    DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + stuId + "|" + getResources().getString(R.string.record_function_dayshow).replace("\n", "") + "|20|" + CurPage + "|" + SchName;
                     DailyExpressionFragmentController.getInstance().StuMsg(tag, DATA);
                 } else if (isPack == 1) {//Uid|Recid|MsgType|PageSize|CurPage|SchName
                     DATA = BaseActivity.sp.getString("JiaoBaoHao", "")
                             + "|"
-                            + packid
+                            + packId
                             + "|"
                             + getResources().getString(
                             R.string.record_function_dayshow).replace("\n", "") + "|20|" + CurPage + "|" + SchName;

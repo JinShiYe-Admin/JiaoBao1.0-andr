@@ -1,9 +1,8 @@
 package com.jsy_jiaobao.main.studentrecord;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
+
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -19,6 +18,8 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+
+import java.util.ArrayList;
 
 public class ClassNoticeFragmentController implements ConstantUrl{
 	private static ClassNoticeFragmentController instance;

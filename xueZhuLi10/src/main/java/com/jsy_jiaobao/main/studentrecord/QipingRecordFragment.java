@@ -23,7 +23,6 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class QipingRecordFragment extends Fragment {
     @ViewInject(R.id.studengrecord_layout)
     private LinearLayout layout_body;
@@ -71,7 +70,6 @@ public class QipingRecordFragment extends Fragment {
         if (isPack == 0) {
             DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + stuid + "|" + getResources().getString(R.string.record_function_appraise).replace("\n", "");
             QipingRecordFragmentController.getInstance().StuQpSch(DATA);
-
         } else if (isPack == 1) {
             DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + packid + "|" + getResources().getString(R.string.record_function_appraise).replace("\n", "");
             QipingRecordFragmentController.getInstance().PackQpSch(DATA);
@@ -97,7 +95,6 @@ public class QipingRecordFragment extends Fragment {
         switch (tag) {
             case Constant.sturecord_home_BaseInfo:
                 BaseInfo baseInfo = (BaseInfo) list.get(1);
-//			StuRecGenPackage stubase = baseInfo.getStubase();
                 isPack = baseInfo.getIspack();
                 packid = baseInfo.getPackid();
                 stuid = baseInfo.getStuid();
@@ -106,7 +103,6 @@ public class QipingRecordFragment extends Fragment {
             case Constant.sturecord_home_PackQpSch:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("\\|");
                         HashMap<String, String> map = new HashMap<>();
@@ -120,7 +116,6 @@ public class QipingRecordFragment extends Fragment {
             case Constant.sturecord_home_StuQpSch:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("\\|");
                         HashMap<String, String> map = new HashMap<>();
@@ -131,12 +126,6 @@ public class QipingRecordFragment extends Fragment {
                     initSchoolList();
                 }
                 break;
-//		case Constant.sturecord_home_StuQp:
-//			ArrayList<Object> stuMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
-//		case Constant.sturecord_home_PackQp:
-//			ArrayList<Object> packMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
             default:
                 break;
         }

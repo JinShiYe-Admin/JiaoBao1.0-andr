@@ -23,7 +23,6 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class TeacherWordsFragment extends Fragment {
     @ViewInject(R.id.studengrecord_layout)
     private LinearLayout layout_body;
@@ -67,7 +66,6 @@ public class TeacherWordsFragment extends Fragment {
         if (isPack == 0) {
             DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + stuid + "|" + getResources().getString(R.string.record_function_tecahcernotice).replace("\n", "");
             TeacherWordsFragmentController.getInstance().StuTecWSch(DATA);
-
         } else if (isPack == 1) {
             DATA = BaseActivity.sp.getString("JiaoBaoHao", "") + "|" + packid + "|" + getResources().getString(R.string.record_function_tecahcernotice).replace("\n", "");
             TeacherWordsFragmentController.getInstance().PackTecWSch(DATA);
@@ -93,7 +91,6 @@ public class TeacherWordsFragment extends Fragment {
         switch (tag) {
             case Constant.sturecord_home_BaseInfo:
                 BaseInfo baseInfo = (BaseInfo) list.get(1);
-//			StuRecGenPackage stubase = baseInfo.getStubase();
                 isPack = baseInfo.getIspack();
                 packid = baseInfo.getPackid();
                 stuid = baseInfo.getStuid();
@@ -116,7 +113,6 @@ public class TeacherWordsFragment extends Fragment {
             case Constant.sturecord_home_StuTecWSch:
                 msgSch = (MsgSch) list.get(1);
                 if (null != msgSch.getSchs()) {
-
                     for (String sch : msgSch.getSchs()) {
                         String[] schitem = sch.split("\\|");
                         HashMap<String, String> map = new HashMap<>();
@@ -127,12 +123,6 @@ public class TeacherWordsFragment extends Fragment {
                     initSchoolList();
                 }
                 break;
-//		case Constant.sturecord_home_StuTecW:
-//			ArrayList<Object> stuMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
-//		case Constant.sturecord_home_PackTecW:
-//			ArrayList<Object> packMsgTag = (ArrayList<Object>) list.get(2);
-//			break;
             default:
                 break;
         }
@@ -195,7 +185,6 @@ public class TeacherWordsFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-
         }
     };
 }

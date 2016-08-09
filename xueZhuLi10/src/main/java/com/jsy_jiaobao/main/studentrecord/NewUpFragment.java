@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import com.jsy_jiaobao.main.R;
 import com.lidroid.xutils.ViewUtils;
 
-
 public class NewUpFragment extends Fragment {
 
     public static NewUpFragment newInstance() {

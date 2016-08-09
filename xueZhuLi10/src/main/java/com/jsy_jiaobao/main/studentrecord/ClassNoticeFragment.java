@@ -1,17 +1,13 @@
 package com.jsy_jiaobao.main.studentrecord;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy_jiaobao.customview.PCWorkItemOneChildView;
@@ -22,14 +18,17 @@ import com.jsy_jiaobao.po.sturecord.MsgSch;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
+import org.greenrobot.eventbus.Subscribe;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ClassNoticeFragment extends Fragment {
 	@ViewInject(R.id.studengrecord_layout)private LinearLayout layout_body;
 	public static int isPack = 0;//1:选择的孩子为档案包类型,0为学生类型
-    public static int packid;//档案包ID;
-    public static int stuid;//学生ID
-    private int CurPage = 1;
-    private ArrayList<HashMap<String,String>> schoolList = new ArrayList<HashMap<String,String>>();
+    public static int packId;//档案包ID;
+    public static int stuId;//学生ID
+	private ArrayList<HashMap<String,String>> schoolList = new ArrayList<>();
 	public static ClassNoticeFragment newInstance() {
 		ClassNoticeFragment fragment = new ClassNoticeFragment();
 		return fragment;
@@ -49,20 +48,20 @@ public class ClassNoticeFragment extends Fragment {
 	private void initData() {
 		if (StudentRecordActivity.initBaseInfo) {
 			isPack = StudentRecordActivity.isPack;
-			packid = StudentRecordActivity.packid;
-			stuid = StudentRecordActivity.stuid;
+			packId = StudentRecordActivity.packid;
+			stuId = StudentRecordActivity.stuid;
 			StuOrPackMsgSch();
 		}
 	}
 	private void StuOrPackMsgSch(){
 		schoolList.clear();
-		String DATA = "";//Uid|Stuid|MsgType
+		String DATA;//Uid|Stuid|MsgType
 		if (isPack == 0) {
-			DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+stuid+"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "");
+			DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+ stuId +"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "");
 			ClassNoticeFragmentController.getInstance().StuMsgSch(DATA);
 			
 		}else if (isPack == 1) {
-			DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+packid+"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "");
+			DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+ packId +"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "");
 			ClassNoticeFragmentController.getInstance().PackMsgSch(DATA);
 		}
 	}
@@ -83,10 +82,9 @@ public class ClassNoticeFragment extends Fragment {
 		switch (tag) {
 		case Constant.sturecord_home_BaseInfo:
 			BaseInfo baseInfo = (BaseInfo) list.get(1);
-//			StuRecGenPackage stubase = baseInfo.getStubase();
 			isPack = baseInfo.getIspack();
-			packid = baseInfo.getPackid();
-			stuid = baseInfo.getStuid();
+			packId = baseInfo.getPackid();
+			stuId = baseInfo.getStuid();
 			StuOrPackMsgSch();
 			break;
 		case Constant.sturecord_home_PackMsgSch_clas:
@@ -95,7 +93,7 @@ public class ClassNoticeFragment extends Fragment {
 				
 				for (String sch : msgSch.getSchs()) {
 					String[] schitem = sch.split("\\|");
-					HashMap<String,String> map = new HashMap<String, String>();
+					HashMap<String,String> map = new HashMap<>();
 					map.put("name", schitem[0]);
 					map.put("number", schitem[1]);
 					schoolList.add(map);
@@ -109,21 +107,13 @@ public class ClassNoticeFragment extends Fragment {
 				
 				for (String sch : msgSch.getSchs()) {
 					String[] schitem = sch.split("\\|");
-					HashMap<String,String> map = new HashMap<String, String>();
+					HashMap<String,String> map = new HashMap<>();
 					map.put("name", schitem[0]);
 					map.put("number", schitem[1]);
 					schoolList.add(map);
 				}
 				initSchoolList();
 			}
-			break;
-		case Constant.sturecord_home_StuMsg_clas:
-//			@SuppressWarnings("unchecked")
-//			ArrayList<Object> stuMsgTag = (ArrayList<Object>) list.get(2);
-			break;
-		case Constant.sturecord_home_PackMsg_clas:
-//			@SuppressWarnings("unchecked")
-//			ArrayList<Object> packMsgTag = (ArrayList<Object>) list.get(2);
 			break;
 		default:
 			break;
@@ -136,23 +126,23 @@ public class ClassNoticeFragment extends Fragment {
 		layout_body.removeAllViews();
 		for (HashMap<String,String> map : schoolList) {
 			PCWorkItemOneChildView layout_item = new PCWorkItemOneChildView(getActivity(), null);
-			layout_item.create(-1, map.get("name").toString());
+			layout_item.create(-1, map.get("name"));
 			NoticeListAdapter adapter = new NoticeListAdapter(getActivity());
-			ArrayList<Object> tag = new ArrayList<Object>();
+			ArrayList<Object> tag = new ArrayList<>();
 			layout_item.listview1.setAdapter(adapter);
-			tag.add(map.get("name").toString());
+			tag.add(map.get("name"));
 			tag.add(layout_item);
 			tag.add(adapter);
 			layout_item.layout_parent.setTag(tag);
 			layout_item.more.setTag(tag);
 			layout_item.layout_parent.setOnClickListener(layoutOnClickListener);
 			layout_item.more.setOnClickListener(moreOnClickListener);
-			int art = Integer.parseInt(map.get("number").toString());
+			int art = Integer.parseInt(map.get("number"));
 			if (art>0) {
-				layout_item.parent_art.setVisibility(0);
+				layout_item.parent_art.setVisibility(View.VISIBLE);
 				layout_item.parent_art.setText(String.valueOf(art));
 			}else{
-				layout_item.parent_art.setVisibility(4);
+				layout_item.parent_art.setVisibility(View.INVISIBLE);
 			}
 			layout_body.addView(layout_item);
 		}
@@ -165,14 +155,15 @@ public class ClassNoticeFragment extends Fragment {
 			ArrayList<Object> tag = (ArrayList<Object>) v.getTag();
 			PCWorkItemOneChildView layout_item  = (PCWorkItemOneChildView) tag.get(1); 
 			String SchName = (String) tag.get(0);
-			String DATA = "";
+			String DATA;
 			if (layout_item.listview1.getVisibility() == View.GONE) {
 				layout_item.setExpanChild(0);
+				int curPage = 1;
 				if (isPack == 0) {
-					DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+stuid+"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "")+"|20|"+CurPage+"|"+SchName;
+					DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+ stuId +"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "")+"|20|"+ curPage +"|"+SchName;
 					ClassNoticeFragmentController.getInstance().StuMsg(tag,DATA);
 				}else if (isPack == 1) {//Uid|Recid|MsgType|PageSize|CurPage|SchName
-					DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+packid+"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "")+"|20|"+CurPage+"|"+SchName;
+					DATA = BaseActivity.sp.getString("JiaoBaoHao", "")+"|"+ packId +"|"+getResources().getString(R.string.record_function_classnotice).replace("\n", "")+"|20|"+ curPage +"|"+SchName;
 					ClassNoticeFragmentController.getInstance().PackMsg(tag,DATA);
 				}
 			}else{
@@ -182,7 +173,6 @@ public class ClassNoticeFragment extends Fragment {
 		}
 	};
 	OnClickListener moreOnClickListener = new OnClickListener() {
-		
 		@Override
 		public void onClick(View v) {
 			
