@@ -1,7 +1,6 @@
 package com.jsy_jiaobao.po.sys;
 
 public class URLs {
-
 	private String Name;
 	private String Value;
 	public String getName() {
@@ -16,5 +15,4 @@ public class URLs {
 	public void setValue(String value) {
 		Value = value;
 	}
-	
 }

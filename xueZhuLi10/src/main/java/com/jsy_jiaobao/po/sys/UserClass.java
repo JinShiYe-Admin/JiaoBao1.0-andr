@@ -1,20 +1,16 @@
 package com.jsy_jiaobao.po.sys;
 
-import java.io.Serializable;
-
 import com.lidroid.xutils.db.annotation.Column;
 import com.lidroid.xutils.db.annotation.Id;
 import com.lidroid.xutils.db.annotation.Table;
 
+import java.io.Serializable;
+
 /**
  * 我关联的 班级信息
- *
  */
 @Table(name = "userclass") 
 public class UserClass implements Serializable{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 987207153246053610L;
 	@Id
 	private int id;
@@ -97,5 +93,4 @@ public class UserClass implements Serializable{
 	public void setSchoolName(String schoolName) {
 		SchoolName = schoolName;
 	}
-    
 }

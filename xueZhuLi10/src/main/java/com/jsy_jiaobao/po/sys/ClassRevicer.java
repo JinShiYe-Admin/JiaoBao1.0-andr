@@ -1,7 +1,6 @@
 package com.jsy_jiaobao.po.sys;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ClassRevicer {
 	private String ClassName;// ": "班级给我",班级名称
@@ -31,5 +30,4 @@ public class ClassRevicer {
 	public void setTeachers_selit(ArrayList<Selit> teachers_selit) {
 		this.teachers_selit = teachers_selit;
 	}
-
 }

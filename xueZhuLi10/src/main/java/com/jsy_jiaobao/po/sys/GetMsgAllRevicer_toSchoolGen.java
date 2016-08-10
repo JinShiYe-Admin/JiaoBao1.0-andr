@@ -4,12 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class GetMsgAllRevicer_toSchoolGen implements Serializable{
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 7177217207538949325L;
-
 	private ArrayList<UnitAdminRevicer> selitadmintogen;
 	private ArrayList<Selit> selitunitclassadmintogen;
 	private ArrayList<Selit> selitunitclassidtogen;
@@ -32,5 +27,4 @@ public class GetMsgAllRevicer_toSchoolGen implements Serializable{
 	public void setSelitunitclassidtogen(ArrayList<Selit> selitunitclassidtogen) {
 		this.selitunitclassidtogen = selitunitclassidtogen;
 	}
-	
 }

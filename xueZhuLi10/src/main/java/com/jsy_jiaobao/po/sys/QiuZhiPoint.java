@@ -29,5 +29,4 @@ public class QiuZhiPoint {
 	public void setRecDate(String recDate) {
 		RecDate = recDate;
 	}
-
 }

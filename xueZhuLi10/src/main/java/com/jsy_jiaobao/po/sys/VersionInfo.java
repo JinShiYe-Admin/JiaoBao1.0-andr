@@ -46,5 +46,4 @@ public class VersionInfo {
 	public void setUpdata_2(String updata_2) {
 		this.updata_2 = updata_2;
 	}
-	
 }

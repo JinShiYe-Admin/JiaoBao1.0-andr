@@ -3,7 +3,6 @@ package com.jsy_jiaobao.po.sys;
 import java.util.List;
 
 public class UnitClassALLRevicer {
-
 	//本班家长，表示学校老师直接发给家长，不需要转发。需要把GroupSelit[]中的selit以selitadmintomem为name提交给api
     public List<Selit> selitunitclassidtogen;
     //本班学生，表示学校老师直接发给学生,不需要转发。需要把GroupSelit[]中的selit以selitadmintogen为name提交给api
@@ -37,5 +36,4 @@ public class UnitClassALLRevicer {
 	public void setSelitunitclassadmintostu(List<Selit> selitunitclassadmintostu) {
 		this.selitunitclassadmintostu = selitunitclassadmintostu;
 	}
-	
 }

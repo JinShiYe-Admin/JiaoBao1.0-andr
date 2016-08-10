@@ -1,13 +1,9 @@
 package com.jsy_jiaobao.po.sys;
 
-import java.io.Serializable;
 import com.jsy.xuezhuli.utils.ConstantUrl;
 
-/**
- * 
- * @author admin
- * 
- */
+import java.io.Serializable;
+
 public class Human implements Serializable {
 	private static final long serialVersionUID = -8351457881476907828L;
 	public String UserID;// 用户Id
@@ -19,7 +15,6 @@ public class Human implements Serializable {
 		this.PhotoUrl = mainURL + ConstantUrl.photoURL + "?AccID=" + UserID;
 		this.UserID = "jb_" + UserID;
 		this.UserName = UserName;
-		// UserID2=userId2;
 	}
 
 	public String getUserID() {
@@ -53,5 +48,4 @@ public class Human implements Serializable {
 	public void setUserID2(int userID2) {
 		UserID2 = userID2;
 	}
-
 }

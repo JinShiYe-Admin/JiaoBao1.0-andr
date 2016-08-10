@@ -2,7 +2,6 @@ package com.jsy_jiaobao.po.sys;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 单位接收人列表model
@@ -36,5 +35,4 @@ public class GroupUserList implements Serializable {
 	public void setGroupselit_selit(ArrayList<Selit> groupselit_selit) {
 		this.groupselit_selit = groupselit_selit;
 	}
-
 }

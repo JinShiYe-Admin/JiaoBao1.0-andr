@@ -4,7 +4,6 @@ import java.util.List;
 
 /**
  * 用户身份信息
- *
  */
 public class UserIdentity {
 	/**1==教育局;2==老师;3==家长;4==学生;5==游客*/

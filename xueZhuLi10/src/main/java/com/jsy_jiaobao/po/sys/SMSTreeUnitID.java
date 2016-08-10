@@ -2,7 +2,6 @@ package com.jsy_jiaobao.po.sys;
 
 /**
  * 短信直通车接收单位树数据源model
- * 
  */
 public class SMSTreeUnitID {
 	private int id;// ": 987;单位ID
@@ -50,5 +49,4 @@ public class SMSTreeUnitID {
 	public void setTabIDStr(String tabIDStr) {
 		TabIDStr = tabIDStr;
 	}
-
 }

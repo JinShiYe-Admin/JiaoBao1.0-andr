@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class GenInfo implements Serializable{
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -5264017012553186770L;
 	private int GenID;//	int	家长ID,惟一标识
@@ -66,5 +66,5 @@ public class GenInfo implements Serializable{
 	public void setAccID(int accID) {
 		AccID = accID;
 	}
-	
+
 }

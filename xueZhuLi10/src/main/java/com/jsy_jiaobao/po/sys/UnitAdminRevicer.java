@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 public class UnitAdminRevicer implements Serializable{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -1104437026906709327L;
 	private String groupName;//": "初中",
 	private int UnitType;//": 2,
@@ -29,5 +26,4 @@ public class UnitAdminRevicer implements Serializable{
 	public void setUserList(List<Selit> userList) {
 		UserList = userList;
 	}
-	
 }

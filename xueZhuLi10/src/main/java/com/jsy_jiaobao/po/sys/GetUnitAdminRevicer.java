@@ -4,12 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class GetUnitAdminRevicer implements Serializable{
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2865964682760040722L;
-	
 	private ArrayList<UnitAdminRevicer> selitadmintomem;
 
 	public ArrayList<UnitAdminRevicer> getSelitadmintomem() {

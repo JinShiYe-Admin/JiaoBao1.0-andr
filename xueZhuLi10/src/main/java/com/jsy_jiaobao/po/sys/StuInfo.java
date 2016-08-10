@@ -3,8 +3,6 @@ package com.jsy_jiaobao.po.sys;
 import java.io.Serializable;
 /**
  * 学生信息
- * @author 
- *
  */
 public class StuInfo implements Serializable {
 	private static final long serialVersionUID = 3651071895443971441L;

@@ -25,5 +25,4 @@ public class GetCommPerm {
 	public void setSubUnitCommRight(boolean subUnitCommRight) {
 		SubUnitCommRight = subUnitCommRight;
 	}
-	
 }

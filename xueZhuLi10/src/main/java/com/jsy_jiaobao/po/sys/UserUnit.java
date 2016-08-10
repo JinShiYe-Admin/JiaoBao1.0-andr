@@ -2,7 +2,6 @@ package com.jsy_jiaobao.po.sys;
 
 /**
  * 单位信息
- *
  */
 public class UserUnit {
 	private int UnitID;
@@ -26,8 +25,6 @@ public class UserUnit {
 	public void setUnitType(int unitType) {
 		UnitType = unitType;
 	}
-
-
 	public String getUnitName() {
 		return UnitName;
 	}
@@ -64,6 +61,4 @@ public class UserUnit {
 	public void setTabIDStr(String tabIDStr) {
 		TabIDStr = tabIDStr;
 	}
-
-	
 }
