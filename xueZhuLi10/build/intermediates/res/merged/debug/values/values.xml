@@ -654,8 +654,8 @@
     <string name="addTimeLayout_start">addTimeLayout_start</string>
     <string name="add_follow">添加关注</string>
     <string name="address">地点</string>
-    <string name="against">反对(%d)</string>
-    <string name="against_number">反对(%d)</string>
+    <string name="against">反对(%1$d)</string>
+    <string name="against_number">反对(%1$d)</string>
     <string name="album">相册</string>
     <string name="album_get_picture">相册取图</string>
     <string name="album_introduce">相册介绍</string>
@@ -754,16 +754,20 @@
     <string name="comment">评论</string>
     <string name="comment_">评论:</string>
     <string name="comment_i_made">我做出的评论</string>
-    <string name="comment_number">评论(%d)</string>
+    <string name="comment_number">评论(%1$d)</string>
     <string name="commit">提交</string>
     <string name="commit_i_made">我做出的评论</string>
     <string name="commit_success">提交成功</string>
+    <string name="commit_workName">提交%3$s</string>
+    <string name="common_questions">共%3$s题</string>
     <string name="communicating_waiting">正在通讯…请稍候</string>
     <string name="confirm_passwords">确认密码</string>
     <string name="content">内容</string>
     <string name="content_atLeast_5word">内容不能少于5个字</string>
     <string name="content_cannot_empty">内容不能为空</string>
     <string name="continue_excesize">继续练习</string>
+    <string name="continue_name">继续%3$s</string>
+    <string name="count_down_time">倒计时 %1$d:%3$s</string>
     <string name="county">区/县</string>
     <string name="course">科目</string>
     <string name="currentPeriod_selected_isDel_orIsHide">本期精选已被删除或隐藏</string>
@@ -788,7 +792,7 @@
     <string name="do_homework">做作业</string>
     <string name="edit">编辑</string>
     <string name="edit_at">编辑于</string>
-    <string name="edit_at_string">编辑于%s</string>
+    <string name="edit_at_string">编辑于%3$s</string>
     <string name="enclosure">附件</string>
     <string name="error_indenity_get">获取身份信息失败</string>
     <string name="error_indenity_login_again">长时间未操作，已登出，重新登录</string>
@@ -858,6 +862,7 @@
     <string name="getting_myGrade_waiting">正在获取我的班级…请稍候</string>
     <string name="golden_view_headQuarter">金视野总部</string>
     <string name="group_name">组名</string>
+    <string name="had_chose_classes">已选%3$s个班级</string>
     <string name="handOut_notice">下发通知</string>
     <string name="hands_notice_message">下发通知信息</string>
     <string name="has_answered_thisQuestion">已经回答过该问题了</string>
@@ -867,7 +872,7 @@
     <string name="have_no_answer">暂无回答</string>
     <string name="have_no_more">没有更多了</string>
     <string name="have_prove">有证据</string>
-    <string name="have_some_shield">有%d条问题因答案被屏蔽或被删除无法查看</string>
+    <string name="have_some_shield">有%1$d条问题因答案被屏蔽或被删除无法查看</string>
     <string name="hello_world">Hello world!</string>
     <string name="hint">提交</string>
     <string name="home_page">首页</string>
@@ -939,7 +944,7 @@
     <string name="leave_time_noMoreThanFive">超出限制</string>
     <string name="leave_uncheck">待审核</string>
     <string name="leave_withdraw">删除</string>
-    <string name="like">赞(%d)</string>
+    <string name="like">赞(%1$d)</string>
     <string name="load_failed">下载失败</string>
     <string name="load_progress">下载进度</string>
     <string name="loading">加载中…</string>
@@ -1063,7 +1068,7 @@
     <string name="note_inputed_wrong">验证码输入错误</string>
     <string name="nothing">无</string>
     <string name="notice_details">通知详情</string>
-    <string name="number_like">%d赞</string>
+    <string name="number_like">%1$d赞</string>
     <string name="of_member">的成员</string>
     <string name="of_parent">的家长</string>
     <string name="of_student">的学生</string>
@@ -1079,6 +1084,7 @@
     <string name="oppose">反对</string>
     <string name="oppose_with_zero">反对(0)</string>
     <string name="over_time">已超时</string>
+    <string name="overred_time">已超时 %1$d:%3$s</string>
     <string name="parent_notice">家长通知</string>
     <string name="parent_party">家长会</string>
     <string name="parents_administrator">家长管理员</string>
@@ -1263,6 +1269,7 @@
     <string name="splash_name">splashactivity</string>
     <string name="sport">体育</string>
     <string name="star2_school_teacher">**学校老师</string>
+    <string name="start_name">开始%3$s</string>
     <string name="start_time_">开始时间:</string>
     <string name="start_toRecord">开始录音</string>
     <string name="start_work">开始作业</string>

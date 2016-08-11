@@ -1,3 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\eventbus-3.0.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\eventbus-3.0.0_0f4749d1ef547ddb285b00b56b9a949ce3aed0e7.jar" />
+    </item>
+    <item
+        jar="C:\Users\admin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\gson-2.4_5d860bc92f8edfa745d596f7286024adf56809ee.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.5_132c995ca71eba6597494a4a20a95a3ccf4cb1bf.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\jars\libs\internal_impl-22.1.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\internal_impl-22.1.0_eecc80ba9724f7b583a911c7bc058fd14f5d9f9d.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\android-viewbadger.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="f1303b50d535716ca7601c5014357b8435658313">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\android-viewbadger_c64d1607ef6dc18cf89114900544233841af8c36.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="1f313d1bfc508e0122e43db630ec88afce4afe58">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\instant-run_862aba6130d7aa83719ab02c271fef7f10509f12.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="c0897012dfd2ff59e1b807c07ef09bd0a26cf73e">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\baidumapapi_v2_4_2_b2e588b8c9afd9fcf8d133992af5af1f8a1d8e14.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\exploded-aar\com.actionbarsherlock\actionbarsherlock\4.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\com.actionbarsherlock-actionbarsherlock-4.4.0_1a66d939b9c063767208c270836e4cf8083334da.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\android-async-http-1.4.8_9a674a61bed1a82dfc2fc97070c38447d41e03cc.jar" />
+    </item>
+    <item
+        jar="G:\Eclipse\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\support-annotations-22.1.0_e99fbc4cbff2bdd43c6052d19a923db1a1a2ace4.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\xUtils-2.6.14.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\xUtils-2.6.14_5a5c69c8920da66e48bfee017b1e62044956a735.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-analytics-v5.6.7.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="bf324c2f968604935d48434b57832aaaca91def0">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\umeng-analytics-v5.6.7_1b733f1e06d1a199a0693fe6b49b506021d74634.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="4a789cfbae72bc47473ce569fcd14606c0f1f6d6">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\instant-run-bootstrap_7186629f52cbfdc3d1573e8f83aeaea4977194c3.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="0678f9f53236f6e6eb51e117f616dbc2b304f678">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\qiniu-android-sdk-7.0.7_5f247ff781e30232f1f34228f7e11b729ee6d409.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="b9a617ab7630ca6cf841becd35e3a74ffbfeb56f">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\happy-dns-0.2.1_bbcfeb2a92f6c00901c1d018a53e51c96847dab0.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\locSDK_4.1_3a202b8344d548fde15fcbf155fd959beef4c7f5.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\pinyin4j-2.5.0_ac144f906143548f07fd3bfdbc7fd705ccfbbeeb.jar" />
+    </item>
+    <item
+        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
+        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.1.0_9fd9b63d832b526d0cf96f40899a1fffe178172b.jar" />
+    </item>
+
+</items>
