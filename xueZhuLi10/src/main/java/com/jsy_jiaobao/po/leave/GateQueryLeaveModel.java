@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 门卫审核假条model
  * 
- * @author
+ * @author an
  * 
  */
 public class GateQueryLeaveModel implements Serializable {
