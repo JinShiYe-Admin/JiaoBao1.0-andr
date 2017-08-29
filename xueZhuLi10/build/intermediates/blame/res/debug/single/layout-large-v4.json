@@ -1,5 +1,9 @@
 [
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\abs__action_mode_close_item.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\layout-large\\abs__action_mode_close_item.xml"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\abs__action_mode_close_item.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\layout-large\\abs__action_mode_close_item.xml"
     }

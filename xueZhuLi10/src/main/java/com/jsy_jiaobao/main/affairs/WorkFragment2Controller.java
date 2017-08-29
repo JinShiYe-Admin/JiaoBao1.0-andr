@@ -2,6 +2,7 @@ package com.jsy_jiaobao.main.affairs;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 
 import com.google.gson.reflect.TypeToken;
 import com.jsy.xuezhuli.utils.BaseUtils;
@@ -110,6 +111,7 @@ public class WorkFragment2Controller implements ConstantUrl {
 	 * trun       	否	boolean	按转发标志检查：不提供该参数：查全部，true查询转发记录，false：查全部
 	 */
 	public void CommList(RequestParams params, int cbTag) {
+		Log.d("获取我发布的参数",params.toString());
 		params.addBodyParameter("numPerPage", "20");//
 		CallBack callback = new CallBack();
 		callback.setUserTag(cbTag);
@@ -189,6 +191,7 @@ public class WorkFragment2Controller implements ConstantUrl {
 	}
 
 	private void dealResponseInfo(String result, Object userTag) {
+		Log.e("回调信息：",result);
 		ArrayList<Object> post = new ArrayList<>();
 		post.add(userTag);
 		switch ((Integer) userTag) {

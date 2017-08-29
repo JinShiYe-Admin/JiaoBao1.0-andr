@@ -45,5 +45,52 @@
                 }
             }
         ]
+    },
+    {
+        "outputFile": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 5,
+                    "endColumn": 12,
+                    "endOffset": 240
+                },
+                "from": {
+                    "file": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\values-v11\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 177,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 362
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 245,
+                    "endLine": 9,
+                    "endColumn": 12,
+                    "endOffset": 442
+                },
+                "from": {
+                    "file": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\values-v11\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 368,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 565
+                    }
+                }
+            }
+        ]
     }
 ]

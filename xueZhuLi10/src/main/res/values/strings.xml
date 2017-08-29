@@ -1,5 +1,5 @@
 <resources>
-
+    <string name="btn_record">记录</string>
     <string name="public_error_nonick">请去个人中心设置昵称</string>
     <string name="public_error_nounit">注意:您还未加入单位</string>
     <string name="public_error_user">您的账号已被停用求知权限</string>
@@ -52,26 +52,26 @@
     <string name="messagecenter_title_show">展示</string>
     <string name="messagecenter_title_train">主题</string>
     <!-- 请假系统 -->
-   	<string name="leave_headteacher">班主任</string>
-   	<string name="leave_teacher">老师</string> 
-   	<string name="leave_gen">家长</string>
-   	<string name="leave_gen_make">请假</string>
+    <string name="leave_headteacher">班主任</string>
+    <string name="leave_teacher">老师</string>
+    <string name="leave_gen">家长</string>
+    <string name="leave_gen_make">请假</string>
     <string name="leave_query">查询</string>
-   	<string name="leave_getstudentinfo_false">没有获取到学生信息</string>
-   	<string name="leave_no_myleaves">暂无请假记录</string> 	   
+    <string name="leave_getstudentinfo_false">没有获取到学生信息</string>
+    <string name="leave_no_myleaves">暂无请假记录</string>
     <string name="leave_success">申请请假成功</string>
     <string name="leave_chosestudent_please">请选择学生</string>
     <string name="leave_choose_class">班级选择</string>
     <string name="leave_modify">修改</string>
     <string name="leave_modifyleave">修改假条</string>
-    <string name="leave_modifyleave_success">成功修改假条</string>     
+    <string name="leave_modifyleave_success">成功修改假条</string>
     <string name="leave_submitted">已提交</string>
     <string name="leave_uncheck">待审核</string>
     <string name="leave_checked">已审核</string>
     <string name="leave_statistical_query">统计查询</string>
     <string name="leave_check">审批</string>
     <string name="leave_approval">请假审核</string>
-    <string name="leave_replace_leave">代人请假</string>    
+    <string name="leave_replace_leave">代人请假</string>
     <string name="leave_class_stuNames">学生名单</string>
     <string name="leave_time_noMoreThanFive">超出限制</string>
     <string name="leave_screen_condition">筛选条件</string>
@@ -928,97 +928,97 @@
     <string name="Show2ArtListAdapter_pp_commit_commit">Show2ArtListAdapter_pp_commit_commit</string>
     <string name="Show2ArtListAdapter_showpp">Show2ArtListAdapter_showpp</string>
     <string name="Show2ArtListAdapter_listView">Show2ArtListAdapter_listView</string>
-	<!-- PersonalSpaceActivity -->
-	<string name="PersonalSpaceActivity_album">PersonalSpaceActivity_album</string>
-	<string name="PersonalSpaceActivity_body">PersonalSpaceActivity_body</string>
-	<string name="ArticleDetailsActivity_commit">ArticleDetailsActivity_commit</string>
-	<string name="ArticleDetailsActivity_like">ArticleDetailsActivity_like</string>
-	<string name="ArticleDetailsActivity_listPhoto">ArticleDetailsActivity_listPhoto</string>
-	<string name="ArticleDetailsActivity_listLike">ArticleDetailsActivity_listLike</string>
-	<string name="ArticleDetailsActivity_listAgainst">ArticleDetailsActivity_listAgainst</string>
-	<string name="ArticleDetailsActivity_listReply">ArticleDetailsActivity_listReply</string>
-	<!-- UnitSpacePhotoGroupActivity -->
-	<string name="UnitSpacePhotoGroupActivity_uploadPhoto">UnitSpacePhotoGroupActivity_uploadPhoto</string>
-	<string name="UnitSpacePhotoGroupActivity_createAlbum">UnitSpacePhotoGroupActivity_createAlbum</string>
-	<string name="UnitSpacePhotoGroupActivity_albumCover">UnitSpacePhotoGroupActivity_albumCover</string>
-	<string name="UnitSpacePhotoActivity_photo">UnitSpacePhotoActivity_photo</string>
-	<!-- 请假系统 -->
-	<!-- 班主任 -->
-	<string name="HeadTeaLeaveFeagment_time_add">HeadTeaLeaveFeagment_time_add</string>
-	<string name="HeadTeaLeaveFeagment_btn_commit">HeadTeaLeaveFeagment_btn_commit</string>
-	<string name="HeadTeaLeaveFeagment_chose_stu">HeadTeaLeaveFeagment_chose_stu</string>
-	<string name="HeadTeaLeaveFeagment_rb_self">HeadTeaLeaveFeagment_rb_self</string>
-	<string name="HeadTeaLeaveFeagment_rb_stu">HeadTeaLeaveFeagment_rb_stu</string>
-	<string name="HeadTeaLeaveFeagment_choseType">HeadTeaLeaveFeagment_choseType</string>
-	<string name="HeadTeaQueryFragment_rb_self">HeadTeaQueryFragment_rb_self</string>
-	<string name="HeadTeaQueryFragment_rb_stu">HeadTeaQueryFragment_rb_stu</string>
-	<string name="HeadTeaQueryFragment_tv_time">HeadTeaQueryFragment_tv_time</string>
-	<string name="HeadTeaQueryFragment_spn_class">HeadTeaQueryFragment_spn_class</string>
-	
-	<!-- 老师 -->
-	<string name="TeaLeaveFragment_time_add">TeaLeaveFragment_time_add</string>
-	<string name="TeaLeaveFragment_btn_commit">TeaLeaveFragment_btn_commit</string>
-	<string name="TeaLeaveFragment_choseType">TeaLeaveFragment_choseType</string>
-	<string name="TeacherQueryFragment_tv_time">TeacherQueryFragment_tv_time</string>
-	
-	<!-- 家长 -->
-	<string name="GenLeaveFragment_time_add">GenLeaveFragment_time_add</string>
-	<string name="GenLeaveFragment_btn_commit">GenLeaveFragment_btn_commit</string>
-	<string name="GenLeaveFragment_leave_type">GenLeaveFragment_leave_type</string>
-	<string name="GenLeaveFragment_leaver_name">GenLeaveFragment_leaver_name</string>
-	<string name="GenQueryFragment_tv_time">GenQueryFragment_tv_time</string>
-	<string name="GenQueryFragment_leaver_name">GenQueryFragment_leaver_name</string>
-	
-	<!-- 请假详情 -->
-	<string name="LeaveDetailsActivity_btn_del">LeaveDetailsActivity_btn_del</string>
-	<string name="LeaveDetailsActivity_btn_change">LeaveDetailsActivity_btn_change</string>
-	<string name="addApprovalLayout_btn_check">addApprovalLayout_btn_check</string>
-	
-	<!-- 时间段修改 -->	
-	<string name="addTimeLayout_start">addTimeLayout_start</string>
-	<string name="addTimeLayout_end">addTimeLayout_end</string>
-	<string name="addTimeLayout_delete">addTimeLayout_delete</string>
-	<string name="modfiyTimeLayout_start">modfiyTimeLayout_start</string>
-	<string name="modfiyTimeLayout_end">modfiyTimeLayout_end</string>
-	<string name="modfiyTimeLayout_delete">modfiyTimeLayout_delete</string>
-	
-	<!-- 审核假条 -->
-	<string name="CheckerAgreeOrActivity_rb_agree">CheckerAgreeOrActivity_rb_agree</string>
-	<string name="CheckerAgreeOrActivity_rb_disagree">CheckerAgreeOrActivity_rb_disagree</string>
-	<string name="CheckerAgreeOrActivity_btn_submit">CheckerAgreeOrActivity_btn_submit</string>
+    <!-- PersonalSpaceActivity -->
+    <string name="PersonalSpaceActivity_album">PersonalSpaceActivity_album</string>
+    <string name="PersonalSpaceActivity_body">PersonalSpaceActivity_body</string>
+    <string name="ArticleDetailsActivity_commit">ArticleDetailsActivity_commit</string>
+    <string name="ArticleDetailsActivity_like">ArticleDetailsActivity_like</string>
+    <string name="ArticleDetailsActivity_listPhoto">ArticleDetailsActivity_listPhoto</string>
+    <string name="ArticleDetailsActivity_listLike">ArticleDetailsActivity_listLike</string>
+    <string name="ArticleDetailsActivity_listAgainst">ArticleDetailsActivity_listAgainst</string>
+    <string name="ArticleDetailsActivity_listReply">ArticleDetailsActivity_listReply</string>
+    <!-- UnitSpacePhotoGroupActivity -->
+    <string name="UnitSpacePhotoGroupActivity_uploadPhoto">UnitSpacePhotoGroupActivity_uploadPhoto</string>
+    <string name="UnitSpacePhotoGroupActivity_createAlbum">UnitSpacePhotoGroupActivity_createAlbum</string>
+    <string name="UnitSpacePhotoGroupActivity_albumCover">UnitSpacePhotoGroupActivity_albumCover</string>
+    <string name="UnitSpacePhotoActivity_photo">UnitSpacePhotoActivity_photo</string>
+    <!-- 请假系统 -->
+    <!-- 班主任 -->
+    <string name="HeadTeaLeaveFeagment_time_add">HeadTeaLeaveFeagment_time_add</string>
+    <string name="HeadTeaLeaveFeagment_btn_commit">HeadTeaLeaveFeagment_btn_commit</string>
+    <string name="HeadTeaLeaveFeagment_chose_stu">HeadTeaLeaveFeagment_chose_stu</string>
+    <string name="HeadTeaLeaveFeagment_rb_self">HeadTeaLeaveFeagment_rb_self</string>
+    <string name="HeadTeaLeaveFeagment_rb_stu">HeadTeaLeaveFeagment_rb_stu</string>
+    <string name="HeadTeaLeaveFeagment_choseType">HeadTeaLeaveFeagment_choseType</string>
+    <string name="HeadTeaQueryFragment_rb_self">HeadTeaQueryFragment_rb_self</string>
+    <string name="HeadTeaQueryFragment_rb_stu">HeadTeaQueryFragment_rb_stu</string>
+    <string name="HeadTeaQueryFragment_tv_time">HeadTeaQueryFragment_tv_time</string>
+    <string name="HeadTeaQueryFragment_spn_class">HeadTeaQueryFragment_spn_class</string>
 
-	<!-- 修改假条 -->
-	<string name="ModifyLeaveActivity_add_time">ModifyLeaveActivity_add_time</string>
-	<string name="ModifyLeaveActivity_btn_commit">ModifyLeaveActivity_btn_commit</string>
-	<string name="ModifyLeaveActivity_leave_type">ModifyLeaveActivity_leave_type</string>
-	
-	<!-- 审核者界面 -->
-	<string name="CheckerActivity_uncheck">CheckerActivity_uncheck</string>
-	<string name="CheckerActivity_checked">CheckerActivity_checked</string>
-	<string name="CheckerActivity_query">CheckerActivity_query</string>
-	<string name="CheckerActivity_gateGuard">CheckerActivity_gateGuard</string>
-	<string name="CheckerActivity_screen_condition">CheckerActivity_screen_condition</string>
-	
-	<!-- 筛选条件 -->
-	<string name="CheckerScreenConditionActivity_tv_time">CheckerScreenConditionActivity_tv_time</string>
-	<string name="CheckerScreenConditionActivity_grade">CheckerScreenConditionActivity_grade</string>
-	<string name="CheckerScreenConditionActivity_class">CheckerScreenConditionActivity_class</string>
-	<string name="CheckerScreenConditionActivity_checkRole">CheckerScreenConditionActivity_checkRole</string>
+    <!-- 老师 -->
+    <string name="TeaLeaveFragment_time_add">TeaLeaveFragment_time_add</string>
+    <string name="TeaLeaveFragment_btn_commit">TeaLeaveFragment_btn_commit</string>
+    <string name="TeaLeaveFragment_choseType">TeaLeaveFragment_choseType</string>
+    <string name="TeacherQueryFragment_tv_time">TeacherQueryFragment_tv_time</string>
 
-	<!-- adapter -->
-	<string name="UnitClassLeavesAdapter_MyLeaveModel">UnitClassLeavesAdapter_MyLeaveModel</string>
-	<string name="UnitClassLeavesAdapter_UnitClassLeaveModel">UnitClassLeavesAdapter_UnitClassLeaveModel</string>
-	<string name="UnitClassLeavesAdapter_GateQueryLeaveModel">UnitClassLeavesAdapter_GateQueryLeaveModel</string>
-	<string name="CheckerQueryAdapter_ClassSumLeaveModel">CheckerQueryAdapter_ClassSumLeaveModel</string>
-	<!-- 门卫签字 -->
-	<string name="GateCheckDetails_Leave">GateCheckDetails_Leave</string>
-	<string name="GateCheckDetails_Back">GateCheckDetails_Back</string>
-	
-	<!-- 提示弹出框 -->
-	<string name="hint">提交</string>
-   	<string name="decided_to_submit">确定提交？</string>
-   	<string name="sure">确定</string>
-   	<string name="cancel">取消</string>
+    <!-- 家长 -->
+    <string name="GenLeaveFragment_time_add">GenLeaveFragment_time_add</string>
+    <string name="GenLeaveFragment_btn_commit">GenLeaveFragment_btn_commit</string>
+    <string name="GenLeaveFragment_leave_type">GenLeaveFragment_leave_type</string>
+    <string name="GenLeaveFragment_leaver_name">GenLeaveFragment_leaver_name</string>
+    <string name="GenQueryFragment_tv_time">GenQueryFragment_tv_time</string>
+    <string name="GenQueryFragment_leaver_name">GenQueryFragment_leaver_name</string>
+
+    <!-- 请假详情 -->
+    <string name="LeaveDetailsActivity_btn_del">LeaveDetailsActivity_btn_del</string>
+    <string name="LeaveDetailsActivity_btn_change">LeaveDetailsActivity_btn_change</string>
+    <string name="addApprovalLayout_btn_check">addApprovalLayout_btn_check</string>
+
+    <!-- 时间段修改 -->
+    <string name="addTimeLayout_start">addTimeLayout_start</string>
+    <string name="addTimeLayout_end">addTimeLayout_end</string>
+    <string name="addTimeLayout_delete">addTimeLayout_delete</string>
+    <string name="modfiyTimeLayout_start">modfiyTimeLayout_start</string>
+    <string name="modfiyTimeLayout_end">modfiyTimeLayout_end</string>
+    <string name="modfiyTimeLayout_delete">modfiyTimeLayout_delete</string>
+
+    <!-- 审核假条 -->
+    <string name="CheckerAgreeOrActivity_rb_agree">CheckerAgreeOrActivity_rb_agree</string>
+    <string name="CheckerAgreeOrActivity_rb_disagree">CheckerAgreeOrActivity_rb_disagree</string>
+    <string name="CheckerAgreeOrActivity_btn_submit">CheckerAgreeOrActivity_btn_submit</string>
+
+    <!-- 修改假条 -->
+    <string name="ModifyLeaveActivity_add_time">ModifyLeaveActivity_add_time</string>
+    <string name="ModifyLeaveActivity_btn_commit">ModifyLeaveActivity_btn_commit</string>
+    <string name="ModifyLeaveActivity_leave_type">ModifyLeaveActivity_leave_type</string>
+
+    <!-- 审核者界面 -->
+    <string name="CheckerActivity_uncheck">CheckerActivity_uncheck</string>
+    <string name="CheckerActivity_checked">CheckerActivity_checked</string>
+    <string name="CheckerActivity_query">CheckerActivity_query</string>
+    <string name="CheckerActivity_gateGuard">CheckerActivity_gateGuard</string>
+    <string name="CheckerActivity_screen_condition">CheckerActivity_screen_condition</string>
+
+    <!-- 筛选条件 -->
+    <string name="CheckerScreenConditionActivity_tv_time">CheckerScreenConditionActivity_tv_time</string>
+    <string name="CheckerScreenConditionActivity_grade">CheckerScreenConditionActivity_grade</string>
+    <string name="CheckerScreenConditionActivity_class">CheckerScreenConditionActivity_class</string>
+    <string name="CheckerScreenConditionActivity_checkRole">CheckerScreenConditionActivity_checkRole</string>
+
+    <!-- adapter -->
+    <string name="UnitClassLeavesAdapter_MyLeaveModel">UnitClassLeavesAdapter_MyLeaveModel</string>
+    <string name="UnitClassLeavesAdapter_UnitClassLeaveModel">UnitClassLeavesAdapter_UnitClassLeaveModel</string>
+    <string name="UnitClassLeavesAdapter_GateQueryLeaveModel">UnitClassLeavesAdapter_GateQueryLeaveModel</string>
+    <string name="CheckerQueryAdapter_ClassSumLeaveModel">CheckerQueryAdapter_ClassSumLeaveModel</string>
+    <!-- 门卫签字 -->
+    <string name="GateCheckDetails_Leave">GateCheckDetails_Leave</string>
+    <string name="GateCheckDetails_Back">GateCheckDetails_Back</string>
+
+    <!-- 提示弹出框 -->
+    <string name="hint">提交</string>
+    <string name="decided_to_submit">确定提交？</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
     <string name="against">反对(%1$d)</string>
     <string name="like">赞(%1$d)</string>
     <string name="number_like">%1$d赞</string>
@@ -1033,4 +1033,5 @@
     <string name="overred_time">已超时 %1$d:%3$s</string>
     <string name="count_down_time">倒计时 %1$d:%3$s</string>
     <string name="common_questions">共%3$s题</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

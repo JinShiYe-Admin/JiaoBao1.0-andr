@@ -1,5 +1,124 @@
 [
     {
+        "outputFile": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh\\values-zh.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 73,
+                    "endOffset": 124
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 73,
+                        "endOffset": 124
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 129,
+                    "endColumn": 113,
+                    "endOffset": 238
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 129,
+                        "endColumn": 113,
+                        "endOffset": 238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 243,
+                    "endColumn": 107,
+                    "endOffset": 346
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 243,
+                        "endColumn": 107,
+                        "endOffset": 346
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 351,
+                    "endColumn": 60,
+                    "endOffset": 407
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 351,
+                        "endColumn": 60,
+                        "endOffset": 407
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 412,
+                    "endColumn": 66,
+                    "endOffset": 474
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 412,
+                        "endColumn": 66,
+                        "endOffset": 474
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 479,
+                    "endColumn": 64,
+                    "endOffset": 539
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\debug\\res\\values-zh\\values-zh.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 479,
+                        "endColumn": 64,
+                        "endOffset": 539
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "E:\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-zh\\values-zh.xml",
         "map": [
             {

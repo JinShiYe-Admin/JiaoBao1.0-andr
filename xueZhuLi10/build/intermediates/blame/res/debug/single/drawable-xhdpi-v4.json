@@ -8,6 +8,18 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_pp_like.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_topical_selected.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_topical_selected.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_chat_selected.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_chat_selected.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_work_selected.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_work_selected.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__spinner_ab_default_holo_light.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__spinner_ab_default_holo_light.9.png"
     },
@@ -104,12 +116,20 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_unit_juniorunit.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_show_selected.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_show_selected.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\checkbox_pressed_crowd.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\checkbox_pressed_crowd.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__tab_selected_pressed_holo.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_work_unselect.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_work_unselect.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
@@ -138,6 +158,10 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__spinner_ab_pressed_holo_dark.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__spinner_ab_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_chat_unselect.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_chat_unselect.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_qiuzhi_takepic.png",
@@ -192,6 +216,10 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__list_pressed_holo_light.9.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_holo.9.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_unittype_school.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_unittype_school.png"
     },
@@ -200,12 +228,16 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_show_ic2.png"
     },
     {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bar_search.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\bar_search.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__spinner_ab_disabled_holo_light.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__spinner_ab_disabled_holo_light.9.png"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bar_search.png",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\bar_search.png"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__ic_search.png",
@@ -316,12 +348,16 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_pp_commit.png"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\btn_location.png",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\btn_location.png"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\vpi__tab_selected_focused_holo.9.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__tab_unselected_pressed_holo.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\btn_location.png",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\btn_location.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_topical_selected.png",
@@ -376,6 +412,10 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__cab_background_bottom_holo_light.9.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__toast_frame.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__toast_frame.9.png"
     },
@@ -390,6 +430,10 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bar_menu_exit.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\bar_menu_exit.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__progress_primary_holo_dark.9.png",
@@ -500,6 +544,10 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_show_curunit_selected.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\vpi__tab_selected_holo.9.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_unit_gallery.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_unit_gallery.png"
     },
@@ -534,6 +582,10 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\cb_register_uncheck.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\cb_register_uncheck.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_unit_show.png",
@@ -624,8 +676,16 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__ab_transparent_dark_holo.9.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_show_curunit_unselect.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_show_curunit_unselect.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_notice_unselect.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_notice_unselect.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__progress_primary_holo_light.9.png",
@@ -658,6 +718,10 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_show_title1.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\icon_show_title1.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_work_uncomment_unselect.png",
@@ -736,6 +800,10 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__textfield_search_selected_holo_light.9.png"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_topical_unselect.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_topical_unselect.png"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bar_menu_changejiaobao.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable-xhdpi\\bar_menu_changejiaobao.png"
     },
@@ -746,6 +814,10 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__ab_stacked_transparent_light_holo.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__ab_stacked_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_notice_selected.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_notice_selected.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__menu_dropdown_panel_holo_dark.9.png",
@@ -778,6 +850,10 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__progress_secondary_holo_light.9.png",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable-xhdpi\\abs__progress_secondary_holo_light.9.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bottom_show_unselect.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\bottom_show_unselect.png"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abs__textfield_search_right_selected_holo_light.9.png",

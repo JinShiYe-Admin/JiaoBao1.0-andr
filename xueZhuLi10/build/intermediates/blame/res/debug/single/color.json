@@ -1,5 +1,57 @@
 [
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\focuse_change_color.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\focuse_change_color.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\channel_gridview_item_click.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\channel_gridview_item_click.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\selector_tabtext.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\selector_tabtext.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\selector_tabtext.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\selector_tabtext.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_holo_dark.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\color\\abs__primary_text_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\rc_list_item_selector.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\rc_list_item_selector.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\focuse_change_color.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\focuse_change_color.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\rc_list_item_selector.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\rc_list_item_selector.xml"
+    },
+    {
+        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\bottom_text.xml",
+        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\color\\bottom_text.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_disable_only_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\color\\abs__primary_text_disable_only_holo_light.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\color\\vpi__dark_theme.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\rc_switch_text_selector.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\rc_switch_text_selector.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\color\\vpi__light_theme.xml"
+    },
+    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_disable_only_holo_dark.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\color\\abs__primary_text_disable_only_holo_dark.xml"
     },
@@ -8,40 +60,32 @@
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\color\\abs__primary_text_disable_only_holo_light.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\selector_tabtext.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\selector_tabtext.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_holo_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\color\\abs__primary_text_holo_dark.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_disable_only_holo_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\color\\abs__primary_text_disable_only_holo_dark.xml"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\vpi__dark_theme.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\color\\vpi__dark_theme.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\color\\abs__primary_text_holo_dark.xml"
-    },
-    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\vpi__light_theme.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\color\\vpi__light_theme.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\rc_list_item_selector.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\rc_list_item_selector.xml"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\channel_gridview_item_click.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\channel_gridview_item_click.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\focuse_change_color.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\focuse_change_color.xml"
-    },
-    {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\gen_check_title_color.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\gen_check_title_color.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\bottom_text.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\color\\bottom_text.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\gen_check_title_color.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\color\\gen_check_title_color.xml"
     },
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\rc_switch_text_selector.xml",
@@ -50,5 +94,13 @@
     {
         "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_holo_light.xml",
         "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\color\\abs__primary_text_holo_light.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\bottom_text.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\color\\bottom_text.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\color\\abs__primary_text_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\color\\abs__primary_text_holo_light.xml"
     }
 ]

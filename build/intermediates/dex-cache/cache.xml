@@ -2,130 +2,364 @@
 <items version="2" >
 
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\eventbus-3.0.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\eventbus-3.0.0_0f4749d1ef547ddb285b00b56b9a949ce3aed0e7.jar" />
-    </item>
-    <item
-        jar="C:\Users\admin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\gson-2.4_5d860bc92f8edfa745d596f7286024adf56809ee.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.5_132c995ca71eba6597494a4a20a95a3ccf4cb1bf.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\jars\libs\internal_impl-22.1.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\internal_impl-22.1.0_eecc80ba9724f7b583a911c7bc058fd14f5d9f9d.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\android-viewbadger.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="f1303b50d535716ca7601c5014357b8435658313">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\android-viewbadger_c64d1607ef6dc18cf89114900544233841af8c36.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="1f313d1bfc508e0122e43db630ec88afce4afe58">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\instant-run_862aba6130d7aa83719ab02c271fef7f10509f12.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="c0897012dfd2ff59e1b807c07ef09bd0a26cf73e">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\baidumapapi_v2_4_2_b2e588b8c9afd9fcf8d133992af5af1f8a1d8e14.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\exploded-aar\com.actionbarsherlock\actionbarsherlock\4.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="af64527b748983a75de9c0756e9768b56b240a49">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\com.actionbarsherlock-actionbarsherlock-4.4.0_1a66d939b9c063767208c270836e4cf8083334da.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\android-async-http-1.4.8_9a674a61bed1a82dfc2fc97070c38447d41e03cc.jar" />
-    </item>
-    <item
-        jar="G:\Eclipse\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\support-annotations-22.1.0_e99fbc4cbff2bdd43c6052d19a923db1a1a2ace4.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\xUtils-2.6.14.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\xUtils-2.6.14_5a5c69c8920da66e48bfee017b1e62044956a735.jar" />
-    </item>
-    <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-analytics-v5.6.7.jar"
-        jumboMode="true"
-        revision="22.0.1"
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-analytics-v5.6.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
         sha1="bf324c2f968604935d48434b57832aaaca91def0">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\umeng-analytics-v5.6.7_1b733f1e06d1a199a0693fe6b49b506021d74634.jar" />
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\umeng-analytics-v5.6.7_8b8ca0b1adfa3ab96cc1eb3702e2208e9f13d41b.jar" />
     </item>
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="4a789cfbae72bc47473ce569fcd14606c0f1f6d6">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\instant-run-bootstrap_7186629f52cbfdc3d1573e8f83aeaea4977194c3.jar" />
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\xUtils-2.6.14.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\xUtils-2.6.14_573dbbff6b94e36ef7c51d5b96d44bd5d5abb576.jar" />
     </item>
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar"
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-analytics-v5.6.7.jar"
         jumboMode="true"
-        revision="22.0.1"
-        sha1="0678f9f53236f6e6eb51e117f616dbc2b304f678">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\qiniu-android-sdk-7.0.7_5f247ff781e30232f1f34228f7e11b729ee6d409.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf324c2f968604935d48434b57832aaaca91def0">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\umeng-analytics-v5.6.7_8b8ca0b1adfa3ab96cc1eb3702e2208e9f13d41b\classes.dex" />
     </item>
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar"
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\eventbus-3.0.0.jar"
         jumboMode="true"
-        revision="22.0.1"
-        sha1="b9a617ab7630ca6cf841becd35e3a74ffbfeb56f">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\happy-dns-0.2.1_bbcfeb2a92f6c00901c1d018a53e51c96847dab0.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-3.0.0_0def9a9fffc7ff6da43c65e196266f814fdfd3c5\classes.dex" />
     </item>
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
+        is-multidex="true"
+        jar="F:\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
         jumboMode="true"
-        revision="22.0.1"
-        sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\locSDK_4.1_3a202b8344d548fde15fcbf155fd959beef4c7f5.jar" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_98e5920e0f9b0e1a1b6a707f8402b4f5acf9a5db\classes.dex" />
     </item>
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\eventbus-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\eventbus-3.0.0_0def9a9fffc7ff6da43c65e196266f814fdfd3c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\android-async-http-1.4.8_2b9a1190e04be9bdf6faced260eb2170eeed34e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\universal-image-loader-1.9.5_aee5f6b2f63de8dff702f91aa5e7af55e06a66f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\constraint-layout-solver-1.0.2_98e5920e0f9b0e1a1b6a707f8402b4f5acf9a5db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLviewPager_lib\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f55a219cd5b3cf6b5cacd6738d48becabe3e007">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_4b4e8a3eeb3d72eff69e727802d3dbfea87aa047.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_7e757926b454fdf7f481d2c275b676d24283ba73.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
         jumboMode="true"
-        revision="22.0.1"
+        optimize="true"
+        revision="25.0.0"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.5_aee5f6b2f63de8dff702f91aa5e7af55e06a66f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
         sha1="ae353005f973da1cd8545b54354504c2503f6865">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\pinyin4j-2.5.0_ac144f906143548f07fd3bfdbc7fd705ccfbbeeb.jar" />
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\pinyin4j-2.5.0_ca004e64b7a536e0f07f9881aca6250f69b4ea89.jar" />
     </item>
     <item
-        jar="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.0\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-viewbadger.jar"
         jumboMode="true"
-        revision="22.0.1"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f1303b50d535716ca7601c5014357b8435658313">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\android-viewbadger_8e60080805bd2fb2d360469537ec18c712ac6471\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e757926b454fdf7f481d2c275b676d24283ba73\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_ca004e64b7a536e0f07f9881aca6250f69b4ea89\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\xUtils-2.6.14.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\xUtils-2.6.14_573dbbff6b94e36ef7c51d5b96d44bd5d5abb576\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cc77986a02a7946ffe671a407b14c52418dda56a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a617ab7630ca6cf841becd35e3a74ffbfeb56f">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\happy-dns-0.2.1_38965407efafdd61d2940ab4a966a84d30604105\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-viewbadger.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f1303b50d535716ca7601c5014357b8435658313">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\android-viewbadger_8e60080805bd2fb2d360469537ec18c712ac6471.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\support-annotations-22.1.0_3a5dfda4e5cad4f9a5891373432e63225602d331.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a617ab7630ca6cf841becd35e3a74ffbfeb56f">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\happy-dns-0.2.1_38965407efafdd61d2940ab4a966a84d30604105.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.1.0_3a5dfda4e5cad4f9a5891373432e63225602d331\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\libs\internal_impl-22.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\internal_impl-22.1.0_d49d12a2a3cb159dfee67bb83374490ecd457ee1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
         sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
-        <dex dex="E:\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.1.0_9fd9b63d832b526d0cf96f40899a1fffe178172b.jar" />
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_a51220d71a5500837473784fd074bea872c27d53.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\libs\internal_impl-22.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.0_d49d12a2a3cb159dfee67bb83374490ecd457ee1\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\locSDK_4.1_3d43c10fc12046f123ddfd6e2c010d81f568fe70.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\android-async-http-1.4.8_2b9a1190e04be9bdf6faced260eb2170eeed34e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\locSDK_4.1_3d43c10fc12046f123ddfd6e2c010d81f568fe70\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a51220d71a5500837473784fd074bea872c27d53\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rocka\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\gson-2.4_2731905697351db5d54826e6ae4393f8e1b6c2d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rocka\.android\build-cache\649a4c3fdfc1d0ab78d44c93b854842fd21296e3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_5e217aec98fed995f4581bb88919d7209ed08c2e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0897012dfd2ff59e1b807c07ef09bd0a26cf73e">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\baidumapapi_v2_4_2_45ec0ade3f14428f6e64cfb30a28aa13d2448997.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0678f9f53236f6e6eb51e117f616dbc2b304f678">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\qiniu-android-sdk-7.0.7_ef997118810389ac3032d404855723fd06ba92de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0897012dfd2ff59e1b807c07ef09bd0a26cf73e">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\baidumapapi_v2_4_2_45ec0ade3f14428f6e64cfb30a28aa13d2448997\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rocka\.android\build-cache\649a4c3fdfc1d0ab78d44c93b854842fd21296e3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5e217aec98fed995f4581bb88919d7209ed08c2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0678f9f53236f6e6eb51e117f616dbc2b304f678">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\qiniu-android-sdk-7.0.7_ef997118810389ac3032d404855723fd06ba92de.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c3c4df13c4ed2c195358b73513d6c8304faf5455">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_baca605273eb8230178df8723fab690bc23d4e30\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rocka\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.4_2731905697351db5d54826e6ae4393f8e1b6c2d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="adccf1d1769bd1a7883121dad94d6680a57f4f75">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_c6e25770239cb06d791b19472c864331eb16e9e8.jar" />
     </item>
 
 </items>
