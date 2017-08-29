@@ -38,15 +38,6 @@
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\eventbus-3.0.0_0def9a9fffc7ff6da43c65e196266f814fdfd3c5\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="F:\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_98e5920e0f9b0e1a1b6a707f8402b4f5acf9a5db\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\eventbus-3.0.0.jar"
         jumboMode="false"
@@ -83,13 +74,13 @@
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\constraint-layout-solver-1.0.2_98e5920e0f9b0e1a1b6a707f8402b4f5acf9a5db.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLviewPager_lib\build\intermediates\bundles\default\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5f55a219cd5b3cf6b5cacd6738d48becabe3e007">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_4b4e8a3eeb3d72eff69e727802d3dbfea87aa047.jar" />
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.5_aee5f6b2f63de8dff702f91aa5e7af55e06a66f6\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -101,22 +92,13 @@
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_7e757926b454fdf7f481d2c275b676d24283ba73.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.5_aee5f6b2f63de8dff702f91aa5e7af55e06a66f6\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLviewPager_lib\build\intermediates\bundles\default\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="ae353005f973da1cd8545b54354504c2503f6865">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\pinyin4j-2.5.0_ca004e64b7a536e0f07f9881aca6250f69b4ea89.jar" />
+        sha1="5f55a219cd5b3cf6b5cacd6738d48becabe3e007">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\classes_4b4e8a3eeb3d72eff69e727802d3dbfea87aa047.jar" />
     </item>
     <item
         is-multidex="true"
@@ -128,13 +110,13 @@
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\android-viewbadger_8e60080805bd2fb2d360469537ec18c712ac6471\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="af64527b748983a75de9c0756e9768b56b240a49">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e757926b454fdf7f481d2c275b676d24283ba73\classes.dex" />
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\pinyin4j-2.5.0_ca004e64b7a536e0f07f9881aca6250f69b4ea89.jar" />
     </item>
     <item
         is-multidex="true"
@@ -200,15 +182,6 @@
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\happy-dns-0.2.1_38965407efafdd61d2940ab4a966a84d30604105.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="F:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.0\support-annotations-22.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="281bc6c58ecb3644c23fbc5ee0452019f67b4d5d">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.1.0_3a5dfda4e5cad4f9a5891373432e63225602d331\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\libs\internal_impl-22.1.0.jar"
         jumboMode="false"
@@ -228,12 +201,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\libs\internal_impl-22.1.0.jar"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="025cb89f2896c63200ff4c2e6c467a95691d880a">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.0_d49d12a2a3cb159dfee67bb83374490ecd457ee1\classes.dex" />
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\android-async-http-1.4.8_2b9a1190e04be9bdf6faced260eb2170eeed34e0\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -246,30 +219,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\android-async-http-1.4.8_2b9a1190e04be9bdf6faced260eb2170eeed34e0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\locSDK_4.1_3d43c10fc12046f123ddfd6e2c010d81f568fe70\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="eeebabdfd8203f6ab639ccea4ffa1f20e1adee3a">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a51220d71a5500837473784fd074bea872c27d53\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -318,12 +273,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\rocka\.android\build-cache\649a4c3fdfc1d0ab78d44c93b854842fd21296e3\output\jars\classes.jar"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5e217aec98fed995f4581bb88919d7209ed08c2e\classes.dex" />
+        sha1="0ebabeb08a4776b3653fbcacdb6f4915ac4ea344">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_baca605273eb8230178df8723fab690bc23d4e30\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -333,24 +288,6 @@
         revision="25.0.0"
         sha1="0678f9f53236f6e6eb51e117f616dbc2b304f678">
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\qiniu-android-sdk-7.0.7_ef997118810389ac3032d404855723fd06ba92de.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c3c4df13c4ed2c195358b73513d6c8304faf5455">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_baca605273eb8230178df8723fab690bc23d4e30\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rocka\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.4_2731905697351db5d54826e6ae4393f8e1b6c2d4\classes.dex" />
     </item>
     <item
         is-multidex="false"

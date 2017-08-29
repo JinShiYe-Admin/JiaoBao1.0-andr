@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:2:1-565:12
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:2:1-567:12
 	package
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml
@@ -34,55 +34,55 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:13:22-72
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:15:5-95
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:15:5-79
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:15:22-76
 uses-permission#android.permission.INTERNET
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:16:5-83
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:16:5-67
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:16:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:17:5-92
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:17:5-76
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:17:22-73
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:18:5-92
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:18:5-76
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:18:22-73
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:20:5-97
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:20:5-81
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:20:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:21:5-96
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:21:5-80
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:21:22-77
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:22:5-89
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:22:5-73
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:22:22-70
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:24:5-91
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:24:5-75
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:24:22-72
 uses-permission#android.permission.CALL_PHONE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:25:5-85
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:25:5-69
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:25:22-66
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:27:5-95
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:27:5-79
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:27:22-76
 permission#android.permission.BAIDU_LOCATION_SERVICE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:29:5-87
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:29:5-76
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:29:17-73
 uses-permission#android.permission.BAIDU_LOCATION_SERVICE
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:31:5-97
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:31:22-78
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:32:5-97
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:32:5-81
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:32:22-78
 uses-permission#android.permission.ACCESS_GPS
@@ -90,11 +90,11 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:33:22-66
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:38:5-100
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:38:5-84
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:38:22-81
 uses-permission#android.permission.READ_LOGS
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:39:5-84
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:39:5-68
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:39:22-65
 uses-permission#android.permission.VIBRATE
@@ -106,7 +106,7 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:41:22-65
 application
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-563:19
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-565:19
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\AndroidManifest.xml:4:3-17
 MERGED from [com.android.support:support-v4:22.1.0] C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\AndroidManifest.xml:22:5-20
@@ -124,7 +124,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ro
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:44:9-39
 meta-data#UMENG_APPKEY
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:50:9-52:66
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:50:9-52:56
 	android:value
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:52:13-53
 	android:name
@@ -136,37 +136,39 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:54:13-41
 activity#com.jsy_jiaobao.main.system.SplashActivity
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:56:9-65:20
-	android:label
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:58:13-58
-	android:theme
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:59:13-49
-	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:57:13-50
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:60:13-64:29
-action#android.intent.action.MAIN
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:61:17-69
-	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:61:25-66
-category#android.intent.category.LAUNCHER
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:63:17-77
-	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:63:27-74
-activity#com.jsy_jiaobao.main.system.LoginActivity
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:67:9-74:20
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:57:9-67:20
 	android:screenOrientation
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:71:13-49
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:60:13-49
 	android:label
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:69:13-45
-	android:launchMode
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:70:13-43
-	android:windowSoftInputMode
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:73:13-72
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:59:13-45
 	android:theme
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:72:13-49
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:61:13-49
 	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:68:13-49
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:58:13-50
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:62:13-66:29
+action#android.intent.action.MAIN
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:63:17-69
+	android:name
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:63:25-66
+category#android.intent.category.LAUNCHER
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:65:17-77
+	android:name
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:65:27-74
+activity#com.jsy_jiaobao.main.system.LoginActivity
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:68:9-74:84
+	android:screenOrientation
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:72:13-49
+	android:label
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:70:13-45
+	android:launchMode
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:71:13-43
+	android:windowSoftInputMode
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:74:13-72
+	android:theme
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:73:13-49
+	android:name
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:69:13-49
 activity#com.jsy_jiaobao.main.BaseActivity
 ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:75:9-80:70
 	android:screenOrientation
@@ -918,7 +920,7 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:546:13-59
 service#com.baidu.location.f
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:549:9-552:49
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:549:9-552:41
 	android:enabled
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:551:13-35
 	android:process
@@ -926,17 +928,23 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:550:13-48
 service#com.jsy_jiaobao.main.UpdateService
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:554:9-556:56
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:554:9-556:48
 	android:label
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:556:13-45
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:555:13-42
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:558:9-560:66
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:558:9-560:56
 	android:value
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:560:13-53
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:559:13-52
+activity#com.jsy_jiaobao.main.system.adActivity
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:562:9-564:66
+	android:label
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:564:13-54
+	android:name
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:563:13-46
 uses-sdk
 INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:40

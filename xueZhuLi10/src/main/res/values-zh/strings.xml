@@ -1034,4 +1034,5 @@
     <string name="count_down_time">倒计时 %1$d:%3$s</string>
     <string name="common_questions">共%3$s题</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_ad">adActivity</string>
 </resources>

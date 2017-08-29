@@ -8,36 +8,24 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_exercise.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\gen_check_title_background.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\gen_check_title_background.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_indicator.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\textview_badview.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\textview_badview.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_right_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__textfield_searchview_right_holo_light.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_popup_artlist_shape.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\bg_popup_artlist_shape.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__progress_horizontal_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__progress_horizontal_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__tab_indicator_ab_holo.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__tab_indicator_ab_holo.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\textview_badview.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\textview_badview.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\choseunit_item.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\choseunit_item.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_publish_work.xml",
@@ -52,28 +40,28 @@
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__item_background_holo_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\videorecorder_shape.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\videorecorder_shape.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__search_dropdown_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__search_dropdown_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_button.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_button.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\personalinfo_shape_gospace.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\personalinfo_shape_gospace.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_show_icon.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_show_icon.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__btn_cab_done_holo_light.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__btn_cab_done_holo_light.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_work_icon.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\drawable\\bottom_work_icon.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_space.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_space.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_do_exercise.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_do_exercise.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\login_checkedbox.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\login_checkedbox.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_rectangle.xml",
@@ -84,36 +72,40 @@
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__tab_indicator_ab_holo.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__list_selector_background_transition_holo_dark.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\worksend_checkedbox.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\worksend_checkedbox.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_app.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_app.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_clear.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_topical_icon.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_topical_icon.xml"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_shape.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\edittext_shape.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_publish_work.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_publish_work.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__list_selector_holo_light.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_study_level.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_study_level.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__search_dropdown_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__search_dropdown_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__spinner_ab_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__spinner_ab_holo_light.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\work_btnsend_shape.xml",
@@ -124,40 +116,28 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\login_checkedbox.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_style_alert_dialog_special.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_style_alert_dialog_special.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_query_exercise.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_exercise.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__btn_cab_done_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__btn_cab_done_holo_light.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__item_background_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__item_background_holo_light.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__spinner_ab_holo_light.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__spinner_ab_holo_light.xml"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__activated_background_holo_dark.xml"
+    },
+    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\gen_check_title_background.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\gen_check_title_background.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_pc.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_pc.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__progress_horizontal_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__progress_horizontal_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_teaworkhw_btn.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\shape_teaworkhw_btn.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_query_error.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_error.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_exercise.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_exercise.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_send_btn.xml",
@@ -172,16 +152,20 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_tea_checkbox.xml"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_clear_holo_light.xml"
+    },
+    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_finish_condition.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_finish_condition.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\choseunit_item.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\choseunit_item.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_homework.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_homework.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_rectangle.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\rounded_rectangle.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\choseunit_item.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\choseunit_item.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_do_homework.xml",
@@ -192,286 +176,6 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_work.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_light.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__activated_background_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\unspecified\\res\\drawable\\indicator_bg_top.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\qiuzhi_btn_moretopic.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\qiuzhi_btn_moretopic.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_pcshowgridview.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\selector_pcshowgridview.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_sys.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_sys.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_style_alert_dialog_cancel.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_style_alert_dialog_cancel.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_work_icon.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_work_icon.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_sign.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_sign.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\personalinfo_shape.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\personalinfo_shape.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_tabtext.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\selector_tabtext.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_shape.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\edittext_shape.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_study_level.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_study_level.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_chat_icon.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_chat_icon.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\wheel_val.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_tea_checkbox.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_tea_checkbox.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\chatto_bg.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\chatto_bg.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_popup_artlist_shape.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\bg_popup_artlist_shape.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__btn_cab_done_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__btn_cab_done_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_record.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_record.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\worksend_checkedbox.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\worksend_checkedbox.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\textview_border.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\textview_border.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_query_exercise.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_exercise.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_style_alert_dialog_button.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_style_alert_dialog_button.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_button.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_button.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_app.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_app.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_finish_condition.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_finish_condition.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_tea_radiobutton.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_tea_radiobutton.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_holo_dark.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__textfield_searchview_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\textview_border.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\textview_border.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\vpi__tab_indicator.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_right_holo_light.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__textfield_searchview_right_holo_light.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\indicator_bg_bottom.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\qiuzhi_btn_moretopic.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\qiuzhi_btn_moretopic.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_notice_icon.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\drawable\\bottom_notice_icon.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_show_icon.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\drawable\\bottom_show_icon.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__search_dropdown_dark.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__search_dropdown_dark.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\personalinfo_shape_gospace.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\personalinfo_shape_gospace.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_show_icon.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_show_icon.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_shape_worksend_msgcontent.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\bg_shape_worksend_msgcontent.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_space.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_space.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_query_error.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_error.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__activated_background_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\unspecified\\res\\drawable\\indicator_bg_bottom.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_menu_moreoverflow_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__ic_clear_holo_light.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_app.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_app.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_tea_radiobutton.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_tea_radiobutton.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_clear.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__activated_background_holo_dark.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\wheel_bg.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_homework.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_homework.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_light.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__list_selector_holo_light.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_menu_moreoverflow_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_do_homework.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_do_homework.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__list_selector_background_transition_holo_dark.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_query_exercise.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_exercise.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__item_background_holo_light.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__item_background_holo_light.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_dark.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__activated_background_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_right_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__textfield_searchview_right_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_right_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__textfield_searchview_right_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__textfield_searchview_holo_light.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_space.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_space.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_do_exercise.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_do_exercise.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\wheel_bg.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear_holo_light.xml",
-        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__ic_clear_holo_light.xml"
-    },
-    {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_homework.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_homework.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_record.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_record.xml"
     },
@@ -480,20 +184,12 @@
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__textfield_searchview_right_holo_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\chat_send_btn.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\chat_send_btn.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__activated_background_holo_light.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__activated_background_holo_light.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_style_alert_dialog_button.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_style_alert_dialog_button.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\crowd_human_checkbox.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\crowd_human_checkbox.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\work_btnsend_shape.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\work_btnsend_shape.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_shape_worksend_msgcontent.xml",
@@ -502,10 +198,6 @@
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLpulltorefresh_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\indicator_bg_top.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_topical_icon.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\drawable\\bottom_topical_icon.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_teaworkhw_btn.xml",
@@ -520,28 +212,28 @@
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__progress_horizontal_holo_light.xml"
     },
     {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\qiuzhi_btn_moretopic.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\qiuzhi_btn_moretopic.xml"
+    },
+    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_dark.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__list_selector_holo_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__search_dropdown_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__search_dropdown_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_pcshowgridview.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\selector_pcshowgridview.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\personalinfo_shape_gospace.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\personalinfo_shape_gospace.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_pcshowgridview.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\selector_pcshowgridview.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__btn_cab_done_holo_dark.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__btn_cab_done_holo_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__textfield_searchview_holo_dark.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_work_icon.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_work_icon.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_sign.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_sign.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_text.xml",
@@ -556,22 +248,6 @@
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__textfield_searchview_holo_light.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\logo72.png",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\logo72.png"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_tabtext.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\selector_tabtext.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_text.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\bottom_text.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__ic_clear.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__ic_clear.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_pc.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_pc.xml"
     },
@@ -580,12 +256,8 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\logo72.png"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__spinner_ab_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__spinner_ab_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_sign.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\btn_sign.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\personalinfo_shape.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\personalinfo_shape.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_background_transition_holo_light.xml",
@@ -596,47 +268,55 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_sys.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__list_selector_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__list_selector_holo_light.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_tabtext.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\selector_tabtext.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\personalinfo_shape.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\personalinfo_shape.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_study_level.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_study_level.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_chat_icon.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_chat_icon.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__spinner_ab_holo_dark.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__spinner_ab_holo_dark.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_query_work.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_query_work.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__progress_horizontal_holo_dark.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__progress_horizontal_holo_dark.xml"
-    },
-    {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__item_background_holo_dark.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__item_background_holo_dark.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_notice_icon.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\default\\res\\drawable\\bottom_notice_icon.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__item_background_holo_light.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\com.actionbarsherlock\\actionbarsherlock\\4.4.0\\res\\drawable\\abs__item_background_holo_light.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\chatto_bg.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\chatto_bg.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\worksend_checkedbox.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\worksend_checkedbox.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\crowd_human_checkbox.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\crowd_human_checkbox.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\chatto_bg.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\chatto_bg.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\textview_border.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\textview_border.xml"
     },
     {
-        "merged": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_chat_icon.xml",
-        "source": "E:\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\exploded-aar\\JiaoBao1.0-andr\\xZLviewPager_lib\\unspecified\\res\\drawable\\bottom_chat_icon.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\base_botton_button.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\base_botton_button.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\workol_tea_radiobutton.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\drawable\\workol_tea_radiobutton.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\drawable\\abs__textfield_searchview_holo_dark.xml",
+        "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\drawable\\abs__textfield_searchview_holo_dark.xml"
     }
 ]

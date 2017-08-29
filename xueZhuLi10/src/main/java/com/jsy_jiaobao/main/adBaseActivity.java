@@ -1,13 +1,11 @@
 package com.jsy_jiaobao.main;
 
-import java.util.ArrayList;
-
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -25,10 +23,16 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.ConstantUrl;
 import com.jsy.xuezhuli.utils.HttpUtil;
+import com.jsy_jiaobao.main.JSYApplication;
+import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.main.system.LoginActivity;
+import com.jsy_jiaobao.main.system.adActivity;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+
+import java.util.ArrayList;
 
 /**
  * <pre>
@@ -53,7 +57,7 @@ import com.lidroid.xutils.http.client.HttpRequest;
  *^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *         		    佛祖保佑       永无BUG
  */
-public class BaseActivity extends SherlockFragmentActivity implements ConstantUrl{
+public class adBaseActivity extends SherlockFragmentActivity implements ConstantUrl{
 	private Context mContext;
 	LinearLayout ly_content;
 	// 内容区域的布局
@@ -89,8 +93,8 @@ public class BaseActivity extends SherlockFragmentActivity implements ConstantUr
 			
 			@Override
 			public void onClick(View v) {
-				setResultForLastActivity();
-				finish();
+				Intent intent = new Intent(adBaseActivity.this, LoginActivity.class);
+				startActivity(intent);
 			}
 		});
 //		title.setOnClickListener(new OnClickListener() {
