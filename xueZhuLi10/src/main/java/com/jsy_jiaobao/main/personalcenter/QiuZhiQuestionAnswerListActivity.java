@@ -291,7 +291,7 @@ public class QiuZhiQuestionAnswerListActivity extends BaseActivity implements
         } catch (Exception e) {
             e.printStackTrace();
         }
-        tv_clicknum.setText(clickNum);
+        tv_clicknum.setText(clickNum+"");
     }
 
     @Override

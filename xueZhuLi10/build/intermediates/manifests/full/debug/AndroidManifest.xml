@@ -562,10 +562,6 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="NLHqyhqTPEtbgVx8XQgEKwjK" />
-
-        <activity
-            android:name="com.jsy_jiaobao.main.system.adActivity"
-            android:label="@string/title_activity_ad" />
     </application>
 
 </manifest>

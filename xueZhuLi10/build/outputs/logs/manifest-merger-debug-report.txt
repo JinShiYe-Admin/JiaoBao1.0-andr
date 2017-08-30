@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:2:1-567:12
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:2:1-563:12
 	package
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml
@@ -106,7 +106,7 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:41:22-65
 application
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-565:19
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-561:19
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\AndroidManifest.xml:4:3-17
 MERGED from [com.android.support:support-v4:22.1.0] C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\AndroidManifest.xml:22:5-20
@@ -939,12 +939,6 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:560:13-53
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:559:13-52
-activity#com.jsy_jiaobao.main.system.adActivity
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:562:9-564:66
-	android:label
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:564:13-54
-	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:563:13-46
 uses-sdk
 INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:40

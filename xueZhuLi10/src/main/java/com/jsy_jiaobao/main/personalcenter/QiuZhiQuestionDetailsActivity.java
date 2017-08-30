@@ -401,8 +401,10 @@ public class QiuZhiQuestionDetailsActivity extends BaseActivity implements
                     layout.setVisibility(View.GONE);
                 }
                 myAnswerID = questiondetails.getMyAnswerId();
-                QiuZhiQuestionDetailsActivityController.getInstance().AnswerDetail(
-                        myAnswerID);
+                if(myAnswerID>0){
+                    QiuZhiQuestionDetailsActivityController.getInstance().AnswerDetail(
+                            myAnswerID);
+                }
                 tv_question.setText(questiondetails.getTitle());
                 tv_attnum.setText(String.valueOf(questiondetails.getAttCount()));
                 tv_answernum.setText(String.valueOf(questiondetails

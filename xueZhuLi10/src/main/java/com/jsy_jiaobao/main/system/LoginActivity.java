@@ -13,6 +13,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewTreeObserver;
@@ -286,6 +287,21 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
 		default:
 			break;
 		}
+	}
+	/**
+	 * 系统返回键的点击事件
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK
+				&& event.getAction() == KeyEvent.ACTION_DOWN) {
+			Intent intent = new Intent(Intent.ACTION_MAIN);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			intent.addCategory(Intent.CATEGORY_HOME);
+			startActivity(intent);
+			return true;
+		}
+		return false;
 	}
 
 	/**

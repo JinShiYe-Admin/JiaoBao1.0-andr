@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.google.gson.reflect.TypeToken;
 import com.jsy.xuezhuli.utils.BaseUtils;
@@ -136,6 +137,7 @@ public class QiuZhiQuestionDetailsActivityController implements ConstantUrl {
 
 		@Override
 		public void onFailure(HttpException arg0, String arg1) {
+			Log.d("发生错误：",arg0.toString());
 			if (null != mContext) {
 				dealResponseInfo("", this.getUserTag());
 				if (BaseUtils.isNetworkAvailable(mContext)) {
@@ -146,6 +148,7 @@ public class QiuZhiQuestionDetailsActivityController implements ConstantUrl {
 
 		@Override
 		public void onSuccess(ResponseInfo<String> arg0) {
+			Log.d("获取的返回值：",arg0.toString());
 			if (null != mContext) {
 				try {
 					JSONObject jsonObj = new JSONObject(arg0.result);
@@ -199,6 +202,7 @@ public class QiuZhiQuestionDetailsActivityController implements ConstantUrl {
 			QuestionDetails questiondetails = GsonUtil.GsonToList(result,
 					new TypeToken<QuestionDetails>() {
 					}.getType());
+			Log.d("获取的响应信息：",questiondetails.toString());
 			post.add(questiondetails);
 			break;
 		case Constant.msgcenter_qiuzhi_AddAnswer:
