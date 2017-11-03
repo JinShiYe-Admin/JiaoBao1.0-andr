@@ -53,25 +53,26 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="jinshiye" />
-
+        <!--广告页-->
         <activity
             android:name=".system.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.MyTheme" />
+        <!--登录页-->
         <activity
             android:name=".system.LoginActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateHidden|adjustUnspecified"></activity>
+            android:windowSoftInputMode="stateHidden|adjustUnspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".BaseActivity"
             android:launchMode="singleTask"
@@ -545,7 +546,9 @@
         <activity
             android:name=".leave.SumStudentLeavesActivity"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".appcenter.sign.QuickSignInActivity"
+            android:label="@string/function_signinquick"/>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

@@ -330,6 +330,7 @@
     <string name="MessageCenterActivity_changeUnit">MessageCenterActivity_changeUnit</string>
     <string name="MessageCenterActivity_changeUser">MessageCenterActivity_changeUser</string>
     <string name="MessageCenterActivity_quiteSystem">MessageCenterActivity_quiteSystem</string>
+    <string name="MessageCenterActivity_quickSignIn">MessageCenterActivity_quickSignIn</string>
     <string name="system">系统</string>
     <string name="no_permission">无权限</string>
     <string name="verifying_user_permission_waiting">验证用户权限中&#8230;请稍候</string>
@@ -1035,4 +1036,5 @@
     <string name="common_questions">共%3$s题</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_ad">adActivity</string>
+    <string name="function_signinquick">快速签到</string>
 </resources>
