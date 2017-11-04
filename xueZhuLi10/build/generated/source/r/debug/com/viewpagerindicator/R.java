@@ -997,9 +997,9 @@ public final class R {
     public static final class id {
         public static final int bottom = 0x7f0c0030;
         public static final int none = 0x7f0c001a;
-        public static final int tabview_icon = 0x7f0c02a3;
-        public static final int tabview_notice = 0x7f0c02a5;
-        public static final int tabview_title = 0x7f0c02a4;
+        public static final int tabview_icon = 0x7f0c02a6;
+        public static final int tabview_notice = 0x7f0c02a8;
+        public static final int tabview_title = 0x7f0c02a7;
         public static final int top = 0x7f0c0031;
         public static final int triangle = 0x7f0c002e;
         public static final int underline = 0x7f0c002f;
@@ -1012,14 +1012,14 @@ public final class R {
         public static final int default_underline_indicator_fade_length = 0x7f070005;
     }
     public static final class layout {
-        public static final int layout_tabview = 0x7f030087;
+        public static final int layout_tabview = 0x7f03008a;
     }
     public static final class string {
-        public static final int bottom_title_article = 0x7f0a00ed;
-        public static final int bottom_title_notice = 0x7f0a00ee;
-        public static final int bottom_title_qiuzhi = 0x7f0a00ef;
-        public static final int bottom_title_topical = 0x7f0a00f0;
-        public static final int bottom_title_work = 0x7f0a00f1;
+        public static final int bottom_title_article = 0x7f0a00ee;
+        public static final int bottom_title_notice = 0x7f0a00ef;
+        public static final int bottom_title_qiuzhi = 0x7f0a00f0;
+        public static final int bottom_title_topical = 0x7f0a00f1;
+        public static final int bottom_title_work = 0x7f0a00f2;
     }
     public static final class style {
         public static final int TextAppearance_TabPageIndicator = 0x7f080056;

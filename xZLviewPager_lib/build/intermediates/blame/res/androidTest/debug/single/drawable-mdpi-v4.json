@@ -24,12 +24,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\bottom_chat_selected.png"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\bottom_notice_unselect.png",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\bottom_notice_unselect.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\bottom_work_selected.png",

@@ -22,7 +22,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
     <exclude-output />
@@ -62,13 +62,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
@@ -76,6 +69,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
@@ -99,30 +99,28 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 22 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="happy-dns-0.2.1" level="project" />
-    <orderEntry type="library" exported="" name="pinyin4j-2.5.0" level="project" />
-    <orderEntry type="library" exported="" name="gson-2.4" level="project" />
-    <orderEntry type="library" exported="" name="locSDK_4.1" level="project" />
-    <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.2" level="project" />
-    <orderEntry type="library" exported="" name="qiniu-android-sdk-7.0.7" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-22.1.0" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-22.1.0" level="project" />
-    <orderEntry type="library" exported="" name="constraint-layout-1.0.2" level="project" />
-    <orderEntry type="library" exported="" name="universal-image-loader-1.9.5" level="project" />
-    <orderEntry type="library" exported="" name="android-viewbadger" level="project" />
-    <orderEntry type="library" exported="" name="eventbus-3.0.0" level="project" />
-    <orderEntry type="library" exported="" name="xUtils-2.6.14" level="project" />
-    <orderEntry type="library" exported="" name="baidumapapi_v2_4_2" level="project" />
-    <orderEntry type="library" exported="" name="actionbarsherlock-4.4.0" level="project" />
-    <orderEntry type="library" exported="" name="android-async-http-1.4.8" level="project" />
-    <orderEntry type="library" exported="" name="umeng-analytics-v5.6.7" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-annotations:22.1.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.4@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-v4-22.1.0" level="project" />
+    <orderEntry type="library" exported="" name="com.actionbarsherlock:actionbarsherlock-4.4.0" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\eventbus-3.0.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support.constraint:constraint-layout-1.0.2" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\xUtils-2.6.14.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-viewbadger.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-analytics-v5.6.7.jar:unspecified@jar" level="project" />
     <orderEntry type="module" module-name="xZLpulltorefresh_lib" exported="" />
     <orderEntry type="module" module-name="xZLviewPager_lib" exported="" />
-    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
   </component>
 </module>

@@ -642,6 +642,7 @@
     <string name="MessageCenterActivity_publishUnitNews">MessageCenterActivity_publishUnitNews</string>
     <string name="MessageCenterActivity_publishWork">MessageCenterActivity_publishWork</string>
     <string name="MessageCenterActivity_qiuzhi">MessageCenterActivity_qiuzhi</string>
+    <string name="MessageCenterActivity_quickSignIn">MessageCenterActivity_quickSignIn</string>
     <string name="MessageCenterActivity_quiteSystem">MessageCenterActivity_quiteSystem</string>
     <string name="MessageCenterActivity_shiwu">MessageCenterActivity_shiwu</string>
     <string name="MessageCenterActivity_workPlan">MessageCenterActivity_workPlan</string>
@@ -979,6 +980,7 @@
     <string name="function_publish_work">发布事务</string>
     <string name="function_publishquestion">发布问题</string>
     <string name="function_signin">签到考勤</string>
+    <string name="function_signinquick">快速签到</string>
     <string name="function_studentrecord">学生档案</string>
     <string name="function_workol">作业布置</string>
     <string name="function_workol_gen">家长查询</string>
@@ -1452,6 +1454,7 @@
     <string name="time_tooShort">时间太短</string>
     <string name="title">标题</string>
     <string name="title_activity_ad">adActivity</string>
+    <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_change">标题更改</string>
     <string name="title_noMoreThan100">标题(6字以上,100字以内)</string>
@@ -1548,13 +1551,7 @@
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
     </style>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-
-        -->
+        
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:windowNoTitle">true</item>
@@ -1773,7 +1770,7 @@
     </style>
     <style name="Theme.Sherlock" parent="Sherlock.__Theme">
 
-        <!-- Action bar styles (from Theme.Holo) -->
+        
         <item name="actionDropDownStyle">@style/Widget.Sherlock.Spinner.DropDown.ActionBar</item>
         <item name="actionButtonStyle">@style/Widget.Sherlock.ActionButton</item>
         <item name="actionOverflowButtonStyle">@style/Widget.Sherlock.ActionButton.Overflow</item>
@@ -1787,11 +1784,11 @@
         <item name="actionModeCloseButtonStyle">@style/Widget.Sherlock.ActionButton.CloseMode</item>
         <item name="actionBarStyle">@style/Widget.Sherlock.ActionBar</item>
         <item name="actionBarSize">@dimen/abs__action_bar_default_height</item>
-        <!-- Internal -->
+        
         <item name="actionModePopupWindowStyle">@style/Widget.Sherlock.PopupWindow.ActionMode</item>
         <item name="actionBarWidgetTheme">@null</item>
 
-        <!-- Action bar styles (defaults from Theme) -->
+        
         <item name="actionBarSplitStyle">?attr/actionBarStyle</item>
         <item name="actionMenuTextAppearance">@style/TextAppearance.Sherlock.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?attr/textColorPrimary</item>
@@ -1810,7 +1807,7 @@
         <item name="textColorPrimaryDisableOnly">@color/abs__primary_text_disable_only_holo_dark</item>
         <item name="textColorPrimaryInverse">@color/abs__primary_text_holo_light</item>
 
-        <!-- Internal -->
+        
         <item name="dropdownListPreferredItemHeight">48dip</item>
         <item name="dropDownListViewStyle">@style/Widget.Sherlock.ListView.DropDown</item>
         <item name="textAppearanceSmall">@style/TextAppearance.Sherlock.Small</item>
@@ -1819,7 +1816,7 @@
         <item name="textAppearanceSearchResultTitle">@style/TextAppearance.Sherlock.SearchResult.Title</item>
         <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.Sherlock.SearchResult.Subtitle</item>
         <item name="popupMenuStyle">@style/Widget.Sherlock.PopupMenu</item>
-        <!-- Internal -->
+        
         <item name="listPopupWindowStyle">@style/Widget.Sherlock.ListPopupWindow</item>
         <item name="searchDropdownBackground">@drawable/abs__search_dropdown_dark</item>
         <item name="searchViewTextField">@drawable/abs__textfield_searchview_holo_dark</item>
@@ -1840,7 +1837,7 @@
     </style>
     <style name="Theme.Sherlock.Light" parent="Sherlock.__Theme.Light">
 
-        <!-- Action bar styles (from Theme.Holo) -->
+        
         <item name="actionDropDownStyle">@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar</item>
         <item name="actionButtonStyle">@style/Widget.Sherlock.Light.ActionButton</item>
         <item name="actionOverflowButtonStyle">@style/Widget.Sherlock.Light.ActionButton.Overflow</item>
@@ -1854,11 +1851,11 @@
         <item name="actionModeCloseButtonStyle">@style/Widget.Sherlock.Light.ActionButton.CloseMode</item>
         <item name="actionBarStyle">@style/Widget.Sherlock.Light.ActionBar.Solid</item>
         <item name="actionBarSize">@dimen/abs__action_bar_default_height</item>
-        <!-- Internal -->
+        
         <item name="actionModePopupWindowStyle">@style/Widget.Sherlock.Light.PopupWindow.ActionMode</item>
         <item name="actionBarWidgetTheme">@null</item>
 
-        <!-- Action bar styles (defaults from Theme) -->
+        
         <item name="actionBarSplitStyle">?attr/actionBarStyle</item>
         <item name="actionMenuTextAppearance">@style/TextAppearance.Sherlock.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?attr/textColorPrimary</item>
@@ -1877,7 +1874,7 @@
         <item name="textColorPrimaryDisableOnly">@color/abs__primary_text_disable_only_holo_light</item>
         <item name="textColorPrimaryInverse">@color/abs__primary_text_holo_dark</item>
 
-        <!-- Internal -->
+        
         <item name="dropdownListPreferredItemHeight">48dip</item>
         <item name="dropDownListViewStyle">@style/Widget.Sherlock.Light.ListView.DropDown</item>
         <item name="textAppearanceSmall">@style/TextAppearance.Sherlock.Light.Small</item>
@@ -1886,7 +1883,7 @@
         <item name="textAppearanceSearchResultTitle">@style/TextAppearance.Sherlock.Light.SearchResult.Title</item>
         <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.Sherlock.Light.SearchResult.Subtitle</item>
         <item name="popupMenuStyle">@style/Widget.Sherlock.Light.PopupMenu</item>
-        <!-- Internal -->
+        
         <item name="listPopupWindowStyle">@style/Widget.Sherlock.Light.ListPopupWindow</item>
         <item name="searchDropdownBackground">@drawable/abs__search_dropdown_light</item>
         <item name="searchViewTextField">@drawable/abs__textfield_searchview_holo_light</item>
@@ -1927,7 +1924,7 @@
         <item name="actionModePopupWindowStyle">@style/Widget.Sherlock.PopupWindow.ActionMode</item>
         <item name="actionModeShareDrawable">@drawable/abs__ic_menu_share_holo_dark</item>
 
-        <!-- We want the dark action bar SearchView stuff -->
+        
         <item name="searchDropdownBackground">@drawable/abs__search_dropdown_dark</item>
         <item name="searchViewTextField">@drawable/abs__textfield_searchview_holo_dark</item>
         <item name="searchViewTextFieldRight">@drawable/abs__textfield_searchview_right_holo_dark</item>
@@ -2140,7 +2137,7 @@
     </style>
     <style name="Widget.Sherlock.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/abs__progress_horizontal_holo_dark</item>
-        <!-- item name="android:indeterminateDrawable">@drawable/abs__progress_indeterminate_horizontal_holo</item -->
+        
         <item name="android:minHeight">16dip</item>
         <item name="android:maxHeight">16dip</item>
     </style>
@@ -2172,15 +2169,15 @@
     </style>
     <style name="dialog" parent="@android:style/Theme.Light">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowIsTranslucent">false</item>
-        <!-- 半透明 -->
+        
         <item name="android:windowBackground">@color/transparent</item>
-        <!-- 背景透明 -->
+        
         <item name="android:backgroundDimEnabled">false</item>
-        <!-- 模糊 -->
+        
     </style>
     <style name="videodialog" parent="@android:style/Theme.Light">
         <item name="android:windowFullscreen">true</item>

@@ -87,6 +87,7 @@
     <string name="MessageCenterActivity_publishUnitNews">MessageCenterActivity_publishUnitNews</string>
     <string name="MessageCenterActivity_publishWork">MessageCenterActivity_publishWork</string>
     <string name="MessageCenterActivity_qiuzhi">MessageCenterActivity_qiuzhi</string>
+    <string name="MessageCenterActivity_quickSignIn">MessageCenterActivity_quickSignIn</string>
     <string name="MessageCenterActivity_quiteSystem">MessageCenterActivity_quiteSystem</string>
     <string name="MessageCenterActivity_shiwu">MessageCenterActivity_shiwu</string>
     <string name="MessageCenterActivity_workPlan">MessageCenterActivity_workPlan</string>
@@ -411,6 +412,7 @@
     <string name="function_publish_work">发布事务</string>
     <string name="function_publishquestion">发布问题</string>
     <string name="function_signin">签到考勤</string>
+    <string name="function_signinquick">快速签到</string>
     <string name="function_studentrecord">学生档案</string>
     <string name="function_workol">作业布置</string>
     <string name="function_workol_gen">家长查询</string>
