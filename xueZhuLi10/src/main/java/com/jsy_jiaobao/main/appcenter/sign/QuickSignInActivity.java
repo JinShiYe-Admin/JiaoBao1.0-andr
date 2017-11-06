@@ -1,6 +1,7 @@
 package com.jsy_jiaobao.main.appcenter.sign;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -63,10 +64,10 @@ public class QuickSignInActivity extends BaseActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Log.d(TAG, "查询");
-//                Intent i = new Intent(mContext,
-//                        WorkPlanActivity.class);
-//                startActivity(i);
-                return false;
+                Intent i = new Intent(mContext,
+                        RecordActivity.class);
+                startActivity(i);
+                return true;
             }
         });
         return super.onCreateOptionsMenu(menu);

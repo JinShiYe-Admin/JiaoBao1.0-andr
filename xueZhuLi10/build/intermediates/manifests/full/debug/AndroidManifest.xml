@@ -569,7 +569,10 @@
 
         <activity
             android:name="com.jsy_jiaobao.main.appcenter.sign.RecordActivity"
-            android:label="@string/title_activity_record" />
+            android:label="@string/title_activity_record"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" />
     </application>
 
 </manifest>

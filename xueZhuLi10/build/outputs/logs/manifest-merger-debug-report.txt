@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:2:1-571:12
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:2:1-575:12
 	package
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml
@@ -106,7 +106,7 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:41:22-65
 application
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-569:19
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-573:19
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\AndroidManifest.xml:4:3-17
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\rocka\.android\build-cache\649a4c3fdfc1d0ab78d44c93b854842fd21296e3\output\AndroidManifest.xml:9:5-20
@@ -926,31 +926,37 @@ ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Android
 	android:name
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:550:13-63
 service#com.baidu.location.f
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:553:9-556:41
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:554:9-557:41
 	android:enabled
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:555:13-35
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:556:13-35
 	android:process
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:556:13-38
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:557:13-38
 	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:554:13-48
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:555:13-48
 service#com.jsy_jiaobao.main.UpdateService
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:558:9-560:48
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:559:9-561:48
 	android:label
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:560:13-45
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:561:13-45
 	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:559:13-42
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:560:13-42
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:562:9-564:56
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:563:9-565:56
 	android:value
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:564:13-53
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:565:13-53
 	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:563:13-52
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:564:13-52
 activity#com.jsy_jiaobao.main.appcenter.sign.RecordActivity
-ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:566:9-568:70
+ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:567:9-572:60
+	android:screenOrientation
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:570:13-49
 	android:label
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:568:13-58
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:572:13-58
+	android:launchMode
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:569:13-44
+	android:theme
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:571:13-49
 	android:name
-		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:567:13-58
+		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:568:13-58
 uses-sdk
 INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:40

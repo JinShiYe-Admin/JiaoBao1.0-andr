@@ -997,9 +997,9 @@ public final class R {
     public static final class id {
         public static final int bottom = 0x7f0c0031;
         public static final int none = 0x7f0c001b;
-        public static final int tabview_icon = 0x7f0c02ab;
-        public static final int tabview_notice = 0x7f0c02ad;
-        public static final int tabview_title = 0x7f0c02ac;
+        public static final int tabview_icon = 0x7f0c02af;
+        public static final int tabview_notice = 0x7f0c02b1;
+        public static final int tabview_title = 0x7f0c02b0;
         public static final int top = 0x7f0c0032;
         public static final int triangle = 0x7f0c002f;
         public static final int underline = 0x7f0c0030;
@@ -1012,7 +1012,7 @@ public final class R {
         public static final int default_underline_indicator_fade_length = 0x7f070005;
     }
     public static final class layout {
-        public static final int layout_tabview = 0x7f03008b;
+        public static final int layout_tabview = 0x7f03008c;
     }
     public static final class string {
         public static final int bottom_title_article = 0x7f0a00ee;

@@ -1,11 +1,11 @@
 package com.jsy_jiaobao.main.appcenter.sign;
 
-import android.app.Activity;
 import android.os.Bundle;
 
+import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 
-public class RecordActivity extends Activity {
+public class RecordActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

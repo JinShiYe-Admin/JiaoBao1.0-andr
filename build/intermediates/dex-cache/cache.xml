@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\rocka\.android\build-cache\34366b5cbc5c49422c2027983d7ccdf6e6a21c58\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d87ecd07ea56392fbd0653f0c01d4a3a96bf1485\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.5_aee5f6b2f63de8dff702f91aa5e7af55e06a66f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rocka\.android\build-cache\34366b5cbc5c49422c2027983d7ccdf6e6a21c58\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d87ecd07ea56392fbd0653f0c01d4a3a96bf1485\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="8487eee4d81f65de944b5d8f3581561198239edf">
+        sha1="871162a96a19a6e9cc3ca00b77f607fde7a87bcb">
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_baca605273eb8230178df8723fab690bc23d4e30\classes.dex" />
     </item>
 
