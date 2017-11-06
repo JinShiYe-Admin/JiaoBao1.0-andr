@@ -550,6 +550,7 @@
             android:name=".appcenter.sign.QuickSignInActivity"
             android:label="@string/function_signinquick" />
 
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
@@ -565,7 +566,10 @@
 
         <activity
             android:name=".appcenter.sign.RecordActivity"
-            android:label="@string/title_activity_record"></activity>
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:label="@string/title_activity_record"/>
     </application>
 
 </manifest>
