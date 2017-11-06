@@ -4,24 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/ui_5dp"
     tools:context="com.jsy_jiaobao.main.appcenter.sign.QuickSignInActivity">
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_weight="4"
-        android:textAppearance="?android:attr/textAppearanceSmall">
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="invisible">
 
     </Spinner>
 
     <Button
         android:id="@+id/btn_submit"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_weight="1"
-        android:background="@drawable/personalinfo_shape"
-        android:text="@string/sure"
+        android:background="@color/green"
+        android:text="@string/bottombar_btn_sign"
         android:textColor="@color/white"
-        android:textSize="@dimen/px_to_sp_28" />
+        android:textSize="@dimen/px_to_sp_28"
+        android:visibility="invisible" />
 </LinearLayout>

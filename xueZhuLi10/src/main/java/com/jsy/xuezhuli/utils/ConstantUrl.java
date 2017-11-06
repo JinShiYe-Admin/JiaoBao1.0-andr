@@ -7,7 +7,7 @@ public interface ConstantUrl {
     // url
     String url = "http://192.168.2.100:8080/";
     String jsyoa = "http://www.jiaobao.net/jbclient";
-
+    String QuickSignInUrl = "https://www.jiaobaowang.net/JBClient";
     String StuRecordUrl = "http://218.98.32.200:8083/";
     String StuRecordDataGet = StuRecordUrl + "HOME/DataGet";
     /**
@@ -657,4 +657,13 @@ public interface ConstantUrl {
      * 获取班级统计
      */
     String GetClassSumLeaves = leave + "/GetClassSumLeaves";
+
+    /**
+     * 快速签到
+     */
+    String QuickSignIn = QuickSignInUrl + "/SignIn/SignIn";
+    /**
+     * 查询快速签到的记录
+     */
+    String GetMySignInfo = QuickSignInUrl + "/SignIn/getMySingInfo";
 }
