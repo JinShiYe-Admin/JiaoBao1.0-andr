@@ -89,7 +89,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
@@ -103,12 +102,13 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 22 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="com.android.support:support-annotations:22.1.0@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.4@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.0@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-v4-22.1.0" level="project" />
     <orderEntry type="library" exported="" name="com.actionbarsherlock:actionbarsherlock-4.4.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:recyclerview-v7-22.2.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-annotations:22.2.1@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-async-http-1.4.8.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-v4-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />

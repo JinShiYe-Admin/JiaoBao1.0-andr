@@ -109,8 +109,8 @@ application
 ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:43:5-569:19
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
 MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\AndroidManifest.xml:4:3-17
-MERGED from [com.android.support:support-v4:22.1.0] C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\rocka\.android\build-cache\649a4c3fdfc1d0ab78d44c93b854842fd21296e3\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\rocka\.android\build-cache\34366b5cbc5c49422c2027983d7ccdf6e6a21c58\output\AndroidManifest.xml:22:5-20
 	android:screenOrientation
 		ADDED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml:48:9-45
 	android:label
@@ -956,8 +956,9 @@ INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\Andr
 MERGED from [JiaoBao1.0-andr:xZLpulltorefresh_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLpulltorefresh_lib\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:40
 MERGED from [JiaoBao1.0-andr:xZLviewPager_lib:unspecified] G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xZLviewPager_lib\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [com.actionbarsherlock:actionbarsherlock:4.4.0] C:\Users\rocka\.android\build-cache\d80cca2bf48d69cc32afaa9061b43558d7ea968f\output\AndroidManifest.xml:3:3-70
-MERGED from [com.android.support:support-v4:22.1.0] C:\Users\rocka\.android\build-cache\32e9458a057546b7516b625b3fbb65bf18b25688\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\rocka\.android\build-cache\649a4c3fdfc1d0ab78d44c93b854842fd21296e3\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:22.2.1] C:\Users\rocka\.android\build-cache\a485b9a35a26c861476d96ce87c83dadc266f526\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\rocka\.android\build-cache\34366b5cbc5c49422c2027983d7ccdf6e6a21c58\output\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml
 		INJECTED from G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\src\main\AndroidManifest.xml
