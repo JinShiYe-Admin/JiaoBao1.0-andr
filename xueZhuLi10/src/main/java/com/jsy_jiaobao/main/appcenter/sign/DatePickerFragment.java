@@ -10,15 +10,18 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.DatePicker;
 
 import com.jsy_jiaobao.main.R;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 
 /**
@@ -49,6 +52,13 @@ public class DatePickerFragment extends DialogFragment {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_date_picker, null);
+        mDatePicker  = (DatePicker) v.findViewById(R.id.dialog_date_picker);
+        mDatePicker.setMaxDate(new Date().getTime());
+        try {
+            mDatePicker.setMinDate(new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse("2017-10-10").getTime());
+        } catch (Exception e) {
+            Log.e("", "", e);
+        }
         mDatePicker = (DatePicker) v.findViewById(R.id.dialog_date_picker);
         mDatePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
             @Override
