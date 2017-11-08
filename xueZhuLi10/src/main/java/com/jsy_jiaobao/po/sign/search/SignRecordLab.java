@@ -1,4 +1,4 @@
-package com.jsy_jiaobao.po.personal;
+package com.jsy_jiaobao.po.sign.search;
 
 import android.content.Context;
 
@@ -27,8 +27,11 @@ public class SignRecordLab {
     public List<SignRecord> getSignRecords() {
         return mSignRecords;
     }
+    public void addSignRecords(List<SignRecord> records){
+        mSignRecords.addAll(records);
+    }
 
     public void clearSignRecords() {
-        mSignRecords = new ArrayList<>();
+        mSignRecords.clear();
     }
 }

@@ -1,53 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pull_refresh_view"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.jsy_jiaobao.main.appcenter.sign.RecordFragment">
+    android:paddingLeft="@dimen/px_to_dip_16"
+    android:paddingRight="@dimen/px_to_dip_16"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/px_to_dip_0"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="@dimen/px_to_dip_0"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间:" />
 
                 <Button
                     android:id="@+id/button_startTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="@dimen/px_to_dip_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间:" />
 
                 <Button
                     android:id="@+id/button_endTime"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/button_sure"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sure" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button_sure"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="查询"
+            android:textColor="@color/deepskyblue" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
 
         <ListView
             android:id="@+id/list_sign_record"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
         </ListView>
-    </LinearLayout>
 
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 
-</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

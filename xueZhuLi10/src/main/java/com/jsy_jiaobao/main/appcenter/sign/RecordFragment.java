@@ -21,18 +21,19 @@ import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.ConstantUrl;
 import com.jsy.xuezhuli.utils.DialogUtil;
+import com.jsy.xuezhuli.utils.GsonUtil;
 import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.main.system.LoginActivityController;
-import com.jsy_jiaobao.po.personal.SignRecord;
-import com.jsy_jiaobao.po.personal.SignRecordLab;
+import com.jsy_jiaobao.po.sign.search.SignRecord;
+import com.jsy_jiaobao.po.sign.search.SignRecordLab;
+import com.jsy_jiaobao.po.sign.search.SignRecordModel;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-
 
 import org.json.JSONObject;
 
@@ -65,6 +66,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
     private int RowCount;
     private int numPerPage = 10;
     private static final String TAG = "RecordFragment";
+    private List<SignRecord> mSignRecords;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -104,7 +106,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
 
     private void setList() {
         SignRecordLab recordLab = SignRecordLab.get(getActivity());
-        List<SignRecord> records = recordLab.getSignRecords();
+        mSignRecords = recordLab.getSignRecords();
     }
 
     private void updateList() {
@@ -165,9 +167,16 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
                         Log.d(TAG, "Data" + Data);
                         if (!TextUtils.isEmpty(ResultCode)) {
                             if ("0".equals(ResultCode)) {
-                                Log.d(TAG, Data);
-                                ToastUtil.showMessage(mContext,
-                                        R.string.fuck_success);
+                                SignRecordModel signRecordModel = GsonUtil.GsonToObject(Data, SignRecordModel.class);
+                                Log.d(TAG, signRecordModel.toString());
+                                RowCount = signRecordModel.getRowCount();
+                                if (pageNum == 1) {
+                                    SignRecordLab.get(getActivity()).clearSignRecords();
+                                }
+                                SignRecordLab.get(getActivity()).addSignRecords(signRecordModel.getInfolist());
+                                mRecordAdapter.setRecords(mSignRecords);
+                                mRecordAdapter.notifyDataSetChanged();
+                                mRefreshScrollView.onRefreshComplete();
                             } else if ("8".equals(ResultCode)) {
                                 LoginActivityController.getInstance().helloService(
                                         mContext);
@@ -268,12 +277,19 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
+        pageNum = 1;
+        requestListData();
 
     }
 
     @Override
     public void onPullUpToRefresh(PullToRefreshBase refreshView) {
-
+        if (pageNum < Math.ceil(RowCount / 10.0)) {
+            pageNum++;
+            requestListData();
+        } else {
+            mRefreshScrollView.onRefreshComplete();
+        }
     }
 
     @Override

@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.po.personal.SignRecord;
+import com.jsy_jiaobao.po.sign.search.SignRecord;
 
 import java.util.ArrayList;
 import java.util.List;

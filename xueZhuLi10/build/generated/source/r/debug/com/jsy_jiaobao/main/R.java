@@ -3295,9 +3295,9 @@ containing a value of this type.
         public static final int btn_submit=0x7f0c00f1;
         public static final int btn_take_photo=0x7f0c039a;
         public static final int btn_take_video=0x7f0c039b;
-        public static final int button_endTime=0x7f0c018e;
-        public static final int button_startTime=0x7f0c018d;
-        public static final int button_sure=0x7f0c018f;
+        public static final int button_endTime=0x7f0c018d;
+        public static final int button_startTime=0x7f0c018c;
+        public static final int button_sure=0x7f0c018e;
         public static final int cancel=0x7f0c0135;
         public static final int chains=0x7f0c001a;
         public static final int channel_gridview_item=0x7f0c012d;
@@ -3683,7 +3683,7 @@ containing a value of this type.
         public static final int pullFromStart=0x7f0c0021;
         public static final int pullUpFromBottom=0x7f0c0022;
         public static final int pull_refresh_scrollview=0x7f0c0057;
-        public static final int pull_refresh_view=0x7f0c018c;
+        public static final int pull_refresh_view=0x7f0c018f;
         public static final int pull_to_refresh_image=0x7f0c039f;
         public static final int pull_to_refresh_progress=0x7f0c03a0;
         public static final int pull_to_refresh_sub_text=0x7f0c03a2;
@@ -3954,7 +3954,7 @@ containing a value of this type.
         public static final int show_layout_lower=0x7f0c00f5;
         public static final int showcorrelation_listview=0x7f0c02ad;
         public static final int showcorrelation_unitname=0x7f0c02ac;
-        public static final int sign_date=0x7f0c0244;
+        public static final int sign_date=0x7f0c0242;
         public static final int sign_item_tv_place=0x7f0c0380;
         public static final int sign_item_tv_time=0x7f0c037e;
         public static final int sign_item_tv_type=0x7f0c037f;
@@ -4101,7 +4101,7 @@ containing a value of this type.
         public static final int ui_sendmessage=0x7f0c0138;
         public static final int ui_sign_home=0x7f0c03ea;
         public static final int underline=0x7f0c0030;
-        public static final int unit_name=0x7f0c0243;
+        public static final int unit_name=0x7f0c0244;
         public static final int unitdetails_expandablelistview=0x7f0c040e;
         public static final int unitdetails_img_logo=0x7f0c040c;
         public static final int unitdetails_tv_title=0x7f0c040d;
@@ -4148,7 +4148,7 @@ containing a value of this type.
         public static final int unitspace_slider_viewGroup=0x7f0c0084;
         public static final int unitspace_slider_viewpager=0x7f0c0083;
         public static final int useLogo=0x7f0c002d;
-        public static final int user_name=0x7f0c0242;
+        public static final int user_name=0x7f0c0243;
         public static final int view_pager=0x7f0c02ae;
         public static final int visitunit_tv_currunit=0x7f0c01ba;
         public static final int visitunit_tv_higherswitch=0x7f0c01bd;

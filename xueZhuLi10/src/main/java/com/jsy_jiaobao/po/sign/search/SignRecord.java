@@ -1,35 +1,35 @@
-package com.jsy_jiaobao.po.personal;
+package com.jsy_jiaobao.po.sign.search;
 
 /**
  * Created by rocka on 2017/11/6.
  */
 
 public class SignRecord {
-    private String  mUserName;
-    private String mRecDate;
-    private String mUserShortName;
+    private String  UserName;
+    private String RecDate;
+    private String UserShortName;
 
     public String getUserName() {
-        return mUserName;
+        return UserName;
     }
 
     public void setUserName(String userName) {
-        mUserName = userName;
+        UserName = userName;
     }
 
     public String getRecDate() {
-        return mRecDate;
+        return RecDate;
     }
 
     public void setRecDate(String recDate) {
-        mRecDate = recDate;
+        RecDate = recDate;
     }
 
     public String getUserShortName() {
-        return mUserShortName;
+        return UserShortName;
     }
 
     public void setUserShortName(String userShortName) {
-        mUserShortName = userShortName;
+        UserShortName = userShortName;
     }
 }
