@@ -8,12 +8,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_title.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_item.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\work2details_item.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_textview.xml",

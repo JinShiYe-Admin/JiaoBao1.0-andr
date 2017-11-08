@@ -11,6 +11,7 @@ public class RecordActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
+        setActionBarTitle(R.string.sign_query);
     }
 
 }

@@ -818,9 +818,17 @@
     <string name="share_recommend">分享推荐</string>
     <string name="share_space">分享空间</string>
     <string name="show_artical">展示文章</string>
+    <string name="sign_date">签到日期:</string>
+    <string name="sign_dia_title">日期选择</string>
+    <string name="sign_end_date">结束时间:</string>
     <string name="sign_in">签到</string>
+    <string name="sign_name">姓名:</string>
     <string name="sign_out">签退</string>
+    <string name="sign_query">签到查询</string>
+    <string name="sign_query_text">查询</string>
     <string name="sign_record">签到记录</string>
+    <string name="sign_start_date">开始时间:</string>
+    <string name="sign_unit">单位:</string>
     <string name="sixty">60</string>
     <string name="smsNote_inputedWrong">短信验证码错误</string>
     <string name="smsNote_inputedWrong_again">短信验证码错误，请重新获取</string>

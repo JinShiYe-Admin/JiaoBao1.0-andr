@@ -2,17 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/px_to_dip_16"
+    android:paddingRight="@dimen/px_to_dip_16">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/px_to_dip_8">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="签到日期:"
-            android:textStyle="bold"/>
+            android:text="@string/sign_date"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/sign_date"
             android:layout_width="wrap_content"
@@ -22,12 +27,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/px_to_dip_8">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="姓名:"
-            android:textStyle="bold"/>
+            android:text="@string/sign_name"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/user_name"
@@ -38,19 +45,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/px_to_dip_8">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="单位:"
-            android:textStyle="bold"/>
+            android:text="@string/sign_unit"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/unit_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
-
 
 
 </LinearLayout>

@@ -62,7 +62,7 @@ public class RecordAdapter extends BaseAdapter {
         SignRecord item = mRecords.get(i);
         holder.mUserName.setText(item.getUserName());
         holder.mUnitName.setText(item.getUserShortName());
-        holder.mSignDate.setText(item.getRecDate());
+        holder.mSignDate.setText(item.getRecDate().replace("T"," "));
         return view;
     }
 
