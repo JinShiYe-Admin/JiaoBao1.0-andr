@@ -2,47 +2,76 @@ package com.jsy_jiaobao.main.appcenter.sign;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
+import com.jsy.xuezhuli.utils.BaseUtils;
+import com.jsy.xuezhuli.utils.ConstantUrl;
+import com.jsy.xuezhuli.utils.DialogUtil;
+import com.jsy.xuezhuli.utils.HttpUtil;
+import com.jsy.xuezhuli.utils.ToastUtil;
+import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.main.system.LoginActivityController;
 import com.jsy_jiaobao.po.personal.SignRecord;
 import com.jsy_jiaobao.po.personal.SignRecordLab;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.RequestParams;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+
+
+import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import static com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
+import static com.lidroid.xutils.http.client.HttpRequest.HttpMethod.POST;
+
 /**
  * A placeholder fragment containing a simple view.
  */
-public class RecordFragment extends Fragment implements View.OnClickListener {
+public class RecordFragment extends Fragment implements View.OnClickListener, OnRefreshListener2 {
     private static final String DIALOG_DATE = "DialogDate";
+    private PullToRefreshScrollView mRefreshScrollView;
     private Button mStartTimeButton;
     private Button mEndTimeButton;
     private Button mSureButton;
     private Date mStartDate;
     private Date mEndDate;
-    private RecyclerView mRecyclerView;
+    private Context mContext;
+    private ListView mListView;
     private RecordAdapter mRecordAdapter;
     private static final int START_DATE_CODE = 0;
     private static final int END_DATE_CODE = 1;
+    private int pageNum = 1;
+    private int RowCount;
+    private int numPerPage = 10;
+    private static final String TAG = "RecordFragment";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_record, container, false);
         setContentView(v);
+        mContext = getActivity();
         return v;
     }
 
@@ -51,17 +80,21 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     }
 
     private void setContentView(View v) {
+        mRefreshScrollView = (PullToRefreshScrollView) v.findViewById(R.id.pull_refresh_view);
+        mRefreshScrollView.setOnRefreshListener(this);
         mStartTimeButton = (Button) v.findViewById(R.id.button_startTime);
         mEndTimeButton = (Button) v.findViewById(R.id.button_endTime);
         mSureButton = (Button) v.findViewById(R.id.button_sure);
-        mRecyclerView = (RecyclerView) v.findViewById(R.id.recyclerView_sign_record);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mListView = (ListView) v.findViewById(R.id.list_sign_record);
+        mRecordAdapter = new RecordAdapter(getActivity());
+        mListView.setAdapter(mRecordAdapter);
         setList();
         mStartDate = new Date();
         mEndDate = new Date();
         updateView();
         mStartTimeButton.setOnClickListener(this);
         mEndTimeButton.setOnClickListener(this);
+        mSureButton.setOnClickListener(this);
     }
 
     private void updateView() {
@@ -72,8 +105,6 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     private void setList() {
         SignRecordLab recordLab = SignRecordLab.get(getActivity());
         List<SignRecord> records = recordLab.getSignRecords();
-        mRecordAdapter = new RecordAdapter(records);
-        mRecyclerView.setAdapter(mRecordAdapter);
     }
 
     private void updateList() {
@@ -84,17 +115,91 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_startTime:
-                showDialog(mStartDate, START_DATE_CODE);
+                showDialog(START_DATE_CODE);
                 break;
             case R.id.button_endTime:
-                showDialog(mEndDate, END_DATE_CODE);
+                showDialog(END_DATE_CODE);
                 break;
             case R.id.button_sure:
-                //TODO 请求数据
+                requestListData();
                 break;
             default:
                 break;
         }
+    }
+
+    private void requestListData() {
+        if (!isDateLegal()) {
+            Toast.makeText(getActivity(), "请确保结束日期在开始日期之后，且在同一月", Toast.LENGTH_LONG).show();
+        } else {
+            requestData();
+        }
+    }
+
+    private void requestData() {
+        if (!DialogUtil.getInstance().isDialogShowing()) {
+            DialogUtil.getInstance().getDialog(getActivity(), getActivity().getResources().getString(R.string.public_loading));
+            DialogUtil.getInstance().setCanCancel(false);
+        }
+
+        String accId = BaseActivity.sp.getString("JiaoBaoHao", "");
+        RequestParams params = new RequestParams();
+        params.addBodyParameter("accId", accId);
+        params.addBodyParameter("sDate", formatDate(mStartDate));
+        params.addBodyParameter("eDate", formatDate(mEndDate));
+        params.addBodyParameter("numPerPage", String.valueOf(numPerPage));
+        params.addBodyParameter("pageNum", String.valueOf(pageNum));
+        params.addBodyParameter("RowCount", String.valueOf(RowCount));
+        HttpUtil.getInstance().send(POST, ConstantUrl.GetMySignInfo, params, new RequestCallBack<String>() {
+            @Override
+            public void onSuccess(ResponseInfo<String> responseInfo) {
+                DialogUtil.getInstance().cannleDialog();
+                if (mContext != null) {
+                    try {
+                        JSONObject jsonObj = new JSONObject(responseInfo.result);
+                        String ResultCode = jsonObj.getString("ResultCode");
+                        String ResultDesc = jsonObj.getString("ResultDesc");
+                        String Data = jsonObj.getString("Data");
+                        Log.d(TAG, "ResultCode" + ResultCode);
+                        Log.d(TAG, "ResultDesc" + ResultDesc);
+                        Log.d(TAG, "Data" + Data);
+                        if (!TextUtils.isEmpty(ResultCode)) {
+                            if ("0".equals(ResultCode)) {
+                                Log.d(TAG, Data);
+                                ToastUtil.showMessage(mContext,
+                                        R.string.fuck_success);
+                            } else if ("8".equals(ResultCode)) {
+                                LoginActivityController.getInstance().helloService(
+                                        mContext);
+                            } else {
+                                ToastUtil.showMessage(mContext,
+                                        jsonObj.getString("ResultDesc"));
+                            }
+                        }
+                    } catch (Exception e) {
+                        ToastUtil.showMessage(mContext, mContext.getResources()
+                                .getString(R.string.error_serverconnect) + "r1002");
+                    }
+                }
+
+
+            }
+
+            @Override
+            public void onFailure(HttpException e, String s) {
+                DialogUtil.getInstance().cannleDialog();
+
+                if (BaseUtils.isNetworkAvailable(getActivity())) {
+                    ToastUtil.showMessage(getActivity(), R.string.phone_no_web);
+                } else {
+                    ToastUtil.showMessage(getActivity(), R.string.error_internet);
+                }
+            }
+        });
+    }
+
+    private boolean isDateLegal() {
+        return isInSameMonth() && isDayBefore();
     }
 
     @Override
@@ -120,11 +225,34 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         return (Date) data.getSerializableExtra(DatePickerFragment.EXTRA_DATE);
     }
 
-    private void showDialog(Date date, int code) {
+    private void showDialog(int code) {
         FragmentManager fragmentManager = getFragmentManager();
-        DatePickerFragment dialog = DatePickerFragment.newInstance(date);
+        DatePickerFragment dialog = DatePickerFragment.newInstance(mStartDate, mEndDate);
         dialog.setTargetFragment(RecordFragment.this, code);
         dialog.show(fragmentManager, DIALOG_DATE);
+    }
+
+    /**
+     * @return
+     */
+    private boolean isDayBefore() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(mStartDate);
+        int startDay = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.setTime(mEndDate);
+        int endDay = calendar.get(Calendar.DAY_OF_MONTH);
+        return startDay <= endDay;
+    }
+
+    private boolean isInSameMonth() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(mStartDate);
+        int startMonth = calendar.get(Calendar.MONTH);
+        int startYear = calendar.get(Calendar.YEAR);
+        calendar.setTime(mEndDate);
+        int endMonth = calendar.get(Calendar.MONTH);
+        int endYear = calendar.get(Calendar.YEAR);
+        return startYear == endYear && startMonth == endMonth;
     }
 
     private String formatDate(Date date) {
@@ -138,54 +266,18 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         return formatter.format(s);
     }
 
-    private class RecordHolder extends RecyclerView.ViewHolder {
-        private TextView mUserName;
-        private TextView mUnitName;
-        private TextView mDateText;
-        private SignRecord mRecord;
+    @Override
+    public void onPullDownToRefresh(PullToRefreshBase refreshView) {
 
-        private RecordHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_recycler_sign_record, parent, false));
-            mUserName = (TextView) itemView.findViewById(R.id.user_name);
-            mUnitName = (TextView) itemView.findViewById(R.id.unit_name);
-            mDateText = (TextView) itemView.findViewById(R.id.date_text);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString();
-        }
-
-        void bind(SignRecord record) {
-            mRecord = record;
-            mDateText.setText(formatDate(mRecord.getRecDate()));
-            mUnitName.setText(mRecord.getUserShortName());
-            mUserName.setText(mRecord.getUserName());
-        }
     }
 
-    private class RecordAdapter extends RecyclerView.Adapter<RecordHolder> {
-        private List<SignRecord> mRecordList;
-        private RecordHolder mHolder;
+    @Override
+    public void onPullUpToRefresh(PullToRefreshBase refreshView) {
 
-        public RecordAdapter(List<SignRecord> recordList) {
-            mRecordList = recordList;
-        }
+    }
 
-        @Override
-        public RecordHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            mHolder = new RecordHolder(LayoutInflater.from(getActivity()), parent);
-            return mHolder;
-        }
+    @Override
+    public void onPullPageChanging(boolean isChanging) {
 
-        @Override
-        public void onBindViewHolder(RecordHolder holder, int position) {
-            mHolder.bind(mRecordList.get(position));
-        }
-
-        @Override
-        public int getItemCount() {
-            return mRecordList.size();
-        }
     }
 }

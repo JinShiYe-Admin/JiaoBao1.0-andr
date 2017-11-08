@@ -21,7 +21,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/date_text"
+        android:id="@+id/sign_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

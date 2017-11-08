@@ -29,13 +29,15 @@ import java.util.Locale;
  */
 
 public class DatePickerFragment extends DialogFragment {
-    private static final String ARG_DATE = "date";
+    private static final String ARG_START_DATE = "startDate";
+    private static final String ARG_END_DATE = "endDate";
     public static final String EXTRA_DATE = "com.jsy_jiaobao.main.appcenter.sign.date";
     DatePicker mDatePicker;
 
-    public static DatePickerFragment newInstance(Date date) {
+    public static DatePickerFragment newInstance(Date startDate, Date endDate) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_DATE, date);
+        args.putSerializable(ARG_START_DATE, startDate);
+        args.putSerializable(ARG_END_DATE, endDate);
         DatePickerFragment fragment = new DatePickerFragment();
         fragment.setArguments(args);
         return fragment;
@@ -44,20 +46,23 @@ public class DatePickerFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        Date date = (Date) getArguments().getSerializable(ARG_DATE);
+        Date startDate = (Date) getArguments().getSerializable(ARG_START_DATE);
+        Date endDate = (Date) getArguments().getSerializable(ARG_END_DATE);
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        if (getTargetRequestCode() == 1) {
+
+        } else {
+            calendar.setTime(startDate);
+        }
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
-
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_date_picker, null);
-        mDatePicker  = (DatePicker) v.findViewById(R.id.dialog_date_picker);
-        mDatePicker.setMaxDate(new Date().getTime());
-        try {
-            mDatePicker.setMinDate(new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse("2017-10-10").getTime());
-        } catch (Exception e) {
-            Log.e("", "", e);
+        mDatePicker = (DatePicker) v.findViewById(R.id.dialog_date_picker);
+        mDatePicker.setMaxDate(getMaxDate(getTargetRequestCode(), startDate, endDate).getTime());
+        Date minDate = getMinDate(getTargetRequestCode(), startDate, endDate);
+        if (minDate != null) {
+            mDatePicker.setMinDate(minDate.getTime());
         }
         mDatePicker = (DatePicker) v.findViewById(R.id.dialog_date_picker);
         mDatePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
@@ -80,6 +85,41 @@ public class DatePickerFragment extends DialogFragment {
 
                     }
                 }).create();
+    }
+
+    /**
+     * @param type
+     * @param startDate
+     * @param endDate
+     * @return
+     */
+    private Date getMaxDate(int type, Date startDate, Date endDate) {
+        if (type == 0) {//开始时间
+            return new Date();
+        } else {//结束时间
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(startDate);
+            int endYear = calendar.get(Calendar.YEAR);
+            int endMonth = calendar.get(Calendar.MONTH);
+            int endDay = calendar.getActualMaximum(calendar.DAY_OF_MONTH);
+            calendar.set(endYear, endMonth, endDay);
+            if (new Date().before(calendar.getTime())) {
+                return new Date();
+            }
+            return calendar.getTime();
+        }
+    }
+
+    private Date getMinDate(int type, Date startDate, Date endDate) {
+        if (type == 0) {//开始时间
+            try {
+                return new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse("2017-10-10");
+            } catch (Exception e) {
+                return null;
+            }
+        } else {//结束时间
+            return startDate;
+        }
     }
 
     private void sendResult(int code, Date date) {
