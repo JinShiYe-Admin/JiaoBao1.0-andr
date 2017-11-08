@@ -6,7 +6,7 @@ package com.jsy.xuezhuli.utils;
 public interface ConstantUrl {
     // url
     String url = "http://192.168.2.100:8080/";
-    String jsyoa = "https://www.jiaobao.net/jbclient";
+    String jsyoa = "https://www.jiaobaowang.net/JBClient";
     String QuickSignInUrl = "https://www.jiaobaowang.net/JBClient";
     String StuRecordUrl = "http://218.98.32.200:8083/";
     String StuRecordDataGet = StuRecordUrl + "HOME/DataGet";
