@@ -73,7 +73,7 @@ public class DatePickerFragment extends DialogFragment {
         });
         return new AlertDialog.Builder(getActivity()).
                 setView(v).
-                setTitle(R.string.sure)
+                setTitle("日期选择")
                 .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
