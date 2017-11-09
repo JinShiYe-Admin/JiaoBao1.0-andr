@@ -63,7 +63,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
     private static final int START_DATE_CODE = 0;
     private static final int END_DATE_CODE = 1;
     private int pageNum = 1;
-    private int RowCount;
+    private int RowCount = 0;
     private int numPerPage = 10;
     private static final String TAG = "RecordFragment";
     private List<SignRecord> mSignRecords;
@@ -134,6 +134,8 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
         if (!isDateLegal()) {
             Toast.makeText(getActivity(), "请确保结束日期在开始日期之后，且在同一月", Toast.LENGTH_LONG).show();
         } else {
+            pageNum = 1;
+            RowCount = 0;
             requestData();
         }
     }
@@ -278,6 +280,7 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
         pageNum = 1;
+        RowCount = 0;
         requestListData();
 
     }

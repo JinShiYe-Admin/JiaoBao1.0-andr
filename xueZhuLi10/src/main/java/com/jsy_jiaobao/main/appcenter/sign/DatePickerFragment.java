@@ -50,7 +50,7 @@ public class DatePickerFragment extends DialogFragment {
         Date endDate = (Date) getArguments().getSerializable(ARG_END_DATE);
         Calendar calendar = Calendar.getInstance();
         if (getTargetRequestCode() == 1) {
-            calendar.setTime(getShowEndDate(startDate,endDate));
+            calendar.setTime(endDate);
         } else {
             calendar.setTime(startDate);
         }
