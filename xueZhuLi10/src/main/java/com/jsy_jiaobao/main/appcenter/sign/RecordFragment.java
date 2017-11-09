@@ -123,6 +123,8 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
                 showDialog(END_DATE_CODE);
                 break;
             case R.id.button_sure:
+                pageNum = 1;
+                RowCount = 0;
                 requestListData();
                 break;
             default:
@@ -132,10 +134,9 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
 
     private void requestListData() {
         if (!isDateLegal()) {
+            mRefreshScrollView.onRefreshComplete();
             Toast.makeText(getActivity(), "请确保结束日期在开始日期之后，且在同一月", Toast.LENGTH_LONG).show();
         } else {
-            pageNum = 1;
-            RowCount = 0;
             requestData();
         }
     }
@@ -221,15 +222,24 @@ public class RecordFragment extends Fragment implements View.OnClickListener, On
         switch (requestCode) {
             case START_DATE_CODE:
                 mStartDate = getChoseDate(data);
+                resetData();
                 break;
             case END_DATE_CODE:
                 mEndDate = getChoseDate(data);
+                resetData();
                 break;
             default:
                 super.onActivityResult(requestCode, resultCode, data);
                 break;
         }
         updateView();
+    }
+
+    private void resetData() {
+        pageNum = 1;
+        RowCount = 0;
+        SignRecordLab.get(getActivity()).clearSignRecords();
+        mRecordAdapter.notifyDataSetChanged();
     }
 
     private Date getChoseDate(Intent data) {
