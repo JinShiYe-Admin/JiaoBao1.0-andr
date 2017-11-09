@@ -50,7 +50,7 @@ public class DatePickerFragment extends DialogFragment {
         Date endDate = (Date) getArguments().getSerializable(ARG_END_DATE);
         Calendar calendar = Calendar.getInstance();
         if (getTargetRequestCode() == 1) {
-
+            calendar.setTime(getShowEndDate(startDate,endDate));
         } else {
             calendar.setTime(startDate);
         }
@@ -87,6 +87,13 @@ public class DatePickerFragment extends DialogFragment {
                 }).create();
     }
 
+    private Date getShowEndDate(Date start, Date end) {
+        if (isInSameMonth(start, end) && isDayBefore(start, end)) {
+            return end;
+        }
+        return start;
+    }
+
     /**
      * @param type
      * @param startDate
@@ -115,11 +122,34 @@ public class DatePickerFragment extends DialogFragment {
 //            try {
 //                return new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse("2017-10-10");
 //            } catch (Exception e) {
-                return null;
+            return null;
 //            }
         } else {//结束时间
             return startDate;
         }
+    }
+
+    /**
+     * @return
+     */
+    private boolean isDayBefore(Date mStartDate, Date mEndDate) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(mStartDate);
+        int startDay = calendar.get(Calendar.DAY_OF_MONTH);
+        calendar.setTime(mEndDate);
+        int endDay = calendar.get(Calendar.DAY_OF_MONTH);
+        return startDay <= endDay;
+    }
+
+    private boolean isInSameMonth(Date mStartDate, Date mEndDate) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(mStartDate);
+        int startMonth = calendar.get(Calendar.MONTH);
+        int startYear = calendar.get(Calendar.YEAR);
+        calendar.setTime(mEndDate);
+        int endMonth = calendar.get(Calendar.MONTH);
+        int endYear = calendar.get(Calendar.YEAR);
+        return startYear == endYear && startMonth == endMonth;
     }
 
     private void sendResult(int code, Date date) {
