@@ -112,11 +112,11 @@ public class DatePickerFragment extends DialogFragment {
 
     private Date getMinDate(int type, Date startDate, Date endDate) {
         if (type == 0) {//开始时间
-            try {
-                return new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse("2017-10-10");
-            } catch (Exception e) {
+//            try {
+//                return new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse("2017-10-10");
+//            } catch (Exception e) {
                 return null;
-            }
+//            }
         } else {//结束时间
             return startDate;
         }

@@ -114,4 +114,7 @@
     <style name="AppTheme.Full" parent="AppTheme.NoActionBar">
         <item name="android:windowFullscreen">true</item>
     </style>
+    <style name="FullDatePicker" parent="@android:style/Widget.Holo.DatePicker">
+
+    </style>
 </resources>

@@ -1022,11 +1022,11 @@ public final class R {
         public static final int bottom_title_work = 0x7f0a00f2;
     }
     public static final class style {
-        public static final int TextAppearance_TabPageIndicator = 0x7f080056;
-        public static final int Theme_PageIndicatorDefaults = 0x7f08005a;
-        public static final int Widget = 0x7f08005f;
-        public static final int Widget_IconPageIndicator = 0x7f080060;
-        public static final int Widget_TabPageIndicator = 0x7f08006a;
+        public static final int TextAppearance_TabPageIndicator = 0x7f080057;
+        public static final int Theme_PageIndicatorDefaults = 0x7f08005b;
+        public static final int Widget = 0x7f080060;
+        public static final int Widget_IconPageIndicator = 0x7f080061;
+        public static final int Widget_TabPageIndicator = 0x7f08006b;
     }
     public static final class styleable {
         public static final int[] CirclePageIndicator = { 0x010100c4, 0x010100d4, 0x7f010002, 0x7f010032, 0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a };
