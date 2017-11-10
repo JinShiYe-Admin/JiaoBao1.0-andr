@@ -4,7 +4,7 @@ package com.jsy_jiaobao.main.workol;
 public class Constants {
 
 
-	private static String baseUrl = "https://znzy.jiaobaowang.net/AutoHWIndex/";
+	private static String baseUrl = "https://znzy.jiaobaowang.net/AtHWPort/";
 	public static String GetLogin = baseUrl +"/AtHWPort/GetLogin";
 	/**<pre>取出联动效果
 	 * params
