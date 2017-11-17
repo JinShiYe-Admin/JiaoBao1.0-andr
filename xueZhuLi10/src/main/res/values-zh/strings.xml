@@ -1037,6 +1037,7 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_ad">adActivity</string>
     <string name="function_signinquick">快速签到</string>
+    <string name="title_activity_record">RecordActivity</string>
     
     <!--sign reord-->
     <string name="sign_query">签到查询</string>

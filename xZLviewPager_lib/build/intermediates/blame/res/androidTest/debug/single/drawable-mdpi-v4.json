@@ -36,12 +36,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\bottom_work_selected.png"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\bottom_notice_selected.png",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\bottom_notice_selected.png"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\bottom_topical_unselect.png",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\bottom_topical_unselect.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\bottom_notice_selected.png",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\bottom_notice_selected.png"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xZLviewPager_lib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\bottom_work_unselect.png",

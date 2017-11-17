@@ -1,4 +1,5 @@
 package com.jsy_jiaobao.main.personalcenter;
+
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -62,7 +63,9 @@ import com.jsy_jiaobao.po.sys.VersionInfo;
 import com.umeng.analytics.MobclickAgent;
 import com.viewpagerindicator.TabPageIndicator;
 import com.viewpagerindicator.view.TabView;
+
 import org.greenrobot.eventbus.Subscribe;
+
 import java.util.ArrayList;
 
 /**
@@ -650,6 +653,9 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
             menu.findItem(1007).setVisible(false);
             menu.findItem(1008).setVisible(false);
         }
+        menu.findItem(1006).setVisible(false);
+        menu.findItem(1007).setVisible(false);
+        menu.findItem(1008).setVisible(false);
         // 签到页面
         sub_more.getItem(0).setOnMenuItemClickListener(
                 new OnMenuItemClickListener() {
