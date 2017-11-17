@@ -894,6 +894,7 @@
     <string name="time_tooShort">时间太短</string>
     <string name="title">标题</string>
     <string name="title_activity_ad">adActivity</string>
+    <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_change">标题更改</string>
     <string name="title_noMoreThan100">标题(6字以上,100字以内)</string>
