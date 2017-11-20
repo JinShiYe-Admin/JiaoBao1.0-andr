@@ -363,9 +363,6 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                     menu.findItem(1007).setVisible(false);
                     menu.findItem(1008).setVisible(false);
                 }
-                menu.findItem(1006).setVisible(false);
-                menu.findItem(1007).setVisible(false);
-                menu.findItem(1008).setVisible(false);
                 break;
             // 获取家长学生信息，然后设置ActionBarTitle
             case Constants.WORKOL_getGenInfo:
@@ -656,9 +653,6 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
             menu.findItem(1007).setVisible(false);
             menu.findItem(1008).setVisible(false);
         }
-        menu.findItem(1006).setVisible(false);
-        menu.findItem(1007).setVisible(false);
-        menu.findItem(1008).setVisible(false);
         // 签到页面
         sub_more.getItem(0).setOnMenuItemClickListener(
                 new OnMenuItemClickListener() {
