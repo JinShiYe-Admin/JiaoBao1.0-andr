@@ -57,12 +57,39 @@
     </item>
     <item
         is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\locSDK_4.1_3d43c10fc12046f123ddfd6e2c010d81f568fe70.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\pinyin4j-2.5.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="ae353005f973da1cd8545b54354504c2503f6865">
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\pinyin4j-2.5.0_ca004e64b7a536e0f07f9881aca6250f69b4ea89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0897012dfd2ff59e1b807c07ef09bd0a26cf73e">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\baidumapapi_v2_4_2_45ec0ade3f14428f6e64cfb30a28aa13d2448997.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ae493b4bb7237188bbe42e4267df81971a23e186">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_baca605273eb8230178df8723fab690bc23d4e30\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -75,39 +102,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b9a617ab7630ca6cf841becd35e3a74ffbfeb56f">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\happy-dns-0.2.1_38965407efafdd61d2940ab4a966a84d30604105.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="1c117908d3d5d1e1da422f513db06f96ec246d85">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\locSDK_4.1_3d43c10fc12046f123ddfd6e2c010d81f568fe70.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\baidumapapi_v2_4_2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c0897012dfd2ff59e1b807c07ef09bd0a26cf73e">
-        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\baidumapapi_v2_4_2_45ec0ade3f14428f6e64cfb30a28aa13d2448997.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="0678f9f53236f6e6eb51e117f616dbc2b304f678">
         <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\qiniu-android-sdk-7.0.7_ef997118810389ac3032d404855723fd06ba92de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\happy-dns-0.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a617ab7630ca6cf841becd35e3a74ffbfeb56f">
+        <dex dex="G:\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\build\intermediates\pre-dexed\release\happy-dns-0.2.1_38965407efafdd61d2940ab4a966a84d30604105.jar" />
     </item>
     <item
         is-multidex="false"
