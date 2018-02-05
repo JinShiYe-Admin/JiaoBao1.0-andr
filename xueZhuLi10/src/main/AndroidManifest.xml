@@ -85,7 +85,6 @@
         <!-- 信息中心 -->
         <activity
             android:name=".personalcenter.MessageCenterActivity"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
             android:windowSoftInputMode="adjustPan" />

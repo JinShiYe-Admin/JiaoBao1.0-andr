@@ -93,6 +93,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG, "*****onCreate******");
         MobclickAgent.openActivityDurationTrack(false);
         mContext = this;
         initPassData();
@@ -102,9 +103,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     }
 
     private void setNoticeListener() {
+        Log.e(TAG, "*****setNoticeListener******");
         Intent intent = getIntent();
-        boolean isNotice=intent.getBooleanExtra(NEWAFFAIRNOTICE, false);
-        Log.e(TAG,isNotice+"");
+        boolean isNotice = intent.getBooleanExtra(NEWAFFAIRNOTICE, false);
+        Log.e(TAG, "是否是通知：" + isNotice);
         if (isNotice) {
             indicator.setCurrentItem(2);
         }
@@ -263,6 +265,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d(TAG, "*****onResume******");
         EventBusUtil.register(this);
         MobclickAgent.onResume(this);
         setTitleText();
@@ -277,6 +280,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
      */
     @Override
     protected void onPause() {
+        Log.d(TAG, "*****onPause******");
         EventBusUtil.unregister(this);
         MobclickAgent.onPause(this);
         super.onPause();
@@ -1058,6 +1062,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.d(TAG, "*****onDestroy******");
         ACache artCache = ACache.get(mContext, "noticefragmentarthlist");
         artCache.clear();
     }
