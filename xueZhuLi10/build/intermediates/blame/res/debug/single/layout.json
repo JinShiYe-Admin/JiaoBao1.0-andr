@@ -8,12 +8,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_readarticle_listview_item_title.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\work2details_item.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\work2details_item.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\unitmsg_quaryunit_listview_item_content.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\unitmsg_quaryunit_listview_item_content.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_textview.xml",
@@ -24,12 +24,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_layout_leave_door.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_calendar.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_calendar.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\layout\\abs__screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_calendar.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_calendar.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_qiuzhi_question_answerlist.xml",
@@ -116,12 +116,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\imageview.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_class_names.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_class_names.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_worksend_unit.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_worksend_unit.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_activity_class_names.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_activity_class_names.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_treeview_person.xml",
@@ -212,12 +212,12 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\layout_personalcenter_search.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_show2.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_show2.xml"
-    },
-    {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\simple_list_item_1.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\simple_list_item_1.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_personal_show2.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\fragment_personal_show2.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\item_qiuzhi_answer_comment.xml",
@@ -244,28 +244,28 @@
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_chosesign_parent.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_choseunit.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_choseunit.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_leave.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_leave.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__action_bar_title_item.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\layout\\abs__action_bar_title_item.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\leave_fragment_gen_leave.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\leave_fragment_gen_leave.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\popup_choseunit.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\popup_choseunit.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalinfo.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalinfo.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_base_menu.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\include_base_menu.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__list_menu_item_checkbox.xml",
         "source": "C:\\Users\\rocka\\.android\\build-cache\\d80cca2bf48d69cc32afaa9061b43558d7ea968f\\output\\res\\layout\\abs__list_menu_item_checkbox.xml"
     },
     {
-        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\include_base_menu.xml",
-        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\include_base_menu.xml"
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_personalinfo.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_personalinfo.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\layout_pcwork_item_1child.xml",
@@ -606,6 +606,10 @@
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_correlationunit.xml",
         "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\src\\main\\res\\layout\\activity_show_correlationunit.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\upush_notification.xml",
+        "source": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\push\\build\\intermediates\\bundles\\default\\res\\layout\\upush_notification.xml"
     },
     {
         "merged": "G:\\AndroidStudioWorkplace\\JiaoBao1.0-andr\\xueZhuLi10\\build\\intermediates\\res\\merged\\debug\\layout\\abs__screen_action_bar.xml",

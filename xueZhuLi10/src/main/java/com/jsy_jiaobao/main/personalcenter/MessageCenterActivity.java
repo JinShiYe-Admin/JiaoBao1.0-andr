@@ -57,10 +57,13 @@ import com.jsy_jiaobao.main.workol.StudentWorkActivity;
 import com.jsy_jiaobao.main.workol.TeacherPublishWorkActivity;
 import com.jsy_jiaobao.po.leave.LeaveConstant;
 import com.jsy_jiaobao.po.personal.PublishPermission;
+import com.jsy_jiaobao.po.push.AliasType;
 import com.jsy_jiaobao.po.qiuzhi.UserInfo;
 import com.jsy_jiaobao.po.sys.UserClass;
 import com.jsy_jiaobao.po.sys.VersionInfo;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.PushAgent;
+import com.umeng.message.UTrack;
 import com.viewpagerindicator.TabPageIndicator;
 import com.viewpagerindicator.view.TabView;
 
@@ -988,8 +991,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                         mContext,
                         getResources().getString(
                                 R.string.MessageCenterActivity_quiteSystem));
+                delAlias();
                 httpLogout();
                 JSYApplication.getInstance().finishActivities();
+
                 break;
             //快速签到
             case 1005:
@@ -1006,6 +1011,19 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                 break;
         }
         return true;
+    }
+
+    private void delAlias() {
+        sp = getSharedPreferences(Constant.SP_TB_USER, MODE_PRIVATE);
+        PushAgent mPushAgent = PushAgent.getInstance(getApplication());
+        mPushAgent.deleteAlias(sp.getString("JiaoBaoHao", ""), AliasType.JINSHIYE, new UTrack.ICallBack() {
+
+            @Override
+            public void onMessage(boolean isSuccess, String message) {
+                Log.d(TAG, "刪除alias "+isSuccess+":" + message);
+            }
+
+        });
     }
 
     /**

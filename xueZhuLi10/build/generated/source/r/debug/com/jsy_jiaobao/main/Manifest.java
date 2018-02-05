@@ -10,5 +10,8 @@ package com.jsy_jiaobao.main;
 public final class Manifest {
     public static final class permission {
         public static final String BAIDU_LOCATION_SERVICE="android.permission.BAIDU_LOCATION_SERVICE";
+        public static final String C2D_MESSAGE="com.jsy_jiaobao.main.permission.C2D_MESSAGE";
+        public static final String MESSAGE="com.jsy_jiaobao.main.push.permission.MESSAGE";
+        public static final String MIPUSH_RECEIVE="com.jsy_jiaobao.main.permission.MIPUSH_RECEIVE";
     }
 }

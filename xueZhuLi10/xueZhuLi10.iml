@@ -99,12 +99,11 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 22 Platform (1)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-common-1.4.3.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\locSDK_4.1.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="com.actionbarsherlock:actionbarsherlock-4.4.0" level="project" />
     <orderEntry type="library" exported="" name="com.android.support:recyclerview-v7-22.2.1" level="project" />
@@ -120,9 +119,12 @@
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\qiniu-android-sdk-7.0.7.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\universal-image-loader-1.9.5.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\xUtils-2.6.14.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.2@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\android-viewbadger.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\utdid4all-1.1.5.3_proguard.jar:unspecified@jar" level="project" />
     <orderEntry type="library" exported="" name="__local_jars__:G.\AndroidStudioWorkplace\JiaoBao1.0-andr\xueZhuLi10\libs\umeng-analytics-v5.6.7.jar:unspecified@jar" level="project" />
     <orderEntry type="module" module-name="xZLpulltorefresh_lib" exported="" />
+    <orderEntry type="module" module-name="push" exported="" />
     <orderEntry type="module" module-name="xZLviewPager_lib" exported="" />
   </component>
 </module>

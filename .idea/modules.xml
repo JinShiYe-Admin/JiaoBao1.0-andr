@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JiaoBao1.0-andr.iml" filepath="$PROJECT_DIR$/JiaoBao1.0-andr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/push/push.iml" filepath="$PROJECT_DIR$/push/push.iml" />
       <module fileurl="file://$PROJECT_DIR$/xZLpulltorefresh_lib/xZLpulltorefresh_lib.iml" filepath="$PROJECT_DIR$/xZLpulltorefresh_lib/xZLpulltorefresh_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/xZLviewPager_lib/xZLviewPager_lib.iml" filepath="$PROJECT_DIR$/xZLviewPager_lib/xZLviewPager_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/xueZhuLi10/xueZhuLi10.iml" filepath="$PROJECT_DIR$/xueZhuLi10/xueZhuLi10.iml" />

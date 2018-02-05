@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/push" />
             <option value="$PROJECT_DIR$/xZLpulltorefresh_lib" />
             <option value="$PROJECT_DIR$/xZLviewPager_lib" />
             <option value="$PROJECT_DIR$/xueZhuLi10" />

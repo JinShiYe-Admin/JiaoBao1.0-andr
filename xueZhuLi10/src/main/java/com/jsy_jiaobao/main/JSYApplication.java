@@ -6,6 +6,7 @@ import android.app.Service;
 import android.content.Context;
 import android.os.Environment;
 import android.os.Vibrator;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
@@ -22,12 +23,17 @@ import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.DbUtils;
+import com.umeng.message.IUmengRegisterCallback;
+import com.umeng.message.PushAgent;
+
+import org.android.agoo.huawei.HuaWeiRegister;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JSYApplication extends Application {
+    private static final String TAG = "JSYApplication";
     private static JSYApplication mInstance = null;
     public BMapManager mBMapManager = null;
     public ArrayList<Activity> activityArray = new ArrayList<>();
@@ -42,12 +48,15 @@ public class JSYApplication extends Application {
     public String DB_PATH, FILE_PATH, AV_PATH;
     // 用户所有身份
     public static List<UserIdentity> listUserIdentity;
+    public PushAgent mPushAgent;
 
     @Override
     public void onCreate() {
         // TODO Auto-generated method stub
         super.onCreate();
+//        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "1fe6a20054bcef865eeb0991ee84525b");
         initBitmap();
+        initPush();
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(getApplicationContext());
 
@@ -68,6 +77,26 @@ public class JSYApplication extends Application {
                 Service.VIBRATOR_SERVICE);
         HttpUtil.getInstance().configHttpCacheSize(1024 * 200);
         HttpUtil.getInstance().configDefaultHttpCacheExpiry(1000 * 30);
+    }
+
+    private void initPush() {
+        HuaWeiRegister.register(getApplicationContext());
+        mPushAgent = PushAgent.getInstance(this);
+        //注册推送服务，每次调用register方法都会回调该接口
+        Log.e(TAG, "注册服务");
+        mPushAgent.register(new IUmengRegisterCallback() {
+
+            @Override
+            public void onSuccess(String deviceToken) {
+                //注册成功会返回device token
+                Log.e(TAG + "注册成功：", deviceToken);
+            }
+
+            @Override
+            public void onFailure(String s, String s1) {
+                Log.e(TAG + "注册失败：", s);
+            }
+        });
     }
 
     private void initBitmap() {
@@ -208,7 +237,6 @@ public class JSYApplication extends Application {
 
         }
     }
-
 
 
     /**

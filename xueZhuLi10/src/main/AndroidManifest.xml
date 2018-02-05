@@ -53,6 +53,9 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="jinshiye" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="49e6e122c879497cd051dea7b7857edc" />
         <!-- 广告页 -->
         <activity
             android:name=".system.SplashActivity"
