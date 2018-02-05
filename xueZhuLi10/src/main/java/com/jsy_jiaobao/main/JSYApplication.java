@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.Service;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Environment;
 import android.os.Vibrator;
 import android.util.Log;
@@ -20,11 +21,14 @@ import com.baidu.mapapi.map.MKEvent;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.HttpUtil;
+import com.jsy_jiaobao.main.personalcenter.MessageCenterActivity;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.DbUtils;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
+import com.umeng.message.UmengNotificationClickHandler;
+import com.umeng.message.entity.UMessage;
 
 import org.android.agoo.huawei.HuaWeiRegister;
 
@@ -77,6 +81,7 @@ public class JSYApplication extends Application {
                 Service.VIBRATOR_SERVICE);
         HttpUtil.getInstance().configHttpCacheSize(1024 * 200);
         HttpUtil.getInstance().configDefaultHttpCacheExpiry(1000 * 30);
+        dealWithCustomAction();
     }
 
     private void initPush() {
@@ -97,6 +102,22 @@ public class JSYApplication extends Application {
                 Log.e(TAG + "注册失败：", s);
             }
         });
+    }
+
+    private void dealWithCustomAction() {
+        UmengNotificationClickHandler notificationClickHandler = new UmengNotificationClickHandler() {
+
+            @Override
+            public void dealWithCustomAction(Context context, UMessage msg) {
+                Toast.makeText(context, msg.custom, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(MessageCenterActivity.NEWAFFAIRNOTICE, true);
+                intent.setClass(context, MessageCenterActivity.class);
+                startActivity(intent);
+            }
+        };
+        mPushAgent.setNotificationClickHandler(notificationClickHandler);
     }
 
     private void initBitmap() {

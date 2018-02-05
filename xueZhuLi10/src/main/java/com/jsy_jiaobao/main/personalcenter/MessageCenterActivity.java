@@ -88,6 +88,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     private TextView title;
     private TabView[] titles = new TabView[3];
     private int position = 0;
+    public static final String NEWAFFAIRNOTICE = "new affair notice";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +99,15 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         initViews();
         initDeatilsData();
         initListener();
+    }
 
+    private void setNoticeListener() {
+        Intent intent = getIntent();
+        boolean isNotice=intent.getBooleanExtra(NEWAFFAIRNOTICE, false);
+        Log.e(TAG,isNotice+"");
+        if (isNotice) {
+            indicator.setCurrentItem(2);
+        }
     }
 
     @Override
@@ -260,6 +269,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         if (position != 0) {
             ACache.get(getApplicationContext(), "qiuzhi").put("isOld", "true");
         }
+        setNoticeListener();
     }
 
     /**
@@ -1020,7 +1030,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
 
             @Override
             public void onMessage(boolean isSuccess, String message) {
-                Log.d(TAG, "刪除alias "+isSuccess+":" + message);
+                Log.d(TAG, "刪除alias " + isSuccess + ":" + message);
             }
 
         });
