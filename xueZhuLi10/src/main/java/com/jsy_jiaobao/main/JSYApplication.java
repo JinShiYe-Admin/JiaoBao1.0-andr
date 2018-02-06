@@ -109,7 +109,6 @@ public class JSYApplication extends Application {
 
             @Override
             public void dealWithCustomAction(Context context, UMessage msg) {
-                Toast.makeText(context, msg.custom, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent();
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra(MessageCenterActivity.NEWAFFAIRNOTICE, true);
