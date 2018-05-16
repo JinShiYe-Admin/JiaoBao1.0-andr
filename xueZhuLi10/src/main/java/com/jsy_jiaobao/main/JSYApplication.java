@@ -116,6 +116,29 @@ public class JSYApplication extends Application {
                 startActivity(intent);
             }
         };
+/** 自定义通知栏样式的code */
+//        UmengMessageHandler messageHandler = new UmengMessageHandler() {
+//
+//            @Override
+//            public Notification getNotification(Context context, UMessage msg) {
+//                    Notification.Builder builder = new Notification.Builder(context);
+//                    RemoteViews myNotificationView = new RemoteViews(context.getPackageName(),
+//                            R.layout.notification_view);
+//                    myNotificationView.setTextViewText(R.id.notification_title, msg.title);
+//                    myNotificationView.setTextViewText(R.id.notification_text, msg.text);
+//                    myNotificationView.setImageViewBitmap(R.id.notification_large_icon,
+//                            getLargeIcon(context, msg));
+//                    myNotificationView.setImageViewResource(R.id.notification_small_icon,
+//                            getSmallIconId(context, msg));
+//                    builder.setContent(myNotificationView)
+//                            .setSmallIcon(getSmallIconId(context, msg))
+//                            .setTicker(msg.ticker)
+//                            .setAutoCancel(true);
+//
+//                    return builder.getNotification();
+//            }
+//        };
+//        mPushAgent.setMessageHandler(messageHandler);
         mPushAgent.setNotificationClickHandler(notificationClickHandler);
     }
 
