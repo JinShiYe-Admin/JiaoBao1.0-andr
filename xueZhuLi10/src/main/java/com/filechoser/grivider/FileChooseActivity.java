@@ -3,12 +3,6 @@
  */
 package com.filechoser.grivider;
 
-import java.io.File;
-import java.util.List;
-import com.actionbarsherlock.view.MenuItem;
-import com.jsy_jiaobao.main.BaseActivity;
-import com.jsy_jiaobao.main.R;
-import com.jsy_jiaobao.main.affairs.WorkSendToSbActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,10 +11,18 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.actionbarsherlock.view.MenuItem;
+import com.jsy_jiaobao.main.BaseActivity;
+import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.main.affairs.WorkSendToSbActivity;
+
+import java.io.File;
+import java.util.List;
 
 public class FileChooseActivity extends BaseActivity implements OnClickListener {
 	private GridView gridView = null;// gridView对象
@@ -31,7 +33,7 @@ public class FileChooseActivity extends BaseActivity implements OnClickListener 
 	private TextView title;
 	private ImageView back;
 	Context context = null;// 上下文对象
-
+  //测试
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
