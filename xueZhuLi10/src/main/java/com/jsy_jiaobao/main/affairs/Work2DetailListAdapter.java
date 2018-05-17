@@ -1,9 +1,5 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -12,7 +8,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.net.Uri;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -47,6 +42,10 @@ import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.HttpHandler;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 一些修改1 2016-4-29 MSL<br>
@@ -144,6 +143,7 @@ public class Work2DetailListAdapter<T> extends BaseAdapter {
                     + work.getModel().getJiaoBaoHao();
             JSYApplication.getInstance().bitmap.display(sendphoto, url);
             workcontent.setText(work.getModel().getMsgContent());
+
             if (WorkType == 1) {// 我发的
                 if (mData.size() == 1) {
                     time.setText(mContext.getResources().getString(
