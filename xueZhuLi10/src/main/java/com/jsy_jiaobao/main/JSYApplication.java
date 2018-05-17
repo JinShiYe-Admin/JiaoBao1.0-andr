@@ -25,6 +25,7 @@ import com.jsy_jiaobao.main.personalcenter.MessageCenterActivity;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.DbUtils;
+import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 import com.umeng.message.UmengNotificationClickHandler;
@@ -52,13 +53,11 @@ public class JSYApplication extends Application {
     public String DB_PATH, FILE_PATH, AV_PATH;
     // 用户所有身份
     public static List<UserIdentity> listUserIdentity;
-    public PushAgent mPushAgent;
+//    public PushAgent mPushAgent;
 
     @Override
     public void onCreate() {
-        // TODO Auto-generated method stub
         super.onCreate();
-//        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "1fe6a20054bcef865eeb0991ee84525b");
         initBitmap();
         initPush();
         CrashHandler crashHandler = CrashHandler.getInstance();
@@ -81,14 +80,25 @@ public class JSYApplication extends Application {
                 Service.VIBRATOR_SERVICE);
         HttpUtil.getInstance().configHttpCacheSize(1024 * 200);
         HttpUtil.getInstance().configDefaultHttpCacheExpiry(1000 * 30);
-        dealWithCustomAction();
     }
 
     private void initPush() {
+        //友盟推送初始化
+        UMConfigure.init(getApplicationContext(),"5732d2f867e58e19d2000fd0","jinshiye",UMConfigure.DEVICE_TYPE_PHONE,"49e6e122c879497cd051dea7b7857edc");
+        //注册华为推送服务
         HuaWeiRegister.register(getApplicationContext());
-        mPushAgent = PushAgent.getInstance(this);
+
+        PushAgent mPushAgent = PushAgent.getInstance(getApplicationContext());
+        //注册推送服务
+        registerService(mPushAgent);
+        //定义通知打开动作
+        dealWithCustomAction(mPushAgent);
+        //统计应用启动数据
+        PushAgent.getInstance(getApplicationContext()).onAppStart();
+    }
+
+    private void registerService(PushAgent mPushAgent) {
         //注册推送服务，每次调用register方法都会回调该接口
-        Log.e(TAG, "注册服务");
         mPushAgent.register(new IUmengRegisterCallback() {
 
             @Override
@@ -104,9 +114,8 @@ public class JSYApplication extends Application {
         });
     }
 
-    private void dealWithCustomAction() {
+    private void dealWithCustomAction(PushAgent mPushAgent) {
         UmengNotificationClickHandler notificationClickHandler = new UmengNotificationClickHandler() {
-
             @Override
             public void dealWithCustomAction(Context context, UMessage msg) {
                 Intent intent = new Intent();
@@ -116,29 +125,6 @@ public class JSYApplication extends Application {
                 startActivity(intent);
             }
         };
-/** 自定义通知栏样式的code */
-//        UmengMessageHandler messageHandler = new UmengMessageHandler() {
-//
-//            @Override
-//            public Notification getNotification(Context context, UMessage msg) {
-//                    Notification.Builder builder = new Notification.Builder(context);
-//                    RemoteViews myNotificationView = new RemoteViews(context.getPackageName(),
-//                            R.layout.notification_view);
-//                    myNotificationView.setTextViewText(R.id.notification_title, msg.title);
-//                    myNotificationView.setTextViewText(R.id.notification_text, msg.text);
-//                    myNotificationView.setImageViewBitmap(R.id.notification_large_icon,
-//                            getLargeIcon(context, msg));
-//                    myNotificationView.setImageViewResource(R.id.notification_small_icon,
-//                            getSmallIconId(context, msg));
-//                    builder.setContent(myNotificationView)
-//                            .setSmallIcon(getSmallIconId(context, msg))
-//                            .setTicker(msg.ticker)
-//                            .setAutoCancel(true);
-//
-//                    return builder.getNotification();
-//            }
-//        };
-//        mPushAgent.setMessageHandler(messageHandler);
         mPushAgent.setNotificationClickHandler(notificationClickHandler);
     }
 
