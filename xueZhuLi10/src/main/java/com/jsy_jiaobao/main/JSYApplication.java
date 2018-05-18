@@ -22,6 +22,7 @@ import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy_jiaobao.main.personalcenter.MessageCenterActivity;
+import com.jsy_jiaobao.po.push.AliasType;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.DbUtils;
@@ -84,7 +85,7 @@ public class JSYApplication extends Application {
 
     private void initPush() {
         //友盟推送初始化
-        UMConfigure.init(getApplicationContext(),"5732d2f867e58e19d2000fd0","jinshiye",UMConfigure.DEVICE_TYPE_PHONE,"49e6e122c879497cd051dea7b7857edc");
+        UMConfigure.init(getApplicationContext(),AliasType.APPKEY, AliasType.JINSHIYE,UMConfigure.DEVICE_TYPE_PHONE,AliasType.Umeng_Message_Secret);
         //注册华为推送服务
         HuaWeiRegister.register(getApplicationContext());
 
