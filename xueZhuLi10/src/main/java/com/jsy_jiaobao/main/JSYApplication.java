@@ -33,6 +33,7 @@ import com.umeng.message.UmengNotificationClickHandler;
 import com.umeng.message.entity.UMessage;
 
 import org.android.agoo.huawei.HuaWeiRegister;
+import org.android.agoo.xiaomi.MiPushRegistar;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -88,7 +89,8 @@ public class JSYApplication extends Application {
         UMConfigure.init(getApplicationContext(),AliasType.APPKEY, AliasType.JINSHIYE,UMConfigure.DEVICE_TYPE_PHONE,AliasType.Umeng_Message_Secret);
         //注册华为推送服务
         HuaWeiRegister.register(getApplicationContext());
-
+        //注册小米推送
+        MiPushRegistar.register(getApplicationContext(), AliasType.XIAOMI_APPID, AliasType.XIAOMI_APPKEY);
         PushAgent mPushAgent = PushAgent.getInstance(getApplicationContext());
         //注册推送服务
         registerService(mPushAgent);
