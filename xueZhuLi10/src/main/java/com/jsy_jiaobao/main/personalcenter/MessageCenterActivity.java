@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -71,6 +72,8 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
+import me.leolin.shortcutbadger.ShortcutBadger;
+
 /**
  * 主界面
  *
@@ -123,6 +126,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     public void initViews() {
         setContentLayout(R.layout.tabpageindicatorviewpager);
+        ShortcutBadger.removeCount(MessageCenterActivity.this);
+        SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
+        editor.putString("num","0");
+        editor.commit();
         layout_ui = (LinearLayout) findViewById(R.id.base_messagecenter_layout);
         mContext = this;
         MessageCenterActivityController.getInstance().setContext(this);
@@ -266,12 +273,17 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "*****onResume******");
+        ShortcutBadger.removeCount(MessageCenterActivity.this);
+        SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
+        editor.putString("num","0");
+        editor.commit();
         EventBusUtil.register(this);
         MobclickAgent.onResume(this);
         setTitleText();
         if (position != 0) {
             ACache.get(getApplicationContext(), "qiuzhi").put("isOld", "true");
         }
+
         setNoticeListener();
     }
 

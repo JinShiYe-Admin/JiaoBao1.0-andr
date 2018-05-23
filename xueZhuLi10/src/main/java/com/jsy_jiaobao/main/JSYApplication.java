@@ -22,6 +22,7 @@ import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy_jiaobao.main.personalcenter.MessageCenterActivity;
+import com.jsy_jiaobao.main.umengService.UPushIntentService;
 import com.jsy_jiaobao.po.push.AliasType;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.lidroid.xutils.BitmapUtils;
@@ -101,6 +102,7 @@ public class JSYApplication extends Application {
     }
 
     private void registerService(PushAgent mPushAgent) {
+        mPushAgent.setPushIntentServiceClass(UPushIntentService.class);
         //注册推送服务，每次调用register方法都会回调该接口
         mPushAgent.register(new IUmengRegisterCallback() {
 

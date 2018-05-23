@@ -567,6 +567,7 @@
             android:theme="@style/Theme.MyTheme"
             android:label="@string/title_activity_record"/>
 
+        <service android:name=".umengService.UPushIntentService"/>
     </application>
 
 </manifest>
