@@ -83,6 +83,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -273,18 +274,13 @@ public class LocationActivity extends BaseActivity {
             dialog.setCanceledOnTouchOutside(false);
             RequestParams params = new RequestParams();
             params.addBodyParameter("unitid", sp.getInt("UnitID", 0) + "");
-            new HttpUtils().send(
-                    HttpRequest.HttpMethod.POST,
-                    ACache.get(mContext.getApplicationContext()).getAsString(
-                            "KaoQUrl")
-                            + getSignWay, params,
+            String url=ACache.get(mContext.getApplicationContext()).getAsString("KaoQUrl") + File.separator+ getSignWay;
+            new HttpUtils().send(HttpRequest.HttpMethod.POST,url, params,
                     new RequestCallBack<String>() {
-
                         @Override
                         public void onFailure(HttpException arg0, String arg1) {
                             dialog.dismiss();
-                            BaseUtils.shortToast(mContext, getResources()
-                                    .getString(R.string.error_serverconnect));
+                            BaseUtils.shortToast(mContext, getResources().getString(R.string.error_serverconnect));
                         }
 
                         @Override
@@ -292,16 +288,12 @@ public class LocationActivity extends BaseActivity {
                             dialog.dismiss();
                             try {
                                 JSONObject jsonObj = new JSONObject(arg0.result);
-                                String ResultCode = jsonObj
-                                        .getString("ResultCode");
+                                String ResultCode = jsonObj.getString("ResultCode");
 
                                 if ("0".equals(ResultCode)) {
-                                    GetSignWay getSignWay = GsonUtil
-                                            .GsonToObject(arg0.result,
-                                                    GetSignWay.class);
+                                    GetSignWay getSignWay = GsonUtil.GsonToObject(arg0.result, GetSignWay.class);
 
-                                    Constant.listParentSignWay = getSignWay
-                                            .getData();
+                                    Constant.listParentSignWay = getSignWay.getData();
                                     if (!isFirstLoad) {
                                         chosesignway();
                                     }
@@ -431,11 +423,8 @@ public class LocationActivity extends BaseActivity {
             System.out.println("----------" + SignInJsonData);
             params.addBodyParameter("SignInJsonData", SignInJsonData);
             HttpUtils http = new HttpUtils();
-            http.send(
-                    HttpRequest.HttpMethod.POST,
-                    ACache.get(mContext.getApplicationContext()).getAsString(
-                            "KaoQUrl")
-                            + user_sign, params, new RequestCallBack<String>() {
+            String url =ACache.get(mContext.getApplicationContext()).getAsString("KaoQUrl")+File.separator + user_sign;
+            http.send(HttpRequest.HttpMethod.POST,url , params, new RequestCallBack<String>() {
 
                         @Override
                         public void onFailure(HttpException arg0, String arg1) {
@@ -539,11 +528,9 @@ public class LocationActivity extends BaseActivity {
         RequestParams params = new RequestParams();
         params.addBodyParameter("ID", sp.getInt("UnitID", 0) + "");
         HttpUtils http = new HttpUtils();
+        String url =ACache.get(mContext.getApplicationContext()).getAsString("KaoQUrl") +File.separator+ fance_select;
         http.send(
-                HttpRequest.HttpMethod.POST,
-                ACache.get(mContext.getApplicationContext()).getAsString(
-                        "KaoQUrl")
-                        + fance_select, params, new RequestCallBack<String>() {
+                HttpRequest.HttpMethod.POST, url, params, new RequestCallBack<String>() {
 
                     @Override
                     public void onFailure(HttpException arg0, String arg1) {

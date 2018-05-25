@@ -47,6 +47,7 @@ import com.lidroid.xutils.view.annotation.event.OnClick;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Hashtable;
@@ -149,7 +150,8 @@ public class SearchActivity extends BaseActivity implements OnRefreshListener2<S
 			params.addBodyParameter("Year",iMonthViewCurrentYear+"");
 			params.addBodyParameter("Month",(iMonthViewCurrentMonth+1)+"");
 			HttpUtils http = new HttpUtils();
-			http.send(HttpRequest.HttpMethod.POST, ACache.get(mContext.getApplicationContext()).getAsString("KaoQUrl")+user_select, params, new RequestCallBack<String>() {
+			String url =ACache.get(mContext.getApplicationContext()).getAsString("KaoQUrl")+ File.separator+user_select;
+			http.send(HttpRequest.HttpMethod.POST,url , params, new RequestCallBack<String>() {
 				
 				@Override
 				public void onFailure(HttpException arg0, String arg1) {

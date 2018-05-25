@@ -558,8 +558,8 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="NLHqyhqTPEtbgVx8XQgEKwjK" />
-
+            android:value="bN9poUzSXxmKD6KmXqVpTZnCQEsj9R3a" />
+        <!--android:value="NLHqyhqTPEtbgVx8XQgEKwjK" />-->
         <activity
             android:name=".appcenter.sign.RecordActivity"
             android:launchMode="singleTask"
