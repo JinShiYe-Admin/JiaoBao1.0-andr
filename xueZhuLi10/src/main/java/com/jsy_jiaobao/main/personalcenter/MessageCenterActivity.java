@@ -2,6 +2,7 @@ package com.jsy_jiaobao.main.personalcenter;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -74,6 +75,7 @@ import java.util.ArrayList;
 
 import me.leolin.shortcutbadger.ShortcutBadger;
 
+
 /**
  * 主界面
  *
@@ -103,6 +105,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         initViews();
         initDeatilsData();
         initListener();
+        setAlias();
     }
 
     private void setNoticeListener() {
@@ -126,7 +129,8 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     public void initViews() {
         setContentLayout(R.layout.tabpageindicatorviewpager);
-        ShortcutBadger.removeCount(MessageCenterActivity.this);
+        clearNotification();
+        ShortcutBadger.removeCount(this);
         SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
         editor.putString("num","0");
         editor.commit();
@@ -153,6 +157,13 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         titles[0] = (TabView) indicator.findViewWithTag(0);
         titles[1] = (TabView) indicator.findViewWithTag(1);
         titles[2] = (TabView) indicator.findViewWithTag(2);
+    }
+
+    //清空通知栏
+    private void clearNotification(){
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        //移除所有通知
+        notificationManager.cancelAll();
     }
 
     @Override
@@ -273,7 +284,9 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "*****onResume******");
+        clearNotification();
         ShortcutBadger.removeCount(MessageCenterActivity.this);
+
         SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
         editor.putString("num","0");
         editor.commit();
@@ -295,6 +308,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         Log.d(TAG, "*****onPause******");
         EventBusUtil.unregister(this);
         MobclickAgent.onPause(this);
+        setAlias();
         super.onPause();
     }
 
@@ -1037,6 +1051,19 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                 break;
         }
         return true;
+    }
+
+    private void setAlias() {
+        sp = getSharedPreferences(Constant.SP_TB_USER, MODE_PRIVATE);
+        String account=sp.getString("JiaoBaoHao", "");
+        PushAgent mPushAgent = PushAgent.getInstance(getApplication());
+        mPushAgent.setAlias(account, AliasType.JINSHIYE,
+                new UTrack.ICallBack() {
+                    @Override
+                    public void onMessage(boolean isSuccess, String message) {
+                        Log.d(TAG, "添加alias::::" + isSuccess + message);
+                    }
+                });
     }
 
     private void delAlias() {

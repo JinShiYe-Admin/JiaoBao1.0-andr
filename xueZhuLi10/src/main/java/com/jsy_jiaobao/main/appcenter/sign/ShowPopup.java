@@ -1,10 +1,5 @@
 package com.jsy_jiaobao.main.appcenter.sign;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -26,6 +21,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
@@ -47,6 +43,12 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 import com.lidroid.xutils.view.annotation.ViewInject;
+
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShowPopup implements ConstantUrl{
 	private PopupWindow ppw;
@@ -275,7 +277,8 @@ public class ShowPopup implements ConstantUrl{
 			
 			RequestParams params = new RequestParams();
 			params.addBodyParameter("unitid",sp.getInt("UnitID", 0)+"");
-			new HttpUtils().send(HttpRequest.HttpMethod.POST, getSignWay, params,new RequestCallBack<String>() {
+			String url =ACache.get(mcontext.getApplicationContext()).getAsString("KaoQUrl")+ File.separator+getSignWay;
+			new HttpUtils().send(HttpRequest.HttpMethod.POST, url, params,new RequestCallBack<String>() {
 				
 				@Override
 				public void onFailure(HttpException arg0, String arg1) {

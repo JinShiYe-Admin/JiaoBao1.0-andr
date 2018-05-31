@@ -22,6 +22,7 @@ import org.json.JSONObject;
 
 import me.leolin.shortcutbadger.ShortcutBadger;
 
+
 /**
  * 类名：.class
  * 描述：
@@ -46,18 +47,15 @@ public class UPushIntentService extends UmengMessageService {
             UmLog.d(TAG, "custom=" + msg.custom);    //自定义消息的内容
             UmLog.d(TAG, "title=" + msg.title);      //通知标题
             UmLog.d(TAG, "text=" + msg.text);        //通知内容
-
             //添加角标
             try {
-                if(ShortcutBadger.isBadgeCounterSupported(context)){
                     SharedPreferences sp =getSharedPreferences("messageNum", MODE_PRIVATE);
                     int num =Integer.valueOf(sp.getString("num","0"));
                     num+=1;
-                    ShortcutBadger.applyCount(context, num);
+                    ShortcutBadger.applyCount(this, num);
                     SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
                     editor.putString("num",num+"");
                     editor.commit();
-                }
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -77,6 +75,7 @@ public class UPushIntentService extends UmengMessageService {
             UmLog.e(TAG, e.getMessage());
         }
     }
+
     /**
      * 自定义通知布局
      *

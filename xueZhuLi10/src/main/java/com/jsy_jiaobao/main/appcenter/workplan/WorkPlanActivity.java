@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.view.Menu;
@@ -23,7 +22,6 @@ import com.actionbarsherlock.view.SubMenu;
 import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
-import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.GsonUtil;
 import com.jsy_jiaobao.customview.CusListView;
 import com.jsy_jiaobao.customview.DateWidgetDayCellWP;
@@ -40,9 +38,9 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
 
-import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -210,12 +208,8 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
         params.addBodyParameter("UserID", UserID + "");
         params.addBodyParameter("strSelectDate", selectdate);
         HttpUtils http = new HttpUtils();
-        http.send(
-                HttpRequest.HttpMethod.POST,
-                ACache.get(mContext.getApplicationContext()).getAsString(
-                        "RiCUrl")
-                        + selectWorkPlanMonth, params,
-                new RequestCallBack<String>() {
+        String url=ACache.get(mContext.getApplicationContext()).getAsString("RiCUrl") +File.separator+ selectWorkPlanMonth;
+        http.send(HttpRequest.HttpMethod.POST, url, params, new RequestCallBack<String>() {
 
                     @Override
                     public void onFailure(HttpException arg0, String arg1) {
@@ -260,12 +254,10 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
     private void getDifference() {
         RequestParams params = new RequestParams();
         params.addBodyParameter("UnitID", UnitID + "");
+        String url=ACache.get(mContext.getApplicationContext()).getAsString("RiCUrl") + File.separator+ getDiffence;
         HttpUtils http = new HttpUtils();
         http.send(
-                HttpRequest.HttpMethod.POST,
-                ACache.get(mContext.getApplicationContext()).getAsString(
-                        "RiCUrl")
-                        + getDiffence, params, new RequestCallBack<String>() {
+                HttpRequest.HttpMethod.POST, url, params, new RequestCallBack<String>() {
 
                     @Override
                     public void onFailure(HttpException arg0, String arg1) {
@@ -760,13 +752,8 @@ public class WorkPlanActivity extends BaseActivity implements View.OnClickListen
         params.addBodyParameter("UserID", sp.getInt("UserID", 0) + "");
         params.addBodyParameter("WorkPlanDate", str_selecttime);
         HttpUtils http = new HttpUtils();
-        http.send(
-                HttpRequest.HttpMethod.POST,
-                ACache.get(mContext.getApplicationContext()).getAsString(
-                        "RiCUrl")
-                        + selectWorkPlanDay, params,
-                new RequestCallBack<String>() {
-
+        String  url =ACache.get(mContext.getApplicationContext()).getAsString("RiCUrl") +File.separator+ selectWorkPlanDay;
+        http.send(HttpRequest.HttpMethod.POST,url, params, new RequestCallBack<String>() {
                     @Override
                     public void onFailure(HttpException arg0, String arg1) {
                         BaseUtils.shortToast(mContext, getResources()
