@@ -46,6 +46,7 @@ import com.lidroid.xutils.view.annotation.event.OnClick;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -361,9 +362,9 @@ public class WriteInfoActivity extends BaseActivity {
         String Data = "{\"dSdate\":\"%s\",\"dEdate\":\"%s\",\"sWorkPlace\":\"%s\",\"sSubject\":\"%s\",\"allday\":\"%s\",\"dRecDate\":\"%s\",\"dUpdateDate\":\"%s\",\"UnitID\":\"%s\",\"UnitName\":\"%s\",\"UnitType\":\"%s\",\"UnitTypeName\":\"%s\",\"DetptID\":\"%s\",\"DetptName\":\"%s\",\"Checked\":\"%s\",\"Checker\":\"%s\",\"sRecorder\":\"%s\",\"RecodrderName\":\"%s\",\"Flag\":\"%s\",\"FlagName\":\"%s\"}";
         String SignInJsonData = String.format(Data, str_selecttime + " " + str_begintime, str_selecttime + " " + str_endtime, str_place, str_workplan, "0", str_committime, str_committime, UnitID, UnitName, UnitType, UnitName, 0, "", "0", "未审核", UserID, UserName, between_days, FlagName);
         params.addBodyParameter("Data", SignInJsonData);
-
+        String url =ACache.get(mContext.getApplicationContext()).getAsString("RiCUrl") + File.separator+ commitWorkPlan;
         HttpUtils http = new HttpUtils();
-        http.send(HttpRequest.HttpMethod.POST, ACache.get(mContext.getApplicationContext()).getAsString("RiCUrl") + commitWorkPlan, params, new RequestCallBack<String>() {
+        http.send(HttpRequest.HttpMethod.POST,url, params, new RequestCallBack<String>() {
 
             @Override
             public void onFailure(HttpException arg0, String arg1) {

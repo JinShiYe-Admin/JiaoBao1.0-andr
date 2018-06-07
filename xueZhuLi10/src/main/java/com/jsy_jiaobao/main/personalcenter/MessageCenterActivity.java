@@ -2,7 +2,6 @@ package com.jsy_jiaobao.main.personalcenter;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -129,7 +128,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     public void initViews() {
         setContentLayout(R.layout.tabpageindicatorviewpager);
-        clearNotification();
+//        clearNotification();
         ShortcutBadger.removeCount(this);
         SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
         editor.putString("num","0");
@@ -160,11 +159,11 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     }
 
     //清空通知栏
-    private void clearNotification(){
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        //移除所有通知
-        notificationManager.cancelAll();
-    }
+//    private void clearNotification(){
+//        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//        //移除所有通知
+//        notificationManager.cancelAll();
+//    }
 
     @Override
     public void initDeatilsData() {
@@ -284,7 +283,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "*****onResume******");
-        clearNotification();
+//        clearNotification();
         ShortcutBadger.removeCount(MessageCenterActivity.this);
 
         SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
