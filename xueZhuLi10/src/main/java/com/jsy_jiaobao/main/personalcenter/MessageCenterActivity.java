@@ -158,12 +158,6 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         titles[2] = (TabView) indicator.findViewWithTag(2);
     }
 
-    //清空通知栏
-//    private void clearNotification(){
-//        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-//        //移除所有通知
-//        notificationManager.cancelAll();
-//    }
 
     @Override
     public void initDeatilsData() {
@@ -199,28 +193,6 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     /**
      * // * search的PopWindow //
      */
-    // @SuppressWarnings("deprecation")
-    // private void initPPW() {
-    // statusBarHeight = BaseUtils.getStatusBarHeight(mContext);
-    // int height = Constant.ScreenHeight;// 高度
-    // LayoutInflater inflater = LayoutInflater.from(mContext);
-    // final View popupLayout = inflater.inflate(R.layout.layout_pc_dialog,
-    // layout_ui, false);
-    // // edt_search = (IEditText) popupLayout
-    // // .findViewById(R.id.pcsearch_edt_keywork);
-    // btn_search = (Button) popupLayout
-    // .findViewById(R.id.pcsearch_btn_search);
-    // ppw = new PopupWindow(mContext);
-    // ppw.setBackgroundDrawable(new BitmapDrawable());
-    // ppw.setWidth(LayoutParams.FILL_PARENT);
-    // ppw.setHeight(height - statusBarHeight);
-    // ppw.setOutsideTouchable(false);
-    // ppw.setFocusable(true);
-    // ppw.setContentView(popupLayout);
-    // // layout_ppw = findViewById(R.id.base_body_content);
-    // btn_search.setOnClickListener(searchlistener);
-    //
-    // }
 
     /**
      * ViewPager适配器
@@ -1021,6 +993,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                 httpLogout();
                 BaseActivity.editor.putString("str_username", "");
                 BaseActivity.editor.putString("UserPW", "").apply();
+                delAlias();
                 startActivity(new Intent(mContext, LoginActivity.class));
                 finish();
                 break;

@@ -40,6 +40,7 @@ public class UPushIntentService extends UmengMessageService {
     @Override
     public void onMessage(Context context, Intent intent) {
         try {
+            clearNotification();
             //可以通过MESSAGE_BODY取得消息体
             String message = intent.getStringExtra(AgooConstants.MESSAGE_BODY);
             UMessage msg = new UMessage(new JSONObject(message));
@@ -77,12 +78,23 @@ public class UPushIntentService extends UmengMessageService {
     }
 
     /**
+     * 清空通知栏
+     */
+    private void clearNotification(){
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        //移除所有通知
+        notificationManager.cancelAll();
+    }
+
+
+    /**
      * 自定义通知布局
      *
      * @param context 上下文
      * @param msg     消息体
      */
     public void showNotifications(Context context, UMessage msg) {
+
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setContentTitle(msg.title)

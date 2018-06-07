@@ -221,7 +221,6 @@ public class LoginActivityController implements ConstantUrl {
 						}
 					}
 				}
-//				initPush();
 			} catch (Exception e) {
 				ToastUtil.showMessage(mContext,
 						R.string.login_data_communication_failed);
@@ -229,40 +228,6 @@ public class LoginActivityController implements ConstantUrl {
 		}
 
 	}
-
-//
-//	private void initPush() {
-//		System.out.println("重新注册了友盟推送");
-//		//友盟推送初始化
-//		UMConfigure.init(mContext, AliasType.APPKEY, AliasType.JINSHIYE,UMConfigure.DEVICE_TYPE_PHONE,AliasType.Umeng_Message_Secret);
-//		//注册华为推送服务
-//		HuaWeiRegister.register(mContext);
-//		//注册小米推送
-//		MiPushRegistar.register(mContext, AliasType.XIAOMI_APPID, AliasType.XIAOMI_APPKEY);
-//		PushAgent mPushAgent = PushAgent.getInstance(mContext);
-//		//注册推送服务
-//		registerService(mPushAgent);
-//		//统计应用启动数据
-//		PushAgent.getInstance(mContext).onAppStart();
-//	}
-
-//	private void registerService(PushAgent mPushAgent) {
-//		mPushAgent.setPushIntentServiceClass(UPushIntentService.class);
-//		//注册推送服务，每次调用register方法都会回调该接口
-//		mPushAgent.register(new IUmengRegisterCallback() {
-//
-//			@Override
-//			public void onSuccess(String deviceToken) {
-//				//注册成功会返回device token
-//				Log.e( "注册成功：", deviceToken);
-//			}
-//
-//			@Override
-//			public void onFailure(String s, String s1) {
-//				Log.e( "注册失败：", s);
-//			}
-//		});
-//	}
 
 	protected void getToken() {
 		try {
