@@ -109,6 +109,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_login);
         MobclickAgent.openActivityDurationTrack(false);
+
         findViews();
         mContext = this;
         JSYApplication.getInstance().addActivity(this);
@@ -185,6 +186,8 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                     }
                 });
     }
+
+
 
     /**
      * @功能 初始化界面 加载监听事件

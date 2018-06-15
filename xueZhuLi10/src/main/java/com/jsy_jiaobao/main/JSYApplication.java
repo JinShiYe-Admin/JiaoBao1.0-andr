@@ -65,7 +65,6 @@ public class JSYApplication extends Application {
         initPush();
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(getApplicationContext());
-
         dbUtils = DbUtils.create(this.getApplicationContext());
         dbUtils.configAllowTransaction(true);
         dbUtils.configDebug(true);

@@ -40,5 +40,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:22.2.1'
     compile files('libs/utdid4all-1.1.5.3_proguard.jar')
     compile files('libs/umeng-common-1.4.3.jar')
-    compile "me.leolin:ShortcutBadger:1.1.21@aar"
+    compile 'me.leolin:ShortcutBadger:1.1.21@aar'
 }

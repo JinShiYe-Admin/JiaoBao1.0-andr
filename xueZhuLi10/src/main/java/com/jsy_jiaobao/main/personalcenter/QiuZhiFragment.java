@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import com.jsy.xuezhuli.utils.ACache;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
+import com.jsy.xuezhuli.utils.NotificationsUtils;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
@@ -161,6 +163,12 @@ public class QiuZhiFragment extends SherlockFragment implements
 		initViews(view);
 		questionList = new ArrayList<>();
 		super.onViewCreated(view, savedInstanceState);
+		SharedPreferences sp=getActivity().getSharedPreferences(Constant.SP_TB_USER, getActivity().MODE_PRIVATE);
+		boolean isEnabled= NotificationsUtils.isNotificationEnabled(getActivity().getApplicationContext());
+		boolean timeOut =NotificationsUtils.checkIsTimeOut(getActivity(),sp);
+		if(!isEnabled&&timeOut){
+			NotificationsUtils.showDialog(getActivity(),sp);
+		}
 	}
 
 	/**
