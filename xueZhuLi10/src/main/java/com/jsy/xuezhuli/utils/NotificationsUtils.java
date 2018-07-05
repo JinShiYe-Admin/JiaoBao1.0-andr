@@ -104,6 +104,7 @@ public class NotificationsUtils {
                         editor.putString("showDialogTime",new SimpleDateFormat("yyyy-mm-dd").format(new Date())).commit();
                     }
                 });
+        normalDialog.setCancelable(false);
         normalDialog.show();
     }
 
