@@ -6,6 +6,8 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Vibrator;
 import android.util.Log;
 import android.widget.Toast;
@@ -32,6 +34,8 @@ import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 import com.umeng.message.UmengNotificationClickHandler;
 import com.umeng.message.entity.UMessage;
+import com.wanjian.cockroach.Cockroach;
+import com.wanjian.cockroach.ExceptionHandler;
 
 import org.android.agoo.huawei.HuaWeiRegister;
 import org.android.agoo.xiaomi.MiPushRegistar;
@@ -63,8 +67,10 @@ public class JSYApplication extends Application {
         super.onCreate();
         initBitmap();
         initPush();
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(getApplicationContext());
+//        installCrash();
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(getApplicationContext());
+
         dbUtils = DbUtils.create(this.getApplicationContext());
         dbUtils.configAllowTransaction(true);
         dbUtils.configDebug(true);
@@ -98,6 +104,54 @@ public class JSYApplication extends Application {
         dealWithCustomAction(mPushAgent);
         //统计应用启动数据
         PushAgent.getInstance(getApplicationContext()).onAppStart();
+    }
+
+    private void installCrash() {
+        final Thread.UncaughtExceptionHandler sysExcepHandler = Thread.getDefaultUncaughtExceptionHandler();
+        final Toast toast = Toast.makeText(this, "", Toast.LENGTH_SHORT);
+//        DebugSafeModeUI.init(this);
+        Cockroach.install(this, new ExceptionHandler() {
+            @Override
+            protected void onUncaughtExceptionHappened(Thread thread, Throwable throwable) {
+                Log.e("AndroidRuntime", "--->onUncaughtExceptionHappened:" + thread + "<---", throwable);
+//                CrashLog.saveCrashLog(getApplicationContext(), throwable);
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        toast.setText("已进入安全模式");
+                        toast.show();
+                    }
+                });
+            }
+
+            @Override
+            protected void onBandageExceptionHappened(Throwable throwable) {
+                throwable.printStackTrace();//打印警告级别log，该throwable可能是最开始的bug导致的，无需关心
+                toast.setText("Cockroach Worked");
+                toast.show();
+            }
+
+            @Override
+            protected void onEnterSafeMode() {
+                Toast.makeText(JSYApplication.this, "已进入安全模式", Toast.LENGTH_LONG).show();
+//                DebugSafeModeUI.showSafeModeUI();
+
+//                if (BuildConfig.DEBUG) {
+//                    Intent intent = new Intent(JSYApplication.this, DebugSafeModeTipActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    startActivity(intent);
+//                }
+            }
+
+            @Override
+            protected void onMayBeBlackScreen(Throwable e) {
+                Thread thread = Looper.getMainLooper().getThread();
+                Log.e("AndroidRuntime", "--->onUncaughtExceptionHappened:" + thread + "<---", e);
+                //黑屏时建议直接杀死app
+                sysExcepHandler.uncaughtException(thread, new RuntimeException("black screen"));
+            }
+
+        });
     }
 
     private void registerService(PushAgent mPushAgent) {

@@ -1124,7 +1124,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                 VersionInfo versionInfo = (VersionInfo) list.get(1);
                 int currCode = BaseUtils.getVersionCode(getApplicationContext());
                 if (currCode < versionInfo.getVersionCode()) {
-                    dialog_version(versionInfo);
+//                    dialog_version(versionInfo);
                 }
                 break;
             case Constant.msgcenter_updataversion:

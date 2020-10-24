@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.jsy_jiaobao.main"
-        minSdkVersion 18
+        minSdkVersion 16
         targetSdkVersion 26
         multiDexEnabled true
         versionCode 1
@@ -36,6 +36,7 @@ dependencies {
     compile project(':xZLpulltorefresh_lib')
     compile project(':xZLviewPager_lib')
     compile project(':push')
+    compile project(':crash')
     compile files('libs/android-async-http-1.4.8.jar')
     compile files('libs/android-viewbadger.jar')
     compile files('libs/baidumapapi_v2_4_2.jar')
@@ -50,7 +51,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:multidex:1.0.3'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile files('libs/utdid4all-1.1.5.3_proguard.jar')

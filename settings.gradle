@@ -1,3 +1,4 @@
+include ':crash'
 include ':push'
 include ':xZLpulltorefresh_lib'
 include ':xZLviewPager_lib'
