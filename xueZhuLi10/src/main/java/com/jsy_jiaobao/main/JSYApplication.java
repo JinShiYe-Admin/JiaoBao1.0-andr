@@ -75,7 +75,7 @@ public class JSYApplication extends Application {
         dbUtils.configAllowTransaction(true);
         dbUtils.configDebug(true);
         mInstance = this;
-//        initEngineManager(this);
+        initEngineManager(this);
         //
         mLocationClient = new LocationClient(this);
         MyLocationListener mMyLocationListener;
