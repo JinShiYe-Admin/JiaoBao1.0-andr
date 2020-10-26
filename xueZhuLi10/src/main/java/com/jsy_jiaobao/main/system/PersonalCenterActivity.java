@@ -26,6 +26,7 @@ import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy.xuezhuli.utils.PictureUtils;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.BaseActivity;
+import com.jsy_jiaobao.main.Const;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.po.sys.UserClass;
@@ -55,6 +56,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 	private String photourl;
 	private Intent intent = new Intent();
 	private Uri photoUri;
+	private TextView personal_tv_yinsi,personal_tv_fankui_detail;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,17 @@ public class PersonalCenterActivity extends BaseActivity implements
 		TextView tv_pwd = (TextView) findViewById(R.id.personal_tv_pwd);
 		TextView tv_getunit = (TextView) findViewById(R.id.personal_tv_getunit);
 		tv_myunits = (TextView) findViewById(R.id.personal_tv_units);
+		personal_tv_yinsi= (TextView) findViewById(R.id.personal_tv_yinsi);
+		personal_tv_fankui_detail= (TextView) findViewById(R.id.personal_tv_fankui_detail);
+		personal_tv_fankui_detail.setText(Const.FANKUI);
+		personal_tv_yinsi.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.YINSI_URL));
+				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+				mContext.startActivity(it);
+			}
+		});
 		photourl = ACache.get(mContext.getApplicationContext()).getAsString(
 				"MainUrl")
 				+ ConstantUrl.photoURL

@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.google.gson.reflect.TypeToken;
@@ -40,6 +41,7 @@ import com.jsy.xuezhuli.utils.NetManager;
 import com.jsy.xuezhuli.utils.RsaHelper;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.IEditText;
+import com.jsy_jiaobao.main.CommonDialog;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.main.UpdateService;
@@ -185,9 +187,32 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                         }
                     }
                 });
+        initDialog();
     }
 
+    private void initDialog() {
+        final CommonDialog dialog = new CommonDialog(this);
+        dialog.setMessage("依据最新法律要求，我们更新了《隐私政策》 请您务必审慎阅读,充分理解相关条款内容，特别是字体加粗标识的重要条款。\n" +
+                "点击同意即代表您已阅读并同意《隐私政策》,如果您不同意用户协议和隐私政策的内容，我们暂时将无法为您提供服务\n" +
+                "我们会尽力保护您的个人信息安全。")
+//                .setImageResId(R.drawable.ic_launcher)
+                .setTitle("用户须知")
+                .setNegtive("不同意")
+                .setPositive("同意")
+                .setSingle(false).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+            @Override
+            public void onPositiveClick() {
+                dialog.dismiss();
+                Toast.makeText(mContext,"同意",Toast.LENGTH_SHORT).show();
+            }
 
+            @Override
+            public void onNegtiveClick() {
+                dialog.dismiss();
+                Toast.makeText(mContext,"不同意",Toast.LENGTH_SHORT).show();
+            }
+        }).show();
+    }
 
     /**
      * @功能 初始化界面 加载监听事件

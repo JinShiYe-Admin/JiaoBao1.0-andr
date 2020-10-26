@@ -8,6 +8,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_to_dip_30"
+        android:layout_marginBottom="@dimen/px_to_dip_30"
         android:gravity="center_vertical" >
 
         <TextView
@@ -35,14 +37,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_to_dip_30"
         android:gravity="center_vertical" >
 
         <ImageView
             android:id="@+id/retist_iv_picnumber"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/px_to_dip_80"
+            android:layout_height="@dimen/px_to_dip_45"
             android:layout_alignParentRight="true"
-            android:minWidth="@dimen/px_to_dip_100"/>
+            android:minWidth="@dimen/px_to_dip_120"/>
 
         <com.jsy_jiaobao.customview.IEditText
             android:id="@+id/regist_edt_picnumber"
@@ -57,11 +60,36 @@
             android:textSize="@dimen/px_to_sp_20" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_to_dip_15"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/yinsi_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentLeft="true"
+            android:text="@null" />
+        <TextView
+            android:id="@+id/yinsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/dodgerblue"
+            android:height="@dimen/px_to_dip_50"
+            android:layout_toRightOf="@id/yinsi_box"
+            android:text="《隐私政策》"
+            />
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/regist_tv_getmsgnumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_to_dip_84"
+        android:layout_marginTop="@dimen/px_to_dip_50"
         android:background="@drawable/work_btnsend_shape"
         android:gravity="center"
         android:text="@string/get_phone_note"

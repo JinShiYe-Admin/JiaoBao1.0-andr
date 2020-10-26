@@ -13,7 +13,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -142,13 +141,13 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         TITLE = new String[]{
                 getResources().getString(R.string.messagecenter_title_qiuzhi),
                 getResources().getString(R.string.messagecenter_title_show),
-                getResources().getString(R.string.messagecenter_title_work)};
+                getResources().getString(R.string.messagecenter_title_work)
+        };
         // ViewPager的adapter
         FragmentPagerAdapter adapter = new TabPageIndicatorAdapter(
                 getSupportFragmentManager());
-        ViewPager pager = (ViewPager) findViewById(R.id.base_layout_pager);
+        NoScrollViewPager pager = (NoScrollViewPager) findViewById(R.id.base_layout_pager);
         pager.setAdapter(adapter);
-
         // 实例化TabPageIndicator然后设置ViewPager与之关联
         indicator = (TabPageIndicator) findViewById(R.id.base_tab_indicator);
         indicator.setViewPager(pager);
@@ -156,6 +155,9 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         titles[0] = (TabView) indicator.findViewWithTag(0);
         titles[1] = (TabView) indicator.findViewWithTag(1);
         titles[2] = (TabView) indicator.findViewWithTag(2);
+        titles[0].setVisibility(View.GONE);
+        titles[1].setVisibility(View.GONE);
+        indicator.setCurrentItem(2);
     }
 
 
@@ -171,7 +173,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     @Override
     public void initListener() {
         // 如果我们要对ViewPager设置监听，用indicator设置就行了
-        indicator.setOnPageChangeListener(new OnPageChangeListener() {
+        indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
             public void onPageSelected(int arg0) {
@@ -342,10 +344,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                     menu.findItem(1009).setVisible(false);
                     menu.findItem(1009).setEnabled(false);
                 } else {
-                    menu.findItem(1003).setVisible(true);
-                    menu.findItem(1003).setEnabled(true);
-                    menu.findItem(1004).setVisible(true);
-                    menu.findItem(1004).setEnabled(true);
+                    menu.findItem(1003).setVisible(false);
+                    menu.findItem(1003).setEnabled(false);
+                    menu.findItem(1004).setVisible(false);
+                    menu.findItem(1004).setEnabled(false);
                     menu.findItem(1005).setVisible(true);//快速签到
                     menu.findItem(1005).setEnabled(true);//快速签到
                     menu.findItem(1009).setVisible(true);
@@ -359,17 +361,17 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                     menu.findItem(1009).setEnabled(true);
                 }
                 if (sp.getInt("RoleIdentity", 1) == 2) {
-                    menu.findItem(1006).setVisible(true);
+                    menu.findItem(1006).setVisible(false);
                     menu.findItem(1007).setVisible(false);
                     menu.findItem(1008).setVisible(false);
                 } else if (sp.getInt("RoleIdentity", 1) == 3) {
                     menu.findItem(1006).setVisible(false);
-                    menu.findItem(1007).setVisible(true);
+                    menu.findItem(1007).setVisible(false);
                     menu.findItem(1008).setVisible(false);
                 } else if (sp.getInt("RoleIdentity", 1) == 4) {
                     menu.findItem(1006).setVisible(false);
                     menu.findItem(1007).setVisible(false);
-                    menu.findItem(1008).setVisible(true);
+                    menu.findItem(1008).setVisible(false);
                     menu.findItem(888).setVisible(false);
                     menu.findItem(999).setVisible(false);
                 } else {
@@ -509,20 +511,20 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         Log.d(TAG, "role" + role);
         if (isHasStdLeave && isHasTeaLeave) {
             if (role == 3 || role == 2) {
-                menu.findItem(888).setVisible(true);
+                menu.findItem(888).setVisible(false);
             } else {
                 menu.findItem(888).setVisible(false);
             }
         } else if (isHasStdLeave) {
             if (role == 3) {
-                menu.findItem(888).setVisible(true);
+                menu.findItem(888).setVisible(false);
             } else {
                 menu.findItem(888).setVisible(false);
             }
 
         } else if (isHasTeaLeave) {
             if (role == 2) {
-                menu.findItem(888).setVisible(true);
+                menu.findItem(888).setVisible(false);
             } else {
                 menu.findItem(888).setVisible(false);
             }
@@ -546,14 +548,14 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         }
         Log.d(TAG, "isHasCHeck" + isHasCheck);
         if (isHasCheck) {
-            menu.findItem(999).setVisible(true);
+            menu.findItem(999).setVisible(false);
         } else {
             menu.findItem(999).setVisible(false);
         }
         Log.d(TAG, "isGateGuard" + isGateGuard);
         if (isGateGuard) {
-            menu.findItem(888).setVisible(true);
-            menu.findItem(999).setVisible(true);
+            menu.findItem(888).setVisible(false);
+            menu.findItem(999).setVisible(false);
         }
     }
 
@@ -650,19 +652,19 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         }
         if (sp.getInt("RoleIdentity", 1) == 2) {
             // 角色为老师
-            menu.findItem(1006).setVisible(true);
+            menu.findItem(1006).setVisible(false);
             menu.findItem(1007).setVisible(false);
             menu.findItem(1008).setVisible(false);
         } else if (sp.getInt("RoleIdentity", 1) == 3) {
             // 角色为家长
             menu.findItem(1006).setVisible(false);
-            menu.findItem(1007).setVisible(true);
+            menu.findItem(1007).setVisible(false);
             menu.findItem(1008).setVisible(false);
         } else if (sp.getInt("RoleIdentity", 1) == 4) {
             // 角色为学生
             menu.findItem(1006).setVisible(false);
             menu.findItem(1007).setVisible(false);
-            menu.findItem(1008).setVisible(true);
+            menu.findItem(1008).setVisible(false);
             menu.findItem(888).setVisible(false);
         } else {
             // 其他
@@ -673,6 +675,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         menu.findItem(1006).setVisible(false);
         menu.findItem(1007).setVisible(false);
         menu.findItem(1008).setVisible(false);
+        menu.findItem(1003).setVisible(false);
+        menu.findItem(1004).setVisible(false);
+        menu.findItem(888).setVisible(false);
+        menu.findItem(999).setVisible(false);
         // 签到页面
         sub_more.getItem(0).setOnMenuItemClickListener(
                 new OnMenuItemClickListener() {
@@ -857,10 +863,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
             menu.findItem(1009).setEnabled(false);
         } else {
             // 非教师
-            menu.findItem(1003).setVisible(true);
-            menu.findItem(1003).setEnabled(true);
-            menu.findItem(1004).setVisible(true);
-            menu.findItem(1004).setEnabled(true);
+            menu.findItem(1003).setVisible(false);
+            menu.findItem(1003).setEnabled(false);
+            menu.findItem(1004).setVisible(false);
+            menu.findItem(1004).setEnabled(false);
             menu.findItem(1009).setVisible(true);
             menu.findItem(1009).setEnabled(true);
             if (BaseActivity.sp.getInt("UnitID", 0) == 0) {
@@ -873,6 +879,12 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                 menu.findItem(1009).setEnabled(true);
             }
         }
+        menu.findItem(1020).setVisible(false);
+        menu.findItem(1020).setEnabled(false);
+        menu.findItem(1010).setVisible(false);
+        menu.findItem(1010).setEnabled(false);
+        menu.findItem(1011).setVisible(false);
+        menu.findItem(1011).setEnabled(false);
         return true;
     }
 

@@ -1,6 +1,8 @@
 package com.jsy_jiaobao.main.system;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,6 +16,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +27,7 @@ import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.IEditText;
 import com.jsy_jiaobao.main.BaseActivity;
+import com.jsy_jiaobao.main.Const;
 import com.jsy_jiaobao.main.R;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -47,6 +52,8 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 	private IEditText edt_pwd1;
 	private IEditText edt_pwd2;
 	private ViewPager viewpager;
+	private CheckBox yinsi_box;
+	private TextView yinsi;
 	private List<View> lists = new ArrayList<>();
 	
 	private String pageWhat =  "regeit";
@@ -144,30 +151,49 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 		edt_first_phone = (IEditText) view.findViewById(R.id.regist_edt_phone);
 		iv_first_picnumber = (ImageView) view.findViewById(R.id.retist_iv_picnumber);
 		iv_first_picnumber.setOnClickListener(this);
-		
+		yinsi_box= (CheckBox)  view.findViewById(R.id.yinsi_box);
+		yinsi= (TextView)  view.findViewById(R.id.yinsi);
 		edt_first_picnumber = (IEditText) view.findViewById(R.id.regist_edt_picnumber);
 		tv_first_getmsgnumber = (TextView) view.findViewById(R.id.regist_tv_getmsgnumber);
 		tv_first_getmsgnumber.setOnClickListener(this);
 		edt_first_phone.setOnFocusChangeListener(new OnFocusChangeListener() {
-			
+
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
+				System.out.println(hasFocus);
 				if (!hasFocus) {
 					String str = edt_first_phone.getTextString();
-						if (!TextUtils.isEmpty(oldPhoneNumber)) {
-							if (!str.equals(oldPhoneNumber)) {
-								tv_first_getmsgnumber.setEnabled(true);
-								tv_first_getmsgnumber.setText(getResources().getString(R.string.get_phone_note));
-								if (timer != null) {
-									timer.cancel();
-								}
-								RegistActivityController.getInstance().GetValidateCode(iv_first_picnumber);
+					if (!TextUtils.isEmpty(oldPhoneNumber)) {
+						if (!str.equals(oldPhoneNumber)) {
+							tv_first_getmsgnumber.setEnabled(true);
+							tv_first_getmsgnumber.setText(getResources().getString(R.string.get_phone_note));
+							if (timer != null) {
+								timer.cancel();
 							}
+							RegistActivityController.getInstance().GetValidateCode(iv_first_picnumber);
 						}
-						oldPhoneNumber = str;
-						DialogUtil.getInstance().getDialog(mContext, R.string.verifying_phone_number);
+					}
+					oldPhoneNumber = str;
+					DialogUtil.getInstance().getDialog(mContext, R.string.verifying_phone_number);
 					RegistActivityController.getInstance().checkMobileAcc(str);
 				}
+			}
+		});
+		edt_first_phone.setOnFocusChangeListener(null);
+
+		yinsi_box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				System.out.println(isChecked);
+				System.out.println(yinsi_box.isChecked());
+			}
+		});
+		yinsi.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.YINSI_URL));
+				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+				mContext.startActivity(it);
 			}
 		});
 	}
@@ -199,18 +225,22 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 			RegistActivityController.getInstance().GetValidateCode(iv_second_picnumber);
 			break;
 		case R.id.regist_tv_getmsgnumber://获取短信验证码
-			String str_phone1 = edt_first_phone.getTextString();
-			String str_pic1 = edt_first_picnumber.getTextString();
-			if (TextUtils.isEmpty(str_phone1)) {
-				ToastUtil.showMessage(mContext, R.string.input_phone_number);
-			}else if(TextUtils.isEmpty(str_pic1)){
-				ToastUtil.showMessage(mContext, R.string.input_note);
-			}else{
-				if ("regeit".equals(pageWhat)) {//注册
-					RegistActivityController.getInstance().SendCheckCode(str_phone1, str_pic1);
-				}else if ("reset".equals(pageWhat)) {//重置密码
-					RegistActivityController.getInstance().ReSendCheckCode(str_phone1, str_pic1);
+			if(yinsi_box.isChecked()){
+				String str_phone1 = edt_first_phone.getTextString();
+				String str_pic1 = edt_first_picnumber.getTextString();
+				if (TextUtils.isEmpty(str_phone1)) {
+					ToastUtil.showMessage(mContext, R.string.input_phone_number);
+				}else if(TextUtils.isEmpty(str_pic1)){
+					ToastUtil.showMessage(mContext, R.string.input_note);
+				}else{
+					if ("regeit".equals(pageWhat)) {//注册
+						RegistActivityController.getInstance().SendCheckCode(str_phone1, str_pic1);
+					}else if ("reset".equals(pageWhat)) {//重置密码
+						RegistActivityController.getInstance().ReSendCheckCode(str_phone1, str_pic1);
+					}
 				}
+			}else{
+				ToastUtil.showMessage(mContext, "请先阅读并勾选 《隐私政策》 再进行下一步操作");
 			}
 			break;
 		case R.id.regist_tv_thirdregist:
