@@ -1,5 +1,3 @@
-include ':crash'
-include ':push'
-include ':xZLpulltorefresh_lib'
+include ':xZLpulltorefresh_lib', ':push', ':crash'
 include ':xZLviewPager_lib'
 include ':xueZhuLi10'
