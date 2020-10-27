@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,13 +23,17 @@ import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.ConstantUrl;
 import com.jsy.xuezhuli.utils.DialogUtil;
+import com.jsy.xuezhuli.utils.EventBusUtil;
+import com.jsy.xuezhuli.utils.GsonUtil;
 import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy.xuezhuli.utils.PictureUtils;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.BaseActivity;
-import com.jsy_jiaobao.main.Const;
+import com.jsy_jiaobao.main.CommonDialog;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.po.push.AliasType;
+import com.jsy_jiaobao.po.qiuzhi.GetPicked;
 import com.jsy_jiaobao.po.sys.UserClass;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.jsy_jiaobao.po.sys.UserUnit;
@@ -37,11 +42,17 @@ import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.PushAgent;
+import com.umeng.message.UTrack;
 
 import org.json.JSONObject;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 个人中心界面
@@ -56,7 +67,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 	private String photourl;
 	private Intent intent = new Intent();
 	private Uri photoUri;
-	private TextView personal_tv_yinsi,personal_tv_fankui_detail;
+	private TextView personal_tv_yinsi,personal_tv_known,personal_tv_fankui_detail,cancellation;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -101,14 +112,46 @@ public class PersonalCenterActivity extends BaseActivity implements
 		TextView tv_getunit = (TextView) findViewById(R.id.personal_tv_getunit);
 		tv_myunits = (TextView) findViewById(R.id.personal_tv_units);
 		personal_tv_yinsi= (TextView) findViewById(R.id.personal_tv_yinsi);
+		personal_tv_known= (TextView) findViewById(R.id.personal_tv_known);
 		personal_tv_fankui_detail= (TextView) findViewById(R.id.personal_tv_fankui_detail);
-		personal_tv_fankui_detail.setText(Const.FANKUI);
+		cancellation= (TextView) findViewById(R.id.cancellation);
+		personal_tv_fankui_detail.setText(Constant.FANKUI);
 		personal_tv_yinsi.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.YINSI_URL));
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.YINSI_URL));
 				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
 				mContext.startActivity(it);
+			}
+		});
+		personal_tv_known.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
+				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+				mContext.startActivity(it);
+			}
+		});
+		cancellation.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				final CommonDialog dialog = new CommonDialog(mContext);
+				dialog.setMessage(Constant.CANCELLATION)
+//                .setImageResId(R.drawable.ic_launcher)
+						.setTitle("提醒")
+						.setNegtive("取消")
+						.setPositive("确定")
+						.setSingle(false).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+					@Override
+					public void onPositiveClick() {
+						delUser(dialog);
+					}
+
+					@Override
+					public void onNegtiveClick() {
+						dialog.dismiss();
+					}
+				}).show();
 			}
 		});
 		photourl = ACache.get(mContext.getApplicationContext()).getAsString(
@@ -127,6 +170,119 @@ public class PersonalCenterActivity extends BaseActivity implements
 		tv_qiuzhi.setOnClickListener(this);
 		setUnits();// 获取单位
 	}
+
+	/**
+	 * 退出系统
+	 */
+	private void exit() {
+		MobclickAgent.onEvent(mContext, getResources().getString(R.string.MessageCenterActivity_quiteSystem));
+		sp = getSharedPreferences(Constant.SP_TB_USER, MODE_PRIVATE);
+		PushAgent mPushAgent = PushAgent.getInstance(getApplication());
+		mPushAgent.deleteAlias(sp.getString("JiaoBaoHao", ""), AliasType.JINSHIYE, new UTrack.ICallBack() {
+
+			@Override
+			public void onMessage(boolean isSuccess, String message) {
+				Log.d("PersonalCenterActivity", "刪除alias " + isSuccess + ":" + message);
+			}
+
+		});
+		httpLogout();
+		JSYApplication.getInstance().finishActivities();
+
+	}
+
+	/**
+	 * 注销协议
+	 */
+
+	public void delUser(CommonDialog dialog) {
+		DialogUtil.getInstance().getDialog(mContext, mContext.getResources().getString(R.string.public_loading));
+		DialogUtil.getInstance().setCanCancel(false);
+		RequestParams params = new RequestParams();
+		String JiaoBaoHao=BaseActivity.sp.getString("JiaoBaoHao", "");
+		if(TextUtils.isEmpty(JiaoBaoHao)){
+			ToastUtil.showMessage(mContext,"教包号为空，无法执行此操作");
+		}else{
+			params.addBodyParameter("accID", JiaoBaoHao);
+			CallBack callback = new CallBack(dialog);
+			callback.setUserTag(Constant.del_user);
+			HttpUtil.InstanceSend(DelUser, params, callback);
+		}
+
+	}
+
+	private class CallBack extends RequestCallBack<String> {
+
+		private CommonDialog dialog;
+
+		public CallBack (){
+			super();
+		}
+
+		public CallBack (CommonDialog dialog){
+			this.dialog=dialog;
+		}
+
+		@Override
+		public void onFailure(HttpException arg0, String arg1) {
+			DialogUtil.getInstance().cannleDialog();
+			if (null != mContext) {
+				dealResponseInfo("", this.getUserTag());
+				if (BaseUtils.isNetworkAvailable(mContext)) {
+					ToastUtil.showMessage(mContext, R.string.phone_no_web);
+				}
+			}
+		}
+
+		@Override
+		public void onSuccess(ResponseInfo<String> arg0) {
+			DialogUtil.getInstance().cannleDialog();
+			if (null != mContext) {
+				try {
+					JSONObject jsonObj = new JSONObject(arg0.result);
+					String ResultCode = jsonObj.getString("ResultCode");
+					if ("0".equals(ResultCode)) {
+						dialog.dismiss();
+						ToastUtil.showMessage(mContext,"账户注销成功，稍后将退出系统");
+						Timer timer = new Timer();
+						TimerTask task = new TimerTask() {
+							@Override
+							public void run() {
+									exit();
+							}
+						};
+						timer.schedule(task,3000,1000000);
+					} else if ("8".equals(ResultCode)) {
+						dealResponseInfo("", this.getUserTag());
+						LoginActivityController.getInstance().helloService(mContext);
+					} else {
+						ToastUtil.showMessage(mContext, jsonObj.getString("ResultDesc"));
+						dealResponseInfo("", this.getUserTag());
+					}
+				} catch (Exception e) {
+					dealResponseInfo("", this.getUserTag());
+					ToastUtil.showMessage(mContext, mContext.getResources().getString(R.string.error_serverconnect) + "r1002");
+				}
+			}
+		}
+	}
+
+	private void dealResponseInfo(String result, Object userTag) {
+		ArrayList<Object> post = new ArrayList<>();
+		post.add(userTag);
+		switch ((Integer) userTag) {
+			case Constant.del_user:
+				DialogUtil.getInstance().cannleDialog();
+				GetPicked getPicked = GsonUtil
+						.GsonToObject(result, GetPicked.class);
+				post.add(getPicked);
+				break;
+			default:
+				break;
+		}
+		EventBusUtil.post(post);
+	}
+
 
 	/*
 	 * 获取所在单位

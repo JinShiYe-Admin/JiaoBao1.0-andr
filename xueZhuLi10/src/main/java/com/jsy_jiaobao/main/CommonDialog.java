@@ -3,11 +3,15 @@ package com.jsy_jiaobao.main;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.jsy.xuezhuli.utils.htmltextview.HtmlTextView;
 
 /**
  * description:自定义dialog
@@ -27,7 +31,7 @@ public class CommonDialog extends Dialog {
     /**
      * 显示的消息
      */
-    private TextView messageTv ;
+    private HtmlTextView messageTv ;
 
     /**
      * 确认和取消按钮
@@ -93,6 +97,15 @@ public class CommonDialog extends Dialog {
         });
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, @NonNull KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            return false;
+        }else {
+            return super.onKeyDown(keyCode, event);
+        }
+    }
+
     /**
      * 初始化界面控件的显示数据
      */
@@ -105,7 +118,7 @@ public class CommonDialog extends Dialog {
             titleTv.setVisibility(View.GONE);
         }
         if (!TextUtils.isEmpty(message)) {
-            messageTv.setText(message);
+            messageTv.setHtmlFromString(message,false);
         }
         //如果设置按钮的文字
         if (!TextUtils.isEmpty(positive)) {
@@ -150,7 +163,7 @@ public class CommonDialog extends Dialog {
         negtiveBn = (Button) findViewById(R.id.negtive);
         positiveBn = (Button) findViewById(R.id.positive);
         titleTv = (TextView) findViewById(R.id.title);
-        messageTv = (TextView) findViewById(R.id.message);
+        messageTv = (HtmlTextView) findViewById(R.id.message);
         imageIv = (ImageView) findViewById(R.id.image);
         columnLineView = findViewById(R.id.column_line);
     }

@@ -666,4 +666,9 @@ public interface ConstantUrl {
      * 查询快速签到的记录
      */
     String GetMySignInfo = QuickSignInUrl + "/SignIn/getMySingInfo";
+
+    /**
+     * 功能：注销账户
+     */
+    String DelUser = jsyoa + "/Account/removeUserAcc";
 }

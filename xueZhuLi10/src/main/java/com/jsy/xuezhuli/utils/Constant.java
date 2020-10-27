@@ -20,6 +20,16 @@ public class Constant {
 	static String SPKXmlStr = "<RSAKeyValue><Modulus>xc0EHqiwAGNZn4s+Nr6U7NOSq6H62WBHOPZHwMFrwRMRm55S7R2oIL7vaaDLTg+x10bztPgKrhxor1hQ1uv2NKAx5uqJwsRd4VckhKEWVms6ysQDTy01Jhz9N3SIe2iMibkIuVW/mVSmgLEWHAAKUv4j0pCPSqkmozX6Ur0BAKE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
 	public static PublicKey publicKey = RsaHelper.decodePublicKeyFromXml(SPKXmlStr);
 
+	public static final String YINSI_URL="http://www.jiaobao.net/dl/jiaobaoxiaoyuan/jbxyPrivacy.htm";
+	public static final String KNOWN_URL="http://www.jiaobao.net/dl/jiaobaoxiaoyuan/jbxyPrivacy.htm";
+	public static final String EMAIL = "kf@jsy8800.com";
+	public static final String FANKUI = "如果您有任何建议或问题欢迎给我们发送邮件:"+EMAIL;
+	public static final String KNOWN = "依据最新法律要求，我们更新了<a target='_blank' href="+YINSI_URL+">《隐私政策》</a>和<a target='_blank' href="+KNOWN_URL+">《用户协议》</a> 请您务必审慎阅读,充分理解相关条款内容，特别是字体加粗标识的重要条款。\n"+
+			"<br>点击同意即代表您已阅读并同意<a target='_blank' href="+YINSI_URL+">《隐私政策》</a>和<a target='_blank' href="+KNOWN_URL+">《用户协议》</a>,如果您不同意用户协议和隐私政策的内容，我们暂时将无法为您提供服务\n" +
+			"<br>我们会尽力保护您的个人信息安全。";
+	public static final String NO_PASS_TEXT = "由于您不同意爱思助手《用户协议》和《隐私政策》的相关内容，我们暂时无法为您提供服务。请谅解！";
+	public static final String CANCELLATION = "注销账户后，相关信息将无法找回，确定要注销此账户吗？";
+
 	//用户所有身份
 	public static List<UserIdentity> listUserIdentity;
 	//考勤方式
@@ -211,6 +221,7 @@ public class Constant {
 	final public static int msgcenter_qiuzhi_PickedIndex = 325;
 	final public static int msgcenter_qiuzhi_ShowPicked = 326;
 	final public static int msgcenter_qiuzhi_GetPickedById_pd = 327;
+	final public static int del_user = 88888;
 	final public static int msgcenter_qiuzhi_AddMyAttQ = 328;
 	final public static int msgcenter_qiuzhi_AtMeForAnswer = 329;
 	final public static int msgcenter_qiuzhi_MyAttQIndex = 330;

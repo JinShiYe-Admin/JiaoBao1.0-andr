@@ -75,13 +75,23 @@
             android:text="@null" />
         <TextView
             android:id="@+id/yinsi"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:textColor="@color/dodgerblue"
             android:height="@dimen/px_to_dip_50"
             android:layout_toRightOf="@id/yinsi_box"
             android:text="《隐私政策》"
+            />
+        <TextView
+            android:id="@+id/known"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/dodgerblue"
+            android:height="@dimen/px_to_dip_50"
+            android:layout_toRightOf="@id/yinsi"
+            android:text="  《用户协议》"
             />
     </RelativeLayout>
 

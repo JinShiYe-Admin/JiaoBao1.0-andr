@@ -17,7 +17,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +26,6 @@ import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.IEditText;
 import com.jsy_jiaobao.main.BaseActivity;
-import com.jsy_jiaobao.main.Const;
 import com.jsy_jiaobao.main.R;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -53,7 +51,7 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 	private IEditText edt_pwd2;
 	private ViewPager viewpager;
 	private CheckBox yinsi_box;
-	private TextView yinsi;
+	private TextView yinsi,known;
 	private List<View> lists = new ArrayList<>();
 	
 	private String pageWhat =  "regeit";
@@ -153,6 +151,7 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 		iv_first_picnumber.setOnClickListener(this);
 		yinsi_box= (CheckBox)  view.findViewById(R.id.yinsi_box);
 		yinsi= (TextView)  view.findViewById(R.id.yinsi);
+		known= (TextView)  view.findViewById(R.id.known);
 		edt_first_picnumber = (IEditText) view.findViewById(R.id.regist_edt_picnumber);
 		tv_first_getmsgnumber = (TextView) view.findViewById(R.id.regist_tv_getmsgnumber);
 		tv_first_getmsgnumber.setOnClickListener(this);
@@ -181,17 +180,18 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 		});
 		edt_first_phone.setOnFocusChangeListener(null);
 
-		yinsi_box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				System.out.println(isChecked);
-				System.out.println(yinsi_box.isChecked());
-			}
-		});
 		yinsi.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.YINSI_URL));
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.YINSI_URL));
+				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+				mContext.startActivity(it);
+			}
+		});
+		known.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
 				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
 				mContext.startActivity(it);
 			}

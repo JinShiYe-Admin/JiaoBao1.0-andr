@@ -22,7 +22,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.google.gson.reflect.TypeToken;
@@ -191,27 +190,40 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
     }
 
     private void initDialog() {
-        final CommonDialog dialog = new CommonDialog(this);
-        dialog.setMessage("依据最新法律要求，我们更新了《隐私政策》 请您务必审慎阅读,充分理解相关条款内容，特别是字体加粗标识的重要条款。\n" +
-                "点击同意即代表您已阅读并同意《隐私政策》,如果您不同意用户协议和隐私政策的内容，我们暂时将无法为您提供服务\n" +
-                "我们会尽力保护您的个人信息安全。")
+        boolean firstLogin= sp_sys.getBoolean("firstLogin",true);
+        if(firstLogin){
+            final CommonDialog dialog = new CommonDialog(this);
+            dialog.setMessage(Constant.KNOWN)
 //                .setImageResId(R.drawable.ic_launcher)
-                .setTitle("用户须知")
-                .setNegtive("不同意")
-                .setPositive("同意")
-                .setSingle(false).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
-            @Override
-            public void onPositiveClick() {
-                dialog.dismiss();
-                Toast.makeText(mContext,"同意",Toast.LENGTH_SHORT).show();
-            }
+                    .setTitle("用户须知")
+                    .setNegtive("不同意")
+                    .setPositive("同意")
+                    .setSingle(false).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+                @Override
+                public void onPositiveClick() {
+                    dialog.dismiss();
+                    editor_sys.putBoolean("firstLogin", false).commit();
+                }
 
-            @Override
-            public void onNegtiveClick() {
-                dialog.dismiss();
-                Toast.makeText(mContext,"不同意",Toast.LENGTH_SHORT).show();
-            }
-        }).show();
+                @Override
+                public void onNegtiveClick() {
+                    final CommonDialog dialog2 = new CommonDialog(mContext);
+                    dialog2.setMessage(Constant.NO_PASS_TEXT)
+                            .setPositive("返回")
+                            .setSingle(true).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+                        @Override
+                        public void onPositiveClick() {
+                            dialog2.dismiss();
+                        }
+
+                        @Override
+                        public void onNegtiveClick() {
+                            dialog2.dismiss();
+                        }
+                    }).show();
+                }
+            }).show();
+        }
     }
 
     /**
