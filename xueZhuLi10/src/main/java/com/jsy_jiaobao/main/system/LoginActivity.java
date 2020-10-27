@@ -189,6 +189,17 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
         initDialog();
     }
 
+    private void test(){
+        String url = "http://www.jiaobao.net/dl/JSY_JiaoBao.apk";
+        Intent updateIntent = new Intent(mContext,
+                UpdateService.class);
+        updateIntent.putExtra("titleId",
+                mContext.getString(R.string.app_name)
+                        + "5.3.3");
+        updateIntent.putExtra("url", url);
+        mContext.startService(updateIntent);
+    }
+
     private void initDialog() {
         boolean firstLogin= sp_sys.getBoolean("firstLogin",true);
         if(firstLogin){

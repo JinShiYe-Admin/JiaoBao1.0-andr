@@ -190,19 +190,19 @@ public class JSYApplication extends Application {
         if (status.equals(Environment.MEDIA_MOUNTED)) {
             // 有sd卡就存在sd卡中
             DB_PATH = Environment.getExternalStorageDirectory()
-                    + "/goldeneyes/datebase/";
+                    + "/Download/goldeneyes/datebase/";
             FILE_PATH = Environment.getExternalStorageDirectory()
-                    + "/goldeneyes/file/";
+                    + "/Download/goldeneyes/file/";
             AV_PATH = Environment.getExternalStorageDirectory()
-                    + "/goldeneyes/VideoAudio/";
+                    + "/Download/goldeneyes/VideoAudio/";
         } else {
             // 没有sd卡就存入data文件夹下
             DB_PATH = getApplicationContext().getFilesDir().getPath()
-                    + "/datebase/";
+                    + "/Download/datebase/";
             FILE_PATH = getApplicationContext().getFilesDir().getPath()
-                    + "/file/";
+                    + "/Download/file/";
             AV_PATH = getApplicationContext().getFilesDir().getPath()
-                    + "/VideoAudio/";
+                    + "/Download/VideoAudio/";
         }
         // 如果目录不存在 新建这个目录
         File dir = new File(DB_PATH);

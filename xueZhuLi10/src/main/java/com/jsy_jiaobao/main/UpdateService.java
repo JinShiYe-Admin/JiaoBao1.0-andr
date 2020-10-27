@@ -1,16 +1,5 @@
 package com.jsy_jiaobao.main;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-
-import com.jsy.xuezhuli.utils.Constant;
-import com.jsy.xuezhuli.utils.EventBusUtil;
-import com.jsy_jiaobao.main.system.LoginActivity;
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -21,6 +10,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.support.v4.content.FileProvider;
+
+import com.jsy.xuezhuli.utils.Constant;
+import com.jsy.xuezhuli.utils.EventBusUtil;
+import com.jsy_jiaobao.main.system.LoginActivity;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 
 public class UpdateService extends Service{
 	private String url = "http://www.jiaobao.net/dl/JSY_JiaoBao.apk";
@@ -75,7 +76,7 @@ public class UpdateService extends Service{
 	    //设置通知栏显示内容
 	    updateNotification.icon = R.drawable.logo72;
 	    updateNotification.tickerText = "开始下载";
-	    updateNotification.setLatestEventInfo(this,getString(R.string.app_name),"0%",updatePendingIntent);
+//	    updateNotification.setLatestEventInfo(this,getString(R.string.app_name),"0%",updatePendingIntent);
 	    //发出通知
 	    updateNotificationManager.notify(0,updateNotification);
 	 
@@ -91,14 +92,22 @@ public class UpdateService extends Service{
 	            case DOWNLOAD_COMPLETE:
 	            	updateNotification.flags|=updateNotification.FLAG_AUTO_CANCEL;
 	                //点击安装PendingIntent
-	                Uri uri = Uri.fromFile(updateFile);
-	                Intent installIntent = new Intent(Intent.ACTION_VIEW);
-	                installIntent.setDataAndType(uri, "application/vnd.android.package-archive");
-	                updatePendingIntent = PendingIntent.getActivity(UpdateService.this, 0, installIntent, 0);
-	                 
-	                updateNotification.defaults = Notification.DEFAULT_SOUND;//铃声提醒 
-	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载完成,点击安装。", updatePendingIntent);
-	                updateNotificationManager.notify(0, updateNotification);
+//	                Uri uri = Uri.fromFile(updateFile);
+					Uri uri = FileProvider.getUriForFile(getApplicationContext(), getApplicationContext().getPackageName() + ".fileProvider", updateFile);
+//	                Intent installIntent = new Intent(Intent.ACTION_VIEW);
+//	                installIntent.setDataAndType(uri, "application/vnd.android.package-archive");
+//	                updatePendingIntent = PendingIntent.getActivity(UpdateService.this, 0, installIntent, 0);
+//
+//	                updateNotification.defaults = Notification.DEFAULT_SOUND;//铃声提醒
+////	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载完成,点击安装。", updatePendingIntent);
+//	                updateNotificationManager.notify(0, updateNotification);
+
+					Intent install = new Intent(Intent.ACTION_VIEW,uri);
+					install.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+//					install.setDataAndType(uri, "application/vnd.android.package-archive");
+					getApplicationContext().startActivity(install);
+
 	                ArrayList<Object> post = new ArrayList<>();
 	                post.add(Constant.msgcenter_updataversion);
 	                EventBusUtil.post(post);
@@ -107,7 +116,7 @@ public class UpdateService extends Service{
 	                break;
 	            case DOWNLOAD_FAIL:
 	                //下载失败
-	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载失败!。", updatePendingIntent);
+//	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载失败!。", updatePendingIntent);
 	                updateNotificationManager.notify(0, updateNotification);
 	                ArrayList<Object> post1 = new ArrayList<>();
 	                post1.add(Constant.msgcenter_updataversion);
@@ -183,7 +192,7 @@ public class UpdateService extends Service{
                 //为了防止频繁的通知导致应用吃紧，百分比增加1才通知一次
                 if((downloadCount == 0)||(int) (totalSize*100/updateTotalSize)-1>downloadCount){ 
                     downloadCount += 1;
-                    updateNotification.setLatestEventInfo(UpdateService.this, "正在下载", (int)totalSize*100/updateTotalSize+"%", updatePendingIntent);
+//                    updateNotification.setLatestEventInfo(UpdateService.this, "正在下载", (int)totalSize*100/updateTotalSize+"%", updatePendingIntent);
                     updateNotificationManager.notify(0, updateNotification);
                 }                        
             }

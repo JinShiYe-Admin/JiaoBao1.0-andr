@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 26
     buildToolsVersion '25.0.0'
-
+    useLibrary('org.apache.http.legacy')
     defaultConfig {
         applicationId "com.jsy_jiaobao.main"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 26
     }
 
     buildTypes {
