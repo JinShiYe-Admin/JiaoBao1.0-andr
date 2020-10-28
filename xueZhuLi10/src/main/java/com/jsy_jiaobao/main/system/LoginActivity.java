@@ -187,6 +187,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                     }
                 });
         initDialog();
+//        test();
     }
 
     private void test(){
@@ -197,7 +198,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                 mContext.getString(R.string.app_name)
                         + "5.3.3");
         updateIntent.putExtra("url", url);
-        mContext.startService(updateIntent);
+        update(updateIntent);
     }
 
     private void initDialog() {
@@ -1214,7 +1215,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                                 mContext.getString(R.string.app_name)
                                         + versionInfo.getVersionCode());
                         updateIntent.putExtra("url", url);
-                        mContext.startService(updateIntent);
+                        update(updateIntent);
                         if (!versionInfo.getUpdata_1().equals("0")) {
                             DialogUtil.getInstance().getDialog(
                                     mContext,
@@ -1235,5 +1236,26 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                     });
         }
         builder.create().show();
+    }
+
+    private void update(final Intent updateIntent){
+        final CommonDialog dialog = new CommonDialog(this);
+        dialog.setMessage(Constant.KNOWN)
+//                .setImageResId(R.drawable.ic_launcher)
+                .setTitle("更新提醒")
+                .setNegtive("稍后再说")
+                .setPositive("立即更新")
+                .setSingle(false).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+            @Override
+            public void onPositiveClick() {
+                dialog.dismiss();
+                mContext.startService(updateIntent);
+            }
+
+            @Override
+            public void onNegtiveClick() {
+                dialog.dismiss();
+            }
+        }).show();
     }
 }

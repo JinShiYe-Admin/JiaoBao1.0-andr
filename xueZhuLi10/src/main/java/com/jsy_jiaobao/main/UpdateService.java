@@ -93,7 +93,6 @@ public class UpdateService extends Service{
 	            	updateNotification.flags|=updateNotification.FLAG_AUTO_CANCEL;
 	                //点击安装PendingIntent
 //	                Uri uri = Uri.fromFile(updateFile);
-					Uri uri = FileProvider.getUriForFile(getApplicationContext(), getApplicationContext().getPackageName() + ".fileProvider", updateFile);
 //	                Intent installIntent = new Intent(Intent.ACTION_VIEW);
 //	                installIntent.setDataAndType(uri, "application/vnd.android.package-archive");
 //	                updatePendingIntent = PendingIntent.getActivity(UpdateService.this, 0, installIntent, 0);
@@ -101,18 +100,18 @@ public class UpdateService extends Service{
 //	                updateNotification.defaults = Notification.DEFAULT_SOUND;//铃声提醒
 ////	                updateNotification.setLatestEventInfo(UpdateService.this, getString(R.string.app_name), "下载完成,点击安装。", updatePendingIntent);
 //	                updateNotificationManager.notify(0, updateNotification);
-
+					Uri uri = FileProvider.getUriForFile(getApplication(), getApplication().getPackageName() + ".fileProvider", updateFile);
 					Intent install = new Intent(Intent.ACTION_VIEW,uri);
 					install.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					install.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 //					install.setDataAndType(uri, "application/vnd.android.package-archive");
 					getApplicationContext().startActivity(install);
 
-	                ArrayList<Object> post = new ArrayList<>();
-	                post.add(Constant.msgcenter_updataversion);
-	                EventBusUtil.post(post);
-	                //停止服务
-	                stopService(updateIntent);
+					ArrayList<Object> post = new ArrayList<>();
+					post.add(Constant.msgcenter_updataversion);
+					EventBusUtil.post(post);
+					//停止服务
+					stopService(updateIntent);
 	                break;
 	            case DOWNLOAD_FAIL:
 	                //下载失败
@@ -127,8 +126,7 @@ public class UpdateService extends Service{
 	        }  
 	    }
 	};
-	
-	
+
 	class updateRunnable implements Runnable {
         Message message = updateHandler.obtainMessage();
         public void run() {

@@ -33,6 +33,7 @@ import com.jsy.xuezhuli.utils.DialogUtil;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.main.BaseActivity;
+import com.jsy_jiaobao.main.CommonDialog;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.PublicMethod;
 import com.jsy_jiaobao.main.R;
@@ -104,6 +105,18 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         initDeatilsData();
         initListener();
         setAlias();
+//        test();
+    }
+
+    private void test(){
+        String url = "http://www.jiaobao.net/dl/JSY_JiaoBao.apk";
+        Intent updateIntent = new Intent(mContext,
+                UpdateService.class);
+        updateIntent.putExtra("titleId",
+                mContext.getString(R.string.app_name)
+                        + "5.3.3");
+        updateIntent.putExtra("url", url);
+        update(updateIntent);
     }
 
     private void setNoticeListener() {
@@ -157,7 +170,9 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         titles[2] = (TabView) indicator.findViewWithTag(2);
         titles[0].setVisibility(View.GONE);
         titles[1].setVisibility(View.GONE);
+//        titles[2].setVisibility(View.GONE);
         indicator.setCurrentItem(2);
+        indicator.setVisibility(View.GONE);
     }
 
 
@@ -585,7 +600,7 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                         mContext.getString(R.string.app_name)
                                 + versionInfo.getVersionCode());
                 updateIntent.putExtra("url", url);
-                mContext.startService(updateIntent);
+                update(updateIntent);
                 if (!versionInfo.getUpdata_1().equals("0")) {
                     DialogUtil.getInstance().getDialog(mContext,
                             getResources().getString(R.string.public_loading));
@@ -1088,5 +1103,26 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         Log.d(TAG, "*****onDestroy******");
         ACache artCache = ACache.get(mContext, "noticefragmentarthlist");
         artCache.clear();
+    }
+
+    private void update(final Intent updateIntent){
+        final CommonDialog dialog = new CommonDialog(this);
+        dialog.setMessage(Constant.KNOWN)
+//                .setImageResId(R.drawable.ic_launcher)
+                .setTitle("更新提醒")
+                .setNegtive("稍后再说")
+                .setPositive("立即更新")
+                .setSingle(false).setOnClickBottomListener(new CommonDialog.OnClickBottomListener() {
+            @Override
+            public void onPositiveClick() {
+                dialog.dismiss();
+                mContext.startService(updateIntent);
+            }
+
+            @Override
+            public void onNegtiveClick() {
+                dialog.dismiss();
+            }
+        }).show();
     }
 }

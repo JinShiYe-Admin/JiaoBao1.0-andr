@@ -118,7 +118,7 @@ public class JSYApplication extends Application {
                     @Override
                     public void run() {
                         toast.setText("已进入安全模式");
-                        toast.show();
+//                        toast.show();
                     }
                 });
             }
@@ -127,12 +127,12 @@ public class JSYApplication extends Application {
             protected void onBandageExceptionHappened(Throwable throwable) {
                 throwable.printStackTrace();//打印警告级别log，该throwable可能是最开始的bug导致的，无需关心
                 toast.setText("Cockroach Worked");
-                toast.show();
+//                toast.show();
             }
 
             @Override
             protected void onEnterSafeMode() {
-                Toast.makeText(JSYApplication.this, "已进入安全模式", Toast.LENGTH_LONG).show();
+//                Toast.makeText(JSYApplication.this, "已进入安全模式", Toast.LENGTH_LONG).show();
 //                DebugSafeModeUI.showSafeModeUI();
 
 //                if (BuildConfig.DEBUG) {
