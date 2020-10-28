@@ -240,7 +240,7 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 					}
 				}
 			}else{
-				ToastUtil.showMessage(mContext, "请先阅读并勾选 《用户协议与隐私政策》 再进行下一步操作");
+				ToastUtil.showMessage(mContext, "请先阅读并勾选 《用户隐私政策》 再进行下一步操作");
 			}
 			break;
 		case R.id.regist_tv_thirdregist:

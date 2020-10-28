@@ -81,7 +81,7 @@
             android:textColor="@color/dodgerblue"
             android:height="@dimen/px_to_dip_50"
             android:layout_toRightOf="@id/yinsi_box"
-            android:text="《用户协议与隐私政策》"
+            android:text="《用户隐私政策》"
             />
         <TextView
             android:id="@+id/known"
