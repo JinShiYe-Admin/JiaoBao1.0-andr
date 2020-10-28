@@ -52,7 +52,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center|left"
-        android:maxHeight="@dimen/ui_250dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:lineSpacingExtra="3dp"

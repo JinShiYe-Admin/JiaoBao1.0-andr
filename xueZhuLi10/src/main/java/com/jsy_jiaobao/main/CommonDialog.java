@@ -118,6 +118,9 @@ public class CommonDialog extends Dialog {
             titleTv.setVisibility(View.GONE);
         }
         if (!TextUtils.isEmpty(message)) {
+            if(message.length()>50){
+                messageTv.setHeight(650);
+            }
             messageTv.setHtmlFromString(message,false);
         }
         //如果设置按钮的文字

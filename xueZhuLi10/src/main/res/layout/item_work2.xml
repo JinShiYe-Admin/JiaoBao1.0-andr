@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/px_to_dip_84"
     android:layout_gravity="center_vertical"
-    android:background="@color/rc_list_item_selector"
+    android:background="@color/white"
     android:gravity="center_vertical"
     android:orientation="vertical">
 
