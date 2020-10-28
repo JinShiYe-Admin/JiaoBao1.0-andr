@@ -90,7 +90,8 @@ public class JSYApplication extends Application {
     private void initPush() {
         //友盟推送初始化
         UMConfigure.init(getApplicationContext(),AliasType.APPKEY, AliasType.JINSHIYE,UMConfigure.DEVICE_TYPE_PHONE,AliasType.Umeng_Message_Secret);
-        UMConfigure.setLogEnabled(true);
+        //打印友盟日志
+        UMConfigure.setLogEnabled(false);
         PushAgent mPushAgent = PushAgent.getInstance(this);
         //注册推送服务
         registerService(mPushAgent);
