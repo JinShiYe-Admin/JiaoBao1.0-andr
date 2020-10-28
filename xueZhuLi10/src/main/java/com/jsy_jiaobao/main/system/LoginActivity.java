@@ -109,7 +109,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_login);
-        MobclickAgent.openActivityDurationTrack(false);
+//        MobclickAgent.openActivityDurationTrack(false);
 
         findViews();
         mContext = this;
@@ -463,7 +463,7 @@ public class LoginActivity extends SherlockActivity implements ConstantUrl,
                 new UTrack.ICallBack() {
                     @Override
                     public void onMessage(boolean isSuccess, String message) {
-                        Log.d(TAG, "添加alias" + isSuccess + message);
+                        Log.d(TAG, "添加alias：" + isSuccess+"，，，" + message);
                     }
                 });
     }

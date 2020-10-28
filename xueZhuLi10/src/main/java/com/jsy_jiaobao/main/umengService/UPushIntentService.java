@@ -9,12 +9,12 @@ import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
 import com.jsy_jiaobao.main.R;
 import com.jsy_jiaobao.main.personalcenter.MessageCenterActivity;
 import com.umeng.message.UTrack;
 import com.umeng.message.UmengMessageService;
-import com.umeng.message.common.UmLog;
 import com.umeng.message.entity.UMessage;
 
 import org.android.agoo.common.AgooConstants;
@@ -39,15 +39,16 @@ public class UPushIntentService extends UmengMessageService {
 
     @Override
     public void onMessage(Context context, Intent intent) {
+        System.out.println(54321);
         try {
             clearNotification();
             //可以通过MESSAGE_BODY取得消息体
             String message = intent.getStringExtra(AgooConstants.MESSAGE_BODY);
             UMessage msg = new UMessage(new JSONObject(message));
-            UmLog.d(TAG, "message=" + message);      //消息体
-            UmLog.d(TAG, "custom=" + msg.custom);    //自定义消息的内容
-            UmLog.d(TAG, "title=" + msg.title);      //通知标题
-            UmLog.d(TAG, "text=" + msg.text);        //通知内容
+            Log.d(TAG, "message=" + message);      //消息体
+            Log.d(TAG, "custom=" + msg.custom);    //自定义消息的内容
+            Log.d(TAG, "title=" + msg.title);      //通知标题
+            Log.d(TAG, "text=" + msg.text);        //通知内容
             //添加角标
             try {
                     SharedPreferences sp =getSharedPreferences("messageNum", MODE_PRIVATE);
@@ -73,7 +74,7 @@ public class UPushIntentService extends UmengMessageService {
                 UTrack.getInstance(getApplicationContext()).trackMsgDismissed(msg);
             }
         } catch (Exception e) {
-            UmLog.e(TAG, e.getMessage());
+            Log.e(TAG, e.getMessage());
         }
     }
 

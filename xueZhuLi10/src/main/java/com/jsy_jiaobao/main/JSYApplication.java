@@ -24,11 +24,11 @@ import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.EventBusUtil;
 import com.jsy.xuezhuli.utils.HttpUtil;
 import com.jsy_jiaobao.main.personalcenter.MessageCenterActivity;
-import com.jsy_jiaobao.main.umengService.UPushIntentService;
 import com.jsy_jiaobao.po.push.AliasType;
 import com.jsy_jiaobao.po.sys.UserIdentity;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.DbUtils;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
@@ -36,9 +36,6 @@ import com.umeng.message.UmengNotificationClickHandler;
 import com.umeng.message.entity.UMessage;
 import com.wanjian.cockroach.Cockroach;
 import com.wanjian.cockroach.ExceptionHandler;
-
-import org.android.agoo.huawei.HuaWeiRegister;
-import org.android.agoo.xiaomi.MiPushRegistar;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -67,7 +64,8 @@ public class JSYApplication extends Application {
         super.onCreate();
         initBitmap();
         initPush();
-//        installCrash();
+        initUAPP();
+        installCrash();
 //        CrashHandler crashHandler = CrashHandler.getInstance();
 //        crashHandler.init(getApplicationContext());
         dbUtils = DbUtils.create(this.getApplicationContext());
@@ -92,17 +90,52 @@ public class JSYApplication extends Application {
     private void initPush() {
         //友盟推送初始化
         UMConfigure.init(getApplicationContext(),AliasType.APPKEY, AliasType.JINSHIYE,UMConfigure.DEVICE_TYPE_PHONE,AliasType.Umeng_Message_Secret);
-        //注册华为推送服务
-        HuaWeiRegister.register(getApplicationContext());
-        //注册小米推送
-        MiPushRegistar.register(getApplicationContext(), AliasType.XIAOMI_APPID, AliasType.XIAOMI_APPKEY);
-        PushAgent mPushAgent = PushAgent.getInstance(getApplicationContext());
+        UMConfigure.setLogEnabled(true);
+        PushAgent mPushAgent = PushAgent.getInstance(this);
         //注册推送服务
         registerService(mPushAgent);
         //定义通知打开动作
         dealWithCustomAction(mPushAgent);
         //统计应用启动数据
         PushAgent.getInstance(getApplicationContext()).onAppStart();
+    }
+
+    private void initUAPP() {
+        MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO);
+    }
+
+
+    private void registerService(PushAgent mPushAgent) {
+        mPushAgent.setPushCheck(true);
+//        mPushAgent.setPushIntentServiceClass(UPushIntentService.class);
+        //注册推送服务，每次调用register方法都会回调该接口
+        mPushAgent.register(new IUmengRegisterCallback() {
+
+            @Override
+            public void onSuccess(String deviceToken) {
+                //注册成功会返回device token
+                Log.e(TAG + "注册成功：", deviceToken);
+            }
+
+            @Override
+            public void onFailure(String s, String s1) {
+                Log.e(TAG + "注册失败：", s);
+            }
+        });
+    }
+
+    private void dealWithCustomAction(PushAgent mPushAgent) {
+        UmengNotificationClickHandler notificationClickHandler = new UmengNotificationClickHandler() {
+            @Override
+            public void dealWithCustomAction(Context context, UMessage msg) {
+                Intent intent = new Intent();
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(MessageCenterActivity.NEWAFFAIRNOTICE, true);
+                intent.setClass(context, MessageCenterActivity.class);
+                startActivity(intent);
+            }
+        };
+        mPushAgent.setNotificationClickHandler(notificationClickHandler);
     }
 
     private void installCrash() {
@@ -151,38 +184,6 @@ public class JSYApplication extends Application {
             }
 
         });
-    }
-
-    private void registerService(PushAgent mPushAgent) {
-        mPushAgent.setPushIntentServiceClass(UPushIntentService.class);
-        //注册推送服务，每次调用register方法都会回调该接口
-        mPushAgent.register(new IUmengRegisterCallback() {
-
-            @Override
-            public void onSuccess(String deviceToken) {
-                //注册成功会返回device token
-                Log.e(TAG + "注册成功：", deviceToken);
-            }
-
-            @Override
-            public void onFailure(String s, String s1) {
-                Log.e(TAG + "注册失败：", s);
-            }
-        });
-    }
-
-    private void dealWithCustomAction(PushAgent mPushAgent) {
-        UmengNotificationClickHandler notificationClickHandler = new UmengNotificationClickHandler() {
-            @Override
-            public void dealWithCustomAction(Context context, UMessage msg) {
-                Intent intent = new Intent();
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra(MessageCenterActivity.NEWAFFAIRNOTICE, true);
-                intent.setClass(context, MessageCenterActivity.class);
-                startActivity(intent);
-            }
-        };
-        mPushAgent.setNotificationClickHandler(notificationClickHandler);
     }
 
     private void initBitmap() {
