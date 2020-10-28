@@ -27,7 +27,7 @@ public class Constant {
 	public static final String KNOWN = "依据最新法律要求，我们更新了<a target='_blank' href="+YINSI_URL+">《隐私政策》</a>和<a target='_blank' href="+KNOWN_URL+">《用户协议》</a> 请您务必审慎阅读,充分理解相关条款内容，特别是字体加粗标识的重要条款。\n"+
 			"<br>点击同意即代表您已阅读并同意<a target='_blank' href="+YINSI_URL+">《隐私政策》</a>和<a target='_blank' href="+KNOWN_URL+">《用户协议》</a>,如果您不同意用户协议和隐私政策的内容，我们暂时将无法为您提供服务\n" +
 			"<br>我们会尽力保护您的个人信息安全。";
-	public static final String NO_PASS_TEXT = "由于您不同意爱思助手《用户协议》和《隐私政策》的相关内容，我们暂时无法为您提供服务。请谅解！";
+	public static final String NO_PASS_TEXT = "由于您不同意《用户协议》和《隐私政策》的相关内容，我们暂时无法为您提供服务。请谅解！";
 	public static final String CANCELLATION = "注销账户后，相关信息将无法找回，确定要注销此账户吗？";
 
 	//用户所有身份

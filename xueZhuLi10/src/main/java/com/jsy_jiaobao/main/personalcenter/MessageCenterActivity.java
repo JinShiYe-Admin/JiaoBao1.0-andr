@@ -2,22 +2,15 @@ package com.jsy_jiaobao.main.personalcenter;
 
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -78,7 +71,7 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
-import me.leolin.shortcutbadger.ShortcutBadger;
+//import me.leolin.shortcutbadger.ShortcutBadger;
 
 
 /**
@@ -112,7 +105,6 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         initListener();
         setAlias();
 //        test();
-        showNotifications(this,"565");
     }
 
     private void test(){
@@ -124,28 +116,6 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
                         + "5.3.3");
         updateIntent.putExtra("url", url);
         update(updateIntent);
-    }
-
-    public void showNotifications(Context context, String msg) {
-
-        NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
-        builder.setContentTitle(msg)
-                .setContentText(msg)
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(),R.drawable.ic_launcher))
-                .setColor(Color.parseColor("#41b5ea"))
-                .setDefaults(Notification.DEFAULT_ALL)
-                .setAutoCancel(true);
-        Intent intent = new Intent();
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.putExtra(MessageCenterActivity.NEWAFFAIRNOTICE, true);
-        intent.setClass(context, MessageCenterActivity.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(context, 0,
-                intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(contentIntent);
-        mNotificationManager.notify(100, builder.build());
     }
 
     private void setNoticeListener() {
@@ -170,10 +140,10 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     public void initViews() {
         setContentLayout(R.layout.tabpageindicatorviewpager);
 //        clearNotification();
-        ShortcutBadger.removeCount(this);
-        SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
-        editor.putString("num","0");
-        editor.commit();
+//        ShortcutBadger.removeCount(this);
+//        SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
+//        editor.putString("num","0");
+//        editor.commit();
         layout_ui = (LinearLayout) findViewById(R.id.base_messagecenter_layout);
         mContext = this;
         MessageCenterActivityController.getInstance().setContext(this);
@@ -302,11 +272,11 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
         super.onResume();
         Log.d(TAG, "*****onResume******");
 //        clearNotification();
-        ShortcutBadger.removeCount(MessageCenterActivity.this);
+//        ShortcutBadger.removeCount(MessageCenterActivity.this);
 
-        SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
-        editor.putString("num","0");
-        editor.commit();
+//        SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
+//        editor.putString("num","0");
+//        editor.commit();
         EventBusUtil.register(this);
         MobclickAgent.onResume(this);
         setTitleText();

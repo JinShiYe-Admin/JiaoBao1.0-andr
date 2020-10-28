@@ -5,7 +5,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v4.app.NotificationCompat;
@@ -19,8 +18,6 @@ import com.umeng.message.entity.UMessage;
 
 import org.android.agoo.common.AgooConstants;
 import org.json.JSONObject;
-
-import me.leolin.shortcutbadger.ShortcutBadger;
 
 
 /**
@@ -39,7 +36,6 @@ public class UPushIntentService extends UmengMessageService {
 
     @Override
     public void onMessage(Context context, Intent intent) {
-        System.out.println(54321);
         try {
             clearNotification();
             //可以通过MESSAGE_BODY取得消息体
@@ -49,18 +45,18 @@ public class UPushIntentService extends UmengMessageService {
             Log.d(TAG, "custom=" + msg.custom);    //自定义消息的内容
             Log.d(TAG, "title=" + msg.title);      //通知标题
             Log.d(TAG, "text=" + msg.text);        //通知内容
-            //添加角标
-            try {
-                    SharedPreferences sp =getSharedPreferences("messageNum", MODE_PRIVATE);
-                    int num =Integer.valueOf(sp.getString("num","0"));
-                    num+=1;
-                    ShortcutBadger.applyCount(this, num);
-                    SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
-                    editor.putString("num",num+"");
-                    editor.commit();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
+//            //添加角标
+//            try {
+//                    SharedPreferences sp =getSharedPreferences("messageNum", MODE_PRIVATE);
+//                    int num =Integer.valueOf(sp.getString("num","0"));
+//                    num+=1;
+//                    ShortcutBadger.applyCount(this, num);
+//                    SharedPreferences.Editor editor = getSharedPreferences("messageNum", MODE_PRIVATE).edit();
+//                    editor.putString("num",num+"");
+//                    editor.commit();
+//            }catch (Exception e){
+//                e.printStackTrace();
+//            }
             //展示通知
             showNotifications(context, msg);
 
