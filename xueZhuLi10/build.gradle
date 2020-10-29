@@ -50,6 +50,7 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.hjq:xxpermissions:8.8'
 //    compile files('libs/utdid4all-1.1.5.3_proguard.jar')
 //    compile files('libs/umeng-common-1.4.3.jar')
 //    compile files('libs/umeng-analytics-v5.6.7.jar')

@@ -3,6 +3,7 @@ package com.jsy.xuezhuli.utils;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentUris;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,7 +13,11 @@ import android.graphics.BitmapFactory.Options;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
+import android.support.v4.os.EnvironmentCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -28,6 +33,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class PictureUtils {
 	private final static String TAG = "PictureUtils";
@@ -304,16 +310,103 @@ public class PictureUtils {
 
 	public static void dispatchTakePictureIntent(Activity activity,
 			File photoFile, int requestCode) {
-		Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//		Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		openCamera(activity,photoFile,requestCode);
 		// Ensure that there's a camera activity to handle the intent
-		if (takePictureIntent.resolveActivity(activity.getPackageManager()) != null) {
-			// Create the File where the photo should go
-			// Continue only if the File was successfully created
-			if (photoFile != null) {
-				takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-						Uri.fromFile(photoFile));
-				activity.startActivityForResult(takePictureIntent, requestCode);
+//		if (takePictureIntent.resolveActivity(activity.getPackageManager()) != null) {
+//			// Create the File where the photo should go
+//			// Continue only if the File was successfully created
+//			if (photoFile != null) {
+//				takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+//						Uri.fromFile(photoFile));
+//				activity.startActivityForResult(takePictureIntent, requestCode);
+//			}
+//		}
+	}
+
+
+
+
+
+
+
+
+
+	//用于保存拍照图片的uri
+	private static Uri mCameraUri;
+
+	// 用于保存图片的文件路径，Android 10以下使用图片路径访问图片
+	private static String mCameraImagePath;
+
+	// 是否是Android 10以上手机
+//	private static boolean isAndroidQ = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q;
+
+	/**
+	 * 调起相机拍照
+	 */
+	private static void openCamera(Activity activity,
+							File photoFile, int requestCode) {
+		Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		// 判断是否有相机
+		if (captureIntent.resolveActivity(activity.getPackageManager()) != null) {
+			Uri photoUri = null;
+
+//			if (isAndroidQ) {
+//				// 适配android 10
+//				photoUri = createImageUri(activity);
+//			} else {
+//				try {
+//					photoFile = createImageFile(activity);
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+
+				if (photoFile != null) {
+					mCameraImagePath = photoFile.getAbsolutePath();
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+						//适配Android 7.0文件权限，通过FileProvider创建一个content类型的Uri
+						photoUri = FileProvider.getUriForFile(activity, activity.getPackageName() + ".fileProvider", photoFile);
+					} else {
+						photoUri = Uri.fromFile(photoFile);
+					}
+				}
+//			}
+
+			mCameraUri = photoUri;
+			if (photoUri != null) {
+				captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+				captureIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+				activity.startActivityForResult(captureIntent, requestCode);
 			}
 		}
+	}
+
+	/**
+	 * 创建图片地址uri,用于保存拍照后的照片 Android 10以后使用这种方法
+	 */
+	private static Uri createImageUri(Activity activity) {
+		String status = Environment.getExternalStorageState();
+		// 判断是否有SD卡,优先使用SD卡存储,当没有SD卡时使用手机存储
+		if (status.equals(Environment.MEDIA_MOUNTED)) {
+			return activity.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new ContentValues());
+		} else {
+			return activity.getContentResolver().insert(MediaStore.Images.Media.INTERNAL_CONTENT_URI, new ContentValues());
+		}
+	}
+
+	/**
+	 * 创建保存图片的文件
+	 */
+	private static File createImageFile(Activity activity) throws IOException {
+		String imageName = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+		File storageDir = activity.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+		if (!storageDir.exists()) {
+			storageDir.mkdir();
+		}
+		File tempFile = new File(storageDir, imageName);
+		if (!Environment.MEDIA_MOUNTED.equals(EnvironmentCompat.getStorageState(tempFile))) {
+			return null;
+		}
+		return tempFile;
 	}
 }

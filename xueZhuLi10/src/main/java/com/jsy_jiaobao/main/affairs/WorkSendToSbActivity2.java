@@ -1,14 +1,7 @@
 package com.jsy_jiaobao.main.affairs;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.greenrobot.eventbus.Subscribe;
-
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -39,6 +32,9 @@ import android.widget.Toast;
 
 import com.filechoser.grivider.FileChooseActivity;
 import com.filechoser.grivider.FilePerate;
+import com.hjq.permissions.OnPermission;
+import com.hjq.permissions.Permission;
+import com.hjq.permissions.XXPermissions;
 import com.jsy.xuezhuli.utils.BaseUtils;
 import com.jsy.xuezhuli.utils.Constant;
 import com.jsy.xuezhuli.utils.DialogUtil;
@@ -63,6 +59,14 @@ import com.jsy_jiaobao.po.sys.GetCommPerm;
 import com.jsy_jiaobao.po.sys.SMSTreeUnitID;
 import com.lidroid.xutils.http.RequestParams;
 import com.umeng.analytics.MobclickAgent;
+
+import org.greenrobot.eventbus.Subscribe;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 发布事务有关的代码不是我写的，但是注释是我补充的，写得对不对我也说不清<br>
@@ -223,6 +227,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 	}
 
 	private void initData() {
+
 		unitFragment
 				.setImageResource(R.drawable.icon_worksend_unitfragment_selected);
 		genFragment
@@ -263,6 +268,8 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 		manager.getDefaultDisplay().getMetrics(outMetrics);
 		width = outMetrics.widthPixels;
 	}
+
+
 
 	private Runnable mSleepTask = new Runnable() {
 		public void run() {
@@ -416,17 +423,11 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 		}
 	};
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.btn_rcd:// 开始录音和结束录音按钮
-			MobclickAgent.onEvent(
-					mContext,
-					getResources().getString(
-							R.string.WorkSendToSbActivity2_btn_rcd));
-			boolean b = noMoreThanTen();
-			if (b) {
-				if (!rcdPressed) {// 开始录音
+	Handler audioHandler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+				case 10010:
 					tv_takefile.setClickable(false);// 附件按钮不可点击
 					edt_input.setEnabled(false);// 编辑框不允许输入
 					btn_recvoice.setText(R.string.click_toSave);
@@ -449,6 +450,122 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 					startVoiceT = System.currentTimeMillis();
 					voiceName = startVoiceT + ".aac";
 					start(voiceName);
+					break;
+				default:
+					break;
+			}
+		}
+	};
+
+	/**
+	 * 申请权限，开始录音
+	 * @param activity
+	 */
+	public static void verifyAudioPermissions(final Activity activity,final Handler audioHandler) {
+		XXPermissions.with(activity)
+				// 申请单个权限
+				.permission(Permission.RECORD_AUDIO)
+				.request(new OnPermission() {
+
+					@Override
+					public void hasPermission(List<String> granted, boolean all) {
+						if (all) {
+//							ToastUtil.showMessage(activity,"获取录音和拍照权限成功");
+							Message msg = Message.obtain(); // 实例化消息对象
+							msg.what = 10010; // 消息标识
+							msg.obj = "AA"; // 消息内容存放
+							audioHandler.sendMessage(msg);
+						} else {
+							ToastUtil.showMessage(activity,"获取权限成功，部分权限未正常授予，事务功能无法完整使用");
+						}
+					}
+
+					@Override
+					public void noPermission(List<String> denied, boolean never) {
+						if (never) {
+							ToastUtil.showMessage(activity,"录音未授权，您仅能发送事务文字，如果需要发送录音，请手动授予录音和拍照权限");
+							// 如果是被永久拒绝就跳转到应用权限系统设置页面
+							XXPermissions.startPermissionActivity(activity, denied);
+						} else {
+							ToastUtil.showMessage(activity,"获取录音权限失败");
+						}
+					}
+				});
+	}
+
+	Handler videoHandler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+				case 10010:
+					View v= (View) msg.obj;
+					// 实例化SelectPicPopupWindow
+					InputMethodManager imm = (InputMethodManager) v.getContext()
+							.getSystemService(Context.INPUT_METHOD_SERVICE);
+					if (imm.isActive()) {
+						imm.hideSoftInputFromWindow(v.getApplicationWindowToken(),
+								0);
+					}
+					menuWindow = new SelectFilePopupWindow(
+							WorkSendToSbActivity2.this, WorkSendToSbActivity2.this);
+					// 显示窗口
+					menuWindow.showAtLocation(layout_body, Gravity.BOTTOM
+							| Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+					break;
+				default:
+					break;
+			}
+		}
+	};
+
+	/**
+	 * 申请权限，开始拍照
+	 * @param activity
+	 */
+	public static void verifyVideoPermissions(final Activity activity,final Handler videoHandler,final View v) {
+		XXPermissions.with(activity)
+				// 申请单个权限
+				.permission(Permission.CAMERA)
+				.request(new OnPermission() {
+
+					@Override
+					public void hasPermission(List<String> granted, boolean all) {
+						if (all) {
+//							ToastUtil.showMessage(activity,"获取拍照权限成功");
+							Message msg = Message.obtain(); // 实例化消息对象
+							msg.what = 10010; // 消息标识
+							msg.obj = v; // 消息内容存放
+							videoHandler.sendMessage(msg);
+						} else {
+							ToastUtil.showMessage(activity,"获取权限成功，部分权限未正常授予，事务功能无法完整使用");
+						}
+					}
+
+					@Override
+					public void noPermission(List<String> denied, boolean never) {
+						if (never) {
+							ToastUtil.showMessage(activity,"拍照未授权，您仅能发送事务文字，如果需要发生视频和图片，请手动授予录音和拍照权限");
+							// 如果是被永久拒绝就跳转到应用权限系统设置页面
+							XXPermissions.startPermissionActivity(activity, denied);
+						} else {
+							ToastUtil.showMessage(activity,"获取拍照权限失败");
+						}
+					}
+				});
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn_rcd:// 开始录音和结束录音按钮
+			MobclickAgent.onEvent(
+					mContext,
+					getResources().getString(
+							R.string.WorkSendToSbActivity2_btn_rcd));
+			boolean b = noMoreThanTen();
+			if (b) {
+				if (!rcdPressed) {// 开始录音
+					verifyAudioPermissions(WorkSendToSbActivity2.this,audioHandler);
 				} else {// 结束录音
 					btn_recvoice.setText(R.string.start_toRecord);
 					btn_recvoice.setCompoundDrawablesWithIntrinsicBounds(
@@ -615,18 +732,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 						mContext,
 						getResources().getString(
 								R.string.WorkSendToSbActivity2_takefile));
-				// 实例化SelectPicPopupWindow
-				InputMethodManager imm = (InputMethodManager) v.getContext()
-						.getSystemService(Context.INPUT_METHOD_SERVICE);
-				if (imm.isActive()) {
-					imm.hideSoftInputFromWindow(v.getApplicationWindowToken(),
-							0);
-				}
-				menuWindow = new SelectFilePopupWindow(
-						WorkSendToSbActivity2.this, WorkSendToSbActivity2.this);
-				// 显示窗口
-				menuWindow.showAtLocation(layout_body, Gravity.BOTTOM
-						| Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+				verifyVideoPermissions(WorkSendToSbActivity2.this,videoHandler,v);
 			}
 			break;
 		case R.id.btn_pick_file:// 附件，从本地选择

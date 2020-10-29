@@ -62,7 +62,7 @@ public class JSYApplication extends Application {
         initBitmap();
         initPush();
         initUAPP();
-//        installCrash();
+        installCrash();
 //        CrashHandler crashHandler = CrashHandler.getInstance();
 //        crashHandler.init(getApplicationContext());
         dbUtils = DbUtils.create(this.getApplicationContext());
