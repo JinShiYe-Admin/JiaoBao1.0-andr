@@ -10,11 +10,50 @@
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.CAMERA" />
+
+<!--
+危险权限组
+权限组名	                                权限名称
+
+CALENDAR（日历）	                        READ_CALENDAR
+                                        WRITE_CALENDAR
+
+CAMERA（相机）	                        CAMERA
+
+CONTACTS（联系人）	                    READ_CONTACTS
+                                        WRITE_CONTACTS
+                                        GET_ACCOUNTS
+
+LOCATION（位置）	                        ACCESS_FINE_LOCATION
+                                        ACCESS_COARSE_LOCATION
+
+MICROPHONE（麦克风）	                    RECORD_AUDIO
+
+PHONE（手机）	                        READ_PHONE_STATE
+                                        CALL_PHONE
+                                        ERAD_CALL_LOG
+                                        WRITE_CALL_LOG
+                                        ADD_VOICEMAIL
+                                        USE_SIP
+                                        PROCESS_OUTGOING_CALLS
+SENSORS（传感器）	                        BODY_SENSORS
+
+SMS（短信）                             	SEND_SMS
+                                        RECEIVE_SMS
+                                        READ_SMS
+                                        RECEIVE_WAP_PUSH
+                                        RECEIVE_MMS
+
+STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
+                                        WRITE_EXTERNAL_STORAGE
+-->
+
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!--  危险权限组  -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!--  危险权限组  -->
+
 
     <!-- 使用网络功能所需权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -22,13 +61,13 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <!-- SDK离线地图和cache功能需要读写外部存储器 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!--  危险权限组  -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!--  危险权限组  -->
+<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>-->
     <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
-    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!--  危险权限组  -->
+    <!--    <uses-permission android:name="android.permission.CALL_PHONE" />--><!--  危险权限组  -->
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 --><!--  危险权限组  -->
     <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
     <!--    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />-->
     <!--    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />-->
