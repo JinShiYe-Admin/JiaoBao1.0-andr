@@ -8,9 +8,11 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
     <!-- 使用网络功能所需权限 -->
@@ -24,13 +26,13 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>
     <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
     <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
-    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />-->
+    <!--    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_GPS" />-->
     <!--  -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" tools:ignore="ProtectedPermissions"/>
     <uses-permission android:name="android.permission.READ_LOGS" tools:ignore="ProtectedPermissions"/>
@@ -552,18 +554,18 @@
             android:label="@string/function_signinquick" />
 
 
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
+        <!--        <service-->
+        <!--            android:name="com.baidu.location.f"-->
+        <!--            android:enabled="true"-->
+        <!--            android:process=":remote" />-->
         <!-- 下载文件服务 -->
         <service
             android:name=".UpdateService"
             android:label="@string/app_name" />
 
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="bN9poUzSXxmKD6KmXqVpTZnCQEsj9R3a" />
+        <!--        <meta-data-->
+        <!--            android:name="com.baidu.lbsapi.API_KEY"-->
+        <!--            android:value="bN9poUzSXxmKD6KmXqVpTZnCQEsj9R3a" />-->
         <!--android:value="NLHqyhqTPEtbgVx8XQgEKwjK" />-->
         <activity
             android:name=".appcenter.sign.RecordActivity"
@@ -572,8 +574,8 @@
             android:theme="@style/Theme.MyTheme"
             android:label="@string/title_activity_record"/>
 
-<!--        <service android:name=".umengService.UPushIntentService"-->
-<!--            android:permission="android.permission.BIND_JOB_SERVICE" />-->
+        <!--        <service android:name=".umengService.UPushIntentService"-->
+        <!--            android:permission="android.permission.BIND_JOB_SERVICE" />-->
 
         <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 start-->
         <service
