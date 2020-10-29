@@ -106,6 +106,7 @@ public class VideoRecorderDialog extends Dialog {
 							}
 						}, JSYApplication.getInstance().AV_PATH, voiceName);
 					} catch (Exception e) {
+						e.printStackTrace();
 						ToastUtil.showMessage(mContext, "启动摄像头失败，录制视频可能无效");
 						onBackPressed();// 启动摄像头失败后退出
 					}

@@ -135,11 +135,12 @@
 		    android:layout_height="1px"
 		    android:layout_marginLeft="@dimen/px_to_dip_10"
             android:layout_marginRight="@dimen/px_to_dip_10"
+                android:visibility="gone"
 		    android:background="@color/color_b2b2b2"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:visibility="gone"
             android:orientation="vertical" >
 
             <TextView

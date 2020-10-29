@@ -526,6 +526,7 @@ public class WorkSendToSbActivity2 extends BaseActivity implements
 		XXPermissions.with(activity)
 				// 申请单个权限
 				.permission(Permission.CAMERA)
+				.permission(Permission.RECORD_AUDIO)
 				.request(new OnPermission() {
 
 					@Override
