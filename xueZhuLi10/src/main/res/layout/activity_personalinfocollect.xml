@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px_to_dip_20" >
+
+            <TextView
+                android:id="@+id/personal_tv_pwdtxt"
+                android:layout_width="@dimen/px_to_dip_120"
+                android:layout_height="wrap_content"
+                android:text="@string/passwords" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/personal_tv_pwdtxt"
+                android:text="@string/all_star" />
+
+            <TextView
+                android:id="@+id/personal_tv_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/personal_tv_pwdtxt"
+                android:drawableRight="@drawable/icon_worksend_selit_plus"
+                android:gravity="right"
+                android:text="@string/reset"
+                android:textColor="@color/red" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/px_to_dip_10"
+            android:layout_marginRight="@dimen/px_to_dip_10"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px_to_dip_20" >
+
+            <TextView
+                android:id="@+id/personal_tv_pwdtxt1"
+                android:layout_width="@dimen/px_to_dip_120"
+                android:layout_height="wrap_content"
+                android:text="@string/passwords" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/personal_tv_pwdtxt1"
+                android:text="@string/all_star" />
+
+            <TextView
+                android:id="@+id/personal_tv_pwd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/personal_tv_pwdtxt1"
+                android:drawableRight="@drawable/icon_worksend_selit_plus"
+                android:gravity="right"
+                android:text="@string/reset"
+                android:textColor="@color/red" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

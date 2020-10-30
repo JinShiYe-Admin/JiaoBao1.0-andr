@@ -35,6 +35,8 @@ public class SelectFilePopupWindow extends PopupWindow {
 		mMenuView.findViewById(R.id.btn_pick_file).setOnClickListener(itemsOnClick);
 		mMenuView.findViewById(R.id.btn_take_photo).setOnClickListener(itemsOnClick);
 		mMenuView.findViewById(R.id.btn_take_video).setOnClickListener(itemsOnClick);
+		//TODO 隐藏拍摄按钮
+//		mMenuView.findViewById(R.id.btn_take_video).setVisibility(View.GONE);
 		//设置SelectPicPopupWindow的View
 		this.setContentView(mMenuView);
 		//设置SelectPicPopupWindow弹出窗体的宽
@@ -51,7 +53,7 @@ public class SelectFilePopupWindow extends PopupWindow {
 		this.setBackgroundDrawable(dw);
 		//mMenuView添加OnTouchListener监听判断获取触屏位置如果在选择框外面则销毁弹出框
 		mMenuView.setOnTouchListener(new OnTouchListener() {
-			
+
 			public boolean onTouch(View v, MotionEvent event) {
 				int height = mMenuView.findViewById(R.id.pop_layout).getTop();
 				int y=(int) event.getY();
@@ -59,7 +61,7 @@ public class SelectFilePopupWindow extends PopupWindow {
 					if(y<height){
 						dismiss();
 					}
-				}				
+				}
 				return true;
 			}
 		});

@@ -176,6 +176,8 @@
     <string name="personal_roleIdentity_boardOfEducation">教育局</string>
     <string name="personal_roleIdentity_teacher">老师</string>
     <string name="personal_roleIdentity_parent">家长</string>
+    <string name="function_personal_infocollect">个人信息收集说明</string>
+
     <!-- GenCheckWorkActivity -->
     <string name="GenCheckWorkActivity_screen">GenCheckWorkActivity_screen</string>
     <string name="GenCheckWorkActivity_error">GenCheckWorkActivity_error</string>

@@ -32,6 +32,7 @@ import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.CommonDialog;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.main.personalcenter.PersonalInfoCollectActivity;
 import com.jsy_jiaobao.po.push.AliasType;
 import com.jsy_jiaobao.po.qiuzhi.GetPicked;
 import com.jsy_jiaobao.po.sys.UserClass;
@@ -67,7 +68,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 	private String photourl;
 	private Intent intent = new Intent();
 	private Uri photoUri;
-	private TextView personal_tv_yinsi,personal_tv_known,personal_tv_fankui_detail,cancellation;
+	private TextView personal_tv_yinsi,personal_tv_known,personal_tv_fankui_detail,cancellation,personalInfoCollect;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +116,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 		personal_tv_known= (TextView) findViewById(R.id.personal_tv_known);
 		personal_tv_fankui_detail= (TextView) findViewById(R.id.personal_tv_fankui_detail);
 		cancellation= (TextView) findViewById(R.id.cancellation);
+		personalInfoCollect = (TextView) findViewById(R.id.personalInfoCollect);
 		personal_tv_fankui_detail.setText(Constant.FANKUI);
 		personal_tv_yinsi.setOnClickListener(new OnClickListener() {
 			@Override
@@ -130,6 +132,14 @@ public class PersonalCenterActivity extends BaseActivity implements
 				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
 				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
 				mContext.startActivity(it);
+			}
+		});
+
+		personalInfoCollect.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(mContext, PersonalInfoCollectActivity.class);
+				mContext.startActivity(intent);
 			}
 		});
 		cancellation.setOnClickListener(new OnClickListener() {
@@ -248,7 +258,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 						TimerTask task = new TimerTask() {
 							@Override
 							public void run() {
-									exit();
+								exit();
 							}
 						};
 						timer.schedule(task,3000,1000000);
@@ -286,7 +296,7 @@ public class PersonalCenterActivity extends BaseActivity implements
 
 	/*
 	 * 获取所在单位
-	 * 
+	 *
 	 * @ 1 教育局2老师3家长4学生
 	 */
 	private void setUnits() {
@@ -365,70 +375,70 @@ public class PersonalCenterActivity extends BaseActivity implements
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.personal_tv_qiuzhi:// 求知个人中心
-			intent.setClass(mContext, QiuzhiPersonalCenterActivity.class);
-			startActivity(intent);
-			break;
-		case R.id.personal_tv_pwd:// 重置密码
-			intent.setClass(mContext, PersonalCenterChangeActivity.class);
-			intent.putExtra("way", "pwd");
-			startActivity(intent);
-			break;
-		case R.id.personal_tv_getunit:// 加入单位
-			intent.setClass(mContext, PersonalCenterChangeActivity.class);
-			intent.putExtra("way", "unit");
-			startActivity(intent);
-			break;
-		case R.id.personal_tv_truename:// 姓名
-			intent.setClass(mContext, PersonalCenterChangeActivity.class);
-			intent.putExtra("way", "name");
-			startActivity(intent);
-			break;
-		case R.id.personal_tv_nickname:// 昵称
-			intent.setClass(mContext, PersonalCenterChangeActivity.class);
-			intent.putExtra("way", "name");
-			startActivity(intent);
-			break;
-		case R.id.personal_iv_photo:// 头像
-			AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-			builder.setIcon(android.R.drawable.ic_menu_gallery);
-			builder.setTitle(R.string.choose_source);
-			builder.setPositiveButton(R.string.camera,
-					new DialogInterface.OnClickListener() {
+			case R.id.personal_tv_qiuzhi:// 求知个人中心
+				intent.setClass(mContext, QiuzhiPersonalCenterActivity.class);
+				startActivity(intent);
+				break;
+			case R.id.personal_tv_pwd:// 重置密码
+				intent.setClass(mContext, PersonalCenterChangeActivity.class);
+				intent.putExtra("way", "pwd");
+				startActivity(intent);
+				break;
+			case R.id.personal_tv_getunit:// 加入单位
+				intent.setClass(mContext, PersonalCenterChangeActivity.class);
+				intent.putExtra("way", "unit");
+				startActivity(intent);
+				break;
+			case R.id.personal_tv_truename:// 姓名
+				intent.setClass(mContext, PersonalCenterChangeActivity.class);
+				intent.putExtra("way", "name");
+				startActivity(intent);
+				break;
+			case R.id.personal_tv_nickname:// 昵称
+				intent.setClass(mContext, PersonalCenterChangeActivity.class);
+				intent.putExtra("way", "name");
+				startActivity(intent);
+				break;
+			case R.id.personal_iv_photo:// 头像
+				AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+				builder.setIcon(android.R.drawable.ic_menu_gallery);
+				builder.setTitle(R.string.choose_source);
+				builder.setPositiveButton(R.string.camera,
+						new DialogInterface.OnClickListener() {
 
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							try {
-								photoPath = JSYApplication.getInstance().FILE_PATH;
-								File photoFile = PictureUtils
-										.createImageFile(photoPath);
-								if (photoFile != null) {
-									photoPath = photoFile.getAbsolutePath();
-									PictureUtils.dispatchTakePictureIntent(
-											PersonalCenterActivity.this,
-											photoFile, 1);
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								try {
+									photoPath = JSYApplication.getInstance().FILE_PATH;
+									File photoFile = PictureUtils
+											.createImageFile(photoPath);
+									if (photoFile != null) {
+										photoPath = photoFile.getAbsolutePath();
+										PictureUtils.dispatchTakePictureIntent(
+												PersonalCenterActivity.this,
+												photoFile, 1);
+									}
+								} catch (Exception e) {
+									ToastUtil.showMessage(mContext,
+											R.string.open_camera_abnormal);
 								}
-							} catch (Exception e) {
-								ToastUtil.showMessage(mContext,
-										R.string.open_camera_abnormal);
 							}
-						}
-					});
-			builder.setNegativeButton(R.string.album,
-					new DialogInterface.OnClickListener() {
+						});
+				builder.setNegativeButton(R.string.album,
+						new DialogInterface.OnClickListener() {
 
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							Intent ii = new Intent(
-									Intent.ACTION_PICK,
-									android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
-							startActivityForResult(ii, 2);
-						}
-					});
-			builder.create().show();
-			break;
-		default:
-			break;
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								Intent ii = new Intent(
+										Intent.ACTION_PICK,
+										android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);// 调用android的图库
+								startActivityForResult(ii, 2);
+							}
+						});
+				builder.create().show();
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -457,34 +467,34 @@ public class PersonalCenterActivity extends BaseActivity implements
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		switch (requestCode) {
-		case 1:// 相机
-			try {
-				DialogUtil.getInstance().getDialog(mContext, R.string.loading);
-				creatThread();
-			} catch (Exception e1) {
-				bitmap = null;
-				e1.printStackTrace();
-			}
-			break;
-		case 2:// 相册
-			try {
-				if (data != null) {
-					Uri uri1 = data.getData();
-					Cursor cursor = this.getContentResolver().query(uri1, null,
-							null, null, null);
-					cursor.moveToFirst();
-					photoPath = cursor.getString(1);
-					DialogUtil.getInstance().getDialog(mContext,
-							R.string.loading);
+			case 1:// 相机
+				try {
+					DialogUtil.getInstance().getDialog(mContext, R.string.loading);
 					creatThread();
+				} catch (Exception e1) {
+					bitmap = null;
+					e1.printStackTrace();
 				}
-			} catch (Exception e) {
-				bitmap = null;
-				e.printStackTrace();
-			}
-			break;
-		default:
-			break;
+				break;
+			case 2:// 相册
+				try {
+					if (data != null) {
+						Uri uri1 = data.getData();
+						Cursor cursor = this.getContentResolver().query(uri1, null,
+								null, null, null);
+						cursor.moveToFirst();
+						photoPath = cursor.getString(1);
+						DialogUtil.getInstance().getDialog(mContext,
+								R.string.loading);
+						creatThread();
+					}
+				} catch (Exception e) {
+					bitmap = null;
+					e.printStackTrace();
+				}
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -520,16 +530,16 @@ public class PersonalCenterActivity extends BaseActivity implements
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case 789:
-				DialogUtil.getInstance().cannleDialog();
-				thread.interrupt();
-				thread = null;
-				if (file != null) {
-					uploadFile(file);
-				}
-				break;
-			default:
-				break;
+				case 789:
+					DialogUtil.getInstance().cannleDialog();
+					thread.interrupt();
+					thread = null;
+					if (file != null) {
+						uploadFile(file);
+					}
+					break;
+				default:
+					break;
 			}
 		}
 	};

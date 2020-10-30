@@ -269,6 +269,12 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name=".personalcenter.PersonalInfoCollectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
         <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.personalcenter.FriendMultiChoiceActivity" -->
         <!-- android:launchMode="singleTask" -->

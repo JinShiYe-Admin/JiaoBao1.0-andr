@@ -25,7 +25,7 @@ import java.util.List;
  * 备注：
  * Modify by：
  */
-public class PersonalInfoActivity extends BaseActivity {
+public class PersonalInfoCollectActivity extends BaseActivity {
 	private Context mContext;
 	private List<String> list = new ArrayList<>();
 
