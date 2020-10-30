@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ui_30dp"
                 android:textColor="@color/grey"
-                android:text="帮助你管理发布、保存、修改等功能，关闭后，将不能使用附件上传功能，不能访问、读取相册、存储空间内的信息" />
+                android:text="我们获取您存储空间信息权限的目的是：帮助你管理发布、保存、修改等功能用于发布事务，关闭后，将不能使用附件上传功能，不能在应用内访问、读取相册、存储空间内的信息" />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ui_30dp"
                 android:textColor="@color/grey"
-                android:text="帮助你管理、授权通过录制、拍摄等方式收集音视频信息，关闭后，将不能采集音视频信息" />
+                android:text="我们获取您视频权限的目的是：帮助你管理、授权通过录制、拍摄等方式收集音视频信息用于发布事务，关闭后，将不能采集音视频信息" />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -82,8 +82,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ui_30dp"
                 android:textColor="@color/grey"
-                android:text="帮助你管理、授权麦克风用于发布音视频功能，关闭后将不能采集音视频信息" />
+                android:text="我们获取您音频权限的目的是：帮助你管理、授权麦克风用于发布音视频功能用于发布事务，关闭后将不能采集音视频信息" />
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/px_to_dip_10"
+            android:layout_marginRight="@dimen/px_to_dip_10"
+            android:background="@color/gray" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_15dp"
+            android:padding="@dimen/px_to_dip_20" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="@dimen/ui_20dp"
+                android:layout_height="wrap_content"
+                android:text="获取设备状态" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_30dp"
+                android:textColor="@color/grey"
+                android:text="我们获取设备状态权限的目的是：为了进行数据统计和分析、信息推送" />
+        </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
