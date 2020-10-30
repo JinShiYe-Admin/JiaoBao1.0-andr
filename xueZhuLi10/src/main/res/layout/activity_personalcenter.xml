@@ -265,7 +265,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:text="个人信息收集设置"
+                android:text="应用使用权限说明"
                 android:drawableRight="@drawable/icon_worksend_selit_plus"
                 />
         </LinearLayout>

@@ -45,7 +45,7 @@
     <string name="function_workol_gen">家长查询</string>
     <string name="function_leave">请假申请</string>
     <string name="function_leave_approval">请假审核</string>
-    <string name="function_personal_infocollect">个人信息收集说明</string>
+    <string name="function_personal_infocollect">应用使用权限说明</string>
     <!-- 个人中心 -->
     <string name="messagecenter_title_qiuzhi">求知</string>
     <string name="messagecenter_title_work">事务</string>

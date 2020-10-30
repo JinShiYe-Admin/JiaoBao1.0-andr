@@ -7,34 +7,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
+        <TextView
+            android:id="@+id/permission"
+            android:layout_marginLeft="@dimen/ui_15dp"
+            android:layout_marginTop="@dimen/ui_15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="教宝校园在使用过程中可能会请求获取如下权限来执行相关业务，特此说明：" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_15dp"
             android:padding="@dimen/px_to_dip_20" >
 
             <TextView
-                android:id="@+id/personal_tv_pwdtxt"
-                android:layout_width="@dimen/px_to_dip_120"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/ui_20dp"
                 android:layout_height="wrap_content"
-                android:text="@string/passwords" />
+                android:text="存储空间信息" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/personal_tv_pwdtxt"
-                android:text="@string/all_star" />
-
-            <TextView
-                android:id="@+id/personal_tv_pwd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_toRightOf="@id/personal_tv_pwdtxt"
-                android:drawableRight="@drawable/icon_worksend_selit_plus"
-                android:gravity="right"
-                android:text="@string/reset"
-                android:textColor="@color/red" />
-
+                android:layout_marginTop="@dimen/ui_30dp"
+                android:textColor="@color/grey"
+                android:text="帮助你管理发布、保存、修改等功能，关闭后，将不能使用附件上传功能，不能访问、读取相册、存储空间内的信息" />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -46,31 +43,71 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_15dp"
             android:padding="@dimen/px_to_dip_20" >
 
             <TextView
-                android:id="@+id/personal_tv_pwdtxt1"
-                android:layout_width="@dimen/px_to_dip_120"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/ui_20dp"
                 android:layout_height="wrap_content"
-                android:text="@string/passwords" />
+                android:text="音视频信息（摄像头）" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/personal_tv_pwdtxt1"
-                android:text="@string/all_star" />
+                android:layout_marginTop="@dimen/ui_30dp"
+                android:textColor="@color/grey"
+                android:text="帮助你管理、授权通过录制、拍摄等方式收集音视频信息，关闭后，将不能采集音视频信息" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/px_to_dip_10"
+            android:layout_marginRight="@dimen/px_to_dip_10"
+            android:background="@color/gray" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_15dp"
+            android:padding="@dimen/px_to_dip_20" >
 
             <TextView
-                android:id="@+id/personal_tv_pwd2"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/ui_20dp"
+                android:layout_height="wrap_content"
+                android:text="音视频信息（麦克风）" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_toRightOf="@id/personal_tv_pwdtxt1"
-                android:drawableRight="@drawable/icon_worksend_selit_plus"
-                android:gravity="right"
-                android:text="@string/reset"
-                android:textColor="@color/red" />
+                android:layout_marginTop="@dimen/ui_30dp"
+                android:textColor="@color/grey"
+                android:text="帮助你管理、授权麦克风用于发布音视频功能，关闭后将不能采集音视频信息" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/px_to_dip_10"
+            android:layout_marginRight="@dimen/px_to_dip_10"
+            android:background="@color/gray" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_15dp"
+            android:padding="@dimen/px_to_dip_20" >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="@dimen/ui_20dp"
+                android:layout_height="wrap_content"
+                android:text="粗略位置信息" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_30dp"
+                android:textColor="@color/grey"
+                android:text="本应仅通过IP等定位大致的位置以保障基本业务功能" />
         </RelativeLayout>
     </LinearLayout>
 
