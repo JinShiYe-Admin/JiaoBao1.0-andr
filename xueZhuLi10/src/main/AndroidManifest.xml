@@ -5,91 +5,6 @@
     android:versionCode="18"
     android:versionName="3.3.5">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
-
-<!--
-危险权限组
-权限组名	                                权限名称
-
-CALENDAR（日历）	                        READ_CALENDAR
-                                        WRITE_CALENDAR
-
-CAMERA（相机）	                        CAMERA
-
-CONTACTS（联系人）	                    READ_CONTACTS
-                                        WRITE_CONTACTS
-                                        GET_ACCOUNTS
-
-LOCATION（位置）	                        ACCESS_FINE_LOCATION
-                                        ACCESS_COARSE_LOCATION
-
-MICROPHONE（麦克风）	                    RECORD_AUDIO
-
-PHONE（手机）	                        READ_PHONE_STATE
-                                        CALL_PHONE
-                                        ERAD_CALL_LOG
-                                        WRITE_CALL_LOG
-                                        ADD_VOICEMAIL
-                                        USE_SIP
-                                        PROCESS_OUTGOING_CALLS
-SENSORS（传感器）	                        BODY_SENSORS
-
-SMS（短信）                             	SEND_SMS
-                                        RECEIVE_SMS
-                                        READ_SMS
-                                        RECEIVE_WAP_PUSH
-                                        RECEIVE_MMS
-
-STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
-                                        WRITE_EXTERNAL_STORAGE
--->
-
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!--  危险权限组  -->
-    <uses-permission android:name="android.permission.CAMERA" /> <!--  危险权限组  -->
-
-
-    <!-- 使用网络功能所需权限 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!--  危险权限组  -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!--  危险权限组  -->
-<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>-->
-    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!--  危险权限组  -->
-    <!--    <uses-permission android:name="android.permission.CALL_PHONE" />--><!--  危险权限组  -->
-    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 --><!--  危险权限组  -->
-    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
-    <!--    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />-->
-    <!--    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />-->
-    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
-    <!--    <uses-permission android:name="android.permission.ACCESS_GPS" />-->
-    <!--  -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" tools:ignore="ProtectedPermissions"/>
-    <uses-permission android:name="android.permission.READ_LOGS" tools:ignore="ProtectedPermissions"/>
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <!-- 以下为需要的基本权限，需要自行添加至您的AndroidManifest文件中 start-->
-    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
-    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
-    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
-    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
-    <!-- 以下为需要的基本权限，需要自行添加至您的AndroidManifest文件中 end-->
-
     <application
         android:name=".JSYApplication"
         android:allowBackup="false"
@@ -97,13 +12,17 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/Theme.MyTheme">
+        <activity android:name=".WebViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme"
+            />
         <!-- 广告页 -->
         <activity
             android:name=".system.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyTheme" />
-        <!-- 登录页 -->
+            android:theme="@style/Theme.MyTheme" /> <!-- 登录页 -->
         <activity
             android:name=".system.LoginActivity"
             android:label="@string/app_name"
@@ -122,14 +41,12 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <!-- 信息中心 -->
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- 信息中心 -->
         <activity
             android:name=".personalcenter.MessageCenterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="adjustPan" />
-        <!-- <activity -->
+            android:windowSoftInputMode="adjustPan" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.affairs.WorkSendMessageActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -176,8 +93,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <!-- <activity -->
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.personalcenter.ContactsActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -196,8 +112,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="adjustPan" />
-        <!-- <activity -->
+            android:windowSoftInputMode="adjustPan" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.schoolcircle.Show2MoreArticleListSelectActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -250,8 +165,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <!-- <activity -->
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.schoolcircle.TopicalSpaceActivity" -->
         <!-- android:launchMode="standard" -->
         <!-- android:screenOrientation="portrait" -->
@@ -274,8 +188,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <!-- <activity -->
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.personalcenter.FriendMultiChoiceActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -316,8 +229,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <!-- <activity -->
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.schoolecircle.TrainArtListActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -342,8 +254,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:layerType="hardware"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <!-- <activity -->
+            android:windowSoftInputMode="adjustResize" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.schoolcircle.TrainArticleDetailsActivity" -->
         <!-- android:hardwareAccelerated="true" -->
         <!-- android:launchMode="singleTask" -->
@@ -355,8 +266,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:name=".schoolcircle.NoticeJuniorListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="adjustResize" />
-        <!-- <activity -->
+            android:windowSoftInputMode="adjustResize" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.schoolcircle.TrainJuniorListActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -373,8 +283,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
-        <!-- 应用中心 -->
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 应用中心 -->
         <activity
             android:name=".appcenter.AppCenterActivity"
             android:launchMode="singleTask"
@@ -403,8 +312,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:name=".appcenter.workplan.WriteInfoActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyTheme" />
-        <!-- singleTask模式无法使用setActivityOnResult -->
+            android:theme="@style/Theme.MyTheme" /> <!-- singleTask模式无法使用setActivityOnResult -->
         <activity
             android:name=".appcenter.GalleryActivity"
             android:screenOrientation="portrait"
@@ -412,9 +320,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
         <activity
             android:name=".affairs.SinglePictureDisplayActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyTheme" />
-
-        <!-- 个人中心 -->
+            android:theme="@style/Theme.MyTheme" /> <!-- 个人中心 -->
         <activity
             android:name=".system.QiuzhiQuestionListActivity"
             android:launchMode="singleTask"
@@ -448,10 +354,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-
-        <!-- 求知 -->
-
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- 求知 -->
         <activity
             android:name=".personalcenter.QiuZhiPickedDetailsActivity"
             android:launchMode="singleTask"
@@ -486,8 +389,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateHidden|stateUnchanged" />
-        <!-- <activity -->
+            android:windowSoftInputMode="stateHidden|stateUnchanged" /> <!-- <activity -->
         <!-- android:name="com.jsy_jiaobao.main.personalcenter.QiuZhiSuggestQuestionDetailsActivity" -->
         <!-- android:launchMode="singleTask" -->
         <!-- android:screenOrientation="portrait" -->
@@ -516,8 +418,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyTheme"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <!-- 在线作业 -->
+            android:windowSoftInputMode="stateUnchanged|adjustPan" /> <!-- 在线作业 -->
         <activity
             android:name=".workol.TeacherPublishWorkActivity"
             android:launchMode="singleTask"
@@ -597,33 +498,86 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             android:screenOrientation="portrait" />
         <activity
             android:name=".appcenter.sign.QuickSignInActivity"
-            android:label="@string/function_signinquick" />
-
-
-        <!--        <service-->
-        <!--            android:name="com.baidu.location.f"-->
-        <!--            android:enabled="true"-->
-        <!--            android:process=":remote" />-->
+            android:label="@string/function_signinquick" /> <!-- <service -->
+        <!-- android:name="com.baidu.location.f" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process=":remote" /> -->
         <!-- 下载文件服务 -->
+        <activity
+            android:name=".appcenter.sign.RecordActivity"
+            android:label="@string/title_activity_record"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyTheme" /> <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="bN9poUzSXxmKD6KmXqVpTZnCQEsj9R3a" /> -->
+        <!-- android:value="NLHqyhqTPEtbgVx8XQgEKwjK" /> -->
+        <provider
+            android:name="com.umeng.message.provider.MessageProvider"
+            android:authorities="com.jsy_jiaobao.main.umeng.message"
+            android:exported="false">
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider> <!-- <service android:name=".umengService.UPushIntentService" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" /> -->
+        <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 start -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.jsy_jiaobao.main.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <receiver
+            android:name="com.taobao.accs.EventReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.taobao.accs.ServiceReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.taobao.agoo.AgooCommondReceiver"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.jsy_jiaobao.main.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" />
         <service
             android:name=".UpdateService"
             android:label="@string/app_name" />
-
-        <!--        <meta-data-->
-        <!--            android:name="com.baidu.lbsapi.API_KEY"-->
-        <!--            android:value="bN9poUzSXxmKD6KmXqVpTZnCQEsj9R3a" />-->
-        <!--android:value="NLHqyhqTPEtbgVx8XQgEKwjK" />-->
-        <activity
-            android:name=".appcenter.sign.RecordActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyTheme"
-            android:label="@string/title_activity_record"/>
-
-        <!--        <service android:name=".umengService.UPushIntentService"-->
-        <!--            android:permission="android.permission.BIND_JOB_SERVICE" />-->
-
-        <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 start-->
         <service
             android:name="com.taobao.accs.ChannelService"
             android:exported="true"
@@ -642,40 +596,15 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
                 <action android:name="com.taobao.accs.intent.action.RECEIVE" />
             </intent-filter>
         </service>
-        <receiver
-            android:name="com.taobao.accs.EventReceiver"
-            android:process=":channel">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED" />
-                <data android:scheme="package" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.USER_PRESENT" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.taobao.accs.ServiceReceiver"
-            android:process=":channel">
-            <intent-filter>
-                <action android:name="com.taobao.accs.intent.action.COMMAND" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
-            </intent-filter>
-        </receiver>
         <service
             android:name="com.taobao.accs.internal.AccsJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"
-            android:process=":channel"/>
+            android:process=":channel" />
+
         <service
             android:name="com.taobao.accs.ChannelService$KernelService"
             android:process=":channel" />
+
         <service
             android:name="org.android.agoo.accs.AgooService"
             android:exported="true">
@@ -683,6 +612,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
                 <action android:name="com.taobao.accs.intent.action.RECEIVE" />
             </intent-filter>
         </service>
+
         <service
             android:name="com.umeng.message.UmengIntentService"
             android:exported="true"
@@ -691,6 +621,7 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
                 <action android:name="org.agoo.android.intent.action.RECEIVE" />
             </intent-filter>
         </service>
+
         <service
             android:name="com.umeng.message.XiaomiIntentService"
             android:exported="true"
@@ -699,18 +630,6 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
                 <action android:name="org.agoo.android.intent.action.RECEIVE" />
             </intent-filter>
         </service>
-        <receiver
-            android:name="com.taobao.agoo.AgooCommondReceiver"
-            android:exported="true"
-            android:process=":channel">
-            <intent-filter>
-                <action android:name="com.jsy_jiaobao.main.intent.action.COMMAND" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED" />
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
         <service
             android:name="com.umeng.message.UmengMessageIntentReceiverService"
             android:exported="true"
@@ -719,13 +638,11 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
                 <action android:name="org.android.agoo.client.MessageReceiverService" />
             </intent-filter>
         </service>
-        <receiver
-            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
-            android:exported="false" />
+
         <service
             android:name="com.umeng.message.UmengMessageCallbackHandlerService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="false">
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
                 <action android:name="com.umeng.messge.registercallback.action" />
             </intent-filter>
@@ -741,30 +658,93 @@ STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
             <intent-filter>
                 <action android:name="com.umeng.message.message.sendmessage.action" />
             </intent-filter>
-        </service>
+        </service> <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 end -->
         <service
             android:name="com.umeng.message.UmengDownloadResourceService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="false" />
-        <provider
-            android:name="com.umeng.message.provider.MessageProvider"
-            android:authorities="com.jsy_jiaobao.main.umeng.message"
-            android:exported="false">
-            <grant-uri-permission android:pathPattern=".*" />
-        </provider>
-        <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 end-->
-
-
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.jsy_jiaobao.main.fileProvider"
-            android:grantUriPermissions="true"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <!--
+危险权限组
+权限组名	                                权限名称
+
+CALENDAR（日历）	                        READ_CALENDAR
+                                        WRITE_CALENDAR
+
+CAMERA（相机）	                        CAMERA
+
+CONTACTS（联系人）	                    READ_CONTACTS
+                                        WRITE_CONTACTS
+                                        GET_ACCOUNTS
+
+LOCATION（位置）	                        ACCESS_FINE_LOCATION
+                                        ACCESS_COARSE_LOCATION
+
+MICROPHONE（麦克风）	                    RECORD_AUDIO
+
+PHONE（手机）	                        READ_PHONE_STATE
+                                        CALL_PHONE
+                                        ERAD_CALL_LOG
+                                        WRITE_CALL_LOG
+                                        ADD_VOICEMAIL
+                                        USE_SIP
+                                        PROCESS_OUTGOING_CALLS
+SENSORS（传感器）	                        BODY_SENSORS
+
+SMS（短信）                             	SEND_SMS
+                                        RECEIVE_SMS
+                                        READ_SMS
+                                        RECEIVE_WAP_PUSH
+                                        RECEIVE_MMS
+
+STORAGE（存储卡）	                        READ_EXTERNAL_STORAGE
+                                        WRITE_EXTERNAL_STORAGE
+    -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 危险权限组 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 危险权限组 -->
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 危险权限组 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 危险权限组 -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/> -->
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 危险权限组 -->
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <!-- 危险权限组 -->
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <!-- 危险权限组 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" /> -->
+    <!-- <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_GPS" /> -->
+    <!--  -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 以下为需要的基本权限，需要自行添加至您的AndroidManifest文件中 start -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
 
 </manifest>

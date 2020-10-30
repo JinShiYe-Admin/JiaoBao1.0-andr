@@ -32,6 +32,7 @@ import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.CommonDialog;
 import com.jsy_jiaobao.main.JSYApplication;
 import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.main.WebViewActivity;
 import com.jsy_jiaobao.main.personalcenter.PersonalInfoCollectActivity;
 import com.jsy_jiaobao.po.push.AliasType;
 import com.jsy_jiaobao.po.qiuzhi.GetPicked;
@@ -121,17 +122,21 @@ public class PersonalCenterActivity extends BaseActivity implements
 		personal_tv_yinsi.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.YINSI_URL));
-				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
-				mContext.startActivity(it);
+//				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.YINSI_URL));
+//				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+//				mContext.startActivity(it);
+				Intent intent = new Intent(mContext,
+						WebViewActivity.class);
+				intent.putExtra("url", Constant.YINSI_URL);
+				mContext.startActivity(intent);
 			}
 		});
 		personal_tv_known.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
-				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
-				mContext.startActivity(it);
+//				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
+//				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+//				mContext.startActivity(it);
 			}
 		});
 

@@ -2,7 +2,6 @@ package com.jsy_jiaobao.main.system;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -27,6 +26,7 @@ import com.jsy.xuezhuli.utils.ToastUtil;
 import com.jsy_jiaobao.customview.IEditText;
 import com.jsy_jiaobao.main.BaseActivity;
 import com.jsy_jiaobao.main.R;
+import com.jsy_jiaobao.main.WebViewActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -183,17 +183,25 @@ public class RegistActivity extends BaseActivity implements OnClickListener {
 		yinsi.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.YINSI_URL));
-				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
-				mContext.startActivity(it);
+//				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.YINSI_URL));
+//				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+//				mContext.startActivity(it);
+				Intent intent = new Intent(mContext,
+						WebViewActivity.class);
+				intent.putExtra("url", Constant.YINSI_URL);
+				mContext.startActivity(intent);
 			}
 		});
 		known.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
-				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
-				mContext.startActivity(it);
+//				Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(Constant.KNOWN_URL));
+//				it.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
+//				mContext.startActivity(it);
+				Intent intent = new Intent(mContext,
+						WebViewActivity.class);
+				intent.putExtra("url", Constant.YINSI_URL);
+				mContext.startActivity(intent);
 			}
 		});
 	}
