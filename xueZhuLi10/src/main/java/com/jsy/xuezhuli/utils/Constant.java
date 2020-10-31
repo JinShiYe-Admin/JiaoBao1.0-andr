@@ -20,8 +20,8 @@ public class Constant {
 	static String SPKXmlStr = "<RSAKeyValue><Modulus>xc0EHqiwAGNZn4s+Nr6U7NOSq6H62WBHOPZHwMFrwRMRm55S7R2oIL7vaaDLTg+x10bztPgKrhxor1hQ1uv2NKAx5uqJwsRd4VckhKEWVms6ysQDTy01Jhz9N3SIe2iMibkIuVW/mVSmgLEWHAAKUv4j0pCPSqkmozX6Ur0BAKE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>";
 	public static PublicKey publicKey = RsaHelper.decodePublicKeyFromXml(SPKXmlStr);
 
-	public static final String YINSI_URL="http://www.jiaobao.net/dl/jiaobaoxiaoyuan/jbxyPrivacy.htm";
-	public static final String KNOWN_URL="http://www.jiaobao.net/dl/jiaobaoxiaoyuan/jbxyPrivacy.htm";
+	public static final String YINSI_URL="https://www.jiaobao.net/dl/jbPrivacy.htm";
+	public static final String KNOWN_URL="https://www.jiaobao.net/dl/jbPrivacy.htm";
 	public static final String EMAIL = "kf@jsy8800.com";
 	public static final String FANKUI = "如果您有任何建议或问题欢迎给我们发送邮件:"+EMAIL;
 	public static final String KNOWN = "依据最新法律要求，我们更新了<a target='_blank' href="+YINSI_URL+">《用户隐私政策》</a> 请您务必审慎阅读,充分理解相关条款内容，特别是字体加粗标识的重要条款。\n"+
