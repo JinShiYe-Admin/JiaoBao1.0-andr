@@ -625,8 +625,9 @@ public class MessageCenterActivity extends BaseActivity implements PublicMethod 
     public boolean onCreateOptionsMenu(Menu menu) {
         this.menu = menu;
 
-        SubMenu sub_more = menu.addSubMenu(0, 1, 0, "更多").setIcon(
-                R.drawable.bar_more);
+        SubMenu sub_more = menu.addSubMenu(0, 1, 0, " ");
+//        SubMenu sub_more = menu.addSubMenu(0, 1, 0, "更多").setIcon(R.drawable.bar_more);
+
         sub_more.add(0, 1003, 0,
                 getResources().getString(R.string.function_signin));
         sub_more.add(0, 1004, 0,
